@@ -9,6 +9,7 @@ html, body {
   -webkit-text-size-adjust: 100%;
   font-family: var(--font-sans);
   letter-spacing: -0.011em;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
