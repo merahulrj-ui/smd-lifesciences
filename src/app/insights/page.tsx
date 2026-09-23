@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Biotech Scientific Insights & IVD Whitepapers | SMD Life Sciences',
+    description: 'Technical whitepapers and assay development protocols for IVD kit manufacturers and biotech researchers.',
+    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+  },
 };
 
 export const revalidate = 3600;

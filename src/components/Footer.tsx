@@ -83,23 +83,23 @@ export default function BiotechFooter() {
           </h3>
           <ul className="flex flex-col gap-2.5 text-xs sm:text-sm">
             <li>
-              <Link href="/products" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
-                <i className="fas fa-angle-right text-[0.7em]"></i> Recombinant Antigens (Infectious &amp; Cardiac)
+              <Link href="/ivd-raw-materials" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
+                <i className="fas fa-angle-right text-[0.7em]"></i> IVD Raw Materials (India Hub)
+              </Link>
+            </li>
+            <li>
+              <Link href="/recombinant-antigens" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
+                <i className="fas fa-angle-right text-[0.7em]"></i> Recombinant Antigens (Bangalore)
+              </Link>
+            </li>
+            <li>
+              <Link href="/diagnostic-cdmo" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
+                <i className="fas fa-angle-right text-[0.7em]"></i> Diagnostic CDMO &amp; Assay Development
               </Link>
             </li>
             <li>
               <Link href="/products" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
-                <i className="fas fa-angle-right text-[0.7em]"></i> Monoclonal Antibodies (High-Affinity)
-              </Link>
-            </li>
-            <li>
-              <Link href="/products" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
-                <i className="fas fa-angle-right text-[0.7em]"></i> Colloidal Gold (40nm Conjugates)
-              </Link>
-            </li>
-            <li>
-              <Link href="/products" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
-                <i className="fas fa-angle-right text-[0.7em]"></i> Secondary Antibodies &amp; Controls
+                <i className="fas fa-angle-right text-[0.7em]"></i> Monoclonal Antibodies &amp; Conjugates
               </Link>
             </li>
             <li>

@@ -24,11 +24,94 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom Monoclonal Antibody Development & Protein Expression India | SMD Life Sciences',
+    description: 'Specialized contract research & CDMO for IVD manufacturers. 4-Phase custom hybridoma development, protein expression, and assay optimization.',
+    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+  },
+};
+
+const servicesSchemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://lifesciences.smdmedicare.in/services#service',
+      name: 'IVD Diagnostic CDMO & Custom Reagent Development',
+      serviceType: 'Contract Development and Manufacturing (CDMO)',
+      provider: {
+        '@id': 'https://lifesciences.smdmedicare.in/#organization',
+      },
+      description: 'Specialized contract research & CDMO for IVD manufacturers. 4-Phase custom hybridoma monoclonal antibody development, recombinant protein expression, and lateral flow conjugation from Bangalore.',
+      areaServed: ['IN', 'US', 'GB', 'AE', 'DE', 'FR', 'JP'],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Biotechnology & Diagnostic CDMO Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Custom Hybridoma Monoclonal Antibody Development',
+              description: '4-Phase milestone-based murine hybridoma generation with ELISA, Western Blot, and clinical serum screening.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Recombinant Protein & Antigen Expression',
+              description: 'Codon-optimized gene synthesis, prokaryotic and eukaryotic protein expression, and chromatography purification.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Matched Antibody Pair Screening & Validation',
+              description: 'Sandwich ELISA and lateral flow matched pair screening to guarantee zero cross-reactivity and high analytical sensitivity.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Colloidal Gold & Fluorescent Conjugation',
+              description: 'Custom nanoparticle conjugation for lateral flow rapid diagnostic test strips and cassettes.',
+            },
+          },
+        ],
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://lifesciences.smdmedicare.in/services#breadcrumbs',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://lifesciences.smdmedicare.in',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Custom Biotech Services & CDMO',
+          item: 'https://lifesciences.smdmedicare.in/services',
+        },
+      ],
+    },
+  ],
 };
 
 export default function BiotechServicesPage() {
   return (
     <div className="bg-slate-50 min-h-screen text-slate-900 selection:bg-orange-500 selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchemaGraph) }}
+      />
       {/* Breadcrumb Header */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs">

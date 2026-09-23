@@ -7,11 +7,67 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in/about',
   },
+  openGraph: {
+    title: 'About Us | SMD Life Sciences - SMD Medicare',
+    description: 'B2B diagnostic raw materials supplier & custom CDMO in technical collaboration with Pentavalent Bio Sciences, Bangalore.',
+    url: 'https://lifesciences.smdmedicare.in/about',
+    siteName: 'SMD Life Sciences',
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us | SMD Life Sciences - SMD Medicare',
+    description: 'B2B diagnostic raw materials supplier & custom CDMO in technical collaboration with Pentavalent Bio Sciences, Bangalore.',
+    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+  },
+};
+
+const aboutSchemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      '@id': 'https://lifesciences.smdmedicare.in/about#webpage',
+      url: 'https://lifesciences.smdmedicare.in/about',
+      name: 'About SMD Life Sciences',
+      isPartOf: {
+        '@id': 'https://lifesciences.smdmedicare.in/#website',
+      },
+      about: {
+        '@id': 'https://lifesciences.smdmedicare.in/#organization',
+      },
+      description: 'SMD Life Sciences is the dedicated diagnostic division of SMD Medicare, in technical collaboration with Pentavalent Bio Sciences, Electronic City, Bangalore.',
+      inLanguage: 'en-IN',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://lifesciences.smdmedicare.in/about#breadcrumbs',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://lifesciences.smdmedicare.in',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'About Us',
+          item: 'https://lifesciences.smdmedicare.in/about',
+        },
+      ],
+    },
+  ],
 };
 
 export default function AboutPage() {
   return (
     <div className="bg-slate-50 min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchemaGraph) }}
+      />
       {/* Header Banner */}
       <section className="bg-white border-b border-slate-200 py-6 sm:py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

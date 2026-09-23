@@ -27,6 +27,12 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IVD Reagents & Biological Raw Materials Directory | SMD Life Sciences',
+    description: '64+ high-purity recombinant antigens, monoclonal antibodies, and lateral flow reagents with Certificate of Analysis (CoA).',
+    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+  },
 };
 
 export default function BiotechProductsPage() {

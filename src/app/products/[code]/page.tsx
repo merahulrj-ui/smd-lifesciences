@@ -43,6 +43,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       locale: 'en_IN',
       type: 'website',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${product.name} (${product.code}) | IVD Reagent`,
+      description: `${product.description} Purity ${product.purity}. Order evaluation samples or bulk quantities.`,
+      images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    },
   };
 }
 
@@ -54,32 +60,90 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const jsonLd = {
+  const relatedProducts = BIOTECH_PRODUCTS.filter(
+    (p) => p.code !== product.code && (p.category === product.category || p.target === product.target)
+  ).slice(0, 4);
+
+  const schemaGraph = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: product.name,
-    sku: product.code,
-    description: product.description,
-    brand: {
-      '@type': 'Brand',
-      name: 'SMD Life Sciences / Pentavalent',
-    },
-    category: product.category,
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'INR',
-      availability: 'https://schema.org/InStock',
-      priceValidUntil: '2026-12-31',
-      url: `https://lifesciences.smdmedicare.in/products/${product.code}`,
-    },
+    '@graph': [
+      {
+        '@type': 'Product',
+        '@id': `https://lifesciences.smdmedicare.in/products/${product.code}#product`,
+        name: product.name,
+        sku: product.code,
+        mpn: product.code,
+        description: product.description,
+        image: 'https://lifesciences.smdmedicare.in/icon-512.png',
+        category: product.category,
+        brand: {
+          '@type': 'Brand',
+          name: 'SMD Life Sciences',
+        },
+        manufacturer: {
+          '@id': 'https://lifesciences.smdmedicare.in/#organization',
+        },
+        isRelatedTo: relatedProducts.map((rp) => ({
+          '@type': 'Product',
+          '@id': `https://lifesciences.smdmedicare.in/products/${rp.code}#product`,
+          name: rp.name,
+          sku: rp.code,
+        })),
+        additionalProperty: [
+          {
+            '@type': 'PropertyValue',
+            name: 'Target Analyte',
+            value: product.target,
+          },
+          {
+            '@type': 'PropertyValue',
+            name: 'Host / Source',
+            value: product.host,
+          },
+          {
+            '@type': 'PropertyValue',
+            name: 'Purity',
+            value: product.purity,
+          },
+          {
+            '@type': 'PropertyValue',
+            name: 'Applications',
+            value: product.applications,
+          },
+        ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `https://lifesciences.smdmedicare.in/products/${product.code}#breadcrumbs`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://lifesciences.smdmedicare.in',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Reagents Directory',
+            item: 'https://lifesciences.smdmedicare.in/products',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: `${product.code} - ${product.name}`,
+            item: `https://lifesciences.smdmedicare.in/products/${product.code}`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
     <div className="bg-slate-50 min-h-screen py-8">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,6 +324,59 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
 
           </div>
         </div>
+
+        {/* Related Diagnostic Reagents & Matched Antibodies */}
+        {relatedProducts.length > 0 && (
+          <div className="mt-12 pt-8 border-t border-slate-200">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Topical Reagent Mesh</span>
+                <h2 className="text-xl font-bold text-slate-900 mt-1">
+                  Related Diagnostic Reagents &amp; Matched Antibodies
+                </h2>
+              </div>
+              <Link
+                href="/products"
+                className="text-xs font-semibold text-blue-600 hover:text-blue-800"
+              >
+                View all 64+ reagents &rarr;
+              </Link>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {relatedProducts.map((rp) => (
+                <div
+                  key={rp.code}
+                  className="bg-white rounded-lg border border-slate-200 p-4 hover:border-blue-400 hover:shadow-xs transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[11px] font-mono font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">
+                        {rp.code}
+                      </span>
+                      <span className="text-[11px] text-slate-400">{rp.format}</span>
+                    </div>
+                    <h3 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug mb-2 line-clamp-2">
+                      {rp.name}
+                    </h3>
+                    <p className="text-[11px] text-slate-500 line-clamp-2 mb-3">
+                      {rp.description}
+                    </p>
+                  </div>
+                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <Link
+                      href={`/products/${rp.code}`}
+                      className="font-semibold text-blue-600 hover:text-blue-800"
+                    >
+                      Datasheet &rarr;
+                    </Link>
+                    <span className="text-emerald-700 font-medium text-[11px]">CoA Validated</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
       </div>
     </div>

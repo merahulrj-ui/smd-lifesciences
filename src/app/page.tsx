@@ -24,6 +24,67 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SMD Life Sciences & Diagnostic Solutions | Custom Antibodies & IVD Raw Materials',
+    description: 'B2B diagnostic raw materials supplier & custom CDMO services in India. Recombinant antigens, monoclonal antibodies, and colloidal gold conjugates.',
+    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+  },
+};
+
+const homeFaqs = [
+  {
+    question: "What biological raw materials does SMD Life Sciences manufacture and supply?",
+    answer: "SMD Life Sciences specializes in high-purity recombinant antigens, monoclonal and polyclonal antibodies, colloidal gold conjugates, and lateral flow reagents for diagnostic test card and ELISA kit manufacturers.",
+  },
+  {
+    question: "Can IVD manufacturers request evaluation samples before bulk procurement?",
+    answer: "Yes, we provide 1mg to 5mg evaluation test samples along with lot-specific Certificate of Analysis (CoA), SDS, and purity validation reports to ensure compatibility with your diagnostic platform.",
+  },
+  {
+    question: "Where are your biomanufacturing and R&D facilities located?",
+    answer: "Our research and biomanufacturing operations are located in Electronic City, Bangalore, Karnataka, conducted in technical collaboration with Pentavalent Bio Sciences.",
+  },
+  {
+    question: "Do you offer custom CDMO and diagnostic assay development?",
+    answer: "Yes, we provide milestone-based CDMO services including hybridoma monoclonal development, recombinant protein expression, antibody pair screening, and lateral flow rapid test development from concept to batch validation.",
+  },
+  {
+    question: "What are the dispatch timelines for domestic and international orders?",
+    answer: "Domestic orders across India are dispatched within 2 to 4 business days directly from Bangalore with end-to-end cold-chain packaging. International shipments are coordinated with certified export documentation.",
+  },
+];
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://lifesciences.smdmedicare.in/#webpage',
+      url: 'https://lifesciences.smdmedicare.in',
+      name: 'SMD Life Sciences & Diagnostic Solutions | Custom Antibodies & IVD Raw Materials',
+      isPartOf: {
+        '@id': 'https://lifesciences.smdmedicare.in/#website',
+      },
+      about: {
+        '@id': 'https://lifesciences.smdmedicare.in/#organization',
+      },
+      description: 'B2B diagnostic raw materials supplier & custom CDMO services in India. High-purity recombinant antigens, monoclonal antibodies, and colloidal gold conjugates for IVD manufacturers.',
+      inLanguage: 'en-IN',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://lifesciences.smdmedicare.in/#faq',
+      mainEntity: homeFaqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    },
+  ],
 };
 
 export default function BiotechHomePage() {
@@ -31,6 +92,10 @@ export default function BiotechHomePage() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
       {/* Top Breadcrumb & Status Bar */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs">
@@ -278,6 +343,43 @@ export default function BiotechHomePage() {
                   </a>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Frequently Asked Questions (FAQ) Section */}
+      <section className="bg-slate-100/70 border-b border-slate-200 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
+              Technical &amp; Procurement FAQ
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-sm text-slate-500 mt-2">
+              Common questions from IVD diagnostic kit manufacturers, scientists, and procurement teams.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {homeFaqs.map((faq, idx) => (
+              <details
+                key={idx}
+                className="group bg-white rounded-xl border border-slate-200/80 p-5 shadow-xs transition-all [&_summary::-webkit-details-marker]:hidden"
+                {...(idx === 0 ? { open: true } : {})}
+              >
+                <summary className="flex cursor-pointer items-center justify-between gap-4 font-semibold text-slate-900 text-sm sm:text-base select-none">
+                  <span>{faq.question}</span>
+                  <span className="shrink-0 text-slate-400 group-open:rotate-180 transition-transform">
+                    <i className="fas fa-chevron-down text-xs"></i>
+                  </span>
+                </summary>
+                <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+                  {faq.answer}
+                </p>
+              </details>
             ))}
           </div>
         </div>

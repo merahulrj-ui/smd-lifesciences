@@ -72,6 +72,12 @@ export const metadata: Metadata = {
     ],
     shortcut: '/favicon.ico',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SMD Life Sciences & Diagnostic Solutions | Recombinant Antigens & Antibodies',
+    description: 'High-Purity Biological Raw Materials & Custom CDMO Services for IVD Manufacturers.',
+    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+  },
   robots: {
     index: true,
     follow: true,
@@ -79,6 +85,71 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in',
   },
+};
+
+const organizationSchemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://lifesciences.smdmedicare.in/#organization',
+      name: 'SMD Life Sciences & Diagnostic Solutions',
+      legalName: 'SMD Medicare Private Limited',
+      url: 'https://lifesciences.smdmedicare.in',
+      logo: 'https://lifesciences.smdmedicare.in/icon-512.png',
+      description: 'B2B biological raw materials supplier and CDMO in technical association with Pentavalent Bio Sciences, Bangalore. High-affinity antigens, monoclonal antibodies, and colloidal gold conjugates for IVD manufacturers.',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Bangalore',
+        addressRegion: 'Karnataka',
+        postalCode: '560100',
+        addressCountry: 'IN',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+91-9555422455',
+        contactType: 'technical sales',
+        areaServed: ['IN', 'US', 'GB', 'AE', 'DE', 'FR', 'JP'],
+        availableLanguage: ['English', 'Hindi'],
+      },
+      knowsAbout: [
+        'IVD Raw Materials',
+        'Recombinant Antigens',
+        'Monoclonal Antibodies',
+        'Lateral Flow Assay Reagents',
+        'Colloidal Gold Conjugates',
+        'Diagnostic CDMO Services',
+        'In Vitro Diagnostic Assay Development',
+        'Lateral Flow Test Development'
+      ],
+      parentOrganization: {
+        '@type': 'Organization',
+        '@id': 'https://www.smdmedicare.in/#organization',
+        name: 'SMD Medicare',
+        url: 'https://www.smdmedicare.in',
+      },
+      memberOf: {
+        '@type': 'Organization',
+        name: 'Pentavalent Bio Sciences',
+        url: 'https://lifesciences.smdmedicare.in/about',
+      },
+      sameAs: [
+        'https://linkedin.com/company/smdmedicare',
+        'https://x.com/smd_medicare',
+        'https://facebook.com/smdmedicare'
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://lifesciences.smdmedicare.in/#website',
+      url: 'https://lifesciences.smdmedicare.in',
+      name: 'SMD Life Sciences',
+      publisher: {
+        '@id': 'https://lifesciences.smdmedicare.in/#organization',
+      },
+      inLanguage: 'en-IN',
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -96,6 +167,10 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchemaGraph) }}
+        />
       </head>
       <body className={`${plusJakartaSans.className} ${plusJakartaSans.variable} font-sans antialiased bg-slate-50 text-slate-900 flex flex-col min-h-screen`}>
         <UIProvider>

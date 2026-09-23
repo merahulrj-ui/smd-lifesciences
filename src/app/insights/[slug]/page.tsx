@@ -36,6 +36,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         url: `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,
         siteName: 'SMD Life Sciences',
         type: 'article',
+        images: [art.blog_image || 'https://lifesciences.smdmedicare.in/icon-512.png'],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: `${art.title} | SMD Life Sciences`,
+        description: `Technical whitepaper: ${art.title}. Advanced protocols and validation data for diagnostic manufacturers.`,
+        images: [art.blog_image || 'https://lifesciences.smdmedicare.in/icon-512.png'],
       },
     };
   } catch (e) {
@@ -154,18 +161,26 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
+    '@id': `https://lifesciences.smdmedicare.in/insights/${cleanSlug}#article`,
     headline: article.title,
     author: {
-      '@type': 'Organization',
+      '@type': 'Person',
       name: article.author_name || 'SMD Life Sciences R&D Team',
-      url: 'https://lifesciences.smdmedicare.in',
+      jobTitle: article.author_title || 'Biotechnology & IVD Research Scientist',
+      worksFor: {
+        '@id': 'https://lifesciences.smdmedicare.in/#organization',
+      },
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'SMD Life Sciences & Diagnostic Solutions',
-      url: 'https://lifesciences.smdmedicare.in',
+      '@id': 'https://lifesciences.smdmedicare.in/#organization',
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,
     },
     datePublished: article.created_at,
+    dateModified: article.updated_at || article.created_at,
+    image: article.blog_image || 'https://lifesciences.smdmedicare.in/icon-512.png',
     description: article.title,
   };
 
