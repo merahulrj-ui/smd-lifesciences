@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 import BiotechCatalogClient from '@/components/BiotechCatalogClient';
@@ -117,7 +118,9 @@ export default function BiotechProductsPage() {
         </div>
 
         {/* Interactive Client Catalog */}
-        <BiotechCatalogClient products={BIOTECH_PRODUCTS} />
+        <Suspense fallback={<div className="text-center py-12 text-slate-400 text-sm">Loading catalog...</div>}>
+          <BiotechCatalogClient products={BIOTECH_PRODUCTS} />
+        </Suspense>
 
       </div>
     </div>
