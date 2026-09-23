@@ -1,0 +1,3 @@
+Device,Good URLs,Needs Improvement URLs,Poor URLs,Status,Source
+Mobile,0,0,0,Not enough usage data in the last 90 days for this device type,Chrome UX Report (CrUX)
+Desktop,0,0,0,Not enough usage data in the last 90 days for this device type,Chrome UX Report (CrUX)

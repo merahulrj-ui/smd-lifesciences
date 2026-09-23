@@ -1,0 +1,6 @@
+Metric,Count,Status,Last Updated,Reason,Source,Validation,Pages
+Indexed Pages,121.0,Valid & Searchable in Google Index,2026-09-18,Page with redirect,Website,Failed,10
+Not Indexed Pages,86.0,Excluded from Google Index,2026-09-18,Excluded by ‘noindex’ tag,Website,Not Started,23
+Total Discovered URLs,207.0,Total Known to GSC,2026-09-18,Crawled - currently not indexed,Google systems,Not Started,1
+,,,,Not found (404),Website,Started,1
+,,,,Discovered - currently not indexed,Google systems,Started,51
