@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MobileDrawer from "@/components/MobileDrawer";
 import BottomNav from "@/components/BottomNav";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import SearchModal from "@/components/SearchModal";
 import FontAwesomeLoader from "@/components/FontAwesomeLoader";
 import { UIProvider } from "@/context/UIContext";
 
@@ -100,10 +102,12 @@ export default function RootLayout({
           <FontAwesomeLoader />
           <Navbar />
           <MobileDrawer />
+          <SearchModal />
           <main className="flex-grow pt-[76px] pb-[70px] lg:pb-0">
             {children}
           </main>
           <Footer />
+          <FloatingWhatsApp />
           <BottomNav />
         </UIProvider>
       </body>

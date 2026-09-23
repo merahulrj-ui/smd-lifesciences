@@ -5,7 +5,7 @@ import { useUI } from '@/context/UIContext';
 import { usePathname } from 'next/navigation';
 
 export default function BottomNav() {
-  const { setMobileDrawerOpen } = useUI();
+  const { setMobileDrawerOpen, setSearchOpen } = useUI();
   const pathname = usePathname();
 
   const openDrawer = (e: React.MouseEvent) => {
@@ -81,19 +81,17 @@ export default function BottomNav() {
           </span>
         </Link>
 
-        {/* 3. Center Action Button: Quick WhatsApp / RFQ */}
+        {/* 3. Center Action Button: Search FAB */}
         <div className="flex flex-col items-center justify-center h-full relative">
-          <a
-            href="https://wa.me/919555422455?text=Hello%20SMD%20Life%20Sciences,%20I%20have%20an%20inquiry%20for%20IVD%20Reagents%20/%20CDMO%20Services"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute -top-4 w-[50px] h-[50px] rounded-full bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30 border-4 border-white active:scale-95 transition-transform outline-none"
-            aria-label="Quick WhatsApp RFQ"
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="absolute -top-4 w-[52px] h-[52px] rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center shadow-lg shadow-blue-500/30 border-4 border-white active:scale-95 transition-transform outline-none cursor-pointer"
+            aria-label="Search Catalog"
           >
-            <i className="fab fa-whatsapp text-[22px]"></i>
-          </a>
+            <i className="fas fa-search text-[19px]"></i>
+          </button>
           <span className="text-[10px] font-semibold text-slate-500 tracking-tight leading-none mt-7 whitespace-nowrap">
-            RFQ / CoA
+            Search
           </span>
         </div>
 
