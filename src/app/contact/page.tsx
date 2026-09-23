@@ -2,20 +2,20 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Contact Us & Technical Sales | SMD Life Sciences - SMD Medicare',
-  description: 'Connect with SMD Life Sciences. Allied biomanufacturing facility in Electronic City, Bangalore in technical collaboration with Pentavalent Bio Sciences. Request price quotations, evaluation samples, or custom CDMO discussions.',
+  title: 'Global Technical Sales & CDMO Inquiries | SMD Life Sciences',
+  description: 'Connect with SMD Life Sciences. Global supply of recombinant antigens, monoclonal antibodies, and diagnostic CDMO services for IVD manufacturers across North America, Europe, APAC, and India.',
   openGraph: {
-    title: 'Contact Us & Technical Sales | SMD Life Sciences - SMD Medicare',
-    description: 'Connect with SMD Life Sciences. Request price quotations, evaluation samples, or custom CDMO discussions for diagnostic rapid test raw materials.',
+    title: 'Global Technical Sales & CDMO Inquiries | SMD Life Sciences',
+    description: 'Connect with SMD Life Sciences. Global supply of recombinant antigens, monoclonal antibodies, and diagnostic CDMO services for IVD manufacturers across North America, Europe, APAC, and India.',
     url: 'https://lifesciences.smdmedicare.in/contact',
     siteName: 'SMD Life Sciences',
-    locale: 'en_IN',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us & Technical Sales | SMD Life Sciences - SMD Medicare',
-    description: 'Connect with SMD Life Sciences. Request price quotations, evaluation samples, or custom CDMO discussions for diagnostic rapid test raw materials.',
+    title: 'Global Technical Sales & CDMO Inquiries | SMD Life Sciences',
+    description: 'Connect with SMD Life Sciences. Global supply of recombinant antigens, monoclonal antibodies, and diagnostic CDMO services for IVD manufacturers across North America, Europe, APAC, and India.',
   },
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in/contact',
@@ -45,8 +45,8 @@ export default function ContactPage() {
   const contactJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'Contact SMD Life Sciences',
-    description: 'B2B diagnostic raw materials, recombinant antigens, monoclonal antibodies, and CDMO inquiries.',
+    name: 'Global Contact Desk - SMD Life Sciences',
+    description: 'Global supply of B2B diagnostic raw materials, recombinant antigens, monoclonal antibodies, and custom CDMO services.',
     url: 'https://lifesciences.smdmedicare.in/contact',
     mainEntity: {
       '@type': 'MedicalBusiness',
@@ -58,7 +58,7 @@ export default function ContactPage() {
       },
       telephone: '+91-9555422455',
       email: 'info@smdmedicare.in',
-      priceRange: '₹₹ - ₹₹₹₹',
+      priceRange: '$$ - $$$$',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'B-202, Block 1, First Floor, KSSIDC Complex, Electronic City Phase 1',
@@ -69,15 +69,18 @@ export default function ContactPage() {
       },
       areaServed: [
         { '@type': 'Country', name: 'Worldwide' },
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'Germany' },
+        { '@type': 'Country', name: 'United Kingdom' },
+        { '@type': 'Country', name: 'Switzerland' },
+        { '@type': 'Country', name: 'Japan' },
+        { '@type': 'Country', name: 'South Korea' },
+        { '@type': 'Country', name: 'Singapore' },
         { '@type': 'Country', name: 'India' },
-        { '@type': 'City', name: 'Delhi NCR' },
-        { '@type': 'City', name: 'Bengaluru' },
-        { '@type': 'City', name: 'Hyderabad' },
-        { '@type': 'City', name: 'Mumbai' },
-        { '@type': 'City', name: 'Pune' },
-        { '@type': 'City', name: 'Chennai' },
-        { '@type': 'City', name: 'Ahmedabad' },
-        { '@type': 'City', name: 'Kolkata' }
+        { '@type': 'Country', name: 'United Arab Emirates' },
+        { '@type': 'Country', name: 'Canada' },
+        { '@type': 'Country', name: 'France' },
+        { '@type': 'Country', name: 'Australia' }
       ],
       openingHoursSpecification: [
         {
@@ -110,7 +113,7 @@ export default function ContactPage() {
         <div className="max-w-[1400px] mx-auto text-sm text-slate-500 font-medium overflow-x-auto whitespace-nowrap custom-scrollbar pb-2">
             <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span className="mx-2 text-slate-300">»</span>
-            <span className="text-slate-900 font-semibold">Contact Us</span>
+            <span className="text-slate-900 font-semibold">Contact Us &amp; Global Sales</span>
         </div>
       </div>
 
@@ -122,13 +125,13 @@ export default function ContactPage() {
         </div>
         <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="inline-block py-1.5 px-4 rounded-full bg-teal-500/10 text-teal-400 font-semibold text-sm mb-4 border border-teal-500/20">
-              <i className="fas fa-flask mr-2"></i> SCIENTIFIC &amp; TECHNICAL SALES
+              <i className="fas fa-globe mr-2"></i> GLOBAL SCIENTIFIC &amp; TECHNICAL SALES DESK
             </span>
             <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
-              Get In Touch with SMD Life Sciences
+              Global Sourcing &amp; Custom Diagnostic CDMO Inquiries
             </h1>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto font-medium">
-              Connect directly with our Bangalore scientific desk for high-affinity antigens, monoclonal antibodies, evaluation samples, and custom CDMO services.
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed">
+              Connect directly with our Bangalore scientific coordination desk for high-affinity monoclonal antibodies, recombinant antigens, evaluation samples, and custom assay contract manufacturing across North America, Europe, APAC, and India.
             </p>
         </div>
       </section>
@@ -142,21 +145,21 @@ export default function ContactPage() {
                   </div>
                   <div>
                       <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">
-                          Need Instant Reagent Pricing, CoA or Sample Vials?
+                          Global Technical Desk: Need Instant Reagent Pricing, CoA or Sample Vials?
                       </h3>
                       <p className="text-emerald-50 text-xs sm:text-sm mt-0.5 font-medium">
-                          Skip the email wait. Chat directly with our technical procurement team on WhatsApp (Instant response).
+                          Serving US, EMEA &amp; APAC time zones. Chat directly with our Bangalore scientific team on WhatsApp for real-time technical consultation.
                       </p>
                   </div>
               </div>
               <a 
-                  href="https://wa.me/919555422455?text=Hello%20SMD%20Life%20Sciences,%20I%20am%20interested%20in%20pricing%20and%20CoA%20for%20diagnostic%20reagents."
+                  href="https://wa.me/919555422455?text=Hello%20SMD%20Life%20Sciences,%20I%20am%20inquiring%20from%20our%20R&D%20procurement%20desk%20regarding%20recombinant%20antigens,%20monoclonal%20antibodies,%20and%20custom%20CDMO%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="shrink-0 w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-emerald-50 text-emerald-800 font-extrabold rounded-xl shadow-md hover:shadow-lg transition-all text-sm sm:text-base flex items-center justify-center gap-2 cursor-pointer"
               >
                   <i className="fab fa-whatsapp text-xl text-[#25D366]"></i>
-                  <span>Chat on WhatsApp</span>
+                  <span>Chat on Global WhatsApp</span>
               </a>
           </div>
 
@@ -231,19 +234,19 @@ export default function ContactPage() {
                           <div>
                               <strong className="block text-slate-900 text-xs tracking-wide uppercase mb-0.5">Technical Desk Hours</strong>
                               <span className="text-slate-600 font-medium leading-relaxed block text-xs sm:text-sm">
-                                  Monday — Saturday: 9:30 AM — 6:30 PM IST · <span className="text-rose-500 font-semibold bg-rose-50 px-1.5 py-0.5 rounded text-[11px]">Closed on Sundays</span>
+                                  Monday — Saturday: 9:30 AM — 6:30 PM IST (UTC +5:30) · <span className="text-emerald-700 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded text-[11px]">24/7 International Digital RFQs Active</span>
                               </span>
                           </div>
                       </div>
 
                       <div className="flex items-start gap-3.5 p-3 rounded-xl bg-slate-50/70 border border-slate-100">
                           <div className="w-9 h-9 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
-                              <i className="fas fa-shield-alt text-base"></i>
+                              <i className="fas fa-plane-departure text-base"></i>
                           </div>
                           <div>
-                              <strong className="block text-slate-900 text-xs tracking-wide uppercase mb-0.5">Cold Chain Express Dispatch &amp; CoA Guarantee</strong>
+                              <strong className="block text-slate-900 text-xs tracking-wide uppercase mb-0.5">Global Cold-Chain Airfreight &amp; Export Compliance</strong>
                               <span className="text-slate-600 font-medium leading-relaxed block text-xs sm:text-sm">
-                                  Express 24–48h cold chain dispatch (Blue Gel / Dry Ice) with lot-specific analytical CoA (SDS-PAGE &amp; HPLC).
+                                  Validated temperature-controlled express airfreight (FedEx / DHL Life Sciences Temp-Assure with Dry Ice / Blue Gel) to USA, Europe, APAC &amp; Middle East with full export documentation (Batch CoA, MSDS, Certificate of Origin).
                               </span>
                           </div>
                       </div>
@@ -274,10 +277,10 @@ export default function ContactPage() {
                       <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                         <i className="fas fa-paper-plane text-base"></i>
                       </div>
-                      Send a Technical RFQ
+                      Send a Technical RFQ / Global Inquiry
                   </h2>
                   <p className="text-xs sm:text-sm text-slate-500 mb-3.5 font-medium">
-                      ⏱️ Guaranteed Certificate of Analysis (CoA) &amp; quotation from our scientists within <strong className="text-slate-700">24 hours</strong>.
+                      ⏱️ Guaranteed Certificate of Analysis (CoA) &amp; quotation from our scientists within <strong className="text-slate-700">24 hours</strong> across US, European &amp; Asian time zones.
                   </p>
                   
                   <div className="flex flex-wrap gap-2 sm:gap-2.5 mb-4 pb-3.5 border-b border-slate-100">
@@ -288,7 +291,10 @@ export default function ContactPage() {
                           <i className="fas fa-dna"></i> &gt;95% Purity (SDS-PAGE)
                       </span>
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-purple-50 text-purple-700 text-xs font-bold border border-purple-100">
-                          <i className="fas fa-snowflake"></i> 24-48h Cold Chain
+                          <i className="fas fa-plane"></i> Global Airfreight Export
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-bold border border-amber-100">
+                          <i className="fas fa-lock"></i> 100% Client IP Ownership
                       </span>
                   </div>
 
@@ -298,45 +304,116 @@ export default function ContactPage() {
               </div>
           </div>
 
-          {/* Areas We Serve - Local SEO Booster */}
+          {/* Global Biotech & Diagnostic Supply Network */}
           <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-10 mb-12">
               <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                      <i className="fas fa-globe-asia text-teal-600 mr-2"></i> Pan-India Diagnostic &amp; IVD Manufacturer Supply Network
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 border border-blue-100">
+                      <i className="fas fa-globe"></i> International Sourcing &amp; Export Desks
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+                      Global Diagnostic &amp; Custom Biotech CDMO Supply Footprint
                   </h3>
-                  <p className="text-slate-600 font-medium max-w-3xl mx-auto">
-                      SMD Life Sciences delivers batch-tested antigens, monoclonal antibodies, and colloidal gold conjugates to diagnostic kit manufacturers and research institutions across India.
+                  <p className="text-slate-600 font-medium max-w-3xl mx-auto text-sm sm:text-base leading-relaxed">
+                      Supplying high-affinity monoclonal antibodies, recombinant antigens, and custom assay CDMO solutions to diagnostic manufacturers, pharma innovators, and life sciences hubs worldwide.
                   </p>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-slate-700 font-medium">
-                  <div className="space-y-2">
-                      <strong className="block text-slate-900 mb-3 pb-2 border-b border-slate-100">North India Bio-Clusters</strong>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Delhi NCR &amp; Manesar</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Dehradun Biotech Park</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Lucknow Biotech City</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Chandigarh &amp; Mohali</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-slate-700 font-medium">
+                  {/* North America */}
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition-colors space-y-2">
+                      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-slate-200">
+                          <span className="text-xl">🇺🇸</span>
+                          <div>
+                              <strong className="block text-slate-900 text-sm font-bold">North America</strong>
+                              <span className="text-[11px] text-blue-600 font-semibold">USA &amp; Canada</span>
+                          </div>
+                      </div>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Boston &amp; Cambridge Hub (MA)</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> San Francisco Bay &amp; San Diego (CA)</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Research Triangle Park (NC) &amp; NJ</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Toronto &amp; Montreal Life Science Corridors</p>
+                      <div className="mt-3 pt-2 border-t border-slate-200/60 text-[11px] text-slate-500 italic">
+                        US BIOSECURE Act compliant supply diversification for monoclonal antibodies &amp; custom antigens.
+                      </div>
                   </div>
-                  <div className="space-y-2">
-                      <strong className="block text-slate-900 mb-3 pb-2 border-b border-slate-100">West &amp; Central India</strong>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Mumbai &amp; Thane</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Pune Biotech Hub (Hinjawadi)</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Ahmedabad &amp; Vadodara</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Indore Pharma Cluster</p>
+
+                  {/* Europe */}
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition-colors space-y-2">
+                      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-slate-200">
+                          <span className="text-xl">🇪🇺</span>
+                          <div>
+                              <strong className="block text-slate-900 text-sm font-bold">Europe (EMEA)</strong>
+                              <span className="text-[11px] text-blue-600 font-semibold">Germany, UK, Switzerland, France</span>
+                          </div>
+                      </div>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Germany (Munich, Berlin, Frankfurt)</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> UK (Oxford-Cambridge-London Triangle)</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Switzerland (Basel &amp; Zurich Bio-Valley)</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> France, Netherlands &amp; Ireland</p>
+                      <div className="mt-3 pt-2 border-t border-slate-200/60 text-[11px] text-slate-500 italic">
+                        High-purity diagnostic raw materials, custom antibody generation &amp; batch reserve programs.
+                      </div>
                   </div>
-                  <div className="space-y-2">
-                      <strong className="block text-slate-900 mb-3 pb-2 border-b border-slate-100">South India Bio-Hubs</strong>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Bengaluru Electronic City</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Hyderabad Genome Valley</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Chennai TICEL Bio Park</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Kochi Bio360 Cluster</p>
+
+                  {/* Asia-Pacific */}
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition-colors space-y-2">
+                      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-slate-200">
+                          <span className="text-xl">🌏</span>
+                          <div>
+                              <strong className="block text-slate-900 text-sm font-bold">Asia-Pacific (APAC)</strong>
+                              <span className="text-[11px] text-blue-600 font-semibold">Japan, Korea, Singapore, Australia</span>
+                          </div>
+                      </div>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Japan (Tokyo, Osaka &amp; Kansai Cluster)</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> South Korea (Songdo Biofront &amp; Seoul)</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Singapore (Biopolis Biomedical Hub)</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Australia &amp; Vietnam Diagnostic Labs</p>
+                      <div className="mt-3 pt-2 border-t border-slate-200/60 text-[11px] text-slate-500 italic">
+                        High-volume lateral flow raw materials, gold conjugates &amp; OEM cassette manufacturing.
+                      </div>
                   </div>
-                  <div className="space-y-2">
-                      <strong className="block text-slate-900 mb-3 pb-2 border-b border-slate-100">East &amp; North East</strong>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Kolkata Biotech Park</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Bhubaneswar Biotech Park</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Patna Medical Cluster</p>
-                      <p className="hover:text-blue-600 transition-colors cursor-default"><i className="fas fa-check text-teal-500 mr-2 text-xs"></i> Guwahati Biotech Hub</p>
+
+                  {/* India & Middle East */}
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition-colors space-y-2">
+                      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-slate-200">
+                          <span className="text-xl">🇮🇳</span>
+                          <div>
+                              <strong className="block text-slate-900 text-sm font-bold">India &amp; Middle East</strong>
+                              <span className="text-[11px] text-blue-600 font-semibold">Global Biomanufacturing Base</span>
+                          </div>
+                      </div>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Bengaluru Electronic City (R&amp;D Hub)</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Hyderabad Genome Valley &amp; Pune Cluster</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> UAE (Dubai Science Park) &amp; Saudi Arabia</p>
+                      <p className="text-xs text-slate-600 flex items-center gap-1.5"><i className="fas fa-check text-blue-600 text-[10px]"></i> Delhi NCR, Chennai &amp; Mumbai Corridors</p>
+                      <div className="mt-3 pt-2 border-t border-slate-200/60 text-[11px] text-slate-500 italic">
+                        Domestic direct sourcing, 24-48h express cold-chain delivery &amp; milestone CDMO contracts.
+                      </div>
+                  </div>
+              </div>
+
+              {/* International Logistics Guarantee Banner */}
+              <div className="mt-8 pt-6 border-t border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-600">
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-blue-50/60 border border-blue-100">
+                      <i className="fas fa-snowflake text-blue-600 text-base mt-0.5 shrink-0"></i>
+                      <div>
+                          <strong className="text-slate-900 block font-semibold mb-0.5">Validated Cold-Chain Airfreight</strong>
+                          <span>FedEx / DHL Life Sciences Temp-Assure with Dry Ice (-20°C / -80°C) and real-time temperature loggers.</span>
+                      </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-emerald-50/60 border border-emerald-100">
+                      <i className="fas fa-file-contract text-emerald-600 text-base mt-0.5 shrink-0"></i>
+                      <div>
+                          <strong className="text-slate-900 block font-semibold mb-0.5">Complete Export Documentation</strong>
+                          <span>Lot Certificate of Analysis (CoA), SEC-HPLC &amp; SDS-PAGE profiles, MSDS, Certificate of Origin, and Customs HS Code clearance.</span>
+                      </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-purple-50/60 border border-purple-100">
+                      <i className="fas fa-shield-alt text-purple-600 text-base mt-0.5 shrink-0"></i>
+                      <div>
+                          <strong className="text-slate-900 block font-semibold mb-0.5">100% Client IP Assignment</strong>
+                          <span>Legally binding mutual NDAs and complete commercial intellectual property transfer for custom antibody &amp; CDMO programs.</span>
+                      </div>
                   </div>
               </div>
           </div>

@@ -7,6 +7,8 @@ const SCRIPT_PATTERN = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>|<[^>]+
 export default function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [country, setCountry] = useState('United States');
+  const [serviceType, setServiceType] = useState('Custom Monoclonal Antibody Generation');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [antiBot, setAntiBot] = useState('');
@@ -26,7 +28,7 @@ export default function ContactForm() {
     }
 
     // 2. Anti-Script & XSS Protection
-    const fieldsToScan = [name, email, phone, message];
+    const fieldsToScan = [name, email, phone, country, serviceType, message];
     for (const val of fieldsToScan) {
       if (SCRIPT_PATTERN.test(val)) {
         setStatus('security_error');
@@ -56,6 +58,8 @@ export default function ContactForm() {
         body: JSON.stringify({
           name,
           email,
+          country_region: country,
+          inquiry_type: serviceType,
           phone,
           message,
         }),
@@ -67,6 +71,8 @@ export default function ContactForm() {
         setEmail('');
         setPhone('');
         setMessage('');
+        setCountry('United States');
+        setServiceType('Custom Monoclonal Antibody Generation');
         if (formRef.current) formRef.current.reset();
       } else {
         setStatus('error');
@@ -130,21 +136,86 @@ export default function ContactForm() {
         />
       </div>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="flex flex-col gap-1">
+          <label className="text-xs sm:text-sm font-bold text-slate-700 ml-1">
+            Country / Region <span className="text-red-500">*</span>
+          </label>
+          <select
+            name="country"
+            value={country}
+            onChange={(e) => {
+              if (status) setStatus('');
+              setCountry(e.target.value);
+            }}
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all font-medium"
+          >
+            <optgroup label="Top Global Biotech & IVD Markets">
+              <option value="United States">🇺🇸 United States (+1)</option>
+              <option value="Germany">🇩🇪 Germany (+49)</option>
+              <option value="United Kingdom">🇬🇧 United Kingdom (+44)</option>
+              <option value="Switzerland">🇨🇭 Switzerland (+41)</option>
+              <option value="Japan">🇯🇵 Japan (+81)</option>
+              <option value="South Korea">🇰🇷 South Korea (+82)</option>
+              <option value="Singapore">🇸🇬 Singapore (+65)</option>
+              <option value="India">🇮🇳 India (+91)</option>
+            </optgroup>
+            <optgroup label="Middle East & APAC">
+              <option value="United Arab Emirates">🇦🇪 United Arab Emirates (+971)</option>
+              <option value="Saudi Arabia">🇸🇦 Saudi Arabia (+966)</option>
+              <option value="Australia">🇦🇺 Australia (+61)</option>
+              <option value="Vietnam">🇻🇳 Vietnam (+84)</option>
+              <option value="Thailand">🇹🇭 Thailand (+66)</option>
+            </optgroup>
+            <optgroup label="Europe & Americas">
+              <option value="Canada">🇨🇦 Canada (+1)</option>
+              <option value="France">🇫🇷 France (+33)</option>
+              <option value="Netherlands">🇳🇱 Netherlands (+31)</option>
+              <option value="Italy">🇮🇹 Italy (+39)</option>
+              <option value="Spain">🇪🇸 Spain (+34)</option>
+              <option value="Brazil">🇧🇷 Brazil (+55)</option>
+              <option value="Other International">🌍 Other International</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label className="text-xs sm:text-sm font-bold text-slate-700 ml-1">
+            Inquiry / Service Type <span className="text-red-500">*</span>
+          </label>
+          <select
+            name="serviceType"
+            value={serviceType}
+            onChange={(e) => {
+              if (status) setStatus('');
+              setServiceType(e.target.value);
+            }}
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all font-medium"
+          >
+            <option value="Custom Monoclonal Antibody Generation">Custom Monoclonal Antibody Generation (Hybridoma / Recombinant)</option>
+            <option value="Recombinant Antigen Sourcing & Bulk Supply">Recombinant Antigen Sourcing & Bulk Scaling</option>
+            <option value="Diagnostic CDMO (Lateral Flow / ELISA)">Diagnostic CDMO (Lateral Flow & ELISA Assay Development)</option>
+            <option value="Bulk IVD Raw Materials & Conjugates">Bulk IVD Raw Materials (Gold/Latex Conjugates)</option>
+            <option value="Evaluation Sample & CoA Request">Evaluation Sample & Lot CoA Request</option>
+          </select>
+        </div>
+      </div>
+
       <div className="flex flex-col gap-1">
         <label className="text-xs sm:text-sm font-bold text-slate-700 ml-1">
-          Phone Number <span className="text-red-500">*</span>
+          Phone / WhatsApp (with Country Code) <span className="text-red-500">*</span>
         </label>
         <input 
           type="tel" 
           name="phone" 
           required 
-          maxLength={20}
+          maxLength={25}
           value={phone}
           onChange={(e) => {
             if (status) setStatus('');
             setPhone(e.target.value);
           }}
-          placeholder="E.g., +91 98765 43210" 
+          placeholder="E.g., +1 (555) 019-2834 or +44 20 7946 0912 or +91 98765 43210" 
           className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder-slate-400 font-medium"
         />
       </div>

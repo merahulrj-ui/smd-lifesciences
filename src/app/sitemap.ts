@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { BIOTECH_PRODUCTS } from '@/data/products';
+import { STATIC_INSIGHTS } from '@/data/insights';
 import pool from '@/lib/db';
 
 const BASE_URL = 'https://lifesciences.smdmedicare.in';
@@ -92,6 +93,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   } catch (err) {
     // If DB is unavailable during static build, fallback safely
+  }
+
+  // Merge static insights
+  const existingUrls = new Set(insightRoutes.map((r) => r.url));
+  for (const item of STATIC_INSIGHTS) {
+    const url = `${BASE_URL}/insights/${item.slug}`;
+    if (!existingUrls.has(url)) {
+      insightRoutes.push({
+        url,
+        lastModified: new Date(item.updated_at || item.created_at),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    }
   }
 
   return [...staticRoutes, ...productRoutes, ...insightRoutes];

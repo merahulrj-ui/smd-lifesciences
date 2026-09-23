@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import pool from '@/lib/db';
 import { BIOTECH_PRODUCTS } from '@/data/products';
+import { getStaticInsightBySlug, STATIC_INSIGHTS } from '@/data/insights';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -13,41 +14,49 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = resolvedParams.slug;
   const cleanSlug = slug.replace(/\.html$/, '');
 
+  let art: any = null;
   try {
     const [rows] = await pool.query(
       'SELECT title, content, blog_image FROM blog WHERE (slug = ? OR slug = ? OR id = ?) LIMIT 1',
       [slug, cleanSlug, isNaN(Number(slug)) ? 0 : Number(slug)]
     ) as any[];
 
-    if (!rows || rows.length === 0) {
-      return { title: 'Scientific Insight | SMD Life Sciences' };
+    if (rows && rows.length > 0) {
+      art = rows[0];
     }
-
-    const art = rows[0];
-    return {
-      title: `${art.title} | SMD Life Sciences Insights`,
-      description: `Technical whitepaper: ${art.title}. Advanced protocols and validation data for diagnostic manufacturers.`,
-      alternates: {
-        canonical: `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,
-      },
-      openGraph: {
-        title: `${art.title} | SMD Life Sciences`,
-        description: `Technical whitepaper and validation data for diagnostic manufacturers.`,
-        url: `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,
-        siteName: 'SMD Life Sciences',
-        type: 'article',
-        images: [art.blog_image || 'https://lifesciences.smdmedicare.in/icon-512.png'],
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: `${art.title} | SMD Life Sciences`,
-        description: `Technical whitepaper: ${art.title}. Advanced protocols and validation data for diagnostic manufacturers.`,
-        images: [art.blog_image || 'https://lifesciences.smdmedicare.in/icon-512.png'],
-      },
-    };
   } catch (e) {
+    // DB offline, fallback to static
+  }
+
+  if (!art) {
+    art = getStaticInsightBySlug(cleanSlug);
+  }
+
+  if (!art) {
     return { title: 'Scientific Insight | SMD Life Sciences' };
   }
+
+  return {
+    title: `${art.title} | SMD Life Sciences Insights`,
+    description: `Technical whitepaper: ${art.title}. Advanced protocols and validation data for diagnostic manufacturers.`,
+    alternates: {
+      canonical: `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,
+    },
+    openGraph: {
+      title: `${art.title} | SMD Life Sciences`,
+      description: `Technical whitepaper and validation data for diagnostic manufacturers.`,
+      url: `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,
+      siteName: 'SMD Life Sciences',
+      type: 'article',
+      images: [art.blog_image || 'https://lifesciences.smdmedicare.in/icon-512.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${art.title} | SMD Life Sciences`,
+      description: `Technical whitepaper: ${art.title}. Advanced protocols and validation data for diagnostic manufacturers.`,
+      images: [art.blog_image || 'https://lifesciences.smdmedicare.in/icon-512.png'],
+    },
+  };
 }
 
 export const revalidate = 3600;
@@ -64,12 +73,19 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
       [slug, cleanSlug, cleanSlug, isNaN(Number(slug)) ? 0 : Number(slug)]
     ) as any[];
 
-    if (!rows || rows.length === 0) {
-      notFound();
+    if (rows && rows.length > 0) {
+      article = rows[0];
     }
-    article = rows[0];
   } catch (error) {
-    console.error('Error fetching insight article:', error);
+    console.error('Error fetching insight article from DB:', error);
+  }
+
+  // Fallback to static insights if not in database
+  if (!article) {
+    article = getStaticInsightBySlug(cleanSlug);
+  }
+
+  if (!article) {
     notFound();
   }
 
@@ -83,6 +99,10 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
     relatedInsights = rRows || [];
   } catch (e) {
     // ignore
+  }
+
+  if (relatedInsights.length === 0) {
+    relatedInsights = STATIC_INSIGHTS.filter((s) => s.slug !== cleanSlug).slice(0, 3);
   }
 
   // Related Biotech Products from catalog
@@ -231,11 +251,11 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
             </h1>
 
             {article.blog_image && (
-              <div className="mb-8 rounded-xl overflow-hidden bg-slate-100 border border-slate-200">
+              <div className="mb-8 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm">
                 <img 
-                  src={article.blog_image.startsWith('http') ? article.blog_image : `/backend-media/${article.blog_image}`} 
+                  src={article.blog_image.startsWith('http') || article.blog_image.startsWith('/') ? article.blog_image : `/backend-media/${article.blog_image}`} 
                   alt={article.title} 
-                  className="w-full h-auto object-cover max-h-[420px]"
+                  className="w-full h-auto object-cover max-h-[460px]"
                 />
               </div>
             )}

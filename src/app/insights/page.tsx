@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import pool from '@/lib/db';
+import { STATIC_INSIGHTS } from '@/data/insights';
 
 export const metadata: Metadata = {
   title: 'Biotech Scientific Insights & IVD Whitepapers | SMD Life Sciences',
@@ -42,6 +43,15 @@ export default async function BiotechInsightsPage() {
     articles = rows || [];
   } catch (error) {
     console.error('Error fetching biotech insights:', error);
+  }
+
+  // Merge static insights fallback
+  if (articles.length === 0) {
+    articles = STATIC_INSIGHTS;
+  } else {
+    const dbSlugs = new Set(articles.map((a: any) => a.slug));
+    const missingStatic = STATIC_INSIGHTS.filter((s) => !dbSlugs.has(s.slug));
+    articles = [...articles, ...missingStatic];
   }
 
   const formatDate = (dateString: string) => {
@@ -156,7 +166,7 @@ export default async function BiotechInsightsPage() {
                 {art.blog_image && (
                   <div className="h-48 w-full overflow-hidden bg-slate-100">
                     <img 
-                      src={art.blog_image.startsWith('http') ? art.blog_image : `/backend-media/${art.blog_image}`} 
+                      src={art.blog_image.startsWith('http') || art.blog_image.startsWith('/') ? art.blog_image : `/backend-media/${art.blog_image}`} 
                       alt={art.title} 
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
