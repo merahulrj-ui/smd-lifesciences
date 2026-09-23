@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "SMD Life Sciences" }],
   creator: "SMD Life Sciences & Pentavalent Bio Sciences",
-  publisher: "SMD Medicare Life Sciences Division",
+  publisher: "SMD Life Sciences",
   openGraph: {
     title: "SMD Life Sciences & Diagnostic Solutions",
     description: "High-Purity Biological Raw Materials & Custom CDMO Services for IVD Manufacturers.",
@@ -142,8 +142,12 @@ const organizationSchemaGraph = {
     {
       '@type': 'WebSite',
       '@id': 'https://lifesciences.smdmedicare.in/#website',
-      url: 'https://lifesciences.smdmedicare.in',
+      url: 'https://lifesciences.smdmedicare.in/',
       name: 'SMD Life Sciences',
+      alternateName: [
+        'SMD Life Sciences & Diagnostic Solutions',
+        'SMD Lifesciences'
+      ],
       publisher: {
         '@id': 'https://lifesciences.smdmedicare.in/#organization',
       },
