@@ -3,11 +3,25 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useUI } from '@/context/UIContext';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export default function MobileDrawer() {
   const { isMobileDrawerOpen, setMobileDrawerOpen } = useUI();
   const pathname = usePathname();
+  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const sanitized = searchQuery.replace(/<[^>]*>?/gm, '').replace(/script/gi, '').slice(0, 100).trim();
+    closeDrawer();
+    if (sanitized) {
+      router.push(`/products?q=${encodeURIComponent(sanitized)}`);
+    } else {
+      router.push('/products');
+    }
+  };
 
   const closeDrawer = () => {
     setMobileDrawerOpen(false);
@@ -58,7 +72,31 @@ export default function MobileDrawer() {
           </button>
         </div>
 
-        {/* Drawer Body Links */}
+        {/* Search Bar in Drawer */}
+        <div className="p-4 border-b border-slate-100 bg-slate-50/70">
+          <form 
+            onSubmit={handleSearch} 
+            className="flex items-center bg-white rounded-xl py-1 pl-3.5 pr-1 border border-slate-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100 transition-all shadow-sm"
+          >
+            <input 
+              type="text" 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value.replace(/[<>]/g, '').slice(0, 100))}
+              placeholder="Search antibodies, reagents..." 
+              maxLength={100}
+              className="border-none bg-transparent outline-none flex-1 text-xs text-slate-700 pr-2" 
+            />
+            <button 
+              type="submit" 
+              aria-label="Search" 
+              className="bg-blue-600 hover:bg-blue-700 text-white w-7 h-7 rounded-lg flex items-center justify-center cursor-pointer transition-colors shadow-sm shrink-0"
+            >
+              <i className="fas fa-search text-[10px]" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+
+        {/* Drawer Body Links - Exact match to Desktop Navbar */}
         <div className="flex-1 overflow-y-auto p-5 custom-scrollbar">
           <ul className="flex flex-col gap-1.5 list-none m-0 p-0">
             <li>
@@ -78,13 +116,8 @@ export default function MobileDrawer() {
                 onClick={closeDrawer} 
                 className={getDrawerLinkClass(pathname?.startsWith('/products'))}
               >
-                <i className="fas fa-vial w-5 text-center text-emerald-600"></i>
-                <div className="flex-1 flex items-center justify-between">
-                  <span>64+ Reagents Catalog</span>
-                  <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">
-                    IVD
-                  </span>
-                </div>
+                <i className="fas fa-flask w-5 text-center text-blue-600"></i>
+                <span>Products</span>
               </Link>
             </li>
 
@@ -94,13 +127,8 @@ export default function MobileDrawer() {
                 onClick={closeDrawer} 
                 className={getDrawerLinkClass(pathname?.startsWith('/services'))}
               >
-                <i className="fas fa-flask w-5 text-center text-orange-600"></i>
-                <div className="flex-1 flex items-center justify-between">
-                  <span>CDMO Services &amp; R&amp;D</span>
-                  <span className="text-[10px] font-bold bg-orange-100 text-orange-800 px-1.5 py-0.5 rounded">
-                    mAb
-                  </span>
-                </div>
+                <i className="fas fa-microscope w-5 text-center text-blue-600"></i>
+                <span>CDMO Services</span>
               </Link>
             </li>
 
@@ -110,8 +138,8 @@ export default function MobileDrawer() {
                 onClick={closeDrawer} 
                 className={getDrawerLinkClass(pathname?.startsWith('/insights'))}
               >
-                <i className="fas fa-newspaper w-5 text-center text-indigo-600"></i>
-                <span>Insights &amp; Whitepapers</span>
+                <i className="fas fa-newspaper w-5 text-center text-blue-600"></i>
+                <span>Insights</span>
               </Link>
             </li>
 
@@ -121,8 +149,8 @@ export default function MobileDrawer() {
                 onClick={closeDrawer} 
                 className={getDrawerLinkClass(pathname === '/about')}
               >
-                <i className="fas fa-building-columns w-5 text-center text-teal-600"></i>
-                <span>Bangalore R&amp;D Facility</span>
+                <i className="fas fa-building w-5 text-center text-blue-600"></i>
+                <span>About Us</span>
               </Link>
             </li>
 
@@ -132,8 +160,8 @@ export default function MobileDrawer() {
                 onClick={closeDrawer} 
                 className={getDrawerLinkClass(pathname === '/contact')}
               >
-                <i className="fas fa-headset w-5 text-center text-purple-600"></i>
-                <span>Contact Technical Desk</span>
+                <i className="fas fa-headset w-5 text-center text-blue-600"></i>
+                <span>Contact</span>
               </Link>
             </li>
           </ul>
