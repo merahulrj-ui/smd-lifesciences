@@ -82,7 +82,7 @@ export default function BiotechProductsPage() {
             <i className="fas fa-home text-slate-400 text-[11px]"></i> Home
           </Link>
           <span className="text-slate-300">/</span>
-          <span className="text-slate-900 font-bold">64+ IVD Biological Reagents Catalog</span>
+          <span className="text-slate-900 font-bold">Products</span>
         </div>
 
         {/* Header Title & CTA Bar */}

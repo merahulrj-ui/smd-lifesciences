@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { BiotechProduct } from '@/data/products';
 
@@ -11,10 +12,22 @@ interface Props {
 const ITEMS_PER_PAGE = 15;
 
 export default function BiotechCatalogClient({ products }: Props) {
-  const [searchTerm, setSearchTerm] = useState('');
+  const searchParams = useSearchParams();
+  const initialQuery = searchParams.get('q') || '';
+  const [searchTerm, setSearchTerm] = useState(initialQuery);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedType, setSelectedType] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
+
+  // Sync search term when URL query changes (e.g. from SearchModal)
+  useEffect(() => {
+    const q = searchParams.get('q') || '';
+    if (q !== searchTerm) {
+      setSearchTerm(q);
+      setCurrentPage(1);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   // Category counts
   const categories = useMemo(() => {
@@ -126,7 +139,7 @@ export default function BiotechCatalogClient({ products }: Props) {
               </select>
             </div>
 
-            <div className="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-xl shrink-0">
+            <div className="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-xl shrink-0 whitespace-nowrap">
               Showing <strong className="text-slate-900">{filteredProducts.length}</strong> of {products.length}
             </div>
           </div>
