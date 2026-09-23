@@ -92,7 +92,7 @@ export default function BiotechCatalogClient({ products }: Props) {
   };
 
   return (
-    <div className="space-y-8 overflow-x-hidden">
+    <div className="space-y-8">
       {/* Search & Filter Terminal Bar */}
       <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 shadow-sm">
         
