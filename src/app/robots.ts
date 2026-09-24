@@ -22,7 +22,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://lifesciences.smdmedicare.in/sitemap.xml',
-    host: 'https://lifesciences.smdmedicare.in',
   };
 }
 
