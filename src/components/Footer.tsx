@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function BiotechFooter() {
   return (
-    <footer className="bg-[#051f18] text-slate-300 pt-12 pb-24 lg:pb-12 border-t border-emerald-900/50 font-sans">
+    <footer className="bg-[#0b0f19] text-slate-300 pt-12 pb-24 lg:pb-12 border-t border-slate-800 font-sans">
       <div className="max-w-[1400px] mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10 md:mb-12">
         
         {/* Col 1: Biotech Branding */}
@@ -18,7 +18,7 @@ export default function BiotechFooter() {
             />
             <div>
               <span className="text-white font-extrabold text-[15px] tracking-tight block leading-tight">SMD LIFE SCIENCES</span>
-              <span className="text-emerald-400 text-[11px] font-semibold tracking-wider uppercase">Diagnostic Solutions</span>
+              <span className="text-orange-400 text-[11px] font-semibold tracking-wider uppercase">Diagnostic Solutions</span>
             </div>
           </div>
           <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
@@ -40,36 +40,36 @@ export default function BiotechFooter() {
         {/* Col 2: Life Sciences Portal Links */}
         <div className="flex flex-col">
           <h3 className="text-white text-base font-bold mb-4 tracking-wide flex items-center gap-2">
-            <i className="fas fa-flask text-emerald-400 text-xs"></i> Life Sciences Portal
+            <i className="fas fa-flask text-orange-400 text-xs"></i> Life Sciences Portal
           </h3>
           <ul className="flex flex-col gap-2.5 text-xs sm:text-sm">
             <li>
-              <Link href="/" className="text-slate-400 hover:text-emerald-300 transition-colors flex items-center gap-2">
+              <Link href="/" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> Division Home
               </Link>
             </li>
             <li>
-              <Link href="/products" className="text-slate-400 hover:text-emerald-300 transition-colors flex items-center gap-2">
+              <Link href="/products" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> 64+ Catalog Reagents Directory
               </Link>
             </li>
             <li>
-              <Link href="/services" className="text-slate-400 hover:text-emerald-300 transition-colors flex items-center gap-2">
+              <Link href="/services" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> Custom CDMO &amp; Hybridoma Services
               </Link>
             </li>
             <li>
-              <Link href="/insights" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
+              <Link href="/insights" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> Scientific Insights &amp; Whitepapers
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
+              <Link href="/about" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> About Bangalore R&amp;D Facility
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2">
+              <Link href="/contact" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> Request Reagent Samples &amp; CoA
               </Link>
             </li>
@@ -79,31 +79,31 @@ export default function BiotechFooter() {
         {/* Col 3: Biological Reagent Categories */}
         <div className="flex flex-col">
           <h3 className="text-white text-base font-bold mb-4 tracking-wide flex items-center gap-2">
-            <i className="fas fa-layer-group text-emerald-400 text-xs"></i> Reagent Categories
+            <i className="fas fa-layer-group text-orange-400 text-xs"></i> Reagent Categories
           </h3>
           <ul className="flex flex-col gap-2.5 text-xs sm:text-sm">
             <li>
-              <Link href="/ivd-raw-materials" className="text-slate-400 hover:text-emerald-300 transition-colors flex items-center gap-2">
+              <Link href="/ivd-raw-materials" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> IVD Raw Materials (India Hub)
               </Link>
             </li>
             <li>
-              <Link href="/recombinant-antigens" className="text-slate-400 hover:text-emerald-300 transition-colors flex items-center gap-2">
+              <Link href="/recombinant-antigens" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> Recombinant Antigens (Bangalore)
               </Link>
             </li>
             <li>
-              <Link href="/diagnostic-cdmo" className="text-slate-400 hover:text-emerald-300 transition-colors flex items-center gap-2">
+              <Link href="/diagnostic-cdmo" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> Diagnostic CDMO &amp; Assay Development
               </Link>
             </li>
             <li>
-              <Link href="/products" className="text-slate-400 hover:text-emerald-300 transition-colors flex items-center gap-2">
+              <Link href="/products" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> Monoclonal Antibodies &amp; Conjugates
               </Link>
             </li>
             <li>
-              <Link href="/services" className="text-slate-400 hover:text-emerald-300 transition-colors flex items-center gap-2">
+              <Link href="/services" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> Lateral Flow Pairing Optimization
               </Link>
             </li>
@@ -113,33 +113,33 @@ export default function BiotechFooter() {
         {/* Col 4: Scientific Coordination Desk */}
         <div className="flex flex-col">
           <h3 className="text-white text-base font-bold mb-4 tracking-wide flex items-center gap-2">
-            <i className="fas fa-headset text-emerald-400 text-xs"></i> Scientific Desk
+            <i className="fas fa-headset text-orange-400 text-xs"></i> Scientific Desk
           </h3>
           <div className="flex flex-col gap-3 text-xs sm:text-sm">
             <p className="flex items-start gap-3 text-slate-400">
-              <i className="fab fa-whatsapp mt-1 text-emerald-400 text-base"></i>
-              <a href="https://wa.me/919555422455" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors font-medium">
+              <i className="fab fa-whatsapp mt-1 text-[#25D366] text-base"></i>
+              <a href="https://wa.me/919555422455" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors font-medium">
                 +91 95554 22455 (WhatsApp Direct)
               </a>
             </p>
             <p className="flex items-start gap-3 text-slate-400 break-all">
-              <i className="fas fa-envelope mt-1 text-emerald-400"></i>
-              <a href="mailto:info@smdmedicare.in" className="hover:text-emerald-300 transition-colors">
+              <i className="fas fa-envelope mt-1 text-orange-400"></i>
+              <a href="mailto:info@smdmedicare.in" className="hover:text-orange-400 transition-colors">
                 info@smdmedicare.in
               </a>
             </p>
             <p className="flex items-start gap-2.5 text-slate-400 text-xs leading-relaxed">
-              <i className="fas fa-map-marker-alt mt-0.5 text-emerald-400 shrink-0"></i>
+              <i className="fas fa-map-marker-alt mt-0.5 text-orange-400 shrink-0"></i>
               <span>R&amp;D Hub: Bangalore Bio-Cluster, Karnataka<br/>Corporate HQ: New Delhi &amp; Roorkee</span>
             </p>
 
             {/* Switch to Hospital Equipment */}
-            <div className="mt-2 pt-3 border-t border-emerald-900/60">
+            <div className="mt-2 pt-3 border-t border-slate-800">
               <a 
                 href="https://www.smdmedicare.in" 
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-950/60 hover:bg-emerald-900/60 text-emerald-300 hover:text-white transition-all text-xs font-semibold border border-emerald-700/50"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 hover:text-white transition-all text-xs font-semibold border border-slate-700"
               >
-                <i className="fas fa-hospital"></i> Looking for Hospital Equipment? Visit Main Site &rarr;
+                <i className="fas fa-hospital text-orange-400"></i> Looking for Hospital Equipment? Visit Main Site &rarr;
               </a>
             </div>
           </div>
@@ -152,12 +152,12 @@ export default function BiotechFooter() {
           &copy; {new Date().getFullYear()} SMD MEDICARE &ndash; Life Sciences &amp; Diagnostic Solutions Division. All Rights Reserved.
         </p>
         <ul className="flex flex-wrap gap-4 text-xs sm:text-sm text-slate-300">
-          <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-          <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-          <li><Link href="/shipping-policy" className="hover:text-white transition-colors">Cold Chain Shipping</Link></li>
-          <li><Link href="/return-policy" className="hover:text-white transition-colors">Return Policy</Link></li>
-          <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-          <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+          <li><Link href="/about" className="hover:text-orange-400 transition-colors">About Us</Link></li>
+          <li><Link href="/contact" className="hover:text-orange-400 transition-colors">Contact</Link></li>
+          <li><Link href="/shipping-policy" className="hover:text-orange-400 transition-colors">Cold Chain Shipping</Link></li>
+          <li><Link href="/return-policy" className="hover:text-orange-400 transition-colors">Return Policy</Link></li>
+          <li><Link href="/privacy-policy" className="hover:text-orange-400 transition-colors">Privacy Policy</Link></li>
+          <li><Link href="/terms" className="hover:text-orange-400 transition-colors">Terms of Service</Link></li>
         </ul>
       </div>
     </footer>

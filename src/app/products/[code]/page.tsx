@@ -149,9 +149,9 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumbs */}
         <div className="flex items-center space-x-2 text-xs text-slate-500 mb-6">
-          <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-orange-600 transition-colors">Home</Link>
           <span>/</span>
-          <Link href="/products" className="hover:text-blue-600 transition-colors">Reagents Directory</Link>
+          <Link href="/products" className="hover:text-orange-600 transition-colors">Reagents Directory</Link>
           <span>/</span>
           <span className="text-slate-900 font-semibold">{product.code}</span>
         </div>
@@ -160,7 +160,7 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
         <div className="mb-6">
           <Link 
             href="/products"
-            className="inline-flex items-center text-xs font-semibold text-slate-600 hover:text-blue-600 transition-colors gap-1.5"
+            className="inline-flex items-center text-xs font-semibold text-slate-600 hover:text-orange-600 transition-colors gap-1.5"
           >
             <i className="fas fa-arrow-left text-[10px]"></i>
             Back to All 64+ Reagents
@@ -173,9 +173,9 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Header Card */}
-            <div className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
               <div className="flex flex-wrap items-center gap-2 mb-4">
-                <span className="text-xs font-mono font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-md border border-blue-100">
+                <span className="text-xs font-mono font-bold text-orange-700 bg-orange-50 px-3 py-1 rounded-md border border-orange-200/80">
                   {product.code}
                 </span>
                 <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-md">
@@ -196,9 +196,9 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
             </div>
 
             {/* Technical Specification Table */}
-            <div className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
               <h2 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <i className="fas fa-flask text-blue-600"></i>
+                <i className="fas fa-flask text-orange-600"></i>
                 Technical Datasheet &amp; Analytical Specifications
               </h2>
 
@@ -243,13 +243,13 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
             </div>
 
             {/* Quality & Batch Guarantee */}
-            <div className="bg-emerald-50/60 rounded-xl border border-emerald-200 p-6 flex items-start gap-4">
-              <i className="fas fa-shield-alt text-2xl text-emerald-600 shrink-0 mt-1"></i>
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 flex items-start gap-4">
+              <i className="fas fa-shield-alt text-2xl text-orange-600 shrink-0 mt-1"></i>
               <div>
-                <h3 className="text-sm font-bold text-emerald-900 mb-1">
+                <h3 className="text-sm font-bold text-slate-900 mb-1">
                   Lot-Specific Certificate of Analysis (CoA) Guarantee
                 </h3>
-                <p className="text-xs text-emerald-800 leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed">
                   Every order includes comprehensive analytical documentation including SDS-PAGE densitometry scans, ELISA binding curves, protein concentration (BCA/A280), and sterility testing reports. Manufactured under rigorous batch quality assurance protocols.
                 </p>
               </div>
@@ -260,8 +260,8 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
           <div className="space-y-6">
             
             {/* Direct RFQ Action Box */}
-            <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm sticky top-6">
-              <div className="text-xs font-bold uppercase tracking-wider text-blue-600 mb-1">
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm sticky top-6">
+              <div className="text-xs font-bold uppercase tracking-wider text-orange-600 mb-1">
                 B2B Bulk Sourcing &amp; Samples
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">
@@ -276,16 +276,16 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
                   href={`https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20Reagent%20${product.code}%20(${encodeURIComponent(product.name)}).%20Please%20provide%20bulk%20quote%20and%20CoA.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-sm"
+                  className="w-full py-3.5 px-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg"
                 >
-                  💬 Inquire on WhatsApp (+91 95554 22455)
+                  <i className="fab fa-whatsapp text-white text-sm"></i> Inquire on WhatsApp (+91 95554 22455)
                 </a>
 
                 <a 
                   href={`mailto:info@smdmedicare.in?subject=RFQ%20for%20${product.code}%20-%20${encodeURIComponent(product.name)}&body=Hello%20SMD%20Medicare%20Life%20Sciences,%0D%0A%0D%0AWe%20would%20like%20to%20request%20a%20quotation%20and%20Certificate%20of%20Analysis%20(CoA)%20for:%0D%0AProduct%20Code:%20${product.code}%0D%0AProduct%20Name:%20${encodeURIComponent(product.name)}%0D%0AQuantity%20Needed%20(mg/g):%20%0D%0ACompany%20Name:%20%0D%0AContact%20Number:%20`}
-                  className="w-full py-3 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors"
+                  className="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-sm"
                 >
-                  <i className="fas fa-paper-plane text-xs"></i>
+                  <i className="fas fa-paper-plane text-xs text-orange-400"></i>
                   Email RFQ (info@smdmedicare.in)
                 </a>
               </div>
@@ -330,14 +330,14 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
           <div className="mt-12 pt-8 border-t border-slate-200">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Topical Reagent Mesh</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-orange-600">Topical Reagent Mesh</span>
                 <h2 className="text-xl font-bold text-slate-900 mt-1">
                   Related Diagnostic Reagents &amp; Matched Antibodies
                 </h2>
               </div>
               <Link
                 href="/products"
-                className="text-xs font-semibold text-blue-600 hover:text-blue-800"
+                className="text-xs font-bold text-orange-600 hover:text-orange-700"
               >
                 View all 64+ reagents &rarr;
               </Link>
@@ -347,11 +347,11 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
               {relatedProducts.map((rp) => (
                 <div
                   key={rp.code}
-                  className="bg-white rounded-lg border border-slate-200 p-4 hover:border-blue-400 hover:shadow-xs transition-all flex flex-col justify-between"
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:border-orange-300 hover:shadow-md transition-all flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[11px] font-mono font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">
+                      <span className="text-[11px] font-mono font-bold text-orange-700 bg-orange-50 border border-orange-200/80 px-1.5 py-0.5 rounded">
                         {rp.code}
                       </span>
                       <span className="text-[11px] text-slate-400">{rp.format}</span>
@@ -366,11 +366,11 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
                   <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
                     <Link
                       href={`/products/${rp.code}`}
-                      className="font-semibold text-blue-600 hover:text-blue-800"
+                      className="font-bold text-slate-900 hover:text-orange-600"
                     >
                       Datasheet &rarr;
                     </Link>
-                    <span className="text-emerald-700 font-medium text-[11px]">CoA Validated</span>
+                    <span className="text-orange-700 font-semibold text-[11px] bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200/60">CoA Validated</span>
                   </div>
                 </div>
               ))}

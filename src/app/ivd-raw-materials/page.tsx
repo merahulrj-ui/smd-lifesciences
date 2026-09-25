@@ -116,26 +116,26 @@ export default function IvdRawMaterialsPage() {
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs">
           <div className="flex items-center space-x-2 text-slate-500">
-            <Link href="/" className="hover:text-[#064e3b] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-orange-600 transition-colors">Home</Link>
             <span>/</span>
             <span className="text-slate-900 font-semibold">IVD Raw Materials India</span>
           </div>
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-[#064e3b] border border-emerald-200/80">
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-orange-50 text-orange-700 border border-orange-200/80">
             Bulk Reagents &amp; Evaluation Samples
           </span>
         </div>
       </div>
 
-      {/* Hero Section (Lonza Clean Editorial Style with Deep Bio-Emerald) */}
-      <section className="bg-gradient-to-b from-[#f8fafc] via-white to-white text-slate-900 py-16 sm:py-20 border-b border-slate-200/80 relative overflow-hidden">
+      {/* Hero Section (Modern High-Contrast Clean Slate) */}
+      <section className="bg-gradient-to-b from-slate-50 via-white to-white text-slate-900 py-16 sm:py-20 border-b border-slate-200/80 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-[#064e3b] text-xs font-bold uppercase tracking-wider mb-6">
-              <i className="fas fa-microscope text-[#059669]"></i>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-bold uppercase tracking-wider mb-6">
+              <i className="fas fa-microscope text-orange-600"></i>
               B2B Diagnostic Sourcing Hub &bull; Bangalore, India
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
-              IVD Raw Materials Manufacturer &amp; Supplier in <span className="text-[#064e3b]">India</span>
+              IVD Raw Materials Manufacturer &amp; Supplier in <span className="text-orange-600">India</span>
             </h1>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
               High-purity biological raw materials engineered specifically for In Vitro Diagnostic (IVD) test kit manufacturers. From recombinant antigens and matched monoclonal antibodies to 40nm colloidal gold conjugates, we deliver dependable batch consistency with full Certificate of Analysis (CoA) verification.
@@ -143,7 +143,7 @@ export default function IvdRawMaterialsPage() {
             <div className="flex flex-wrap gap-4 mb-8">
               <Link
                 href="/products"
-                className="px-6 py-3.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm transition-colors shadow-sm hover:shadow-md"
+                className="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition-all shadow-md hover:shadow-lg"
               >
                 Browse 64+ Catalog Reagents
               </Link>
@@ -151,20 +151,20 @@ export default function IvdRawMaterialsPage() {
                 href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20bulk%20IVD%20raw%20materials%20in%20India."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors shadow-sm"
+                className="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-colors shadow-sm flex items-center gap-2"
               >
-                💬 WhatsApp Technical Desk
+                <i className="fab fa-whatsapp text-emerald-400"></i> WhatsApp Technical Desk
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-200/80 text-xs text-slate-600">
               <div className="flex items-center gap-2 font-medium">
-                <i className="fas fa-circle-check text-emerald-600"></i> Batch-to-Batch Consistency Guaranteed
+                <i className="fas fa-circle-check text-orange-600"></i> Batch-to-Batch Consistency Guaranteed
               </div>
               <div className="flex items-center gap-2 font-medium">
-                <i className="fas fa-circle-check text-emerald-600"></i> Bangalore Dispatch in 2–4 Days
+                <i className="fas fa-circle-check text-orange-600"></i> Bangalore Dispatch in 2–4 Days
               </div>
               <div className="flex items-center gap-2 font-medium">
-                <i className="fas fa-circle-check text-emerald-600"></i> Validated on Clinical Sera
+                <i className="fas fa-circle-check text-orange-600"></i> Validated on Clinical Sera
               </div>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function IvdRawMaterialsPage() {
       <section className="py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">The Domestic Advantage</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-orange-600">The Domestic Advantage</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">
               Why Global &amp; Indian IVD Manufacturers Choose SMD Life Sciences
             </h2>
@@ -185,8 +185,8 @@ export default function IvdRawMaterialsPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-orange-300 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-truck-fast"></i>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Zero Customs Holdups &bull; Fast Dispatch</h3>
@@ -195,8 +195,8 @@ export default function IvdRawMaterialsPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-orange-300 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-certificate"></i>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Purity &gt; 95% &bull; Validated CoA</h3>
@@ -205,8 +205,8 @@ export default function IvdRawMaterialsPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-orange-300 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-hand-holding-dollar"></i>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">30-45% Cost Reduction</h3>
@@ -223,7 +223,7 @@ export default function IvdRawMaterialsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">Reagents Portfolio</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600">Reagents Portfolio</span>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
                 Validated IVD Biological Raw Materials
               </h2>
@@ -233,7 +233,7 @@ export default function IvdRawMaterialsPage() {
             </div>
             <Link
               href="/products"
-              className="mt-4 sm:mt-0 inline-flex items-center text-sm font-semibold text-[#064e3b] hover:text-[#043327] gap-1.5"
+              className="mt-4 sm:mt-0 inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-700 gap-1.5"
             >
               View Full 64+ Catalog &rarr;
             </Link>
@@ -243,11 +243,11 @@ export default function IvdRawMaterialsPage() {
             {featuredReagents.map((product) => (
               <div
                 key={product.code}
-                className="bg-white border border-slate-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-xs transition-all flex flex-col justify-between"
+                className="bg-white border border-slate-200 rounded-xl p-5 hover:border-orange-300 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-mono font-bold text-[#064e3b] bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded">
+                    <span className="text-xs font-mono font-bold text-orange-700 bg-orange-50 border border-orange-200/80 px-2 py-0.5 rounded">
                       {product.code}
                     </span>
                     <span className="text-xs font-medium text-slate-500">
@@ -266,7 +266,7 @@ export default function IvdRawMaterialsPage() {
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
                   <Link
                     href={`/products/${product.code}`}
-                    className="text-xs font-semibold text-[#064e3b] hover:text-[#043327]"
+                    className="text-xs font-bold text-slate-900 hover:text-orange-600"
                   >
                     View Datasheet &rarr;
                   </Link>
@@ -274,7 +274,7 @@ export default function IvdRawMaterialsPage() {
                     href={`https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20IVD%20Reagent%20${product.code}%20(${encodeURIComponent(product.name)})`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-semibold text-emerald-600 hover:text-emerald-700"
+                    className="text-xs font-bold text-orange-600 hover:text-orange-700"
                   >
                     Request CoA
                   </a>
@@ -289,7 +289,7 @@ export default function IvdRawMaterialsPage() {
       <section className="bg-white border-t border-slate-200 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">Procurement &amp; QC FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-orange-600">Procurement &amp; QC FAQ</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
               Frequently Asked Questions About Sourcing IVD Raw Materials
             </h2>
@@ -319,15 +319,15 @@ export default function IvdRawMaterialsPage() {
 
       {/* Commercial Inquiry CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-[#064e3b] rounded-2xl p-8 sm:p-12 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8 shadow-lg">
+        <div className="bg-gradient-to-r from-slate-900 via-slate-950 to-indigo-950 rounded-2xl p-8 sm:p-12 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8 shadow-xl border border-slate-800">
           <div className="max-w-2xl">
-            <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-200 text-xs font-semibold uppercase tracking-wider mb-4 border border-emerald-400/20">
+            <span className="inline-block px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-orange-500/30">
               Direct Technical &amp; Commercial Desk
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold mb-3">
               Need Bulk Supply Quotes or Evaluation Samples?
             </h2>
-            <p className="text-emerald-100 text-sm leading-relaxed">
+            <p className="text-slate-300 text-sm leading-relaxed">
               Contact our Bangalore scientific coordination desk. Milestone quotes, Certificate of Analysis (CoA) verification, and 1mg–5mg evaluation samples dispatched promptly.
             </p>
           </div>
@@ -336,13 +336,13 @@ export default function IvdRawMaterialsPage() {
               href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20bulk%20IVD%20raw%20materials."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors gap-2 shadow-sm"
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition-all gap-2 shadow-md hover:shadow-lg"
             >
               💬 WhatsApp Desk
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm transition-colors gap-2"
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-sm transition-colors gap-2"
             >
               Request Price Quotation
             </Link>

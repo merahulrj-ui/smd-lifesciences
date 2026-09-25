@@ -104,27 +104,27 @@ export default async function BiotechInsightsPage() {
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs">
           <div className="flex items-center space-x-2 text-slate-500">
-            <Link href="/" className="hover:text-[#064e3b] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-orange-600 transition-colors">Home</Link>
             <span>/</span>
             <span className="text-slate-900 font-semibold">Scientific Insights &amp; Whitepapers</span>
           </div>
           <div className="hidden sm:flex items-center space-x-2">
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-[#064e3b] border border-emerald-200/80">
-              <i className="fas fa-flask mr-1 text-[#059669]"></i> Technical R&amp;D Publication
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-orange-50 text-orange-700 border border-orange-200/80">
+              <i className="fas fa-flask mr-1 text-orange-600"></i> Technical R&amp;D Publication
             </span>
           </div>
         </div>
       </div>
 
-      {/* Hero Section (Lonza Clean Editorial Style with Deep Bio-Emerald) */}
-      <section className="bg-gradient-to-b from-[#f8fafc] via-white to-white text-slate-900 py-14 lg:py-18 border-b border-slate-200/80 relative overflow-hidden">
+      {/* Hero Section (Modern High-Contrast Clean Slate) */}
+      <section className="bg-gradient-to-b from-slate-50 via-white to-white text-slate-900 py-14 lg:py-18 border-b border-slate-200/80 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-[#064e3b] text-xs font-bold uppercase tracking-wider mb-4">
-            <i className="fas fa-microscope text-[#059669]"></i>
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-bold uppercase tracking-wider mb-4">
+            <i className="fas fa-microscope text-orange-600"></i>
             Life Sciences Research Desk
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-4 tracking-tight">
-            Scientific Insights &amp; <span className="text-[#064e3b]">IVD Whitepapers</span>
+            Scientific Insights &amp; <span className="text-orange-600">IVD Whitepapers</span>
           </h1>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Validation studies, antibody pairing methodologies, and technical protocols developed for rapid test card manufacturers and diagnostic researchers.
@@ -136,7 +136,7 @@ export default async function BiotechInsightsPage() {
       <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {articles.length === 0 ? (
           <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 text-center max-w-3xl mx-auto shadow-sm">
-            <div className="w-16 h-16 rounded-full bg-emerald-50 text-[#064e3b] flex items-center justify-center mx-auto mb-4 text-2xl">
+            <div className="w-16 h-16 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center mx-auto mb-4 text-2xl">
               <i className="fas fa-file-alt"></i>
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-2">Technical Publications in Preparation</h3>
@@ -146,22 +146,22 @@ export default async function BiotechInsightsPage() {
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/products"
-                className="inline-flex items-center px-5 py-2.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-xs transition-colors gap-2"
+                className="inline-flex items-center px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs transition-colors gap-2 shadow-sm"
               >
                 <i className="fas fa-layer-group"></i> Browse Reagents Catalog
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center px-5 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition-colors gap-2"
+                className="inline-flex items-center px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition-colors gap-2 shadow-sm"
               >
-                <i className="fas fa-flask"></i> Custom CDMO Services
+                <i className="fas fa-flask text-orange-400"></i> Custom CDMO Services
               </Link>
             </div>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((art) => (
-              <article key={art.id} className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:border-emerald-300 transition-all flex flex-col">
+              <article key={art.id} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-orange-300 hover:shadow-md transition-all flex flex-col">
                 {art.blog_image && (
                   <div className="h-48 w-full overflow-hidden bg-slate-100">
                     <img 
@@ -174,13 +174,13 @@ export default async function BiotechInsightsPage() {
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-3 text-xs text-slate-500 mb-3">
-                      <span className="font-semibold text-[#064e3b]">{art.author_name || 'R&D Advisory'}</span>
+                      <span className="font-bold text-orange-600">{art.author_name || 'R&D Advisory'}</span>
                       <span>•</span>
                       <span>{formatDate(art.created_at)}</span>
                       <span>•</span>
                       <span>{art.read_time || '5 min read'}</span>
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2 hover:text-[#064e3b] transition-colors">
+                    <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2 hover:text-orange-600 transition-colors">
                       <Link href={`/insights/${art.slug || art.id}`}>
                         {art.title}
                       </Link>
@@ -192,7 +192,7 @@ export default async function BiotechInsightsPage() {
                   <div className="pt-4 border-t border-slate-100">
                     <Link
                       href={`/insights/${art.slug || art.id}`}
-                      className="text-xs font-bold text-[#064e3b] hover:text-[#043327] inline-flex items-center gap-1.5"
+                      className="text-xs font-bold text-orange-600 hover:text-orange-700 inline-flex items-center gap-1.5"
                     >
                       Read Full Whitepaper <i className="fas fa-arrow-right text-[10px]"></i>
                     </Link>

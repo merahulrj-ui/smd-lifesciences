@@ -112,20 +112,20 @@ export default function BiotechHomePage() {
         </div>
       </div>
 
-      {/* Hero Section (Lonza Clean Editorial Style with Deep Bio-Emerald) */}
-      <section className="bg-gradient-to-b from-[#f8fafc] via-white to-white border-b border-slate-200/80 py-12 lg:py-16">
+      {/* Hero Section (Modern Swiss Biotech with Midnight Slate + Electric Orange) */}
+      <section className="bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200/80 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Content (7 Cols) */}
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-[#064e3b] text-xs font-bold uppercase tracking-wider mb-5">
-                <i className="fas fa-dna text-[#059669]"></i>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-bold uppercase tracking-wider mb-5">
+                <i className="fas fa-dna text-orange-600"></i>
                 Technical Association with Pentavalent Bio Sciences, Bangalore
               </div>
               
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#064e3b] leading-[1.15] mb-5">
-                High-Purity Biological Raw Materials &amp; Custom CDMO for <span className="text-slate-900 underline decoration-emerald-500/50 decoration-4 underline-offset-4">IVD Manufacturers</span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-5">
+                High-Purity Biological Raw Materials &amp; Custom CDMO for <span className="text-orange-600 underline decoration-orange-400/50 decoration-4 underline-offset-4">IVD Manufacturers</span>
               </h1>
               
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-7 max-w-2xl">
@@ -135,7 +135,7 @@ export default function BiotechHomePage() {
               <div className="flex flex-wrap gap-3.5 mb-8">
                 <Link 
                   href="/services" 
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm shadow-sm hover:shadow-md transition-all gap-2"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm shadow-md shadow-orange-950/20 transition-all gap-2"
                 >
                   <i className="fas fa-flask"></i>
                   Custom Development Services
@@ -143,18 +143,18 @@ export default function BiotechHomePage() {
                 </Link>
                 <Link 
                   href="/products" 
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold text-sm transition-all shadow-xs gap-2"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold text-sm transition-all shadow-xs gap-2"
                 >
-                  <i className="fas fa-layer-group text-[#064e3b]"></i>
+                  <i className="fas fa-layer-group text-orange-600"></i>
                   Browse 64+ Catalog Reagents
                 </Link>
               </div>
 
               {/* Trust Micro-Metrics */}
               <div className="pt-6 border-t border-slate-200/80 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-600 font-medium">
-                <span className="flex items-center gap-1.5"><i className="fas fa-check-circle text-emerald-600"></i> Lot-Specific CoA &amp; MSDS</span>
-                <span className="flex items-center gap-1.5"><i className="fas fa-check-circle text-emerald-600"></i> &gt;95% SDS-PAGE &amp; HPLC Purity</span>
-                <span className="flex items-center gap-1.5"><i className="fas fa-check-circle text-emerald-600"></i> 24–48h Cold-Chain Express</span>
+                <span className="flex items-center gap-1.5"><i className="fas fa-check-circle text-orange-600"></i> Lot-Specific CoA &amp; MSDS</span>
+                <span className="flex items-center gap-1.5"><i className="fas fa-check-circle text-orange-600"></i> &gt;95% SDS-PAGE &amp; HPLC Purity</span>
+                <span className="flex items-center gap-1.5"><i className="fas fa-check-circle text-orange-600"></i> 24–48h Cold-Chain Express</span>
               </div>
             </div>
 
@@ -168,14 +168,14 @@ export default function BiotechHomePage() {
                 />
                 
                 {/* Floating Chip 1: Top-Left */}
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-md border border-slate-200/80 text-xs font-bold text-[#064e3b] flex items-center gap-2">
-                  <i className="fas fa-microscope text-[#059669]"></i>
+                <div className="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-md border border-slate-700 text-xs font-bold text-white flex items-center gap-2">
+                  <i className="fas fa-microscope text-orange-400"></i>
                   Bangalore Bio-Cluster R&amp;D Hub
                 </div>
 
                 {/* Floating Chip 2: Bottom-Right */}
-                <div className="absolute bottom-4 right-4 bg-[#064e3b]/95 backdrop-blur-md text-white px-3.5 py-2 rounded-xl shadow-lg text-xs font-semibold flex items-center gap-2">
-                  <i className="fas fa-shield-halved text-emerald-300"></i>
+                <div className="absolute bottom-4 right-4 bg-orange-600/95 backdrop-blur-md text-white px-3.5 py-2 rounded-xl shadow-lg text-xs font-semibold flex items-center gap-2">
+                  <i className="fas fa-shield-halved text-white"></i>
                   Validated on Clinical Sera Panels
                 </div>
               </div>
@@ -190,19 +190,19 @@ export default function BiotechHomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="border-r border-slate-100 last:border-0">
-              <div className="text-2xl font-bold text-[#064e3b]">64+</div>
+              <div className="text-2xl font-extrabold text-slate-900">64+</div>
               <div className="text-xs text-slate-500 mt-1">Cataloged Reagents</div>
             </div>
             <div className="border-r border-slate-100 last:border-0">
-              <div className="text-2xl font-bold text-emerald-600">&gt; 95%</div>
+              <div className="text-2xl font-extrabold text-orange-600">&gt; 95%</div>
               <div className="text-xs text-slate-500 mt-1">SDS-PAGE &amp; HPLC Purity</div>
             </div>
             <div className="border-r border-slate-100 last:border-0">
-              <div className="text-2xl font-bold text-[#064e3b]">Lot CoA</div>
+              <div className="text-2xl font-extrabold text-slate-900">Lot CoA</div>
               <div className="text-xs text-slate-500 mt-1">Batch Quality Assured</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">24–48h</div>
+              <div className="text-2xl font-extrabold text-slate-900">24–48h</div>
               <div className="text-xs text-slate-500 mt-1">Cold-Chain Express Dispatch</div>
             </div>
           </div>
@@ -224,15 +224,15 @@ export default function BiotechHomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
                 
                 {/* Floating Chips */}
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-200 shadow-sm flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span className="text-[11px] font-bold text-[#064e3b] tracking-wide uppercase">
+                <div className="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-700 shadow-sm flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                  <span className="text-[11px] font-bold text-white tracking-wide uppercase">
                     ÄKTA Avant FPLC System &bull; Class 10k Cleanroom
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 text-white">
                   <div className="flex items-center justify-between text-xs">
-                    <span className="font-semibold text-emerald-300">Purity Guarantee: &gt;95% SEC-HPLC</span>
+                    <span className="font-semibold text-orange-400">Purity Guarantee: &gt;95% SEC-HPLC</span>
                     <span className="text-slate-300">Endotoxin &lt;0.1 EU/&mu;g</span>
                   </div>
                   <p className="text-[11px] text-slate-300 mt-1">
@@ -244,12 +244,12 @@ export default function BiotechHomePage() {
 
             {/* Right: Editorial Narrative */}
             <div className="lg:col-span-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-[#064e3b] border border-emerald-200/80 text-xs font-bold uppercase tracking-wider mb-4">
-                <i className="fas fa-dna text-[#059669]"></i> Core Capability 01 &bull; Protein Engineering
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-orange-700 border border-orange-200/80 text-xs font-bold uppercase tracking-wider mb-4">
+                <i className="fas fa-dna text-orange-600"></i> Core Capability 01 &bull; Protein Engineering
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-[1.2] mb-5">
                 Clinical-Grade Recombinant Antigens &amp;{' '}
-                <span className="text-[#064e3b]">Monoclonal Antibodies</span>
+                <span className="text-orange-600">Monoclonal Antibodies</span>
               </h2>
               <p className="text-base text-slate-600 leading-relaxed mb-6">
                 Engineered specifically for solid-phase diagnostic coating in lateral flow nitrocellulose strips, ELISA microplates, and CLIA analyzers. Produced in Bangalore in technical partnership with Pentavalent Bio Sciences, guaranteeing authentic native conformation and zero batch variations.
@@ -257,28 +257,28 @@ export default function BiotechHomePage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
                 <div className="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
-                  <i className="fas fa-check-circle text-emerald-600 mt-0.5 text-sm shrink-0"></i>
+                  <i className="fas fa-check-circle text-orange-600 mt-0.5 text-sm shrink-0"></i>
                   <div>
                     <strong className="block text-xs font-bold text-slate-900">Validated Epitope Accessibility</strong>
                     <span className="text-[11px] text-slate-600">Cross-verified on clinical positive/negative patient sera.</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
-                  <i className="fas fa-check-circle text-emerald-600 mt-0.5 text-sm shrink-0"></i>
+                  <i className="fas fa-check-circle text-orange-600 mt-0.5 text-sm shrink-0"></i>
                   <div>
                     <strong className="block text-xs font-bold text-slate-900">Lot-to-Lot CV &lt; 5%</strong>
                     <span className="text-[11px] text-slate-600">Standardized fermentation protocols ensure repeatability.</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
-                  <i className="fas fa-check-circle text-emerald-600 mt-0.5 text-sm shrink-0"></i>
+                  <i className="fas fa-check-circle text-orange-600 mt-0.5 text-sm shrink-0"></i>
                   <div>
                     <strong className="block text-xs font-bold text-slate-900">Zero Customs Holdups</strong>
                     <span className="text-[11px] text-slate-600">Dispatched from Bangalore within 2-4 business days across India.</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
-                  <i className="fas fa-check-circle text-emerald-600 mt-0.5 text-sm shrink-0"></i>
+                  <i className="fas fa-check-circle text-orange-600 mt-0.5 text-sm shrink-0"></i>
                   <div>
                     <strong className="block text-xs font-bold text-slate-900">Lot-Specific CoA Included</strong>
                     <span className="text-[11px] text-slate-600">Complete SDS-PAGE and SEC-HPLC profiles with every shipment.</span>
@@ -289,13 +289,13 @@ export default function BiotechHomePage() {
               <div className="flex flex-wrap items-center gap-3.5">
                 <Link
                   href="/products"
-                  className="px-6 py-3.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm transition-all shadow-sm hover:shadow-md inline-flex items-center gap-2"
+                  className="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition-all shadow-md shadow-orange-950/20 inline-flex items-center gap-2"
                 >
                   <i className="fas fa-vial text-xs"></i> Browse 64+ Catalog Reagents
                 </Link>
                 <Link
                   href="/ivd-raw-materials"
-                  className="px-6 py-3.5 rounded-lg bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-300 transition-all inline-flex items-center gap-2 shadow-xs"
+                  className="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-300 transition-all inline-flex items-center gap-2 shadow-xs"
                 >
                   Explore IVD Sourcing Desk &rarr;
                 </Link>
@@ -312,12 +312,12 @@ export default function BiotechHomePage() {
             
             {/* Left: Editorial Narrative */}
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-[#064e3b] border border-emerald-200/80 text-xs font-bold uppercase tracking-wider mb-4">
-                <i className="fas fa-flask text-[#059669]"></i> Core Capability 02 &bull; Diagnostic CDMO
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-orange-700 border border-orange-200/80 text-xs font-bold uppercase tracking-wider mb-4">
+                <i className="fas fa-flask text-orange-600"></i> Core Capability 02 &bull; Diagnostic CDMO
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-[1.2] mb-5">
                 Rapid Test Assay Formulation &amp;{' '}
-                <span className="text-[#064e3b]">40nm Gold Conjugation</span>
+                <span className="text-orange-600">40nm Gold Conjugation</span>
               </h2>
               <p className="text-base text-slate-600 leading-relaxed mb-6">
                 Overcome assay sensitivity limits and background haze. We offer milestone-based contract development for IVD kit manufacturers—from high-affinity hybridoma clone screening to colloidal gold bioconjugation, nitrocellulose membrane blocking, and pilot-batch stability profiling.
@@ -325,7 +325,7 @@ export default function BiotechHomePage() {
 
               <div className="space-y-3 mb-8">
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center font-bold text-xs shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-slate-900 text-orange-400 flex items-center justify-center font-bold text-xs shrink-0">
                     01
                   </div>
                   <div>
@@ -335,7 +335,7 @@ export default function BiotechHomePage() {
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center font-bold text-xs shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-slate-900 text-orange-400 flex items-center justify-center font-bold text-xs shrink-0">
                     02
                   </div>
                   <div>
@@ -345,7 +345,7 @@ export default function BiotechHomePage() {
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center font-bold text-xs shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-slate-900 text-orange-400 flex items-center justify-center font-bold text-xs shrink-0">
                     03
                   </div>
                   <div>
@@ -358,13 +358,13 @@ export default function BiotechHomePage() {
               <div className="flex flex-wrap items-center gap-3.5">
                 <Link
                   href="/services"
-                  className="px-6 py-3.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm transition-all shadow-sm hover:shadow-md inline-flex items-center gap-2"
+                  className="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition-all shadow-md shadow-orange-950/20 inline-flex items-center gap-2"
                 >
                   <i className="fas fa-file-signature text-xs"></i> Request CDMO Consultation
                 </Link>
                 <Link
                   href="/diagnostic-cdmo"
-                  className="px-6 py-3.5 rounded-lg bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-300 transition-all inline-flex items-center gap-2 shadow-xs"
+                  className="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-300 transition-all inline-flex items-center gap-2 shadow-xs"
                 >
                   View 4-Phase CDMO Workflow &rarr;
                 </Link>
@@ -382,15 +382,15 @@ export default function BiotechHomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
 
                 {/* Floating Chips */}
-                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-200 shadow-sm flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span className="text-[11px] font-bold text-[#064e3b] tracking-wide uppercase">
+                <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-700 shadow-sm flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                  <span className="text-[11px] font-bold text-white tracking-wide uppercase">
                     Lateral Flow Quality Validation
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 text-white">
                   <div className="flex items-center justify-between text-xs">
-                    <span className="font-semibold text-emerald-300">Nitrocellulose Optimization</span>
+                    <span className="font-semibold text-orange-400">Nitrocellulose Optimization</span>
                     <span className="text-slate-300">40nm Colloidal Gold</span>
                   </div>
                   <p className="text-[11px] text-slate-300 mt-1">
@@ -408,7 +408,7 @@ export default function BiotechHomePage() {
       <section className="py-20 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/80">
+            <span className="text-xs font-bold uppercase tracking-wider text-orange-700 bg-orange-50 px-3 py-1 rounded-full border border-orange-200/80">
               Infrastructure &bull; Electronic City Bangalore
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
@@ -428,13 +428,13 @@ export default function BiotechHomePage() {
                   alt="High-density microbial and yeast fermentation bioreactor facility in Class 10k cleanroom"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 bg-[#064e3b]/90 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                <span className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md text-orange-400 text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-slate-700">
                   Bioprocessing Suites
                 </span>
               </div>
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#064e3b] transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
                     High-Density Fermentation Bioreactors
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
@@ -443,7 +443,7 @@ export default function BiotechHomePage() {
                 </div>
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
                   <span>10L–200L Scale-up</span>
-                  <span className="text-[#064e3b] font-semibold">Continuous pH &amp; DO₂ Telemetry</span>
+                  <span className="text-orange-600 font-semibold">Continuous pH &amp; DO₂ Telemetry</span>
                 </div>
               </div>
             </div>
@@ -456,13 +456,13 @@ export default function BiotechHomePage() {
                   alt="Scientist in biosafety cabinet conducting microplate ELISA screening and hybridoma cloning"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 bg-[#064e3b]/90 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                <span className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md text-orange-400 text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-slate-700">
                   Discovery &amp; Screening
                 </span>
               </div>
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#064e3b] transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
                     Hybridoma Discovery &amp; ELISA Screening
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
@@ -471,7 +471,7 @@ export default function BiotechHomePage() {
                 </div>
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
                   <span>96-Well Microplate Titration</span>
-                  <span className="text-[#064e3b] font-semibold">Clinical Sera Validation</span>
+                  <span className="text-orange-600 font-semibold">Clinical Sera Validation</span>
                 </div>
               </div>
             </div>
@@ -484,13 +484,13 @@ export default function BiotechHomePage() {
                   alt="Pharmaceutical cleanroom testing and diagnostic reagent quality control laboratory"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 bg-[#064e3b]/90 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                <span className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md text-orange-400 text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-slate-700">
                   Quality Assurance
                 </span>
               </div>
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#064e3b] transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
                     Sterile Filling &amp; Cold-Chain Logistical Hub
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
@@ -499,7 +499,7 @@ export default function BiotechHomePage() {
                 </div>
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
                   <span>Grade C / Class 10,000</span>
-                  <span className="text-[#064e3b] font-semibold">24–48h Domestic Dispatch</span>
+                  <span className="text-orange-600 font-semibold">24–48h Domestic Dispatch</span>
                 </div>
               </div>
             </div>
@@ -513,7 +513,7 @@ export default function BiotechHomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600">
                 Biological Catalog
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
@@ -525,7 +525,7 @@ export default function BiotechHomePage() {
             </div>
             <Link 
               href="/products" 
-              className="mt-4 sm:mt-0 inline-flex items-center text-sm font-semibold text-[#064e3b] hover:text-[#043327] gap-1.5"
+              className="mt-4 sm:mt-0 inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-700 gap-1.5"
             >
               View Full 64+ Catalog
               <i className="fas fa-arrow-right text-xs"></i>
@@ -536,18 +536,18 @@ export default function BiotechHomePage() {
             {sampleProducts.map((product) => (
               <div 
                 key={product.code}
-                className="bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-[#065f46] hover:shadow-md transition-all flex flex-col justify-between"
+                className="bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-orange-400 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-mono font-bold text-[#064e3b] bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded">
+                    <span className="text-xs font-mono font-bold text-orange-700 bg-orange-50 border border-orange-200 px-2 py-0.5 rounded">
                       {product.code}
                     </span>
-                    <span className="text-xs font-medium text-emerald-700">
+                    <span className="text-xs font-medium text-slate-700">
                       {product.purity}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold text-slate-900 leading-snug mb-2">
+                  <h3 className="text-base font-bold text-slate-900 leading-snug mb-2 hover:text-orange-600 transition-colors">
                     {product.name}
                   </h3>
                   <div className="space-y-1 text-xs text-slate-600 mb-4">
@@ -559,7 +559,7 @@ export default function BiotechHomePage() {
                 <div className="pt-3 border-t border-slate-200 flex items-center justify-between">
                   <Link 
                     href={`/products/${product.code}`}
-                    className="text-xs font-semibold text-[#064e3b] hover:text-[#043327]"
+                    className="text-xs font-bold text-orange-600 hover:text-orange-700"
                   >
                     View Datasheet ➔
                   </Link>
@@ -567,7 +567,7 @@ export default function BiotechHomePage() {
                     href={`https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20IVD%20Reagent%20${product.code}%20(${encodeURIComponent(product.name)})`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-semibold text-emerald-700 hover:text-emerald-800"
+                    className="text-xs font-semibold text-slate-600 hover:text-orange-600"
                   >
                     Request CoA
                   </a>
@@ -582,7 +582,7 @@ export default function BiotechHomePage() {
       <section className="bg-slate-50 border-b border-slate-200 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/80">
+            <span className="text-xs font-bold uppercase tracking-wider text-orange-700 bg-orange-50 px-3 py-1 rounded-full border border-orange-200/80">
               Technical &amp; Procurement FAQ
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">
@@ -597,7 +597,7 @@ export default function BiotechHomePage() {
             {homeFaqs.map((faq, idx) => (
               <details
                 key={idx}
-                className="group bg-white rounded-xl border border-slate-200 p-5 shadow-xs hover:border-emerald-300 transition-colors [&_summary::-webkit-details-marker]:hidden"
+                className="group bg-white rounded-xl border border-slate-200 p-5 shadow-xs hover:border-orange-300 transition-colors [&_summary::-webkit-details-marker]:hidden"
                 {...(idx === 0 ? { open: true } : {})}
               >
                 <summary className="flex cursor-pointer items-center justify-between gap-4 font-semibold text-slate-900 text-sm sm:text-base select-none">
@@ -615,17 +615,17 @@ export default function BiotechHomePage() {
         </div>
       </section>
 
-      {/* Direct RFQ / WhatsApp CTA Banner */}
+      {/* Direct RFQ / WhatsApp CTA Banner (Modern Midnight Slate + Electric Orange) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#043327] rounded-2xl p-8 sm:p-12 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-gradient-to-r from-slate-900 via-slate-950 to-indigo-950 rounded-3xl p-8 sm:p-12 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8 shadow-xl border border-slate-800">
           <div className="max-w-2xl">
-            <span className="inline-block px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-200 text-xs font-semibold uppercase tracking-wider mb-4 border border-emerald-400/30">
-              Direct Technical &amp; Commercial Desk
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider mb-4 border border-orange-500/30">
+              <i className="fas fa-flask"></i> Direct Technical &amp; Commercial Desk
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3">
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-3 text-white">
               Need Custom Assay Development or Bulk Evaluation Samples?
             </h2>
-            <p className="text-slate-200 text-sm leading-relaxed">
+            <p className="text-slate-300 text-sm leading-relaxed">
               Connect directly with our Bangalore scientific coordination desk. Milestone quotes, Certificate of Analysis (CoA) verification, and 1mg–5mg evaluation samples dispatched within 24 hours.
             </p>
           </div>
@@ -634,16 +634,16 @@ export default function BiotechHomePage() {
               href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20I%20am%20interested%20in%20custom%20biotech%20services%20/%20IVD%20raw%20materials." 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-sm transition-colors gap-2 shadow-lg"
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20b858] text-white font-bold text-sm transition-colors gap-2 shadow-md"
             >
-              💬 WhatsApp Technical Desk
+              <i className="fab fa-whatsapp text-lg"></i> WhatsApp Technical Desk
             </a>
             <Link 
-              href="/services"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm transition-colors gap-2"
+              href="/services" 
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition-all shadow-md shadow-orange-950/20 gap-2"
             >
               <i className="fas fa-paper-plane text-xs"></i>
-              Submit Project RFQ
+              Submit Project RFQ ➔
             </Link>
           </div>
         </div>

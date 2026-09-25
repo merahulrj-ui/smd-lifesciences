@@ -169,7 +169,7 @@ export default function AboutPage() {
 
                 <Link 
                   href="/contact" 
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-xs sm:text-sm transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs sm:text-sm transition-all shadow-md shadow-orange-950/20"
                 >
                   <i className="fa-solid fa-location-dot"></i> Schedule a Facility Visit
                 </Link>
@@ -238,24 +238,24 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Bottom CTA Card (Contained & Compact) */}
+      {/* Bottom CTA Card (Contained & Compact - Midnight Slate + Orange) */}
       <section className="py-10 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-[#064e3b] text-white rounded-2xl py-8 px-6 sm:px-10 text-center shadow-lg">
-            <h2 className="text-xl sm:text-2xl font-bold mb-2">Ready to evaluate our reagents?</h2>
-            <p className="text-emerald-100 text-xs sm:text-sm max-w-lg mx-auto mb-5 leading-relaxed">
+          <div className="bg-gradient-to-r from-slate-900 to-indigo-950 text-white rounded-3xl py-8 px-6 sm:px-10 text-center shadow-xl border border-slate-800">
+            <h2 className="text-xl sm:text-2xl font-bold mb-2 text-white">Ready to evaluate our reagents?</h2>
+            <p className="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto mb-5 leading-relaxed">
               Contact our Bangalore technical team for lot-specific CoAs, evaluation samples, or custom hybridoma discussions.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link 
                 href="/products" 
-                className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-lg text-xs sm:text-sm transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all shadow-md shadow-orange-950/20"
               >
                 <i className="fa-solid fa-vial text-xs"></i> View 64+ Reagents
               </Link>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-2.5 rounded-lg text-xs sm:text-sm transition-colors border border-white/20"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-colors border border-white/20"
               >
                 <i className="fa-solid fa-envelope text-xs"></i> Contact Technical Sales
               </Link>

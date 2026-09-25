@@ -99,7 +99,7 @@ export default function BiotechCatalogClient({ products }: Props) {
         {/* Top Controls: Search + Type Selector + Count */}
         <div className="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between">
           
-          {/* Search Box with Clear Button */}
+            {/* Search Box with Clear Button */}
           <div className="relative flex-1 max-w-lg">
             <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 text-xs">
               <i className="fas fa-search"></i>
@@ -109,7 +109,7 @@ export default function BiotechCatalogClient({ products }: Props) {
               value={searchTerm}
               onChange={(e) => handleSearchChange(e.target.value)}
               placeholder="Search by code (e.g. PVBSP101), target, name, or host..."
-              className="w-full pl-9 pr-9 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:border-[#064e3b] focus:ring-2 focus:ring-emerald-100 focus:outline-none transition-colors"
+              className="w-full pl-9 pr-9 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:border-orange-500 focus:ring-2 focus:ring-orange-100 focus:outline-none transition-colors"
             />
             {searchTerm && (
               <button
@@ -129,7 +129,7 @@ export default function BiotechCatalogClient({ products }: Props) {
               <select
                 value={selectedType}
                 onChange={(e) => handleTypeChange(e.target.value)}
-                className="px-3 py-2 rounded-xl border border-slate-300 bg-white text-xs font-semibold text-slate-700 focus:border-[#064e3b] focus:outline-none cursor-pointer min-w-0"
+                className="px-3 py-2 rounded-xl border border-slate-300 bg-white text-xs font-semibold text-slate-700 focus:border-orange-500 focus:outline-none cursor-pointer min-w-0"
               >
                 {productTypes.map((type) => (
                   <option key={type} value={type}>
@@ -139,7 +139,7 @@ export default function BiotechCatalogClient({ products }: Props) {
               </select>
             </div>
 
-            <div className="text-xs font-semibold text-[#064e3b] bg-emerald-50 border border-emerald-200/60 px-3 py-1.5 rounded-xl shrink-0 whitespace-nowrap">
+            <div className="text-xs font-bold text-orange-700 bg-orange-50 border border-orange-200/60 px-3 py-1.5 rounded-xl shrink-0 whitespace-nowrap">
               {filteredProducts.length} / {products.length}
             </div>
           </div>
@@ -159,13 +159,13 @@ export default function BiotechCatalogClient({ products }: Props) {
                 onClick={() => handleCategoryChange(cat.name)}
                 className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                   isActive 
-                    ? 'bg-[#064e3b] text-white shadow-sm' 
+                    ? 'bg-orange-600 text-white shadow-sm' 
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                 }`}
               >
                 <span>{cat.name}</span>
                 <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                  isActive ? 'bg-[#043327] text-emerald-200' : 'bg-slate-200 text-slate-600'
+                  isActive ? 'bg-orange-700 text-orange-100' : 'bg-slate-200 text-slate-600'
                 }`}>
                   {cat.count}
                 </span>
@@ -212,22 +212,22 @@ export default function BiotechCatalogClient({ products }: Props) {
             {paginatedProducts.map((p) => (
               <div 
                 key={p.code}
-                className="bg-white border border-slate-200/90 rounded-2xl p-6 hover:border-[#065f46] hover:shadow-lg transition-all flex flex-col justify-between group"
+                className="bg-white border border-slate-200/90 rounded-2xl p-6 hover:border-orange-500 hover:shadow-lg transition-all flex flex-col justify-between group"
               >
                 <div>
                   {/* Top Bar: Code & Purity */}
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-mono font-extrabold text-[#064e3b] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200/80">
+                    <span className="text-xs font-mono font-extrabold text-orange-700 bg-orange-50 px-2.5 py-1 rounded-md border border-orange-200">
                       {p.code}
                     </span>
-                    <span className="text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded-full flex items-center gap-1">
-                      <i className="fas fa-check-circle text-[10px] text-emerald-600"></i>
+                    <span className="text-[11px] font-bold text-slate-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-full flex items-center gap-1">
+                      <i className="fas fa-check-circle text-[10px] text-orange-600"></i>
                       {p.purity}
                     </span>
                   </div>
 
                   {/* Product Name */}
-                  <h3 className="text-base font-extrabold text-slate-900 leading-snug mb-2 group-hover:text-[#064e3b] transition-colors">
+                  <h3 className="text-base font-extrabold text-slate-900 leading-snug mb-2 group-hover:text-orange-600 transition-colors">
                     <Link href={`/products/${p.code}`}>
                       {p.name}
                     </Link>
@@ -265,7 +265,7 @@ export default function BiotechCatalogClient({ products }: Props) {
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
                   <Link 
                     href={`/products/${p.code}`}
-                    className="text-xs font-bold text-[#064e3b] hover:text-[#043327] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
+                    className="text-xs font-bold text-orange-600 hover:text-orange-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
                   >
                     Datasheet
                     <i className="fas fa-arrow-right text-[9px]"></i>
@@ -275,9 +275,9 @@ export default function BiotechCatalogClient({ products }: Props) {
                     href={`https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20Reagent%20${p.code}%20(${encodeURIComponent(p.name)})`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs transition-colors flex items-center gap-1.5 border border-emerald-200/50"
+                    className="px-3.5 py-1.5 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-800 font-bold text-xs transition-colors flex items-center gap-1.5 border border-orange-200/60"
                   >
-                    <i className="fab fa-whatsapp text-emerald-600"></i> Quote / CoA
+                    <i className="fab fa-whatsapp text-[#25D366]"></i> Quote / CoA
                   </a>
                 </div>
               </div>
@@ -313,7 +313,7 @@ export default function BiotechCatalogClient({ products }: Props) {
                         onClick={() => setCurrentPage(pageNum)}
                         className={`w-8 h-8 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
                           currentPage === pageNum
-                            ? 'bg-[#064e3b] text-white shadow-sm'
+                            ? 'bg-orange-600 text-white shadow-sm'
                             : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
                         }`}
                       >

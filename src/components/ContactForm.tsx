@@ -113,7 +113,7 @@ export default function ContactForm() {
             setName(e.target.value);
           }}
           placeholder="E.g., John Doe" 
-          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder-slate-400 font-medium"
+          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all placeholder-slate-400 font-medium"
         />
       </div>
       
@@ -132,7 +132,7 @@ export default function ContactForm() {
             setEmail(e.target.value);
           }}
           placeholder="E.g., john@example.com" 
-          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder-slate-400 font-medium"
+          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all placeholder-slate-400 font-medium"
         />
       </div>
 
@@ -148,7 +148,7 @@ export default function ContactForm() {
               if (status) setStatus('');
               setCountry(e.target.value);
             }}
-            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all font-medium"
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all font-medium"
           >
             <optgroup label="Top Global Biotech & IVD Markets">
               <option value="United States">🇺🇸 United States (+1)</option>
@@ -190,7 +190,7 @@ export default function ContactForm() {
               if (status) setStatus('');
               setServiceType(e.target.value);
             }}
-            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all font-medium"
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all font-medium"
           >
             <option value="Custom Monoclonal Antibody Generation">Custom Monoclonal Antibody Generation (Hybridoma / Recombinant)</option>
             <option value="Recombinant Antigen Sourcing & Bulk Supply">Recombinant Antigen Sourcing & Bulk Scaling</option>
@@ -216,7 +216,7 @@ export default function ContactForm() {
             setPhone(e.target.value);
           }}
           placeholder="E.g., +1 (555) 019-2834 or +44 20 7946 0912 or +91 98765 43210" 
-          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder-slate-400 font-medium"
+          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all placeholder-slate-400 font-medium"
         />
       </div>
       
@@ -240,14 +240,14 @@ export default function ContactForm() {
             setMessage(e.target.value);
           }}
           placeholder="Specify target reagent (antigen/antibody), required volume (mg/grams/liters), or custom CDMO service details..."
-          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder-slate-400 font-medium resize-none"
+          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all placeholder-slate-400 font-medium resize-none"
         ></textarea>
       </div>
 
       <button 
         type="submit" 
         disabled={loading}
-        className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white font-bold py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 text-sm sm:text-base disabled:opacity-70 disabled:pointer-events-none cursor-pointer mt-1"
+        className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3.5 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 text-sm sm:text-base disabled:opacity-70 disabled:pointer-events-none cursor-pointer mt-1"
       >
         {loading ? (
           <><i className="fas fa-spinner fa-spin"></i> Submitting...</>
