@@ -36,15 +36,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Scientific Insight | SMD Life Sciences' };
   }
 
+  const desc = art.excerpt || `Technical whitepaper: ${art.title}. Advanced protocols and validation data for diagnostic manufacturers.`;
+
   return {
     title: `${art.title} | SMD Life Sciences Insights`,
-    description: `Technical whitepaper: ${art.title}. Advanced protocols and validation data for diagnostic manufacturers.`,
+    description: desc,
     alternates: {
       canonical: `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,
     },
     openGraph: {
       title: `${art.title} | SMD Life Sciences`,
-      description: `Technical whitepaper and validation data for diagnostic manufacturers.`,
+      description: desc,
       url: `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,
       siteName: 'SMD Life Sciences',
       type: 'article',
@@ -53,10 +55,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: 'summary_large_image',
       title: `${art.title} | SMD Life Sciences`,
-      description: `Technical whitepaper: ${art.title}. Advanced protocols and validation data for diagnostic manufacturers.`,
+      description: desc,
       images: [art.blog_image || 'https://lifesciences.smdmedicare.in/icon-512.png'],
     },
   };
+}
+
+export async function generateStaticParams() {
+  return STATIC_INSIGHTS.map((art) => ({
+    slug: art.slug,
+  }));
 }
 
 export const revalidate = 3600;

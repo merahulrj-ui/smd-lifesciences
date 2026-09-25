@@ -161,13 +161,20 @@ export default async function BiotechInsightsPage() {
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((art) => (
-              <article key={art.id} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-orange-300 hover:shadow-md transition-all flex flex-col">
+              <article key={art.id} className="relative bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-orange-400 hover:shadow-lg transition-all flex flex-col group cursor-pointer">
+                {/* Full-box Clickable Overlay Link */}
+                <Link
+                  href={`/insights/${art.slug || art.id}`}
+                  className="absolute inset-0 z-10 rounded-2xl"
+                  aria-label={`Read whitepaper: ${art.title}`}
+                />
+
                 {art.blog_image && (
                   <div className="h-48 w-full overflow-hidden bg-slate-100">
                     <img 
                       src={art.blog_image.startsWith('http') || art.blog_image.startsWith('/') ? art.blog_image : `/backend-media/${art.blog_image}`} 
                       alt={art.title} 
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 )}
@@ -180,22 +187,17 @@ export default async function BiotechInsightsPage() {
                       <span>•</span>
                       <span>{art.read_time || '5 min read'}</span>
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2 hover:text-orange-600 transition-colors">
-                      <Link href={`/insights/${art.slug || art.id}`}>
-                        {art.title}
-                      </Link>
+                    <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                      {art.title}
                     </h3>
                     <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed mb-4">
-                      {getExcerpt(art.content)}
+                      {art.excerpt || getExcerpt(art.content)}
                     </p>
                   </div>
                   <div className="pt-4 border-t border-slate-100">
-                    <Link
-                      href={`/insights/${art.slug || art.id}`}
-                      className="text-xs font-bold text-orange-600 hover:text-orange-700 inline-flex items-center gap-1.5"
-                    >
+                    <span className="text-xs font-bold text-orange-600 group-hover:text-orange-700 inline-flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
                       Read Full Whitepaper <i className="fas fa-arrow-right text-[10px]"></i>
-                    </Link>
+                    </span>
                   </div>
                 </div>
               </article>
