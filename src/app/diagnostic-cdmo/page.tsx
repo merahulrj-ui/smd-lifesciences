@@ -114,7 +114,7 @@ const cdmoSchemaGraph = {
 
 export default function DiagnosticCdmoPage() {
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900 selection:bg-orange-500 selection:text-white">
+    <div className="bg-slate-50 min-h-screen text-slate-900 selection:bg-emerald-600 selection:text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cdmoSchemaGraph) }}
@@ -124,34 +124,34 @@ export default function DiagnosticCdmoPage() {
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs">
           <div className="flex items-center space-x-2 text-slate-500">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#064e3b] transition-colors">Home</Link>
             <span>/</span>
             <span className="text-slate-900 font-semibold">Diagnostic CDMO Development</span>
           </div>
-          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-[#064e3b] border border-emerald-200/80">
             Bangalore R&amp;D Cleanrooms
           </span>
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white py-16 sm:py-20 relative overflow-hidden">
+      {/* Hero Section (Lonza Clean Editorial Style with Deep Bio-Emerald) */}
+      <section className="bg-gradient-to-b from-[#f8fafc] via-white to-white text-slate-900 py-16 sm:py-20 border-b border-slate-200/80 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-orange-300 text-xs font-bold tracking-wide uppercase mb-6">
-              <i className="fas fa-flask text-orange-400"></i>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-[#064e3b] text-xs font-bold tracking-wide uppercase mb-6">
+              <i className="fas fa-flask text-[#059669]"></i>
               Milestone-Based Diagnostic CDMO &bull; Bangalore
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
-              Diagnostic Development CDMO for <span className="text-orange-400">IVD Companies</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
+              Diagnostic Development CDMO for <span className="text-[#064e3b]">IVD Companies</span>
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
               Accelerate your diagnostic pipeline from molecular concept to market-ready rapid lateral flow cards and ELISA kits. In technical partnership with Pentavalent Bio Sciences, we provide milestone-guaranteed development, matched antibody pair discovery, and pilot-scale manufacturing.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-8">
               <a
                 href="#rfq-form"
-                className="px-6 py-3.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm transition-colors shadow-lg"
+                className="px-6 py-3.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm transition-colors shadow-sm hover:shadow-md"
               >
                 Submit Project RFQ
               </a>
@@ -159,10 +159,21 @@ export default function DiagnosticCdmoPage() {
                 href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20diagnostic%20CDMO%20development%20in%20Bangalore."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-colors shadow-lg"
+                className="px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors shadow-sm"
               >
                 💬 Discuss with Lead Scientist
               </a>
+            </div>
+            <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-200/80 text-xs text-slate-600">
+              <div className="flex items-center gap-2 font-medium">
+                <i className="fas fa-circle-check text-emerald-600"></i> Milestone-Gated Invoicing
+              </div>
+              <div className="flex items-center gap-2 font-medium">
+                <i className="fas fa-circle-check text-emerald-600"></i> Mutual NDA &amp; IP Protection
+              </div>
+              <div className="flex items-center gap-2 font-medium">
+                <i className="fas fa-circle-check text-emerald-600"></i> Bangalore Cleanroom Scale-up
+              </div>
             </div>
           </div>
         </div>
@@ -172,7 +183,7 @@ export default function DiagnosticCdmoPage() {
       <section className="py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600">The 4-Phase Workflow</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">The 4-Phase Workflow</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">
               Structured Milestone-Based CDMO Delivery Model
             </h2>
@@ -182,8 +193,8 @@ export default function DiagnosticCdmoPage() {
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 relative">
-              <div className="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm mb-4">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all relative">
+              <div className="w-10 h-10 rounded-full bg-[#064e3b] text-white font-bold flex items-center justify-center text-sm mb-4">
                 01
               </div>
               <h3 className="text-base font-bold text-slate-900 mb-2">Target &amp; Antigen Expression</h3>
@@ -192,7 +203,7 @@ export default function DiagnosticCdmoPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 relative">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all relative">
               <div className="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm mb-4">
                 02
               </div>
@@ -202,8 +213,8 @@ export default function DiagnosticCdmoPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 relative">
-              <div className="w-10 h-10 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center text-sm mb-4">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all relative">
+              <div className="w-10 h-10 rounded-full bg-teal-700 text-white font-bold flex items-center justify-center text-sm mb-4">
                 03
               </div>
               <h3 className="text-base font-bold text-slate-900 mb-2">Assay Formulation &amp; Strip Assembly</h3>
@@ -212,8 +223,8 @@ export default function DiagnosticCdmoPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 relative">
-              <div className="w-10 h-10 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center text-sm mb-4">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all relative">
+              <div className="w-10 h-10 rounded-full bg-slate-800 text-white font-bold flex items-center justify-center text-sm mb-4">
                 04
               </div>
               <h3 className="text-base font-bold text-slate-900 mb-2">Pilot Batch &amp; Stability Verification</h3>
@@ -229,7 +240,7 @@ export default function DiagnosticCdmoPage() {
       <section id="rfq-form" className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Confidential Project Scoping</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">Confidential Project Scoping</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
               Request a CDMO Technical Feasibility Assessment
             </h2>
@@ -248,7 +259,7 @@ export default function DiagnosticCdmoPage() {
       <section className="bg-white border-t border-slate-200 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">CDMO Engagement FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">CDMO Engagement FAQ</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
               Frequently Asked Questions About Our Diagnostic CDMO
             </h2>

@@ -69,12 +69,12 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchemaGraph) }}
       />
       {/* Header Banner */}
-      <section className="bg-white border-b border-slate-200 py-6 sm:py-8">
+      <section className="bg-gradient-to-b from-[#f8fafc] via-white to-white border-b border-slate-200 py-10 sm:py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[11px] font-semibold mb-3">
-            <i className="fa-solid fa-building text-[10px]"></i> Corporate &amp; Scientific Overview
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-[#064e3b] border border-emerald-200/80 text-xs font-semibold mb-3">
+            <i className="fa-solid fa-building text-[10px] text-[#059669]"></i> Corporate &amp; Scientific Overview
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#064e3b] tracking-tight mb-3">
             About SMD Life Sciences
           </h1>
           <p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed">
@@ -90,7 +90,7 @@ export default function AboutPage() {
             
             {/* Left Narrative */}
             <div className="lg:col-span-7">
-              <span className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2 block">
+              <span className="text-xs font-bold text-[#064e3b] uppercase tracking-wider mb-2 block">
                 Our Strategic Vision
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-5 leading-tight">
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 Historically, diagnostic kit manufacturers across India and emerging markets have relied on expensive imports from North America and Europe for core biological raw materials: recombinant antigens, paired monoclonal antibodies, and colloidal gold conjugates. Supply chain bottlenecks or customs clearance delays directly threatened diagnostic testing capacity.
               </p>
               <p className="text-slate-600 text-base leading-relaxed mb-8">
-                <strong className="text-slate-900">SMD Life Sciences</strong>, in technical partnership with <strong className="text-blue-600">Pentavalent Bio Sciences</strong>, is proudly leading the way to supply diagnostic kit manufacturers worldwide with indigenous, high-purity biological reagents matching global benchmarks. Utilizing synthetic biology, high-density fermentation, and hybridoma technology, we ensure seamless supply security.
+                <strong className="text-slate-900">SMD Life Sciences</strong>, in technical partnership with <strong className="text-[#064e3b]">Pentavalent Bio Sciences</strong>, is proudly leading the way to supply diagnostic kit manufacturers worldwide with indigenous, high-purity biological reagents matching global benchmarks. Utilizing synthetic biology, high-density fermentation, and hybridoma technology, we ensure seamless supply security.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -110,7 +110,7 @@ export default function AboutPage() {
                     Domestic supply chain with fast 3-4 day dispatch, free from customs clearance holdups.
                   </p>
                 </div>
-                <div className="bg-slate-50 p-5 rounded-xl border-l-4 border-blue-600 border border-slate-200/60">
+                <div className="bg-slate-50 p-5 rounded-xl border-l-4 border-[#064e3b] border border-slate-200/60">
                   <h4 className="font-bold text-slate-900 text-base mb-1">Global IVD Standards</h4>
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                     Validated against real patient clinical sera across lateral flow, ELISA, and CLIA analyzers.
@@ -120,39 +120,39 @@ export default function AboutPage() {
             </div>
 
             {/* Right Facility Card */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-2xl p-8 shadow-xl">
-              <div className="text-xs font-bold text-cyan-300 uppercase tracking-wider mb-2">
+            <div className="lg:col-span-5 bg-gradient-to-br from-[#064e3b] to-[#043327] text-white rounded-2xl p-8 shadow-xl">
+              <div className="text-xs font-bold text-emerald-200 uppercase tracking-wider mb-2">
                 Bangalore Biomanufacturing Hub
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                 Electronic City R&amp;D Center
               </h3>
-              <p className="text-xs font-semibold text-blue-300 mb-4">
+              <p className="text-xs font-semibold text-emerald-100 mb-4">
                 In Technical Collaboration with Pentavalent Bio Sciences
               </p>
-              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+              <p className="text-sm text-slate-200 leading-relaxed mb-6">
                 Located within the KSSIDC Complex in Electronic City Phase 1, Bangalore, our allied biomanufacturing facility integrates:
               </p>
 
-              <ul className="space-y-3 text-sm text-slate-300 mb-8">
+              <ul className="space-y-3 text-sm text-slate-200 mb-8">
                 <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-cyan-400 mt-1 text-xs"></i>
+                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
                   <span>Grade C / Class 10,000 cleanrooms for sterile filling</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-cyan-400 mt-1 text-xs"></i>
+                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
                   <span>Automated AKTA FPLC &amp; analytical HPLC chromatography</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-cyan-400 mt-1 text-xs"></i>
+                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
                   <span>BSL-2 tissue culture &amp; hybridoma fusion suites</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-cyan-400 mt-1 text-xs"></i>
+                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
                   <span>Liquid nitrogen vapor-phase master cell banking</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-cyan-400 mt-1 text-xs"></i>
+                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
                   <span>Temperature telemetry (-20°C / 2-8°C cold chain)</span>
                 </li>
               </ul>
@@ -160,7 +160,7 @@ export default function AboutPage() {
               <div className="pt-6 border-t border-white/10">
                 <Link 
                   href="/contact" 
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors shadow-sm"
                 >
                   <i className="fa-solid fa-location-dot"></i> Schedule a Facility Visit
                 </Link>
@@ -174,7 +174,7 @@ export default function AboutPage() {
       <section className="py-10 sm:py-12 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-8">
-            <span className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1.5 block">
+            <span className="text-xs font-bold text-[#064e3b] uppercase tracking-wider mb-1.5 block">
               Guiding Values
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">
@@ -186,8 +186,8 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-4">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:border-emerald-300 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
                 <i className="fa-solid fa-flask-vial"></i>
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">Precision Chemistry</h4>
@@ -196,8 +196,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:border-emerald-300 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
                 <i className="fa-solid fa-scale-balanced"></i>
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">Transparent B2B Pricing</h4>
@@ -206,8 +206,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mb-4">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:border-emerald-300 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
                 <i className="fa-solid fa-handshake-angle"></i>
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">On-Site SOP Support</h4>
@@ -216,8 +216,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-xl mb-4">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:border-emerald-300 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
                 <i className="fa-solid fa-truck-ramp-box"></i>
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">Cold-Chain Dispatch</h4>
@@ -232,15 +232,15 @@ export default function AboutPage() {
       {/* Bottom CTA Card (Contained & Compact) */}
       <section className="py-10 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white rounded-2xl py-8 px-6 sm:px-10 text-center shadow-lg border border-slate-800">
+          <div className="bg-[#064e3b] text-white rounded-2xl py-8 px-6 sm:px-10 text-center shadow-lg">
             <h2 className="text-xl sm:text-2xl font-bold mb-2">Ready to evaluate our reagents?</h2>
-            <p className="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto mb-5 leading-relaxed">
+            <p className="text-emerald-100 text-xs sm:text-sm max-w-lg mx-auto mb-5 leading-relaxed">
               Contact our Bangalore technical team for lot-specific CoAs, evaluation samples, or custom hybridoma discussions.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link 
                 href="/products" 
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg text-xs sm:text-sm transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-lg text-xs sm:text-sm transition-colors shadow-sm"
               >
                 <i className="fa-solid fa-vial text-xs"></i> View 64+ Reagents
               </Link>

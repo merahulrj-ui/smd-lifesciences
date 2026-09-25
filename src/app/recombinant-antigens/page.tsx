@@ -119,34 +119,34 @@ export default function RecombinantAntigensPage() {
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs">
           <div className="flex items-center space-x-2 text-slate-500">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#064e3b] transition-colors">Home</Link>
             <span>/</span>
             <span className="text-slate-900 font-semibold">Recombinant Antigens Bangalore</span>
           </div>
-          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-[#064e3b] border border-emerald-200/80">
             Electronic City Biomanufacturing
           </span>
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white py-16 sm:py-20 relative overflow-hidden">
+      {/* Hero Section (Lonza Clean Editorial Style with Deep Bio-Emerald) */}
+      <section className="bg-gradient-to-b from-[#f8fafc] via-white to-white text-slate-900 py-16 sm:py-20 border-b border-slate-200/80 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-semibold uppercase tracking-wider mb-6">
-              <i className="fas fa-dna text-blue-400"></i>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-[#064e3b] text-xs font-bold uppercase tracking-wider mb-6">
+              <i className="fas fa-dna text-[#059669]"></i>
               Synthetic Biology &bull; High-Density Fermentation &bull; Bangalore
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
-              Recombinant Antigens Manufacturer in <span className="text-blue-400">Bangalore, India</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
+              Recombinant Antigens Manufacturer in <span className="text-[#064e3b]">Bangalore, India</span>
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
               Engineered for maximum epitope accessibility and solid-phase coating efficiency. SMD Life Sciences manufactures pharmaceutical-grade recombinant antigens for lateral flow rapid test strips, ELISA microplates, and chemiluminescent analyzers in technical partnership with Pentavalent Bio Sciences.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-8">
               <Link
                 href="/products"
-                className="px-6 py-3.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-colors shadow-lg"
+                className="px-6 py-3.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm transition-colors shadow-sm hover:shadow-md"
               >
                 Explore Antigens Catalog
               </Link>
@@ -154,10 +154,21 @@ export default function RecombinantAntigensPage() {
                 href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20recombinant%20antigens%20in%20Bangalore."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-colors shadow-lg"
+                className="px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors shadow-sm"
               >
                 💬 WhatsApp Technical Desk
               </a>
+            </div>
+            <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-200/80 text-xs text-slate-600">
+              <div className="flex items-center gap-2 font-medium">
+                <i className="fas fa-circle-check text-emerald-600"></i> &gt;95% Monomeric Purity (SEC-HPLC)
+              </div>
+              <div className="flex items-center gap-2 font-medium">
+                <i className="fas fa-circle-check text-emerald-600"></i> Clinical Reactivity Validated
+              </div>
+              <div className="flex items-center gap-2 font-medium">
+                <i className="fas fa-circle-check text-emerald-600"></i> Gram-Scale Biomanufacturing
+              </div>
             </div>
           </div>
         </div>
@@ -167,7 +178,7 @@ export default function RecombinantAntigensPage() {
       <section className="py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Production Standards</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">Production Standards</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">
               Expression Platforms Engineered for Diagnostic Precision
             </h2>
@@ -177,8 +188,8 @@ export default function RecombinantAntigensPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200">
-              <div className="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-xl mb-4">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-vial"></i>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Bacterial &bull; E. coli Systems</h3>
@@ -187,8 +198,8 @@ export default function RecombinantAntigensPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200">
-              <div className="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-layer-group"></i>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Yeast &bull; Pichia pastoris</h3>
@@ -197,8 +208,8 @@ export default function RecombinantAntigensPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200">
-              <div className="w-12 h-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4">
+            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-check-double"></i>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Mammalian &bull; HEK293 / CHO</h3>
@@ -215,7 +226,7 @@ export default function RecombinantAntigensPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Recombinant Portfolio</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">Recombinant Portfolio</span>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
                 Validated Recombinant Diagnostic Antigens
               </h2>
@@ -225,7 +236,7 @@ export default function RecombinantAntigensPage() {
             </div>
             <Link
               href="/products"
-              className="mt-4 sm:mt-0 inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 gap-1.5"
+              className="mt-4 sm:mt-0 inline-flex items-center text-sm font-semibold text-[#064e3b] hover:text-[#043327] gap-1.5"
             >
               Browse All Reagents &rarr;
             </Link>
@@ -235,11 +246,11 @@ export default function RecombinantAntigensPage() {
             {recombinantAntigens.map((product) => (
               <div
                 key={product.code}
-                className="bg-white border border-slate-200 rounded-lg p-5 hover:border-blue-400 hover:shadow-sm transition-all flex flex-col justify-between"
+                className="bg-white border border-slate-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-xs transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-mono font-bold text-blue-700 bg-blue-100/60 px-2 py-0.5 rounded">
+                    <span className="text-xs font-mono font-bold text-[#064e3b] bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded">
                       {product.code}
                     </span>
                     <span className="text-xs font-medium text-slate-500">
@@ -258,7 +269,7 @@ export default function RecombinantAntigensPage() {
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
                   <Link
                     href={`/products/${product.code}`}
-                    className="text-xs font-semibold text-blue-600 hover:text-blue-800"
+                    className="text-xs font-semibold text-[#064e3b] hover:text-[#043327]"
                   >
                     View Datasheet &rarr;
                   </Link>
@@ -281,7 +292,7 @@ export default function RecombinantAntigensPage() {
       <section className="bg-white border-t border-slate-200 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Technical FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b]">Technical FAQ</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
               Frequently Asked Questions About Our Recombinant Antigens
             </h2>
@@ -311,15 +322,15 @@ export default function RecombinantAntigensPage() {
 
       {/* Direct CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 sm:p-12 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-[#064e3b] rounded-2xl p-8 sm:p-12 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8 shadow-lg">
           <div className="max-w-2xl">
-            <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-4">
+            <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-200 text-xs font-semibold uppercase tracking-wider mb-4 border border-emerald-400/20">
               Bangalore Production Facility
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold mb-3">
               Need Custom Antigen Expression or Bulk Lots?
             </h2>
-            <p className="text-slate-300 text-sm leading-relaxed">
+            <p className="text-emerald-100 text-sm leading-relaxed">
               Connect with our protein engineering scientists in Electronic City, Bangalore. Custom sequence design, codon optimization, and gram-scale biomanufacturing.
             </p>
           </div>
@@ -328,7 +339,7 @@ export default function RecombinantAntigensPage() {
               href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20custom%20recombinant%20antigen%20expression."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors gap-2 shadow-lg"
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors gap-2 shadow-sm"
             >
               💬 WhatsApp Scientists
             </a>

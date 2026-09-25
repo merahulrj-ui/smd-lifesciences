@@ -107,72 +107,99 @@ const servicesSchemaGraph = {
 
 export default function BiotechServicesPage() {
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900 selection:bg-orange-500 selection:text-white">
+    <div className="bg-white min-h-screen text-slate-900 selection:bg-emerald-500 selection:text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchemaGraph) }}
       />
       {/* Breadcrumb Header */}
-      <div className="bg-white border-b border-slate-200">
+      <div className="bg-slate-50 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs">
           <div className="flex items-center space-x-2 text-slate-500 font-medium">
-            <Link href="/" className="hover:text-blue-600 transition-colors flex items-center gap-1.5">
+            <Link href="/" className="hover:text-[#064e3b] transition-colors flex items-center gap-1.5">
               <i className="fas fa-home text-slate-400 text-[11px]"></i> Home
             </Link>
             <span className="text-slate-300">/</span>
             <span className="text-slate-900 font-bold">Custom Biotech Services &amp; CDMO</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-orange-700 bg-orange-50 border border-orange-200 px-2.5 py-0.5 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
+            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#064e3b] bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
               Bangalore R&amp;D Facility
             </span>
           </div>
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white py-16 sm:py-20 overflow-hidden">
-        {/* Ambient Glows */}
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
+      {/* Hero Section (Lonza Clean Editorial Style with Deep Bio-Emerald) */}
+      <section className="relative bg-gradient-to-b from-[#f8fafc] via-white to-white text-slate-900 py-12 sm:py-16 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-orange-300 text-xs font-bold tracking-wide uppercase mb-6 shadow-sm">
-              <i className="fas fa-flask text-orange-400"></i>
-              Contract Research &amp; CDMO Solutions
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15] mb-5">
-              Custom Antibody Development &amp;{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-teal-300">
-                Recombinant Expression
-              </span>
-            </h1>
-            
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 font-normal">
-              Specialized bioprocess engineering for IVD test manufacturers and diagnostic assembly plants. Milestone-based custom hybridoma monoclonal antibody generation, high-yield ÄKTA FPLC protein purification, and matched pairing optimized for lateral flow membranes.
-            </p>
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-[#064e3b] text-xs font-bold uppercase tracking-wider mb-5">
+                <i className="fas fa-flask text-[#059669]"></i>
+                Contract Research &amp; CDMO Solutions &bull; Bangalore
+              </div>
+              
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#064e3b] leading-[1.15] mb-5">
+                Custom Antibody Discovery &amp;{' '}
+                <span className="text-slate-900 underline decoration-emerald-500/50 decoration-4 underline-offset-4">
+                  Recombinant Expression
+                </span>
+              </h1>
+              
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-7 max-w-2xl">
+                Specialized bioprocess engineering for IVD test kit manufacturers and diagnostic assembly plants. Milestone-based custom hybridoma monoclonal antibody generation, high-yield ÄKTA FPLC protein purification, and matched pairing optimized for lateral flow membranes.
+              </p>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <a 
-                href="#rfq-form"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold text-sm shadow-[0_10px_25px_rgba(234,88,12,0.35)] hover:shadow-[0_12px_30px_rgba(234,88,12,0.45)] hover:-translate-y-0.5 transition-all gap-2.5"
-              >
-                <i className="fas fa-file-signature text-sm"></i>
-                Request Project Consultation
-              </a>
-              <a 
-                href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20regarding%20Custom%20Antibody%20/%20Biotech%20Services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm font-semibold text-sm transition-all gap-2.5 hover:-translate-y-0.5"
-              >
-                <i className="fab fa-whatsapp text-emerald-400 text-base"></i>
-                WhatsApp Technical Desk
-              </a>
+              <div className="flex flex-wrap items-center gap-3.5 mb-8">
+                <a 
+                  href="#rfq-form"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm shadow-sm hover:shadow-md transition-all gap-2"
+                >
+                  <i className="fas fa-file-signature text-xs"></i>
+                  Request Project Consultation
+                </a>
+                <a 
+                  href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20regarding%20Custom%20Antibody%20/%20Biotech%20Services."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all gap-2 shadow-xs"
+                >
+                  <i className="fab fa-whatsapp text-white text-base"></i>
+                  WhatsApp Technical Desk
+                </a>
+              </div>
+
+              {/* Trust Micro-Row */}
+              <div className="pt-6 border-t border-slate-200/80 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-600 font-medium">
+                <span className="flex items-center gap-1.5"><i className="fas fa-check-circle text-emerald-600"></i> Milestone-Gated Invoicing</span>
+                <span className="flex items-center gap-1.5"><i className="fas fa-check-circle text-emerald-600"></i> 100% Client IP Assignment</span>
+                <span className="flex items-center gap-1.5"><i className="fas fa-check-circle text-emerald-600"></i> Mutual NDA Protected</span>
+              </div>
             </div>
+
+            {/* Right Side Visual Showcase */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 group bg-slate-100">
+                <img 
+                  src="/images/biotech_cleanroom_hero.jpg" 
+                  alt="SMD Life Sciences Custom CDMO Lab" 
+                  className="w-full h-[360px] sm:h-[400px] object-cover group-hover:scale-102 transition-transform duration-500"
+                />
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-200/80">
+                  <div className="text-xs font-bold text-[#064e3b] flex items-center justify-between mb-1">
+                    <span>CDMO Phase Validation Pipeline</span>
+                    <span className="text-emerald-700 font-mono">Phase 1 &rarr; 4</span>
+                  </div>
+                  <p className="text-[11px] text-slate-600">
+                    From antigen synthesis &amp; mouse immunization to roller bottle bioreactor scale-up and clinical sera cross-matching.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
