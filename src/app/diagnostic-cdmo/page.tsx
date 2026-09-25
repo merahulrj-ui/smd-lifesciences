@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://lifesciences.smdmedicare.in/images/biotech_bioreactors.jpg',
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_bioreactors.webp',
         width: 1200,
         height: 630,
         alt: 'Diagnostic CDMO Bioreactor Cleanroom Suites Bangalore',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Diagnostic CDMO Services India | Rapid Test & ELISA Development | SMD Life Sciences',
     description: 'Contract development for IVD test kit manufacturers in Bangalore. Hybridoma generation, antigen expression, and rapid test assembly.',
-    images: ['https://lifesciences.smdmedicare.in/images/biotech_bioreactors.jpg'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_bioreactors.webp'],
   },
 };
 

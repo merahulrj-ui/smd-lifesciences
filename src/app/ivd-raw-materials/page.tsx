@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.jpg',
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.webp',
         width: 1200,
         height: 630,
         alt: 'IVD Raw Materials and Lateral Flow Test Strip Development',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Buy IVD Raw Materials & Reagents India | SMD Life Sciences',
     description: 'High-purity recombinant antigens, monoclonal antibodies, and colloidal gold conjugates for IVD manufacturers.',
-    images: ['https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.jpg'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.webp'],
   },
 };
 

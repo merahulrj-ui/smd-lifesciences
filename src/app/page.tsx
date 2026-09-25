@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.jpg',
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.webp',
         width: 1200,
         height: 630,
         alt: 'SMD Life Sciences Cleanroom Biomanufacturing Facility Bangalore',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Buy IVD Raw Materials & Reagents Online | SMD Life Sciences',
     description: 'High-purity recombinant antigens, matched monoclonal antibodies, and custom CDMO services for IVD manufacturers with lot CoA.',
-    images: ['https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.jpg'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.webp'],
   },
 };
 
@@ -173,7 +173,7 @@ export default function BiotechHomePage() {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 group bg-slate-100">
                 <img 
-                  src="/images/biotech_cleanroom_hero.jpg" 
+                  src="/images/biotech_cleanroom_hero.webp" 
                   alt="SMD Life Sciences Bangalore Biomanufacturing Cleanroom" 
                   className="w-full h-[360px] sm:h-[420px] object-cover group-hover:scale-102 transition-transform duration-500"
                 />
@@ -228,7 +228,7 @@ export default function BiotechHomePage() {
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 group">
                 <img
-                  src="/images/biotech_chromatography.jpg"
+                  src="/images/biotech_chromatography.webp"
                   alt="ÄKTA Avant FPLC Preparative Chromatography System at Bangalore Biomanufacturing Facility"
                   className="w-full h-[400px] sm:h-[460px] object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -386,7 +386,7 @@ export default function BiotechHomePage() {
             <div className="lg:col-span-6 order-1 lg:order-2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 group">
                 <img
-                  src="/images/biotech_lateral_flow.jpg"
+                  src="/images/biotech_lateral_flow.webp"
                   alt="Rapid Diagnostic Lateral Flow Test Cassette Quality Inspection and Dispensing at Bangalore R&D Facility"
                   className="w-full h-[400px] sm:h-[460px] object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -440,7 +440,7 @@ export default function BiotechHomePage() {
               />
               <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                 <img
-                  src="/images/biotech_bioreactors.jpg"
+                  src="/images/biotech_bioreactors.webp"
                   alt="High-density microbial and yeast fermentation bioreactor facility in Class 10k cleanroom"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -473,7 +473,7 @@ export default function BiotechHomePage() {
               />
               <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                 <img
-                  src="/images/biotech_microplate_assay.jpg"
+                  src="/images/biotech_microplate_assay.webp"
                   alt="Scientist in biosafety cabinet conducting microplate ELISA screening and hybridoma cloning"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -506,7 +506,7 @@ export default function BiotechHomePage() {
               />
               <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                 <img
-                  src="/images/biotech_cleanroom_hero.jpg"
+                  src="/images/biotech_cleanroom_hero.webp"
                   alt="Pharmaceutical cleanroom testing and diagnostic reagent quality control laboratory"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

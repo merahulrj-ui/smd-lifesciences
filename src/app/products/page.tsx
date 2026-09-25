@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg',
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp',
         width: 1200,
         height: 630,
         alt: 'IVD Raw Materials & Reagents Catalog',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Buy IVD Reagents & Biological Raw Materials Online | SMD Life Sciences',
     description: 'High-purity recombinant antigens, monoclonal antibodies, and lateral flow reagents with Certificate of Analysis (CoA).',
-    images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'],
   },
 };
 

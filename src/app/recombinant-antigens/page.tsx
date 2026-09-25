@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg',
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp',
         width: 1200,
         height: 630,
         alt: 'Recombinant Antigen Chromatography Purification ÄKTA',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Buy Recombinant Antigens (Bangalore) | SMD Life Sciences',
     description: 'High-purity recombinant antigens manufactured in Electronic City, Bangalore for lateral flow and ELISA test kits.',
-    images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'],
   },
 };
 

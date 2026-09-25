@@ -123,7 +123,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-lg flex flex-col">
               <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                 <img
-                  src="/images/biotech_bioreactors.jpg"
+                  src="/images/biotech_bioreactors.webp"
                   alt="Bangalore Electronic City Biomanufacturing Suites"
                   className="w-full h-full object-cover"
                 />

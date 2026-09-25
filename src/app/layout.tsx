@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.jpg',
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.webp',
         width: 1200,
         height: 630,
         alt: 'SMD Life Sciences Cleanroom Biomanufacturing Facility Bangalore',
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "SMD Life Sciences | IVD Raw Materials & Reagents Manufacturer India",
     description: "High-purity recombinant antigens, monoclonal antibodies, colloidal gold conjugates, and CDMO assay development with lot Certificate of Analysis (CoA).",
-    images: ['https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.jpg'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.webp'],
   },
   robots: {
     index: true,

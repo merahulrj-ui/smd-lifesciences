@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const productImage = product.category.toLowerCase().includes('antigen') || product.type.toLowerCase().includes('recombinant')
-    ? 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg'
-    : 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.jpg';
+    ? 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'
+    : 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.webp';
 
   return {
     title: `Buy ${product.name} (${product.code}) | IVD Reagent Bulk Price & CoA | SMD Life Sciences`,
@@ -81,8 +81,8 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
   ).slice(0, 4);
 
   const productImage = product.category.toLowerCase().includes('antigen') || product.type.toLowerCase().includes('recombinant')
-    ? 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg'
-    : 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.jpg';
+    ? 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'
+    : 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.webp';
 
   const productFaqs = [
     {

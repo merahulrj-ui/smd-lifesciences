@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://lifesciences.smdmedicare.in/images/biotech_microplate_assay.jpg',
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_microplate_assay.webp',
         width: 1200,
         height: 630,
         alt: 'Custom Monoclonal Antibody Development and ELISA Screening Lab',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Custom Monoclonal Antibody Development & Protein Expression India | SMD Life Sciences',
     description: 'Specialized contract research & CDMO for IVD manufacturers. 4-Phase custom hybridoma development, protein expression, and assay optimization.',
-    images: ['https://lifesciences.smdmedicare.in/images/biotech_microplate_assay.jpg'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_microplate_assay.webp'],
   },
 };
 
@@ -192,7 +192,7 @@ export default function BiotechServicesPage() {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 group bg-slate-100">
                 <img 
-                  src="/images/biotech_cleanroom_hero.jpg" 
+                  src="/images/biotech_cleanroom_hero.webp" 
                   alt="SMD Life Sciences Custom CDMO Lab" 
                   className="w-full h-[360px] sm:h-[400px] object-cover group-hover:scale-102 transition-transform duration-500"
                 />
@@ -283,7 +283,7 @@ export default function BiotechServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8 items-center bg-slate-50 p-5 sm:p-6 rounded-2xl border border-slate-200">
             <div className="lg:col-span-5 rounded-xl overflow-hidden shadow-sm">
               <img
-                src="/images/biotech_microplate_assay.jpg"
+                src="/images/biotech_microplate_assay.webp"
                 alt="Scientist conducting hybridoma microplate ELISA screening in biosafety cabinet"
                 className="w-full h-44 sm:h-48 object-cover"
               />
@@ -431,7 +431,7 @@ export default function BiotechServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8 items-center bg-slate-50 p-5 sm:p-6 rounded-2xl border border-slate-200">
             <div className="lg:col-span-5 rounded-xl overflow-hidden shadow-sm">
               <img
-                src="/images/biotech_chromatography.jpg"
+                src="/images/biotech_chromatography.webp"
                 alt="ÄKTA Avant FPLC Preparative Chromatography System"
                 className="w-full h-44 sm:h-48 object-cover"
               />
@@ -541,7 +541,7 @@ export default function BiotechServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8 items-center bg-slate-50 p-5 sm:p-6 rounded-2xl border border-slate-200">
             <div className="lg:col-span-5 rounded-xl overflow-hidden shadow-sm">
               <img
-                src="/images/biotech_lateral_flow.jpg"
+                src="/images/biotech_lateral_flow.webp"
                 alt="Lateral flow test cassette dispensing and colloidal gold conjugation validation"
                 className="w-full h-44 sm:h-48 object-cover"
               />
