@@ -383,10 +383,10 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
           </div>
 
           {/* Right Action & RFQ Sidebar (1 Column) */}
-          <div className="space-y-6">
+          <div className="space-y-6 lg:sticky lg:top-24 self-start">
             
             {/* Direct RFQ Action Box */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm sticky top-6">
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
               <div className="text-xs font-bold uppercase tracking-wider text-orange-600 mb-1">
                 B2B Bulk Sourcing &amp; Samples
               </div>
@@ -432,20 +432,24 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
               </div>
             </div>
 
-            {/* Custom Services Teaser */}
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl border border-orange-200 p-6 text-xs">
+            {/* Custom Services Teaser Box */}
+            <div className="relative bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-200 p-6 text-xs shadow-xs hover:border-orange-400 hover:shadow-md transition-all group cursor-pointer">
+              <Link 
+                href="/services" 
+                className="absolute inset-0 z-10 rounded-2xl" 
+                aria-label="Inquire Custom Services" 
+              />
               <span className="font-bold text-orange-800 uppercase tracking-wider block mb-1">
                 Need Custom Modifications?
               </span>
               <p className="text-slate-700 mb-3 leading-relaxed">
                 Need this target expressed in mammalian CHO cells, or conjugated with custom 40nm colloidal gold nanoparticles?
               </p>
-              <Link 
-                href="/services"
-                className="font-bold text-orange-700 hover:text-orange-900 inline-flex items-center gap-1"
+              <span 
+                className="font-bold text-orange-700 group-hover:text-orange-900 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-all"
               >
                 Inquire Custom Services ➔
-              </Link>
+              </span>
             </div>
 
           </div>
