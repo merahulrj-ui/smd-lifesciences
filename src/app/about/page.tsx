@@ -119,48 +119,57 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right Facility Card */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-[#064e3b] to-[#043327] text-white rounded-2xl p-8 shadow-xl">
-              <div className="text-xs font-bold text-emerald-200 uppercase tracking-wider mb-2">
-                Bangalore Biomanufacturing Hub
+            {/* Right Facility Card with Real Photo */}
+            <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+              <div className="relative h-56 w-full overflow-hidden bg-slate-100">
+                <img
+                  src="/images/biotech_bioreactors.jpg"
+                  alt="Bangalore Electronic City Biomanufacturing Suites"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                <div className="absolute bottom-3 left-4 right-4 text-white">
+                  <span className="text-[10px] font-bold text-emerald-300 uppercase tracking-wider block">
+                    Bangalore Biomanufacturing Hub
+                  </span>
+                  <h3 className="text-lg font-bold text-white leading-tight">
+                    Electronic City R&amp;D Center
+                  </h3>
+                  <span className="text-[11px] text-slate-300">In Technical Collaboration with Pentavalent Bio Sciences</span>
+                </div>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                Electronic City R&amp;D Center
-              </h3>
-              <p className="text-xs font-semibold text-emerald-100 mb-4">
-                In Technical Collaboration with Pentavalent Bio Sciences
-              </p>
-              <p className="text-sm text-slate-200 leading-relaxed mb-6">
-                Located within the KSSIDC Complex in Electronic City Phase 1, Bangalore, our allied biomanufacturing facility integrates:
-              </p>
 
-              <ul className="space-y-3 text-sm text-slate-200 mb-8">
-                <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
-                  <span>Grade C / Class 10,000 cleanrooms for sterile filling</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
-                  <span>Automated AKTA FPLC &amp; analytical HPLC chromatography</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
-                  <span>BSL-2 tissue culture &amp; hybridoma fusion suites</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
-                  <span>Liquid nitrogen vapor-phase master cell banking</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <i className="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i>
-                  <span>Temperature telemetry (-20°C / 2-8°C cold chain)</span>
-                </li>
-              </ul>
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  Located within the KSSIDC Complex in Electronic City Phase 1, Bangalore, our allied biomanufacturing facility integrates:
+                </p>
 
-              <div className="pt-6 border-t border-white/10">
+                <ul className="space-y-2.5 text-xs text-slate-700 mb-6">
+                  <li className="flex items-start gap-2">
+                    <i className="fa-solid fa-check text-emerald-600 mt-0.5 text-xs"></i>
+                    <span>Grade C / Class 10,000 cleanrooms for sterile filling</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <i className="fa-solid fa-check text-emerald-600 mt-0.5 text-xs"></i>
+                    <span>Automated ÄKTA FPLC &amp; analytical HPLC chromatography</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <i className="fa-solid fa-check text-emerald-600 mt-0.5 text-xs"></i>
+                    <span>BSL-2 tissue culture &amp; hybridoma fusion suites</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <i className="fa-solid fa-check text-emerald-600 mt-0.5 text-xs"></i>
+                    <span>Liquid nitrogen vapor-phase master cell banking</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <i className="fa-solid fa-check text-emerald-600 mt-0.5 text-xs"></i>
+                    <span>Temperature telemetry (-20°C / 2-8°C cold chain)</span>
+                  </li>
+                </ul>
+
                 <Link 
                   href="/contact" 
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-xs sm:text-sm transition-colors shadow-sm"
                 >
                   <i className="fa-solid fa-location-dot"></i> Schedule a Facility Visit
                 </Link>

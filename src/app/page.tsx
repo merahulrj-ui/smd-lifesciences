@@ -209,107 +209,301 @@ export default function BiotechHomePage() {
         </div>
       </section>
 
-      {/* Two Core Pillars Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/80">
-            Our Business Capabilities
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-3">
-            Two Core Pillars for Diagnostic Excellence
-          </h2>
-          <p className="text-sm text-slate-600 mt-2">
-            Whether you need custom assay design from scratch or bulk batch supply of proven antibodies, our Bangalore facility delivers milestone-guaranteed results.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Pillar 1: Custom Services */}
-          <div className="bg-white rounded-xl border border-slate-200 p-8 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#064e3b] rounded-t-xl"></div>
-            <div>
-              <div className="w-12 h-12 rounded-lg bg-emerald-50 text-[#064e3b] border border-emerald-200/60 flex items-center justify-center mb-6 text-xl">
-                <i className="fas fa-flask"></i>
+      {/* Editorial Showcase 1: Recombinant Antigens & Protein Purification */}
+      <section className="py-20 bg-white border-b border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left: Real High-Res Photography */}
+            <div className="lg:col-span-6 relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 group">
+                <img
+                  src="/images/biotech_chromatography.jpg"
+                  alt="ÄKTA Avant FPLC Preparative Chromatography System at Bangalore Biomanufacturing Facility"
+                  className="w-full h-[400px] sm:h-[460px] object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
+                
+                {/* Floating Chips */}
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-200 shadow-sm flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="text-[11px] font-bold text-[#064e3b] tracking-wide uppercase">
+                    ÄKTA Avant FPLC System &bull; Class 10k Cleanroom
+                  </span>
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 text-white">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-semibold text-emerald-300">Purity Guarantee: &gt;95% SEC-HPLC</span>
+                    <span className="text-slate-300">Endotoxin &lt;0.1 EU/&mu;g</span>
+                  </div>
+                  <p className="text-[11px] text-slate-300 mt-1">
+                    Multi-stage affinity, ion-exchange &amp; size exclusion chromatography for IVD raw materials.
+                  </p>
+                </div>
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[#064e3b] mb-1">
-                High-Ticket Contract Research
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
-                Custom Antibody &amp; Protein Development
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed mb-6">
-                End-to-end development of custom murine monoclonal antibodies (mAbs), high-yield recombinant protein expression in bacterial/mammalian hosts, and matched antibody pairing to eliminate false positives in lateral flow cassettes.
-              </p>
-              <ul className="space-y-2.5 text-sm text-slate-700 mb-8">
-                <li className="flex items-start gap-2">
-                  <i className="fas fa-check-circle text-emerald-600 mt-1 shrink-0 text-xs"></i>
-                  <span><strong>4-Phase Hybridoma Pipeline:</strong> Immunization to Roller Bottle Scale-up</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <i className="fas fa-check-circle text-emerald-600 mt-1 shrink-0 text-xs"></i>
-                  <span><strong>Recombinant Expression:</strong> <em>E. coli</em>, Pichia &amp; CHO/HEK293 systems</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <i className="fas fa-check-circle text-emerald-600 mt-1 shrink-0 text-xs"></i>
-                  <span><strong>Assay Pairing:</strong> Sandwich screening &amp; gold bioconjugation optimization</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <i className="fas fa-check-circle text-emerald-600 mt-1 shrink-0 text-xs"></i>
-                  <span><strong>IP Security:</strong> Client owns exclusive clone rights upon milestone completion</span>
-                </li>
-              </ul>
             </div>
-            <Link 
-              href="/services"
-              className="inline-flex items-center justify-center w-full py-3 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm transition-colors gap-2 shadow-xs"
-            >
-              Explore Custom Services Details
-              <i className="fas fa-arrow-right text-xs"></i>
-            </Link>
+
+            {/* Right: Editorial Narrative */}
+            <div className="lg:col-span-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-[#064e3b] border border-emerald-200/80 text-xs font-bold uppercase tracking-wider mb-4">
+                <i className="fas fa-dna text-[#059669]"></i> Core Capability 01 &bull; Protein Engineering
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-[1.2] mb-5">
+                Clinical-Grade Recombinant Antigens &amp;{' '}
+                <span className="text-[#064e3b]">Monoclonal Antibodies</span>
+              </h2>
+              <p className="text-base text-slate-600 leading-relaxed mb-6">
+                Engineered specifically for solid-phase diagnostic coating in lateral flow nitrocellulose strips, ELISA microplates, and CLIA analyzers. Produced in Bangalore in technical partnership with Pentavalent Bio Sciences, guaranteeing authentic native conformation and zero batch variations.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
+                <div className="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
+                  <i className="fas fa-check-circle text-emerald-600 mt-0.5 text-sm shrink-0"></i>
+                  <div>
+                    <strong className="block text-xs font-bold text-slate-900">Validated Epitope Accessibility</strong>
+                    <span className="text-[11px] text-slate-600">Cross-verified on clinical positive/negative patient sera.</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
+                  <i className="fas fa-check-circle text-emerald-600 mt-0.5 text-sm shrink-0"></i>
+                  <div>
+                    <strong className="block text-xs font-bold text-slate-900">Lot-to-Lot CV &lt; 5%</strong>
+                    <span className="text-[11px] text-slate-600">Standardized fermentation protocols ensure repeatability.</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
+                  <i className="fas fa-check-circle text-emerald-600 mt-0.5 text-sm shrink-0"></i>
+                  <div>
+                    <strong className="block text-xs font-bold text-slate-900">Zero Customs Holdups</strong>
+                    <span className="text-[11px] text-slate-600">Dispatched from Bangalore within 2-4 business days across India.</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
+                  <i className="fas fa-check-circle text-emerald-600 mt-0.5 text-sm shrink-0"></i>
+                  <div>
+                    <strong className="block text-xs font-bold text-slate-900">Lot-Specific CoA Included</strong>
+                    <span className="text-[11px] text-slate-600">Complete SDS-PAGE and SEC-HPLC profiles with every shipment.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3.5">
+                <Link
+                  href="/products"
+                  className="px-6 py-3.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm transition-all shadow-sm hover:shadow-md inline-flex items-center gap-2"
+                >
+                  <i className="fas fa-vial text-xs"></i> Browse 64+ Catalog Reagents
+                </Link>
+                <Link
+                  href="/ivd-raw-materials"
+                  className="px-6 py-3.5 rounded-lg bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-300 transition-all inline-flex items-center gap-2 shadow-xs"
+                >
+                  Explore IVD Sourcing Desk &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Editorial Showcase 2: Lateral Flow Formulation & Diagnostic CDMO (Alternating) */}
+      <section className="py-20 bg-slate-50 border-b border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left: Editorial Narrative */}
+            <div className="lg:col-span-6 order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-[#064e3b] border border-emerald-200/80 text-xs font-bold uppercase tracking-wider mb-4">
+                <i className="fas fa-flask text-[#059669]"></i> Core Capability 02 &bull; Diagnostic CDMO
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-[1.2] mb-5">
+                Rapid Test Assay Formulation &amp;{' '}
+                <span className="text-[#064e3b]">40nm Gold Conjugation</span>
+              </h2>
+              <p className="text-base text-slate-600 leading-relaxed mb-6">
+                Overcome assay sensitivity limits and background haze. We offer milestone-based contract development for IVD kit manufacturers—from high-affinity hybridoma clone screening to colloidal gold bioconjugation, nitrocellulose membrane blocking, and pilot-batch stability profiling.
+              </p>
+
+              <div className="space-y-3 mb-8">
+                <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center font-bold text-xs shrink-0">
+                    01
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900">Matched Antibody Sandwich Pair Discovery</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">High-throughput ELISA pairing to maximize binding affinity and prevent sterical hindrance on strip test lines.</p>
+                  </div>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center font-bold text-xs shrink-0">
+                    02
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900">40nm Monodisperse Colloidal Gold Bioconjugation</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">Stable passive and covalent antibody conjugation with optimized buffer matrices for high optical density and clear test lines.</p>
+                  </div>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#064e3b] flex items-center justify-center font-bold text-xs shrink-0">
+                    03
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900">100% Client IP Ownership &amp; Tech-Transfer</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">Complete ownership of master hybridoma cell banks, SOP formulations, and strip assembly parameters upon project delivery.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3.5">
+                <Link
+                  href="/services"
+                  className="px-6 py-3.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white font-semibold text-sm transition-all shadow-sm hover:shadow-md inline-flex items-center gap-2"
+                >
+                  <i className="fas fa-file-signature text-xs"></i> Request CDMO Consultation
+                </Link>
+                <Link
+                  href="/diagnostic-cdmo"
+                  className="px-6 py-3.5 rounded-lg bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-300 transition-all inline-flex items-center gap-2 shadow-xs"
+                >
+                  View 4-Phase CDMO Workflow &rarr;
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: Real Macro Photography */}
+            <div className="lg:col-span-6 order-1 lg:order-2 relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 group">
+                <img
+                  src="/images/biotech_lateral_flow.jpg"
+                  alt="Rapid Diagnostic Lateral Flow Test Cassette Quality Inspection and Dispensing at Bangalore R&D Facility"
+                  className="w-full h-[400px] sm:h-[460px] object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
+
+                {/* Floating Chips */}
+                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-200 shadow-sm flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="text-[11px] font-bold text-[#064e3b] tracking-wide uppercase">
+                    Lateral Flow Quality Validation
+                  </span>
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 text-white">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-semibold text-emerald-300">Nitrocellulose Optimization</span>
+                    <span className="text-slate-300">40nm Colloidal Gold</span>
+                  </div>
+                  <p className="text-[11px] text-slate-300 mt-1">
+                    Precision dispensing, conjugate pad drying protocols, and thermal accelerated shelf-life verification.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Brand New Visual Section: Bangalore Biomanufacturing Facility Tour (3 High-Res Cards) */}
+      <section className="py-20 bg-white border-b border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064e3b] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/80">
+              Infrastructure &bull; Electronic City Bangalore
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+              Inside Our Allied Biomanufacturing &amp; R&amp;D Hub
+            </h2>
+            <p className="text-base text-slate-600 mt-3">
+              Operating in technical partnership with Pentavalent Bio Sciences, our Bangalore facilities house specialized suites for synthetic biology, fermentation, hybridoma screening, and cleanroom filling.
+            </p>
           </div>
 
-          {/* Pillar 2: 64+ Catalog Reagents */}
-          <div className="bg-white rounded-xl border border-slate-200 p-8 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-slate-800 rounded-t-xl"></div>
-            <div>
-              <div className="w-12 h-12 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center mb-6 text-xl">
-                <i className="fas fa-layer-group"></i>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1: Bioreactor & Fermentation */}
+            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col group">
+              <div className="relative h-56 w-full overflow-hidden bg-slate-100">
+                <img
+                  src="/images/biotech_bioreactors.jpg"
+                  alt="High-density microbial and yeast fermentation bioreactor facility in Class 10k cleanroom"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <span className="absolute top-3 left-3 bg-[#064e3b]/90 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  Bioprocessing Suites
+                </span>
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
-                Off-the-Shelf Bulk Supply
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#064e3b] transition-colors">
+                    High-Density Fermentation Bioreactors
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                    Submerged aerobic bacterial (E. coli) and yeast (Pichia pastoris) fermentation vessels supporting gram-to-kilogram batch yields under ISO Class 10,000 cleanroom controls.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+                  <span>10L–200L Scale-up</span>
+                  <span className="text-[#064e3b] font-semibold">Continuous pH &amp; DO₂ Telemetry</span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
-                Bulk IVD Raw Material Reagents
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed mb-6">
-                Ready-to-ship biological reagents formulated specifically for lateral flow rapid test strips, ELISA microplates, and CLIA analyzers. Stop waiting 4 weeks for Chinese shipments—get direct domestic GST billing.
-              </p>
-              <ul className="space-y-2.5 text-sm text-slate-700 mb-8">
-                <li className="flex items-start gap-2">
-                  <i className="fas fa-check-circle text-emerald-600 mt-1 shrink-0 text-xs"></i>
-                  <span><strong>Infectious Targets:</strong> Dengue NS1/IgG/IgM, Malaria Pf/Pv, HIV-1/2, HBsAg, HCV</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <i className="fas fa-check-circle text-emerald-600 mt-1 shrink-0 text-xs"></i>
-                  <span><strong>Cardiac Biomarkers:</strong> High-sensitivity Troponin I, CK-MB, Myoglobin</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <i className="fas fa-check-circle text-emerald-600 mt-1 shrink-0 text-xs"></i>
-                  <span><strong>Conjugates &amp; Controls:</strong> Colloidal gold 40nm, Goat anti-Mouse IgG</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <i className="fas fa-check-circle text-emerald-600 mt-1 shrink-0 text-xs"></i>
-                  <span><strong>Documentation:</strong> Batch-specific Certificate of Analysis (CoA) &amp; MSDS</span>
-                </li>
-              </ul>
             </div>
-            <Link 
-              href="/products"
-              className="inline-flex items-center justify-center w-full py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition-colors gap-2 shadow-xs"
-            >
-              Browse 64+ Catalog Reagents
-              <i className="fas fa-arrow-right text-xs"></i>
-            </Link>
+
+            {/* Card 2: Hybridoma & Screening */}
+            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col group">
+              <div className="relative h-56 w-full overflow-hidden bg-slate-100">
+                <img
+                  src="/images/biotech_microplate_assay.jpg"
+                  alt="Scientist in biosafety cabinet conducting microplate ELISA screening and hybridoma cloning"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <span className="absolute top-3 left-3 bg-[#064e3b]/90 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  Discovery &amp; Screening
+                </span>
+              </div>
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#064e3b] transition-colors">
+                    Hybridoma Discovery &amp; ELISA Screening
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                    BSL-2 laminar airflow biosafety suites for murine hybridoma fusion, single-cell limiting dilution cloning, and high-throughput sandwich pairing verification.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+                  <span>96-Well Microplate Titration</span>
+                  <span className="text-[#064e3b] font-semibold">Clinical Sera Validation</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3: Downstream Chromatography */}
+            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col group">
+              <div className="relative h-56 w-full overflow-hidden bg-slate-100">
+                <img
+                  src="/images/biotech_cleanroom_hero.jpg"
+                  alt="Pharmaceutical cleanroom testing and diagnostic reagent quality control laboratory"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <span className="absolute top-3 left-3 bg-[#064e3b]/90 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  Quality Assurance
+                </span>
+              </div>
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#064e3b] transition-colors">
+                    Sterile Filling &amp; Cold-Chain Logistical Hub
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                    Class 100 laminar flow filling stations with automated crimping, liquid nitrogen vapor cell banking, and -20°C / 2-8°C temperature telemetry dispatch.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+                  <span>Grade C / Class 10,000</span>
+                  <span className="text-[#064e3b] font-semibold">24–48h Domestic Dispatch</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

@@ -249,20 +249,20 @@ export default function BiotechServicesPage() {
         {/* Service 1: Custom Monoclonal Antibodies */}
         <div className="bg-white rounded-3xl border border-slate-200/90 p-8 sm:p-10 shadow-lg shadow-slate-200/50 relative overflow-hidden transition-all hover:shadow-xl">
           {/* Top Gradient Accent */}
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600"></div>
+          <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#064e3b]"></div>
 
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
-                <i className="fas fa-dna text-xs"></i>
-                Service Line 01 • High-Affinity Hybridoma Discovery
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-[#064e3b] text-xs font-bold uppercase tracking-wider mb-2">
+                <i className="fas fa-dna text-[#059669]"></i>
+                Service Line 01 &bull; High-Affinity Hybridoma Discovery
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                 Custom Monoclonal Antibody (mAb) Discovery Pipeline
               </h2>
             </div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold self-start md:self-auto">
-              <i className="fas fa-clock text-blue-600"></i> Turnaround: 14–16 Weeks
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-50 text-[#064e3b] border border-emerald-200/60 text-xs font-semibold self-start md:self-auto">
+              <i className="fas fa-clock text-emerald-600"></i> Turnaround: 14–16 Weeks
             </span>
           </div>
 
@@ -270,15 +270,37 @@ export default function BiotechServicesPage() {
             Traditional hybridoma engineering tailored specifically for diagnostic applications. Unlike academic antibodies that only work in Western Blots, our clones are screened to bind robustly on nitrocellulose lateral flow membranes and in high-stringency chemiluminescent (CLIA) and ELISA assays.
           </p>
 
+          {/* Visual Showcase for Hybridoma Screening */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8 items-center bg-slate-50 p-5 sm:p-6 rounded-2xl border border-slate-200">
+            <div className="lg:col-span-5 rounded-xl overflow-hidden shadow-sm">
+              <img
+                src="/images/biotech_microplate_assay.jpg"
+                alt="Scientist conducting hybridoma microplate ELISA screening in biosafety cabinet"
+                className="w-full h-44 sm:h-48 object-cover"
+              />
+            </div>
+            <div className="lg:col-span-7 space-y-2">
+              <span className="text-[11px] font-bold text-[#064e3b] uppercase tracking-wider block">
+                Screening Technology &bull; BSL-2 Biosafety Suites
+              </span>
+              <h4 className="text-base font-bold text-slate-900">
+                96-Well Microplate Single-Cell Cloning &amp; Titer Screening
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Every fusion is screened directly against clinical patient sera to guarantee that positive clones distinguish between true target epitopes and background matrix interferences.
+              </p>
+            </div>
+          </div>
+
           {/* Stepper Pipeline */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {/* Phase 1 */}
-            <div className="bg-gradient-to-br from-blue-50/60 to-white border border-blue-200/80 p-5 rounded-2xl relative shadow-sm hover:border-blue-300 transition-all">
+            <div className="bg-gradient-to-br from-emerald-50/40 to-white border border-emerald-200/80 p-5 rounded-2xl relative shadow-sm hover:border-emerald-300 transition-all">
               <div className="flex items-center justify-between mb-3">
-                <span className="w-8 h-8 rounded-full bg-blue-600 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
+                <span className="w-8 h-8 rounded-full bg-[#064e3b] text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
                   01
                 </span>
-                <span className="text-[10px] font-mono font-bold text-blue-700 bg-blue-100/80 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-mono font-bold text-[#064e3b] bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full">
                   Weeks 1–6
                 </span>
               </div>
@@ -286,18 +308,18 @@ export default function BiotechServicesPage() {
               <p className="text-xs text-slate-600 leading-relaxed">
                 BALB/c mice cohort immunized with optimized adjuvant formulations. Serum titer kinetics verified via indirect ELISA.
               </p>
-              <div className="mt-3 pt-3 border-t border-blue-100/80 flex items-center gap-1 text-[11px] font-semibold text-blue-800">
-                <i className="fas fa-check-circle text-blue-600 text-[10px]"></i> Titer &gt; 1:100,000 Gate
+              <div className="mt-3 pt-3 border-t border-emerald-100 flex items-center gap-1 text-[11px] font-semibold text-[#064e3b]">
+                <i className="fas fa-check-circle text-emerald-600 text-[10px]"></i> Titer &gt; 1:100,000 Gate
               </div>
             </div>
 
             {/* Phase 2 */}
-            <div className="bg-gradient-to-br from-indigo-50/60 to-white border border-indigo-200/80 p-5 rounded-2xl relative shadow-sm hover:border-indigo-300 transition-all">
+            <div className="bg-gradient-to-br from-emerald-50/40 to-white border border-emerald-200/80 p-5 rounded-2xl relative shadow-sm hover:border-emerald-300 transition-all">
               <div className="flex items-center justify-between mb-3">
-                <span className="w-8 h-8 rounded-full bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
+                <span className="w-8 h-8 rounded-full bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
                   02
                 </span>
-                <span className="text-[10px] font-mono font-bold text-indigo-700 bg-indigo-100/80 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-mono font-bold text-emerald-800 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full">
                   Weeks 7–10
                 </span>
               </div>
@@ -305,18 +327,18 @@ export default function BiotechServicesPage() {
               <p className="text-xs text-slate-600 leading-relaxed">
                 PEG-mediated myeloma fusion with Sp2/0 cells, HAT selective media growth, and limiting dilution monoclonality assurance.
               </p>
-              <div className="mt-3 pt-3 border-t border-indigo-100/80 flex items-center gap-1 text-[11px] font-semibold text-indigo-800">
-                <i className="fas fa-check-circle text-indigo-600 text-[10px]"></i> &gt;99% Monoclonal Clones
+              <div className="mt-3 pt-3 border-t border-emerald-100 flex items-center gap-1 text-[11px] font-semibold text-[#064e3b]">
+                <i className="fas fa-check-circle text-emerald-600 text-[10px]"></i> &gt;99% Monoclonal Clones
               </div>
             </div>
 
             {/* Phase 3 */}
-            <div className="bg-gradient-to-br from-purple-50/60 to-white border border-purple-200/80 p-5 rounded-2xl relative shadow-sm hover:border-purple-300 transition-all">
+            <div className="bg-gradient-to-br from-teal-50/40 to-white border border-teal-200/80 p-5 rounded-2xl relative shadow-sm hover:border-teal-300 transition-all">
               <div className="flex items-center justify-between mb-3">
-                <span className="w-8 h-8 rounded-full bg-purple-600 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
+                <span className="w-8 h-8 rounded-full bg-teal-700 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
                   03
                 </span>
-                <span className="text-[10px] font-mono font-bold text-purple-700 bg-purple-100/80 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-mono font-bold text-teal-800 bg-teal-50 border border-teal-100 px-2 py-0.5 rounded-full">
                   Weeks 11–13
                 </span>
               </div>
@@ -324,18 +346,18 @@ export default function BiotechServicesPage() {
               <p className="text-xs text-slate-600 leading-relaxed">
                 Cross-reactivity screening, sandwich capture-detection pairing, and immunoglobulin isotyping (IgG1, IgG2a, IgG2b).
               </p>
-              <div className="mt-3 pt-3 border-t border-purple-100/80 flex items-center gap-1 text-[11px] font-semibold text-purple-800">
-                <i className="fas fa-check-circle text-purple-600 text-[10px]"></i> Sandwich LFA Match
+              <div className="mt-3 pt-3 border-t border-teal-100 flex items-center gap-1 text-[11px] font-semibold text-teal-800">
+                <i className="fas fa-check-circle text-teal-600 text-[10px]"></i> Sandwich LFA Match
               </div>
             </div>
 
             {/* Phase 4 */}
-            <div className="bg-gradient-to-br from-emerald-50/60 to-white border border-emerald-200/80 p-5 rounded-2xl relative shadow-sm hover:border-emerald-300 transition-all">
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-slate-200/80 p-5 rounded-2xl relative shadow-sm hover:border-slate-300 transition-all">
               <div className="flex items-center justify-between mb-3">
-                <span className="w-8 h-8 rounded-full bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
+                <span className="w-8 h-8 rounded-full bg-slate-800 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">
                   04
                 </span>
-                <span className="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-mono font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded-full">
                   Weeks 14+
                 </span>
               </div>
@@ -343,7 +365,7 @@ export default function BiotechServicesPage() {
               <p className="text-xs text-slate-600 leading-relaxed">
                 Roller bottle high-density culture, Protein A/G affinity chromatography yielding &gt;95% SDS-PAGE purity in gram lots.
               </p>
-              <div className="mt-3 pt-3 border-t border-emerald-100/80 flex items-center gap-1 text-[11px] font-semibold text-emerald-800">
+              <div className="mt-3 pt-3 border-t border-slate-100 flex items-center gap-1 text-[11px] font-semibold text-slate-800">
                 <i className="fas fa-check-circle text-emerald-600 text-[10px]"></i> &gt;95% Densitometric Purity
               </div>
             </div>
@@ -352,7 +374,7 @@ export default function BiotechServicesPage() {
           {/* Deliverables Banner */}
           <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 text-[#064e3b] flex items-center justify-center shrink-0">
                 <i className="fas fa-certificate text-base"></i>
               </div>
               <div>
@@ -364,7 +386,7 @@ export default function BiotechServicesPage() {
             <div className="flex items-center gap-3 w-full sm:w-auto shrink-0">
               <a 
                 href="#rfq-form"
-                className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-colors text-center shadow-sm"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white text-xs font-bold transition-colors text-center shadow-sm"
               >
                 Inquire Hybridoma Project ➔
               </a>
@@ -375,19 +397,19 @@ export default function BiotechServicesPage() {
         {/* Service 2: Recombinant Protein Expression */}
         <div className="bg-white rounded-3xl border border-slate-200/90 p-8 sm:p-10 shadow-lg shadow-slate-200/50 relative overflow-hidden transition-all hover:shadow-xl">
           {/* Top Gradient Accent */}
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500"></div>
+          <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#064e3b]"></div>
 
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">
-                <i className="fas fa-microchip text-xs"></i>
-                Service Line 02 • High-Yield Expression &amp; Chromatography
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-[#064e3b] text-xs font-bold uppercase tracking-wider mb-2">
+                <i className="fas fa-microchip text-[#059669]"></i>
+                Service Line 02 &bull; High-Yield Expression &amp; Chromatography
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                 Recombinant Protein Expression &amp; FPLC Purification
               </h2>
             </div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold self-start md:self-auto">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-50 text-[#064e3b] border border-emerald-200/60 text-xs font-semibold self-start md:self-auto">
               <i className="fas fa-shield-alt text-emerald-600"></i> &gt;95% HPLC Purity Guaranteed
             </span>
           </div>
@@ -396,42 +418,64 @@ export default function BiotechServicesPage() {
             Gene-to-protein custom manufacturing in prokaryotic (<em>E. coli</em>) and eukaryotic (<em>Pichia pastoris</em>, CHO) expression platforms. Optimized specifically for diagnostic coating antigens, clinical calibrators, and control proteins.
           </p>
 
+          {/* Visual Showcase for Protein Expression & FPLC */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8 items-center bg-slate-50 p-5 sm:p-6 rounded-2xl border border-slate-200">
+            <div className="lg:col-span-5 rounded-xl overflow-hidden shadow-sm">
+              <img
+                src="/images/biotech_chromatography.jpg"
+                alt="ÄKTA Avant FPLC Preparative Chromatography System"
+                className="w-full h-44 sm:h-48 object-cover"
+              />
+            </div>
+            <div className="lg:col-span-7 space-y-2">
+              <span className="text-[11px] font-bold text-[#064e3b] uppercase tracking-wider block">
+                Chromatography Purification &bull; ÄKTA Avant Pipeline
+              </span>
+              <h4 className="text-base font-bold text-slate-900">
+                Multi-Stage Affinity &amp; Size-Exclusion Fractionation
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Automated multi-wavelength UV monitoring and fraction collection ensure that only peak monomeric antigens with native tertiary structure are harvested for commercial lot release.
+              </p>
+            </div>
+          </div>
+
           <div className="grid sm:grid-cols-3 gap-6 mb-8">
             <div className="p-6 bg-gradient-to-br from-emerald-50/40 to-white rounded-2xl border border-emerald-100 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#064e3b] flex items-center justify-center mb-4">
                 <i className="fas fa-bacterium text-lg"></i>
               </div>
               <h3 className="font-bold text-slate-900 text-base mb-2">Expression Systems</h3>
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 Bacterial (<em>E. coli</em> BL21, Rosetta), Yeast (<em>Pichia</em>), and mammalian suspension systems for proper post-translational disulfide folding.
               </p>
-              <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
+              <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#064e3b] bg-emerald-50 px-2 py-0.5 rounded">
                 Prokaryotic &amp; Eukaryotic Hosts
               </span>
             </div>
 
-            <div className="p-6 bg-gradient-to-br from-teal-50/40 to-white rounded-2xl border border-teal-100 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-4">
+            <div className="p-6 bg-gradient-to-br from-emerald-50/40 to-white rounded-2xl border border-emerald-100 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#064e3b] flex items-center justify-center mb-4">
                 <i className="fas fa-filter text-lg"></i>
               </div>
               <h3 className="font-bold text-slate-900 text-base mb-2">ÄKTA FPLC Chromatography</h3>
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 Affinity (His-tag, GST, Protein A/G), Ion-Exchange (IEX), and Size Exclusion (SEC) polishing to guarantee monomeric conformational integrity.
               </p>
-              <span className="inline-flex items-center gap-1 text-[11px] font-bold text-teal-700 bg-teal-50 px-2 py-0.5 rounded">
+              <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#064e3b] bg-emerald-50 px-2 py-0.5 rounded">
                 SEC Monomer Verification
               </span>
             </div>
 
-            <div className="p-6 bg-gradient-to-br from-cyan-50/40 to-white rounded-2xl border border-cyan-100 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-4">
+            <div className="p-6 bg-gradient-to-br from-emerald-50/40 to-white rounded-2xl border border-emerald-100 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#064e3b] flex items-center justify-center mb-4">
                 <i className="fas fa-check-double text-lg"></i>
               </div>
               <h3 className="font-bold text-slate-900 text-base mb-2">Quality Assurance (QA)</h3>
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
-                Purity &gt;95% verified by SDS-PAGE densitometry and analytical RP-HPLC. Endotoxin levels verified &lt;0.1 EU/µg upon request.
+                Purity &gt;95% verified by SDS-PAGE densitometry and analytical RP-HPLC. Endotoxin levels verified &lt;0.1 EU/&mu;g upon request.
               </p>
-              <span className="inline-flex items-center gap-1 text-[11px] font-bold text-cyan-700 bg-cyan-50 px-2 py-0.5 rounded">
+              <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#064e3b] bg-emerald-50 px-2 py-0.5 rounded">
                 Analytical RP-HPLC Profile
               </span>
             </div>
@@ -440,7 +484,7 @@ export default function BiotechServicesPage() {
           {/* Deliverables Banner */}
           <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 text-[#064e3b] flex items-center justify-center shrink-0">
                 <i className="fas fa-file-invoice text-base"></i>
               </div>
               <div>
@@ -452,7 +496,7 @@ export default function BiotechServicesPage() {
             <div className="flex items-center gap-3 w-full sm:w-auto shrink-0">
               <a 
                 href="#rfq-form"
-                className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors text-center shadow-sm"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-[#064e3b] hover:bg-[#043327] text-white text-xs font-bold transition-colors text-center shadow-sm"
               >
                 Inquire Protein Expression ➔
               </a>
@@ -463,26 +507,48 @@ export default function BiotechServicesPage() {
         {/* Service 3: Bioconjugation & Assay Optimization */}
         <div className="bg-white rounded-3xl border border-slate-200/90 p-8 sm:p-10 shadow-lg shadow-slate-200/50 relative overflow-hidden transition-all hover:shadow-xl">
           {/* Top Gradient Accent */}
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500"></div>
+          <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#064e3b]"></div>
 
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-700 text-xs font-bold uppercase tracking-wider mb-2">
-                <i className="fas fa-atom text-xs"></i>
-                Service Line 03 • Lateral Flow Optimization
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-[#064e3b] text-xs font-bold uppercase tracking-wider mb-2">
+                <i className="fas fa-atom text-[#059669]"></i>
+                Service Line 03 &bull; Lateral Flow Optimization
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                 Colloidal Gold Bioconjugation &amp; Strip Optimization
               </h2>
             </div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold self-start md:self-auto">
-              <i className="fas fa-magic text-orange-600"></i> Zero Ghost Lines Guaranteed
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-50 text-[#064e3b] border border-emerald-200/60 text-xs font-semibold self-start md:self-auto">
+              <i className="fas fa-magic text-emerald-600"></i> Zero Ghost Lines Guaranteed
             </span>
           </div>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8 max-w-4xl">
             Stop suffering from ghost lines, high background noise, or aggregated gold particles. Our bioconjugation scientists determine the exact isoelectric point (pI), pH titration curve, and optimum blocking buffer formulation for your antibody.
           </p>
+
+          {/* Visual Showcase for Lateral Flow */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8 items-center bg-slate-50 p-5 sm:p-6 rounded-2xl border border-slate-200">
+            <div className="lg:col-span-5 rounded-xl overflow-hidden shadow-sm">
+              <img
+                src="/images/biotech_lateral_flow.jpg"
+                alt="Lateral flow test cassette dispensing and colloidal gold conjugation validation"
+                className="w-full h-44 sm:h-48 object-cover"
+              />
+            </div>
+            <div className="lg:col-span-7 space-y-2">
+              <span className="text-[11px] font-bold text-[#064e3b] uppercase tracking-wider block">
+                Formulation &bull; Rapid Test Cassette Optimization
+              </span>
+              <h4 className="text-base font-bold text-slate-900">
+                Membrane Flow-Rate &amp; Signal-to-Noise Ratio Calibration
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Overcome ghost lines and false positives with custom blocking buffer matrices, optimized antibody-to-gold ratios, and accelerated thermal stability validation (37°C / 45°C).
+              </p>
+            </div>
+          </div>
 
           <div className="grid sm:grid-cols-3 gap-6 mb-8">
             <div className="p-6 bg-gradient-to-br from-orange-50/40 to-white rounded-2xl border border-orange-100 shadow-sm">
