@@ -250,8 +250,15 @@ export default function IvdRawMaterialsPage() {
             {featuredReagents.map((product) => (
               <div
                 key={product.code}
-                className="bg-white border border-slate-200 rounded-xl p-5 hover:border-orange-300 hover:shadow-md transition-all flex flex-col justify-between"
+                className="relative bg-white border border-slate-200 rounded-xl p-5 hover:border-orange-400 hover:shadow-lg transition-all flex flex-col justify-between group cursor-pointer"
               >
+                {/* Full-box Clickable Overlay Link */}
+                <Link
+                  href={`/products/${product.code}`}
+                  className="absolute inset-0 z-10 rounded-xl"
+                  aria-label={`View ${product.name} (${product.code}) datasheet`}
+                />
+
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-mono font-bold text-orange-700 bg-orange-50 border border-orange-200/80 px-2 py-0.5 rounded">
@@ -261,7 +268,7 @@ export default function IvdRawMaterialsPage() {
                       {product.purity}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold text-slate-900 leading-snug mb-2">
+                  <h3 className="text-base font-bold text-slate-900 leading-snug mb-2 group-hover:text-orange-600 transition-colors">
                     {product.name}
                   </h3>
                   <div className="space-y-1 text-xs text-slate-600 mb-4">
@@ -271,17 +278,14 @@ export default function IvdRawMaterialsPage() {
                   </div>
                 </div>
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <Link
-                    href={`/products/${product.code}`}
-                    className="text-xs font-bold text-slate-900 hover:text-orange-600"
-                  >
+                  <span className="text-xs font-bold text-orange-600 group-hover:text-orange-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                     View Datasheet &rarr;
-                  </Link>
+                  </span>
                   <a
                     href={`https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20IVD%20Reagent%20${product.code}%20(${encodeURIComponent(product.name)})`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-bold text-orange-600 hover:text-orange-700"
+                    className="relative z-20 text-xs font-bold text-slate-600 hover:text-orange-600 transition-colors"
                   >
                     Request CoA
                   </a>

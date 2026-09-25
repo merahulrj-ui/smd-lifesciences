@@ -212,8 +212,15 @@ export default function BiotechCatalogClient({ products }: Props) {
             {paginatedProducts.map((p) => (
               <div 
                 key={p.code}
-                className="bg-white border border-slate-200/90 rounded-2xl p-6 hover:border-orange-500 hover:shadow-lg transition-all flex flex-col justify-between group"
+                className="relative bg-white border border-slate-200/90 rounded-2xl p-6 hover:border-orange-500 hover:shadow-lg transition-all flex flex-col justify-between group cursor-pointer"
               >
+                {/* Full-box Clickable Overlay Link */}
+                <Link
+                  href={`/products/${p.code}`}
+                  className="absolute inset-0 z-10 rounded-2xl"
+                  aria-label={`View ${p.name} (${p.code}) datasheet`}
+                />
+
                 <div>
                   {/* Top Bar: Code & Purity */}
                   <div className="flex items-center justify-between mb-3">
@@ -228,9 +235,7 @@ export default function BiotechCatalogClient({ products }: Props) {
 
                   {/* Product Name */}
                   <h3 className="text-base font-extrabold text-slate-900 leading-snug mb-2 group-hover:text-orange-600 transition-colors">
-                    <Link href={`/products/${p.code}`}>
-                      {p.name}
-                    </Link>
+                    {p.name}
                   </h3>
 
                   {/* Short Description */}
@@ -263,19 +268,16 @@ export default function BiotechCatalogClient({ products }: Props) {
 
                 {/* Bottom Action Strip */}
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
-                  <Link 
-                    href={`/products/${p.code}`}
-                    className="text-xs font-bold text-orange-600 hover:text-orange-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
-                  >
+                  <span className="text-xs font-bold text-orange-600 group-hover:text-orange-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                     Datasheet
                     <i className="fas fa-arrow-right text-[9px]"></i>
-                  </Link>
+                  </span>
 
                   <a 
                     href={`https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20Reagent%20${p.code}%20(${encodeURIComponent(p.name)})`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-800 font-bold text-xs transition-colors flex items-center gap-1.5 border border-orange-200/60"
+                    className="relative z-20 px-3.5 py-1.5 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-800 font-bold text-xs transition-colors flex items-center gap-1.5 border border-orange-200/60"
                   >
                     <i className="fab fa-whatsapp text-[#25D366]"></i> Quote / CoA
                   </a>
