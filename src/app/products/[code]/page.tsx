@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BIOTECH_PRODUCTS } from '@/data/products';
+import { STATIC_INSIGHTS } from '@/data/insights';
 
 interface PageProps {
   params: Promise<{ code: string }>;
@@ -79,6 +80,16 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
   const relatedProducts = BIOTECH_PRODUCTS.filter(
     (p) => p.code !== product.code && (p.category === product.category || p.target === product.target)
   ).slice(0, 4);
+
+  // Match Technical Whitepapers & Blogs directly mentioning this product code or its disease/target area
+  const targetToken = (product.target || product.name).split(/[\s\-\/(),]+/)[0]?.toLowerCase() || '';
+  const directBlogMatches = STATIC_INSIGHTS.filter(
+    (ins) =>
+      ins.content.toUpperCase().includes(product.code.toUpperCase()) ||
+      (targetToken.length >= 3 && (ins.title.toLowerCase().includes(targetToken) || ins.excerpt.toLowerCase().includes(targetToken)))
+  );
+  const fallbackBlogs = STATIC_INSIGHTS.filter((ins) => !directBlogMatches.some((d) => d.slug === ins.slug));
+  const relatedBlogs = [...directBlogMatches, ...fallbackBlogs].slice(0, 3);
 
   const productImage = product.category.toLowerCase().includes('antigen') || product.type.toLowerCase().includes('recombinant')
     ? 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'
@@ -505,6 +516,77 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
                       Datasheet &rarr;
                     </span>
                     <span className="text-orange-700 font-semibold text-[11px] bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200/60">CoA Validated</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Related Technical Whitepapers & Assay Formulation Blogs */}
+        {relatedBlogs.length > 0 && (
+          <div className="mt-12 pt-8 border-t border-slate-200">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider text-orange-600">
+                  R&amp;D Whitepapers &amp; Dispensing SOPs
+                </span>
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
+                  Technical Formulation Guides for {product.target || product.category} Assays
+                </h2>
+              </div>
+              <Link
+                href="/insights"
+                className="text-xs font-bold text-orange-600 hover:text-orange-700 shrink-0"
+              >
+                View All Whitepapers &rarr;
+              </Link>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {relatedBlogs.map((blog) => (
+                <div
+                  key={blog.slug}
+                  className="relative bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-orange-400 hover:shadow-md transition-all flex flex-col justify-between group cursor-pointer"
+                >
+                  {/* Full-Box Clickable Overlay Link */}
+                  <Link
+                    href={`/insights/${blog.slug}`}
+                    className="absolute inset-0 z-10 rounded-2xl"
+                    aria-label={blog.title}
+                  />
+
+                  <div>
+                    {blog.blog_image && (
+                      <div className="h-44 overflow-hidden bg-slate-100 border-b border-slate-100">
+                        <img
+                          src={blog.blog_image}
+                          alt={blog.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    )}
+                    <div className="p-5">
+                      <div className="flex items-center gap-2 mb-2.5">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-orange-700 bg-orange-50 border border-orange-200/80 px-2 py-0.5 rounded-full">
+                          Whitepaper SOP
+                        </span>
+                        <span className="text-[11px] text-slate-400 font-medium">{blog.read_time}</span>
+                      </div>
+                      <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                        {blog.title}
+                      </h3>
+                      <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                        {blog.excerpt}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="px-5 py-3.5 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <span className="font-bold text-orange-600 group-hover:text-orange-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                      Read Full Protocol &rarr;
+                    </span>
+                    <span className="text-[11px] text-slate-500 font-medium">By {blog.author_name}</span>
                   </div>
                 </div>
               ))}

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Suspense } from 'react';
 import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
+import { STATIC_INSIGHTS } from '@/data/insights';
 import BiotechCatalogClient from '@/components/BiotechCatalogClient';
 
 export const metadata: Metadata = {
@@ -135,6 +136,78 @@ export default function BiotechProductsPage() {
         <Suspense fallback={<div className="text-center py-12 text-slate-400 text-sm">Loading catalog...</div>}>
           <BiotechCatalogClient products={BIOTECH_PRODUCTS} />
         </Suspense>
+
+        {/* Featured Technical Whitepapers & Assay Formulation Blogs */}
+        <section className="mt-14 pt-10 border-t border-slate-200">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <span className="text-xs font-extrabold uppercase tracking-wider text-orange-600 block mb-1">
+                R&amp;D Knowledge Base &bull; Dispensing &amp; Conjugation SOPs
+              </span>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900">
+                Technical Whitepapers &amp; Assay Formulation Guides
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl">
+                Step-by-step biomanufacturing protocols for colloidal gold conjugation, nitrocellulose membrane blocking, and matched antibody pair optimization.
+              </p>
+            </div>
+            <Link
+              href="/insights"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 hover:border-orange-500 text-xs font-bold text-slate-800 hover:text-orange-600 transition-all shrink-0 self-start sm:self-auto"
+            >
+              View All 12 Whitepapers &rarr;
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {STATIC_INSIGHTS.slice(0, 6).map((blog) => (
+              <div
+                key={blog.slug}
+                className="relative bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-orange-400 hover:shadow-md transition-all flex flex-col justify-between group cursor-pointer"
+              >
+                {/* Full-Box Clickable Overlay Link */}
+                <Link
+                  href={`/insights/${blog.slug}`}
+                  className="absolute inset-0 z-10 rounded-2xl"
+                  aria-label={blog.title}
+                />
+
+                <div>
+                  {blog.blog_image && (
+                    <div className="h-44 overflow-hidden bg-slate-100 border-b border-slate-100">
+                      <img
+                        src={blog.blog_image}
+                        alt={blog.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                  <div className="p-5">
+                    <div className="flex items-center gap-2 mb-2.5">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-orange-700 bg-orange-50 border border-orange-200/80 px-2 py-0.5 rounded-full">
+                        Technical SOP
+                      </span>
+                      <span className="text-[11px] text-slate-400 font-medium">{blog.read_time}</span>
+                    </div>
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                      {blog.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                      {blog.excerpt}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="px-5 py-3.5 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span className="font-bold text-orange-600 group-hover:text-orange-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                    Read Full Whitepaper &rarr;
+                  </span>
+                  <span className="text-[11px] text-slate-500 font-medium">{blog.author_name}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
       </div>
     </div>
