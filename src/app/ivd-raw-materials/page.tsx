@@ -152,7 +152,7 @@ export default function IvdRawMaterialsPage() {
                 href="/products"
                 className="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition-all shadow-md hover:shadow-lg"
               >
-                Browse 64+ Catalog Reagents
+                Browse Full Reagents Catalog
               </Link>
               <a
                 href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20bulk%20IVD%20raw%20materials%20in%20India."
@@ -235,14 +235,14 @@ export default function IvdRawMaterialsPage() {
                 Validated IVD Biological Raw Materials
               </h2>
               <p className="text-sm text-slate-500 mt-1">
-                Sample selection from our 64+ validated reagents. 1mg–5mg evaluation samples ready for bench testing.
+                Sample selection from our validated reagents. 1mg–5mg evaluation samples ready for bench testing.
               </p>
             </div>
             <Link
               href="/products"
               className="mt-4 sm:mt-0 inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-700 gap-1.5"
             >
-              View Full 64+ Catalog &rarr;
+              View Full Catalog &rarr;
             </Link>
           </div>
 

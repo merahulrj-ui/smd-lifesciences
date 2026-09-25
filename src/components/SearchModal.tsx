@@ -84,7 +84,7 @@ export default function SearchModal() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value.replace(/[<>]/g, '').slice(0, 100))}
-            placeholder="Search 64+ antibodies, antigens, reagents..."
+            placeholder="Search antibodies, antigens, reagents..."
             maxLength={100}
             className="flex-1 bg-transparent border-none outline-none text-slate-800 text-base md:text-lg placeholder:text-slate-400 font-medium"
           />
@@ -137,7 +137,7 @@ export default function SearchModal() {
         {/* Footer info */}
         <div className="px-5 py-3 border-t border-slate-100 text-[11px] text-slate-400 flex items-center justify-between">
           <span>Press <strong>ESC</strong> to close</span>
-          <span>64+ Validated Diagnostic Reagents</span>
+          <span>Validated Diagnostic Reagents Catalog</span>
         </div>
       </div>
     </div>

@@ -66,7 +66,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Dynamic product routes (all 64+ validated B2B reagents)
+  // Dynamic product routes (all validated B2B reagents)
   const productRoutes: MetadataRoute.Sitemap = BIOTECH_PRODUCTS.map((product) => ({
     url: `${BASE_URL}/products/${product.code}`,
     lastModified: now,

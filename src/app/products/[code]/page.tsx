@@ -262,7 +262,7 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
             className="inline-flex items-center text-xs font-semibold text-slate-600 hover:text-orange-600 transition-colors gap-1.5"
           >
             <i className="fas fa-arrow-left text-[10px]"></i>
-            Back to All 64+ Reagents
+            Back to All Reagents
           </Link>
         </div>
 
@@ -465,7 +465,7 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
                 href="/products"
                 className="text-xs font-bold text-orange-600 hover:text-orange-700"
               >
-                View all 64+ reagents &rarr;
+                View all reagents &rarr;
               </Link>
             </div>
 

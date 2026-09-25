@@ -261,7 +261,7 @@ export default function ContactPage() {
                           href="/products" 
                           className="flex-1 py-3 px-3 bg-orange-50 hover:bg-orange-100 text-orange-700 rounded-xl font-bold text-xs sm:text-sm text-center transition-all border border-orange-200 shadow-sm flex items-center justify-center gap-1.5"
                         >
-                          <i className="fas fa-vial text-orange-600 text-sm"></i> Browse 64+ Catalog
+                          <i className="fas fa-vial text-orange-600 text-sm"></i> Browse Catalog
                         </Link>
                       </div>
                   </div>

@@ -251,7 +251,7 @@ export default function AboutPage() {
                 href="/products" 
                 className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all shadow-md shadow-orange-950/20"
               >
-                <i className="fa-solid fa-vial text-xs"></i> View 64+ Reagents
+                <i className="fa-solid fa-vial text-xs"></i> View All Reagents
               </Link>
               <Link 
                 href="/contact" 

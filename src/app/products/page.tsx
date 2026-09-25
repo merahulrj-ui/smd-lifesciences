@@ -5,8 +5,8 @@ import { BIOTECH_PRODUCTS } from '@/data/products';
 import BiotechCatalogClient from '@/components/BiotechCatalogClient';
 
 export const metadata: Metadata = {
-  title: 'Buy IVD Raw Materials & Reagents (64+ Products) | Factory Direct India | SMD Life Sciences',
-  description: 'Source 64+ clinical-grade IVD biological raw materials: recombinant antigens, matched monoclonal antibodies, colloidal gold conjugates. Free CoA, 1mg-5mg samples, 24-48h dispatch from Bangalore.',
+  title: 'Buy IVD Raw Materials & Reagents Online | Factory Direct India | SMD Life Sciences',
+  description: 'Source clinical-grade IVD biological raw materials: recombinant antigens, matched monoclonal antibodies, colloidal gold conjugates. Free CoA, 1mg-5mg samples, 24-48h dispatch from Bangalore.',
   keywords: [
     'buy IVD raw materials India',
     'lateral flow raw materials supplier',
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     canonical: 'https://lifesciences.smdmedicare.in/products',
   },
   openGraph: {
-    title: 'Buy IVD Reagents & Biological Raw Materials (64+ Validated) | SMD Life Sciences',
-    description: '64+ high-purity recombinant antigens, monoclonal antibodies, and lateral flow reagents with Certificate of Analysis (CoA).',
+    title: 'Buy IVD Reagents & Biological Raw Materials Online | SMD Life Sciences',
+    description: 'High-purity recombinant antigens, monoclonal antibodies, and lateral flow reagents with Certificate of Analysis (CoA).',
     url: 'https://lifesciences.smdmedicare.in/products',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Buy IVD Reagents & Biological Raw Materials (64+ Validated) | SMD Life Sciences',
-    description: '64+ high-purity recombinant antigens, monoclonal antibodies, and lateral flow reagents with Certificate of Analysis (CoA).',
+    title: 'Buy IVD Reagents & Biological Raw Materials Online | SMD Life Sciences',
+    description: 'High-purity recombinant antigens, monoclonal antibodies, and lateral flow reagents with Certificate of Analysis (CoA).',
     images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg'],
   },
 };
@@ -71,7 +71,7 @@ export default function BiotechProductsPage() {
       {
         '@type': 'ListItem',
         'position': 2,
-        'name': '64+ Reagents Catalog',
+        'name': 'Reagents Catalog',
         'item': 'https://lifesciences.smdmedicare.in/products',
       },
     ],

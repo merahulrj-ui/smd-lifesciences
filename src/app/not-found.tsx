@@ -24,7 +24,7 @@ export default function NotFound() {
               <i className="fas fa-layer-group"></i>
             </div>
             <div>
-              <div className="font-bold text-slate-900 text-xs sm:text-sm">64+ Catalog Reagents</div>
+              <div className="font-bold text-slate-900 text-xs sm:text-sm">Reagents Catalog Directory</div>
               <div className="text-slate-500 text-[11px]">Recombinant antigens &amp; antibodies</div>
             </div>
           </Link>

@@ -50,7 +50,7 @@ export default function BiotechFooter() {
             </li>
             <li>
               <Link href="/products" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
-                <i className="fas fa-angle-right text-[0.7em]"></i> 64+ Catalog Reagents Directory
+                <i className="fas fa-angle-right text-[0.7em]"></i> Biological Reagents Directory
               </Link>
             </li>
             <li>

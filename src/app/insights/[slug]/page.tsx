@@ -286,7 +286,7 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
                   href="/products"
                   className="inline-flex items-center px-5 py-2.5 rounded-lg bg-white hover:bg-slate-50 text-blue-700 border border-blue-300 font-semibold text-xs transition-colors gap-2"
                 >
-                  <i className="fas fa-layer-group"></i> Browse 64+ Catalog Reagents
+                  <i className="fas fa-layer-group"></i> Browse Catalog Reagents
                 </Link>
               </div>
             </div>
@@ -322,7 +322,7 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
                 href="/products" 
                 className="block text-center mt-4 text-xs font-bold text-blue-600 hover:text-blue-800"
               >
-                View All 64+ Reagents &rarr;
+                View All Reagents &rarr;
               </Link>
             </div>
 

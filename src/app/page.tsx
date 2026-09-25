@@ -4,7 +4,7 @@ import { BIOTECH_PRODUCTS } from '@/data/products';
 
 export const metadata: Metadata = {
   title: 'Buy IVD Raw Materials & Reagents Online | Recombinant Antigens & Antibodies India | SMD Life Sciences',
-  description: 'Direct manufacturer of 64+ validated IVD biological raw materials in Bangalore, India. High-affinity monoclonal antibodies, recombinant antigens & colloidal gold conjugates. Free CoA, 1mg-5mg evaluation samples, express dispatch.',
+  description: 'Direct manufacturer of validated IVD biological raw materials in Bangalore, India. High-affinity monoclonal antibodies, recombinant antigens & colloidal gold conjugates. Free CoA, 1mg-5mg evaluation samples, express dispatch.',
   keywords: [
     'buy IVD raw materials India',
     'IVD raw material supplier Bangalore',
@@ -157,7 +157,7 @@ export default function BiotechHomePage() {
                   className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold text-sm transition-all shadow-xs gap-2"
                 >
                   <i className="fas fa-layer-group text-orange-600"></i>
-                  Browse 64+ Catalog Reagents
+                  Browse Catalog Reagents
                 </Link>
               </div>
 
@@ -201,8 +201,8 @@ export default function BiotechHomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="border-r border-slate-100 last:border-0">
-              <div className="text-2xl font-extrabold text-slate-900">64+</div>
-              <div className="text-xs text-slate-500 mt-1">Cataloged Reagents</div>
+              <div className="text-2xl font-extrabold text-slate-900">In-Stock</div>
+              <div className="text-xs text-slate-500 mt-1">Diagnostic Reagents</div>
             </div>
             <div className="border-r border-slate-100 last:border-0">
               <div className="text-2xl font-extrabold text-orange-600">&gt; 95%</div>
@@ -302,7 +302,7 @@ export default function BiotechHomePage() {
                   href="/products"
                   className="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition-all shadow-md shadow-orange-950/20 inline-flex items-center gap-2"
                 >
-                  <i className="fas fa-vial text-xs"></i> Browse 64+ Catalog Reagents
+                  <i className="fas fa-vial text-xs"></i> Browse Catalog Reagents
                 </Link>
                 <Link
                   href="/ivd-raw-materials"
@@ -546,14 +546,14 @@ export default function BiotechHomePage() {
                 Featured IVD Raw Materials
               </h2>
               <p className="text-sm text-slate-500 mt-1">
-                Sample selection from our 64+ validated reagents. Batch samples available for R&amp;D evaluation.
+                Sample selection from our validated reagents. Batch samples available for R&amp;D evaluation.
               </p>
             </div>
             <Link 
               href="/products" 
               className="mt-4 sm:mt-0 inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-700 gap-1.5"
             >
-              View Full 64+ Catalog
+              View Full Catalog
               <i className="fas fa-arrow-right text-xs"></i>
             </Link>
           </div>
