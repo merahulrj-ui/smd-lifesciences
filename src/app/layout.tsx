@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -16,11 +16,11 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "700", "900"],
   display: "swap",
-  variable: "--font-plus-jakarta-sans",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -176,7 +176,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchemaGraph) }}
         />
       </head>
-      <body className={`${plusJakartaSans.className} ${plusJakartaSans.variable} font-sans antialiased bg-slate-50 text-slate-900 flex flex-col min-h-screen`}>
+      <body className={`${roboto.className} ${roboto.variable} font-sans antialiased bg-slate-50 text-slate-900 flex flex-col min-h-screen`}>
         <UIProvider>
           <FontAwesomeLoader />
           <Navbar />
