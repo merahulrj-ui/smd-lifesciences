@@ -3,9 +3,12 @@ import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 
 export const metadata: Metadata = {
-  title: 'Buy Recombinant Antigens (Bangalore) | >95% Purity, Express Dispatch | SMD Life Sciences',
-  description: 'Leading B2B manufacturer of high-purity recombinant antigens in Bangalore. Expression in E. coli, Pichia pastoris, and mammalian systems. Purity >95% validated for lateral flow, ELISA, and CLIA diagnostic kits.',
+  title: 'Recombinant & Native Antigens Supplier India (Bangalore) | >95% Purity | SMD Life Sciences',
+  description: 'Leading B2B recombinant and native antigens supplier in India (Electronic City, Bangalore). High-purity viral, bacterial, parasitic & cardiac antigens (>95% SEC-HPLC) for lateral flow, ELISA, and CLIA diagnostic kits.',
   keywords: [
+    'native antigens supplier India',
+    'recombinant and native antigens supplier India',
+    'buy native antigens India',
     'buy recombinant antigens India',
     'recombinant antigens manufacturer Bangalore',
     'bulk diagnostic antigens supplier',
@@ -15,48 +18,52 @@ export const metadata: Metadata = {
     'dengue ns1 recombinant antigen supplier'
   ],
   alternates: {
-    canonical: 'https://lifesciences.smdmedicare.in/recombinant-antigens',
+    canonical: 'https://www.smdlifesciences.com/recombinant-antigens',
   },
   openGraph: {
-    title: 'Buy Recombinant Antigens (Bangalore) | SMD Life Sciences',
-    description: 'High-purity recombinant antigens manufactured in Electronic City, Bangalore for lateral flow and ELISA test kits.',
-    url: 'https://lifesciences.smdmedicare.in/recombinant-antigens',
+    title: 'Recombinant & Native Antigens Supplier India (Bangalore) | SMD Life Sciences',
+    description: 'High-purity recombinant and native-grade diagnostic antigens manufactured in Electronic City, Bangalore for lateral flow, ELISA, and CLIA test kits.',
+    url: 'https://www.smdlifesciences.com/recombinant-antigens',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp',
+        url: 'https://www.smdlifesciences.com/images/biotech_chromatography.webp',
         width: 1200,
         height: 630,
-        alt: 'Recombinant Antigen Chromatography Purification ÄKTA',
+        alt: 'Recombinant & Native Antigens Supplier India — ÄKTA Chromatography Purification',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Buy Recombinant Antigens (Bangalore) | SMD Life Sciences',
-    description: 'High-purity recombinant antigens manufactured in Electronic City, Bangalore for lateral flow and ELISA test kits.',
-    images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'],
+    title: 'Recombinant & Native Antigens Supplier India (Bangalore) | SMD Life Sciences',
+    description: 'High-purity recombinant and native-conformation antigens manufactured in Electronic City, Bangalore for lateral flow and ELISA test kits.',
+    images: ['https://www.smdlifesciences.com/images/biotech_chromatography.webp'],
   },
 };
 
 const antigenFaqs = [
   {
-    question: 'What expression systems are used for recombinant antigen production?',
-    answer: 'We utilize Escherichia coli for non-glycosylated viral and bacterial antigens, Pichia pastoris (yeast) for disulfide-rich proteins, and HEK293/CHO mammalian cells for complex glycosylated antigens requiring authentic post-translational modifications.'
+    question: 'Why choose SMD Life Sciences as your recombinant and native antigens supplier in India?',
+    answer: 'As an indigenous recombinant and native antigens supplier in India (Electronic City, Bangalore), we eliminate international cold-chain delays and provide biohazard-free, native-conformation viral, bacterial, and parasitic proteins with >95% SEC-HPLC purity and 24–48 hour dispatch.'
   },
   {
-    question: 'How is the purity and activity of recombinant antigens verified?',
+    question: 'What expression systems are used for recombinant and native-conformation antigen production?',
+    answer: 'We utilize Escherichia coli for non-glycosylated viral and bacterial antigens, Pichia pastoris (yeast) for disulfide-rich virus-like particles (VLPs), and HEK293/CHO mammalian cells for complex glycosylated native-conformation antigens requiring authentic human post-translational modifications.'
+  },
+  {
+    question: 'How is the purity and activity of diagnostic antigens verified?',
     answer: 'Every antigen lot undergoes rigorous purity verification by SDS-PAGE (>95% purity) and size-exclusion chromatography (SEC-HPLC). Biological activity and immunoreactivity are validated using both ELISA titration curves and rapid lateral flow dipstick tests.'
   },
   {
     question: 'Can you customize expression tags or buffer formulations for our assays?',
-    answer: 'Yes. We offer tag-free, His-tag, or GST-tag versions, and can dialyze or lyophilize recombinant proteins into your proprietary assay running buffer, including specific pH, salt, and stabilizer requirements.'
+    answer: 'Yes. We offer tag-free, His-tag, or GST-tag versions, and can dialyze or lyophilize recombinant and native proteins into your proprietary assay running buffer, including specific pH, salt, and stabilizer requirements.'
   },
   {
-    question: 'What disease targets are covered in your recombinant antigen catalog?',
-    answer: 'Our portfolio covers infectious diseases (HIV 1/2, Hepatitis B, Hepatitis C, Dengue NS1/Envelope, Malaria Pf/Pv, Syphilis, Typhoid), cardiac markers (Troponin I, CK-MB, Myoglobin, D-Dimer), and hormone/fertility targets (hCG, LH, TSH).'
+    question: 'What disease targets are covered in your antigen supplier catalog in India?',
+    answer: 'Our portfolio covers infectious diseases (HIV 1/2, Hepatitis B, Hepatitis C, Dengue NS1/Envelope, Malaria Pf/Pv, Syphilis, Typhoid), cardiac markers (Troponin I, CK-MB, Myoglobin, D-Dimer), and hormone/fertility targets (hCG, LH, TSH, T3/T4-BSA).'
   },
 ];
 
@@ -145,10 +152,10 @@ export default function RecombinantAntigensPage() {
               Synthetic Biology &bull; High-Density Fermentation &bull; Bangalore
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
-              Recombinant Antigens Manufacturer in <span className="text-orange-600">Bangalore, India</span>
+              Recombinant &amp; Native Antigens Supplier in <span className="text-orange-600">India (Bangalore)</span>
             </h1>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
-              Engineered for maximum epitope accessibility and solid-phase coating efficiency. SMD Life Sciences manufactures pharmaceutical-grade recombinant antigens for lateral flow rapid test strips, ELISA microplates, and chemiluminescent analyzers in technical partnership with Pentavalent Bio Sciences.
+              Engineered for maximum epitope accessibility and solid-phase coating efficiency. As a trusted <strong>recombinant and native antigens supplier in India</strong>, SMD Life Sciences manufactures pharmaceutical-grade diagnostic proteins for lateral flow rapid test strips, ELISA microplates, and chemiluminescent (CLIA) analyzers in Electronic City, Bangalore.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <Link

@@ -24,14 +24,16 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lifesciences.smdmedicare.in'),
+  metadataBase: new URL('https://www.smdlifesciences.com'),
   applicationName: 'SMD Life Sciences',
   title: {
-    default: "SMD Life Sciences | IVD Raw Materials, Recombinant Antigens & Antibodies Manufacturer",
+    default: "SMD Life Sciences | IVD Raw Materials, Recombinant & Native Antigens Supplier India",
     template: "%s | SMD Life Sciences",
   },
-  description: "India's premier manufacturer & bulk supplier of high-purity IVD biological raw materials: recombinant antigens, matched monoclonal antibodies, colloidal gold conjugates & CDMO assay services. Bangalore dispatch in 24-48h with lot CoA.",
+  description: "India's premier manufacturer & bulk supplier of high-purity IVD biological raw materials: recombinant & native antigens supplier India, matched monoclonal antibodies, colloidal gold conjugates & CDMO assay services. Bangalore dispatch in 24-48h with lot CoA.",
   keywords: [
+    "native antigens supplier India",
+    "recombinant and native antigens supplier India",
     "buy IVD raw materials India",
     "recombinant antigens manufacturer Bangalore",
     "monoclonal antibodies supplier India",
