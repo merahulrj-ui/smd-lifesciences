@@ -3,34 +3,41 @@ import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 
 export const metadata: Metadata = {
-  title: 'Recombinant Antigens Manufacturer in Bangalore, India | SMD Life Sciences',
+  title: 'Buy Recombinant Antigens (Bangalore) | >95% Purity, Express Dispatch | SMD Life Sciences',
   description: 'Leading B2B manufacturer of high-purity recombinant antigens in Bangalore. Expression in E. coli, Pichia pastoris, and mammalian systems. Purity >95% validated for lateral flow, ELISA, and CLIA diagnostic kits.',
   keywords: [
+    'buy recombinant antigens India',
     'recombinant antigens manufacturer Bangalore',
-    'recombinant antigens India',
     'bulk diagnostic antigens supplier',
     'infectious disease recombinant antigens',
     'cardiac marker recombinant antigens',
-    'malaria recombinant antigen bulk',
+    'malaria recombinant antigen bulk price',
     'dengue ns1 recombinant antigen supplier'
   ],
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in/recombinant-antigens',
   },
   openGraph: {
-    title: 'Recombinant Antigens Manufacturer in Bangalore, India | SMD Life Sciences',
+    title: 'Buy Recombinant Antigens (Bangalore) | SMD Life Sciences',
     description: 'High-purity recombinant antigens manufactured in Electronic City, Bangalore for lateral flow and ELISA test kits.',
     url: 'https://lifesciences.smdmedicare.in/recombinant-antigens',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
     type: 'website',
-    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    images: [
+      {
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Recombinant Antigen Chromatography Purification ÄKTA',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Recombinant Antigens Manufacturer in Bangalore, India | SMD Life Sciences',
+    title: 'Buy Recombinant Antigens (Bangalore) | SMD Life Sciences',
     description: 'High-purity recombinant antigens manufactured in Electronic City, Bangalore for lateral flow and ELISA test kits.',
-    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg'],
   },
 };
 

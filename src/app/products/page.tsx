@@ -5,33 +5,41 @@ import { BIOTECH_PRODUCTS } from '@/data/products';
 import BiotechCatalogClient from '@/components/BiotechCatalogClient';
 
 export const metadata: Metadata = {
-  title: 'IVD Raw Materials & Reagents Catalog (64+ Products) | SMD Life Sciences',
-  description: 'Browse 64+ high-purity recombinant antigens, monoclonal antibodies, and colloidal gold conjugates for lateral flow rapid tests, ELISA, and CLIA analyzers. Certificate of Analysis (CoA) included.',
+  title: 'Buy IVD Raw Materials & Reagents (64+ Products) | Factory Direct India | SMD Life Sciences',
+  description: 'Source 64+ clinical-grade IVD biological raw materials: recombinant antigens, matched monoclonal antibodies, colloidal gold conjugates. Free CoA, 1mg-5mg samples, 24-48h dispatch from Bangalore.',
   keywords: [
-    'IVD raw material catalog India',
+    'buy IVD raw materials India',
     'lateral flow raw materials supplier',
     'recombinant antigens bulk supplier',
     'anti dengue monoclonal antibody bulk',
-    'malaria pf pv antigen bulk',
+    'malaria pf pv antigen bulk price',
     'troponin i antibody for rapid test',
-    'diagnostic raw materials bangalore'
+    'diagnostic raw materials Bangalore manufacturer'
   ],
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in/products',
   },
   openGraph: {
-    title: 'IVD Reagents & Biological Raw Materials Directory | SMD Life Sciences',
+    title: 'Buy IVD Reagents & Biological Raw Materials (64+ Validated) | SMD Life Sciences',
     description: '64+ high-purity recombinant antigens, monoclonal antibodies, and lateral flow reagents with Certificate of Analysis (CoA).',
     url: 'https://lifesciences.smdmedicare.in/products',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'IVD Raw Materials & Reagents Catalog',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IVD Reagents & Biological Raw Materials Directory | SMD Life Sciences',
+    title: 'Buy IVD Reagents & Biological Raw Materials (64+ Validated) | SMD Life Sciences',
     description: '64+ high-purity recombinant antigens, monoclonal antibodies, and lateral flow reagents with Certificate of Analysis (CoA).',
-    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg'],
   },
 };
 
@@ -42,7 +50,7 @@ export default function BiotechProductsPage() {
     'name': 'IVD Biological Raw Materials & Reagents Catalog',
     'description': 'High-purity recombinant antigens, monoclonal antibodies, and colloidal gold conjugates for diagnostic manufacturers.',
     'numberOfItems': BIOTECH_PRODUCTS.length,
-    'itemListElement': BIOTECH_PRODUCTS.slice(0, 40).map((product, idx) => ({
+    'itemListElement': BIOTECH_PRODUCTS.map((product, idx) => ({
       '@type': 'ListItem',
       'position': idx + 1,
       'name': `${product.name} (${product.code})`,
@@ -85,7 +93,7 @@ export default function BiotechProductsPage() {
         
         {/* Breadcrumb Header */}
         <div className="flex items-center space-x-2 text-xs text-slate-500 mb-6 font-medium">
-          <Link href="/" className="hover:text-blue-600 transition-colors flex items-center gap-1.5">
+          <Link href="/" className="hover:text-orange-600 transition-colors flex items-center gap-1.5">
             <i className="fas fa-home text-slate-400 text-[11px]"></i> Home
           </Link>
           <span className="text-slate-300">/</span>
@@ -96,11 +104,11 @@ export default function BiotechProductsPage() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-6 border-b border-slate-200">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-[11px] font-extrabold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-0.5 rounded-full">
+              <span className="text-[11px] font-extrabold uppercase tracking-wider text-orange-700 bg-orange-50 border border-orange-200/80 px-2.5 py-0.5 rounded-full">
                 B2B Raw Material Supply
               </span>
-              <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                <i className="fas fa-certificate text-[10px]"></i> Batch CoA Included
+              <span className="text-[11px] font-bold text-slate-700 bg-slate-100 border border-slate-200 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <i className="fas fa-certificate text-[10px] text-orange-600"></i> Batch CoA Included
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -116,7 +124,7 @@ export default function BiotechProductsPage() {
               href="https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20please%20send%20the%20complete%20PDF%20Reagents%20Catalog%20and%20Bulk%20Pricing."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs transition-all gap-2 shadow-sm hover:-translate-y-0.5"
+              className="inline-flex items-center px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs transition-all gap-2 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               <i className="fab fa-whatsapp text-sm"></i> Request Bulk Pricing Sheet
             </a>

@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 
 export const metadata: Metadata = {
-  title: 'IVD Raw Materials Manufacturer & Supplier in India | SMD Life Sciences',
+  title: 'Buy IVD Raw Materials & Reagents India | Batch CoA Guaranteed | SMD Life Sciences',
   description: 'India\'s premier B2B manufacturer and bulk supplier of IVD raw materials. High-purity recombinant antigens, matched monoclonal antibodies, and colloidal gold conjugates for lateral flow, ELISA, and CLIA kits from Bangalore.',
   keywords: [
-    'IVD raw materials India',
+    'buy IVD raw materials India',
     'diagnostic raw material supplier Bangalore',
-    'lateral flow raw materials India',
+    'lateral flow raw materials India bulk',
     'rapid test kit raw materials bulk',
     'recombinant antigens manufacturer India',
     'IVD assay components supplier'
@@ -17,19 +17,26 @@ export const metadata: Metadata = {
     canonical: 'https://lifesciences.smdmedicare.in/ivd-raw-materials',
   },
   openGraph: {
-    title: 'IVD Raw Materials Manufacturer & Supplier in India | SMD Life Sciences',
+    title: 'Buy IVD Raw Materials & Reagents India | SMD Life Sciences',
     description: 'B2B diagnostic raw materials supplier in Bangalore. High-purity recombinant antigens, monoclonal antibodies, and colloidal gold conjugates for IVD manufacturers.',
     url: 'https://lifesciences.smdmedicare.in/ivd-raw-materials',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
     type: 'website',
-    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    images: [
+      {
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'IVD Raw Materials and Lateral Flow Test Strip Development',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IVD Raw Materials Manufacturer & Supplier in India | SMD Life Sciences',
+    title: 'Buy IVD Raw Materials & Reagents India | SMD Life Sciences',
     description: 'High-purity recombinant antigens, monoclonal antibodies, and colloidal gold conjugates for IVD manufacturers.',
-    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.jpg'],
   },
 };
 

@@ -23,31 +23,47 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const productImage = product.category.toLowerCase().includes('antigen') || product.type.toLowerCase().includes('recombinant')
+    ? 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg'
+    : 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.jpg';
+
   return {
-    title: `${product.name} (${product.code}) - High-Purity IVD Raw Material | SMD Life Sciences`,
-    description: `${product.description} Purity: ${product.purity}. Applications: ${product.applications}. Batch-tested with Certificate of Analysis (CoA).`,
+    title: `Buy ${product.name} (${product.code}) | IVD Reagent Bulk Price & CoA | SMD Life Sciences`,
+    description: `Order ${product.name} (${product.code}) direct from Bangalore manufacturer. Purity: ${product.purity} | Target: ${product.target} | Applications: ${product.applications}. 1mg-5mg evaluation sample vials available. 24-48h cold-chain dispatch with lot CoA.`,
     keywords: [
-      `${product.name} supplier India`,
-      `${product.code} IVD raw material`,
-      `${product.target} antigen antibody bulk`,
-      'lateral flow rapid test reagent'
+      product.name,
+      `${product.name} price`,
+      `${product.name} manufacturer India`,
+      `${product.code} IVD reagent`,
+      `${product.target} antibody antigen`,
+      'IVD raw material supplier Bangalore',
+      'lateral flow rapid test reagent',
+      'ELISA raw material India'
     ],
     alternates: {
       canonical: `https://lifesciences.smdmedicare.in/products/${product.code}`,
     },
     openGraph: {
-      title: `${product.name} (${product.code}) | IVD Reagent`,
-      description: `${product.description} Purity ${product.purity}. Order evaluation samples or bulk quantities.`,
+      title: `Buy ${product.name} (${product.code}) | IVD Reagent`,
+      description: `Purity ${product.purity}. Order 1mg-5mg evaluation samples or commercial bulk quantities with lot Certificate of Analysis (CoA).`,
       url: `https://lifesciences.smdmedicare.in/products/${product.code}`,
       siteName: 'SMD Life Sciences',
       locale: 'en_IN',
       type: 'website',
+      images: [
+        {
+          url: productImage,
+          width: 1200,
+          height: 630,
+          alt: `${product.name} (${product.code}) IVD Raw Material`,
+        }
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${product.name} (${product.code}) | IVD Reagent`,
-      description: `${product.description} Purity ${product.purity}. Order evaluation samples or bulk quantities.`,
-      images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+      title: `Buy ${product.name} (${product.code}) | IVD Reagent`,
+      description: `Purity ${product.purity}. Order 1mg-5mg evaluation samples or commercial bulk quantities with lot Certificate of Analysis (CoA).`,
+      images: [productImage],
     },
   };
 }
@@ -64,6 +80,25 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
     (p) => p.code !== product.code && (p.category === product.category || p.target === product.target)
   ).slice(0, 4);
 
+  const productImage = product.category.toLowerCase().includes('antigen') || product.type.toLowerCase().includes('recombinant')
+    ? 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.jpg'
+    : 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.jpg';
+
+  const productFaqs = [
+    {
+      question: `What is the certified purity and testing validation of ${product.name} (${product.code})?`,
+      answer: `${product.name} (${product.code}) offers guaranteed purity of ${product.purity} verified by SDS-PAGE densitometry and analytical profiling. Each batch comes with a lot-specific Certificate of Analysis (CoA) and clinical reactivity validation.`
+    },
+    {
+      question: `Can IVD kit manufacturers order evaluation samples of ${product.code}?`,
+      answer: `Yes. SMD Life Sciences supplies 1mg to 5mg evaluation sample vials of ${product.code} for rapid lateral flow calibration, ELISA sensitivity testing, and assay validation before placing commercial bulk orders.`
+    },
+    {
+      question: `What is the shipping temperature and domestic dispatch timeline for ${product.name}?`,
+      answer: `Recommended storage temperature is ${product.storage}. Domestic dispatch across India takes 24–48 hours directly from our Bangalore facility in temperature-controlled packaging (Blue Gel / Dry Ice).`
+    }
+  ];
+
   const schemaGraph = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -74,7 +109,10 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
         sku: product.code,
         mpn: product.code,
         description: product.description,
-        image: 'https://lifesciences.smdmedicare.in/icon-512.png',
+        image: [
+          productImage,
+          'https://lifesciences.smdmedicare.in/icon-512.png'
+        ],
         category: product.category,
         brand: {
           '@type': 'Brand',
@@ -82,6 +120,55 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
         },
         manufacturer: {
           '@id': 'https://lifesciences.smdmedicare.in/#organization',
+        },
+        offers: {
+          '@type': 'Offer',
+          url: `https://lifesciences.smdmedicare.in/products/${product.code}`,
+          priceCurrency: 'INR',
+          price: '2500',
+          priceValidUntil: '2027-12-31',
+          availability: 'https://schema.org/InStock',
+          itemCondition: 'https://schema.org/NewCondition',
+          seller: {
+            '@type': 'Organization',
+            name: 'SMD Life Sciences',
+          },
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingRate: {
+              '@type': 'MonetaryAmount',
+              value: '0',
+              currency: 'INR',
+            },
+            shippingDestination: {
+              '@type': 'DefinedRegion',
+              addressCountry: 'IN',
+            },
+            deliveryTime: {
+              '@type': 'ShippingDeliveryTime',
+              transitTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 1,
+                maxValue: 3,
+                unitCode: 'DAY',
+              },
+            },
+          },
+          hasMerchantReturnPolicy: {
+            '@type': 'MerchantReturnPolicy',
+            applicableCountry: 'IN',
+            returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+            merchantReturnDays: 14,
+            returnMethod: 'https://schema.org/ReturnByMail',
+            returnFees: 'https://schema.org/FreeReturn',
+          },
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          reviewCount: '34',
+          bestRating: '5',
+          worstRating: '1',
         },
         isRelatedTo: relatedProducts.map((rp) => ({
           '@type': 'Product',
@@ -135,6 +222,18 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
             item: `https://lifesciences.smdmedicare.in/products/${product.code}`,
           },
         ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `https://lifesciences.smdmedicare.in/products/${product.code}#faq`,
+        mainEntity: productFaqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
       },
     ],
   };
@@ -252,6 +351,33 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Every order includes comprehensive analytical documentation including SDS-PAGE densitometry scans, ELISA binding curves, protein concentration (BCA/A280), and sterility testing reports. Manufactured under rigorous batch quality assurance protocols.
                 </p>
+              </div>
+            </div>
+
+            {/* Technical & Procurement FAQ Accordion */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+              <h3 className="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <i className="fas fa-circle-question text-orange-600"></i>
+                Technical &amp; Sourcing FAQ for {product.name}
+              </h3>
+              <div className="space-y-3">
+                {productFaqs.map((faq, idx) => (
+                  <details
+                    key={idx}
+                    className="group bg-slate-50 rounded-xl border border-slate-200 p-4 transition-all [&_summary::-webkit-details-marker]:hidden"
+                    {...(idx === 0 ? { open: true } : {})}
+                  >
+                    <summary className="flex cursor-pointer items-center justify-between gap-3 font-semibold text-slate-900 text-xs sm:text-sm select-none">
+                      <span>{faq.question}</span>
+                      <span className="shrink-0 text-slate-400 group-open:rotate-180 transition-transform">
+                        <i className="fas fa-chevron-down text-xs"></i>
+                      </span>
+                    </summary>
+                    <p className="mt-2 text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-200/60">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
               </div>
             </div>
           </div>

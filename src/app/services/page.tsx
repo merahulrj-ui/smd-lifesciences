@@ -23,12 +23,20 @@ export const metadata: Metadata = {
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_microplate_assay.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Custom Monoclonal Antibody Development and ELISA Screening Lab',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Custom Monoclonal Antibody Development & Protein Expression India | SMD Life Sciences',
     description: 'Specialized contract research & CDMO for IVD manufacturers. 4-Phase custom hybridoma development, protein expression, and assay optimization.',
-    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_microplate_assay.jpg'],
   },
 };
 

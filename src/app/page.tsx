@@ -3,32 +3,43 @@ import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 
 export const metadata: Metadata = {
-  title: 'SMD Life Sciences & Diagnostic Solutions | Custom Antibodies & IVD Raw Materials',
-  description: 'B2B diagnostic raw materials supplier & custom CDMO services in India. High-purity recombinant antigens, monoclonal antibodies, and colloidal gold conjugates for IVD manufacturers.',
+  title: 'Buy IVD Raw Materials & Reagents Online | Recombinant Antigens & Antibodies India | SMD Life Sciences',
+  description: 'Direct manufacturer of 64+ validated IVD biological raw materials in Bangalore, India. High-affinity monoclonal antibodies, recombinant antigens & colloidal gold conjugates. Free CoA, 1mg-5mg evaluation samples, express dispatch.',
   keywords: [
-    'IVD raw material supplier India',
+    'buy IVD raw materials India',
+    'IVD raw material supplier Bangalore',
     'custom monoclonal antibody development',
-    'lateral flow raw materials',
+    'lateral flow raw materials bulk price',
     'recombinant antigen manufacturer Bangalore',
     'colloidal gold conjugate supplier',
-    'rapid test raw materials B2B'
+    'rapid test raw materials B2B',
+    'Dengue NS1 antigen bulk supplier',
+    'Malaria antigen manufacturer India'
   ],
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in',
   },
   openGraph: {
-    title: 'SMD Life Sciences & Diagnostic Solutions | IVD Raw Materials & Custom CDMO',
-    description: 'High-purity recombinant antigens, monoclonal antibodies, and contract development for rapid test card manufacturers.',
+    title: 'Buy IVD Raw Materials & Reagents Online | SMD Life Sciences',
+    description: 'High-purity recombinant antigens, matched monoclonal antibodies, and custom CDMO services for IVD manufacturers with lot CoA.',
     url: 'https://lifesciences.smdmedicare.in',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SMD Life Sciences Cleanroom Biomanufacturing Facility Bangalore',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SMD Life Sciences & Diagnostic Solutions | Custom Antibodies & IVD Raw Materials',
-    description: 'B2B diagnostic raw materials supplier & custom CDMO services in India. Recombinant antigens, monoclonal antibodies, and colloidal gold conjugates.',
-    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    title: 'Buy IVD Raw Materials & Reagents Online | SMD Life Sciences',
+    description: 'High-purity recombinant antigens, matched monoclonal antibodies, and custom CDMO services for IVD manufacturers with lot CoA.',
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.jpg'],
   },
 };
 

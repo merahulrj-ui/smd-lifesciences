@@ -3,12 +3,12 @@ import Link from 'next/link';
 import CustomServiceRFQForm from '@/components/CustomServiceRFQForm';
 
 export const metadata: Metadata = {
-  title: 'Diagnostic Development CDMO for IVD Companies India | SMD Life Sciences',
+  title: 'Diagnostic CDMO Services India | Rapid Test & ELISA Development | SMD Life Sciences',
   description: 'Specialized Contract Development and Manufacturing Organization (CDMO) in Bangalore for IVD companies. End-to-end rapid lateral flow and ELISA assay development, antibody pairing, and commercial scale-up.',
   keywords: [
-    'CDMO diagnostic development',
-    'IVD CDMO services India',
-    'lateral flow contract manufacturing Bangalore',
+    'CDMO diagnostic development India',
+    'IVD CDMO services Bangalore',
+    'lateral flow contract manufacturing',
     'custom assay development CDMO',
     'hybridoma development service India',
     'rapid test development contract research'
@@ -17,19 +17,26 @@ export const metadata: Metadata = {
     canonical: 'https://lifesciences.smdmedicare.in/diagnostic-cdmo',
   },
   openGraph: {
-    title: 'Diagnostic Development CDMO for IVD Companies India | SMD Life Sciences',
+    title: 'Diagnostic CDMO Services India | Rapid Test & ELISA Development | SMD Life Sciences',
     description: 'Milestone-based contract development for IVD test kit manufacturers in Bangalore. Hybridoma generation, antigen expression, and rapid test assembly.',
     url: 'https://lifesciences.smdmedicare.in/diagnostic-cdmo',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
     type: 'website',
-    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    images: [
+      {
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_bioreactors.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Diagnostic CDMO Bioreactor Cleanroom Suites Bangalore',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Diagnostic Development CDMO for IVD Companies India | SMD Life Sciences',
+    title: 'Diagnostic CDMO Services India | Rapid Test & ELISA Development | SMD Life Sciences',
     description: 'Contract development for IVD test kit manufacturers in Bangalore. Hybridoma generation, antigen expression, and rapid test assembly.',
-    images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_bioreactors.jpg'],
   },
 };
 
