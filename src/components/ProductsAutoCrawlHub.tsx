@@ -43,65 +43,6 @@ export default function ProductsAutoCrawlHub() {
 
   return (
     <section className="mt-14 pt-10 border-t border-slate-200">
-      
-      {/* 1. AUTO-SCROLL TICKER / MARQUEE (Visual Auto-Scroll) */}
-      <div className="mb-10 overflow-hidden bg-slate-900 rounded-2xl p-4 sm:p-5 text-white shadow-md relative">
-        <div className="flex items-center justify-between mb-3 px-2">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-400">
-              Live B2B Reagent Dispatch &bull; 64 Validated Products
-            </span>
-          </div>
-          <span className="text-[11px] text-slate-400 hidden sm:inline">
-            Direct Bangalore Cleanroom Supply &bull; 24-48h Express Delivery
-          </span>
-        </div>
-
-        {/* Marquee Track */}
-        <div className="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)]">
-          <div className="flex gap-3 w-max animate-marquee hover:[animation-play-state:paused]">
-            {/* Loop 1 */}
-            {BIOTECH_PRODUCTS.map((prod) => (
-              <Link
-                key={prod.code}
-                href={`/products/${prod.code}`}
-                className="flex items-center gap-2 px-3.5 py-2 bg-slate-800/90 hover:bg-orange-600 rounded-xl border border-slate-700 hover:border-orange-500 transition-colors text-xs shrink-0 group"
-              >
-                <span className="font-mono font-bold text-orange-400 group-hover:text-white">
-                  {prod.code}
-                </span>
-                <span className="text-slate-300 group-hover:text-white font-medium max-w-[200px] truncate">
-                  {prod.name}
-                </span>
-                <span className="text-[10px] text-slate-400 group-hover:text-orange-100 bg-slate-900/60 px-1.5 py-0.5 rounded">
-                  {prod.purity}
-                </span>
-              </Link>
-            ))}
-
-            {/* Loop 2 (Seamless infinite repetition) */}
-            {BIOTECH_PRODUCTS.map((prod) => (
-              <Link
-                key={`${prod.code}-dup`}
-                href={`/products/${prod.code}`}
-                className="flex items-center gap-2 px-3.5 py-2 bg-slate-800/90 hover:bg-orange-600 rounded-xl border border-slate-700 hover:border-orange-500 transition-colors text-xs shrink-0 group"
-              >
-                <span className="font-mono font-bold text-orange-400 group-hover:text-white">
-                  {prod.code}
-                </span>
-                <span className="text-slate-300 group-hover:text-white font-medium max-w-[200px] truncate">
-                  {prod.name}
-                </span>
-                <span className="text-[10px] text-slate-400 group-hover:text-orange-100 bg-slate-900/60 px-1.5 py-0.5 rounded">
-                  {prod.purity}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* 2. STATIC SSR HTML CRAWL MATRIX (Googlebot Crawl Guarantee) */}
       <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
         <div className="mb-6 pb-4 border-b border-slate-100">
