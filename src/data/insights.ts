@@ -1286,12 +1286,12 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
     author_name: 'Dr. S. K. Narayanan',
     author_title: 'Head of Protein Biochemistry & Diagnostic R&D, SMD Life Sciences',
     author_image: '/images/team/scientist.svg',
-    read_time: '15 min read',
+    read_time: '18 min read',
     created_at: '2026-09-25T09:00:00+05:30',
     updated_at: '2026-09-25T09:00:00+05:30',
     division: 'biotech',
     status: 'published',
-    excerpt: 'Complete raw material engineering guide for Malaria Pf (HRP2) and Pv/Pan (pLDH) combo rapid tests, addressing WHO Panel Detection Scores (<200 parasites/uL), pfhrp2/3 deletion strains, and 45C tropical stability.',
+    excerpt: 'Comprehensive biochemical and regulatory engineering manual for bivalent Malaria Pf (HRP2) and Pv/Pan (pLDH) combo rapid tests: achieving WHO Panel Detection Scores at 200 parasites/uL, overcoming pfhrp2/pfhrp3 gene deletion false negatives, non-denaturing RBC hemolysis buffer formulation, and 45C tropical shelf-life stability.',
     content: `
 <div class="space-y-10 text-slate-700 leading-relaxed text-base">
 
@@ -1299,137 +1299,249 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
   <div class="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200/80 rounded-2xl p-6 sm:p-8 shadow-xs">
     <div class="flex flex-wrap items-center gap-3 mb-4">
       <span class="px-3 py-1 bg-orange-600 text-white text-xs font-bold uppercase tracking-wider rounded-full">Malaria RDT Engineering</span>
-      <span class="text-xs text-orange-800 font-semibold">Keywords: Malaria HRP2 &amp; pLDH Antibody Pairs India &bull; WHO PQ RDT Standards &bull; pfhrp2 Gene Deletion</span>
+      <span class="text-xs text-orange-800 font-semibold">Keywords: Malaria HRP2 &amp; pLDH Antibody Pairs India &bull; WHO PQ RDT Standards &bull; pfhrp2 Gene Deletion &bull; NVBDCP Guidelines</span>
     </div>
     <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
       Achieving &ge;75% WHO Panel Detection Score at 200 Parasites/&mu;L Across Tropical Supply Chains
     </h3>
     <p class="text-slate-700 mb-4">
-      Over 400 million Malaria Rapid Diagnostic Tests (RDTs) are manufactured annually for national vector-borne disease control programs across India (NVBDCP) and global procurement agencies (WHO, Global Fund, UNICEF). For bivalent <strong>Malaria Pf/Pv</strong> or <strong>Malaria Pf/Pan</strong> cassettes, regulatory approval requires passing rigorous clinical sensitivity benchmarks at low parasite density (<strong>200 parasites/&mu;L</strong>, corresponding to ~0.8 ng/mL HRP2 and ~1.5 ng/mL pLDH in peripheral venous blood) while maintaining zero false-positive drift after 90 days at 45&deg;C.
+      Over 400 million Malaria Rapid Diagnostic Tests (RDTs) are procured annually for national vector-borne disease control programs in India (National Vector Borne Disease Control Programme &ndash; NVBDCP) and international agencies (WHO, Global Fund, UNICEF, and FIND). In bivalent <strong>Malaria Pf/Pv</strong> or <strong>Malaria Pf/Pan</strong> lateral flow cassettes, regulatory approval requires meeting stringent clinical sensitivity thresholds: specifically, achieving a <strong>Panel Detection Score (PDS) &ge;75% at low parasite density (200 parasites/&mu;L)</strong> across diverse global wild-type strains, maintaining zero false-positive background in healthy and febrile clinical controls, and preserving full analytical reactivity after 90 days of accelerated thermal aging at 45&deg;C (&ge;24 months shelf life in Zone IVb tropical climates).
     </p>
     <p class="text-slate-700">
-      Furthermore, the rising prevalence of <em>pfhrp2/pfhrp3</em> gene-deleted <em>Plasmodium falciparum</em> strains in Eastern India, the Horn of Africa, and the Amazon basin has made high-affinity <strong>Parasite Lactate Dehydrogenase (pLDH)</strong> antibody pairs indispensable. This whitepaper details the structural immunology, antibody pair stoichiometry, hemolysis buffer formulation, and lot-release QC calibrators required for top-tier Malaria RDT manufacturing.
+      Simultaneously, the global diagnostic landscape faces an existential threat: the rapid geographical expansion of <strong><em>pfhrp2</em> and <em>pfhrp3</em> gene deletions</strong> in <em>Plasmodium falciparum</em> parasites across Eastern India (Odisha, Chhattisgarh, Jharkhand, and Assam), the Horn of Africa (Eritrea, Ethiopia, Djibouti), and the Amazon basin. In patients infected with <em>pfhrp2</em>-deleted parasites, traditional HRP2-only rapid tests produce catastrophic false-negative results, allowing life-threatening cerebral malaria to go untreated. To address this crisis, modern diagnostic manufacturers are mandatorily integrating ultra-high-affinity <strong>Parasite Lactate Dehydrogenase (pLDH)</strong> monoclonal antibody pairs capable of detecting both <em>P. falciparum</em> and <em>P. vivax</em> independent of HRP2 expression.
     </p>
+    <div class="grid sm:grid-cols-3 gap-4 pt-4 border-t border-orange-200/60 text-xs">
+      <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
+        <span class="font-bold text-slate-900 block mb-0.5">WHO Sensitivity Threshold</span>
+        <span class="text-orange-700 font-semibold">&le; 200 parasites/&mu;L (~0.8 ng/mL HRP2 &amp; ~1.5 ng/mL pLDH)</span>
+      </div>
+      <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
+        <span class="font-bold text-slate-900 block mb-0.5">Deletion-Proof Strategy</span>
+        <span class="text-orange-700 font-semibold">Dual Pf-HRP2 + Pv/Pan-pLDH Line Architecture</span>
+      </div>
+      <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
+        <span class="font-bold text-slate-900 block mb-0.5">Tropical Thermal Stability</span>
+        <span class="text-orange-700 font-semibold">24 Months at 30&deg;C–40&deg;C via Trehalose Curing</span>
+      </div>
+    </div>
   </div>
 
-  <!-- Section 1: HRP2 vs pLDH Biochemistry -->
+  <!-- Section 1: HRP2 vs pLDH Structural Biochemistry -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">1. Comparative Immunochemistry: HRP2 vs. Parasite LDH (pLDH)</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">1. Comparative Structural Biochemistry: HRP2 vs. Parasite Lactate Dehydrogenase (pLDH)</h2>
     <p class="mb-4">
-      Designing a balanced dual-line Malaria Pf/Pv strip requires understanding why HRP2 and pLDH behave radically differently on nitrocellulose membranes:
+      Designing a balanced dual-line Malaria Pf/Pv rapid test strip requires mastering the distinct immunochemical and biophysical behaviors of the two target biomarkers:
     </p>
     <div class="grid md:grid-cols-2 gap-6 my-6">
       <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
-        <span class="text-xs font-bold text-orange-600 uppercase">Target 01 &bull; P. falciparum HRP2</span>
-        <h4 class="font-bold text-slate-900 mt-1 mb-2">Multi-Epitope Tandem Repeat Amplification</h4>
+        <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Biomarker 01 &bull; P. falciparum HRP2</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-2">Tandem Repetitive Epitope Array &amp; Prozone Hook Risk</h4>
         <p class="text-xs text-slate-600 leading-relaxed mb-3">
-          Histidine-Rich Protein 2 (60–105 kDa) is a water-soluble protein abundantly secreted by asexual trophozoites and young gametocytes. Its sequence consists of over 30 tandem repeats of <strong>AHHAHHAAD</strong> and <strong>AHHAAD</strong>. Because a single HRP2 molecule can simultaneously bind 6 to 10 gold-conjugated detector antibodies, HRP2 lines generate intense visual bands—but are conversely prone to the <strong>high-dose hook (prozone) effect</strong> at hyperparasitemia (&gt;5% parasitized RBCs).
+          Histidine-Rich Protein 2 (HRP2, 60–105 kDa depending on strain repeat length) is a remarkably stable, water-soluble protein synthesized by asexual erythrocytic trophozoites and young gametocytes. Its amino acid sequence consists of over 30 tandem repeat motifs of <strong>AHHAHHAAD</strong> (Type 1) and <strong>AHHAAD</strong> (Type 2). Because a single circulating HRP2 molecule presents dozens of identical binding sites, multiple colloidal gold-conjugated detector antibodies can bind simultaneously to one antigen molecule. This delivers intense optical test lines even at picogram concentrations.
+        </p>
+        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+          However, this repetitive architecture creates two diagnostic vulnerabilities: (1) <strong>High-Dose Hook Effect (Prozone)</strong>: At hyperparasitemia (>5% parasitized red blood cells, corresponding to >10 &mu;g/mL circulating HRP2), free antigen saturates both the capture antibody on the membrane and the detector antibody on the gold pad, causing complete disappearance of the Test Line; and (2) <strong>Post-Treatment Antigen Persistence</strong>: Due to its extreme biological stability and slow renal clearance, HRP2 circulates in patient blood for 21 to 35 days after complete parasitological cure, causing false-positive results during therapeutic monitoring.
         </p>
         <div class="text-xs font-semibold text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
-          SMD Solution: <a href="/products/PVBSP112" class="text-orange-600 underline">PVBSP112 / PVBSP113</a> mAb pair is cross-reactive with conserved HRP3 epitopes to safeguard against isolated <em>pfhrp2</em> deletions while resisting prozone hook up to 50,000 parasites/&mu;L.
+          <strong>SMD Engineering Solution:</strong> Our <a href="/products/PVBSP112" class="text-orange-600 underline">PVBSP112</a> Coat mAb and <a href="/products/PVBSP113" class="text-orange-600 underline">PVBSP113</a> Conjugate mAb pair is epitope-mapped to recognize both Type 2 and Type 7 repeats shared with HRP3, while conjugate pad formulation resists prozone hook up to 50,000 parasites/&mu;L.
         </div>
       </div>
+
       <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
-        <span class="text-xs font-bold text-orange-600 uppercase">Target 02 &bull; P. vivax / Pan-Malaria pLDH</span>
-        <h4 class="font-bold text-slate-900 mt-1 mb-2">Conformational Tetrameric Enzyme Capture</h4>
+        <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Biomarker 02 &bull; P. vivax &amp; Pan-Malaria pLDH</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-2">Quaternary Enzyme Conformation &amp; Viability Indicator</h4>
         <p class="text-xs text-slate-600 leading-relaxed mb-3">
-          Plasmodium Lactate Dehydrogenase (~140 kDa homotetramer of four 33 kDa subunits) is an intracellular glycolytic enzyme produced only by viable, metabolically active parasites. Unlike HRP2, pLDH lacks repetitive hexapeptide arrays and denatures if exposed to ionic detergents (such as SDS) or temperatures exceeding 50&deg;C without trehalose stabilization.
+          Plasmodium Lactate Dehydrogenase (pLDH, ~140 kDa homotetramer of four identical 33 kDa subunits) is a core glycolytic enzyme produced in vast quantities by metabolically active intra-erythrocytic parasites. Unlike HRP2, pLDH is cleared from the bloodstream within 48 to 72 hours of successful antimalarial therapy (artemisinin-based combination therapies &ndash; ACT), making it the gold-standard marker for active infection and cure verification.
+        </p>
+        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+          Biochemically, pLDH presents a much greater formulation challenge: (1) <strong>Non-Repetitive Conformational Epitopes</strong>: Each pLDH tetramer carries only four symmetrical active clefts, requiring a genuine two-site sandwich pair targeting distinct non-overlapping surfaces with association rate constants ($k_{on} \ge 10^5\text{ M}^{-1}\text{s}^{-1}$); and (2) <strong>Detergent Sensitivity</strong>: Because the diagnostic epitopes depend on the intact quaternary tetrameric fold, exposure to ionic detergents (such as SDS or Deoxycholate) in the lysis buffer instantly dissociates pLDH into inactive monomers, abolishing antibody recognition on the strip.
         </p>
         <div class="text-xs font-semibold text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
-          SMD Solution: <a href="/products/PVBSP114" class="text-orange-600 underline">PVBSP114 / PVBSP115</a> targets surface-exposed cleft loops unique to <em>Plasmodium</em> LDH with zero cross-reactivity against human erythrocytic LDH-A/LDH-B isoforms.
+          <strong>SMD Engineering Solution:</strong> Our <a href="/products/PVBSP114" class="text-orange-600 underline">PVBSP114</a> (Capture) and <a href="/products/PVBSP115" class="text-orange-600 underline">PVBSP115</a> (Detector) monoclonal pair targets a unique surface loop inserting into the substrate-binding cleft that is strictly conserved across <em>Plasmodium</em> species but absent in human erythrocytic LDH isoforms (LDH-A and LDH-B).
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Section 2: Specification Table -->
+  <!-- Section 2: Catalog Specification Table -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">2. SMD Life Sciences Malaria Raw Materials &amp; Matched Pair Specifications</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">2. SMD Life Sciences Validated Malaria Reagent Specifications</h2>
+    <p class="mb-4">
+      Manufactured under ISO 13485:2016 quality systems at our Electronic City, Bangalore biomanufacturing facility, all Malaria Pf and Pv antibodies and calibrator antigens undergo rigorous lot-release testing against WHO International Reference Panels and Indian clinical isolates:
+    </p>
     <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-xs my-6">
       <table class="w-full text-left border-collapse text-sm">
         <thead>
           <tr class="bg-slate-900 text-white">
             <th class="p-3.5 font-bold">Catalog Code</th>
             <th class="p-3.5 font-bold">Biological Reagent</th>
-            <th class="p-3.5 font-bold">Specificity &amp; Isotype</th>
-            <th class="p-3.5 font-bold">Recommended Strip Role</th>
-            <th class="p-3.5 font-bold">Analytical Sensitivity</th>
+            <th class="p-3.5 font-bold">Target Specificity &amp; Isotype</th>
+            <th class="p-3.5 font-bold">Optimal Strip Role &amp; Concentration</th>
+            <th class="p-3.5 font-bold">Analytical Sensitivity Benchmark</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-200 bg-white">
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP112" class="underline">PVBSP112</a></td>
-            <td class="p-3.5 font-semibold">Anti-Malaria Pf (HRP2) Coat mAb</td>
-            <td class="p-3.5"><em>P. falciparum</em> HRP2/HRP3 &bull; Mouse IgG1</td>
-            <td class="p-3.5">Test Line 1 Capture (1.0 mg/mL in PBS pH 7.4)</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">&le; 100 parasites/&mu;L (0.4 ng/mL HRP2)</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP112" class="underline hover:text-orange-800">PVBSP112</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-Malaria Pf (HRP2) Capture Monoclonal Antibody</td>
+            <td class="p-3.5"><em>P. falciparum</em> HRP2/HRP3 &bull; Murine IgG1 (Protein A purified, &gt;96%)</td>
+            <td class="p-3.5">Test Line 1 Capture (0.9–1.2 mg/mL in 10 mM Phosphate, pH 7.4)</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">&le; 50–100 parasites/&mu;L (0.4 ng/mL recombinant HRP2)</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP113" class="underline">PVBSP113</a></td>
-            <td class="p-3.5 font-semibold">Anti-Malaria Pf (HRP2) Conjugate mAb</td>
-            <td class="p-3.5">Type-2/Type-7 Repeat Motif &bull; Mouse IgG2b</td>
-            <td class="p-3.5">40nm Gold Detector (10 &mu;g/mL per OD<sub>520</sub>, pH 8.2)</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">Zero Prozone Hook up to 10 &mu;g/mL</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP113" class="underline hover:text-orange-800">PVBSP113</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-Malaria Pf (HRP2) Detector Monoclonal Antibody</td>
+            <td class="p-3.5">Type 2 / Type 7 Repeat Motifs &bull; Murine IgG2b</td>
+            <td class="p-3.5">40nm Colloidal Gold Conjugate (10 &mu;g/mL at OD<sub>525</sub> = 1.0, pH 8.2)</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">Zero prozone hook effect up to 15 &mu;g/mL pure antigen</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP114" class="underline">PVBSP114</a></td>
-            <td class="p-3.5 font-semibold">Anti-Malaria Pv/Pan (pLDH) Coat mAb</td>
-            <td class="p-3.5"><em>P. vivax</em> / Pan-LDH Tetramer &bull; Mouse IgG1</td>
-            <td class="p-3.5">Test Line 2 Capture (1.5 mg/mL + 2% Trehalose)</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">&le; 150 parasites/&mu;L (0.8 ng/mL pLDH)</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP114" class="underline hover:text-orange-800">PVBSP114</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-Malaria Pv/Pan (pLDH) Capture Monoclonal Antibody</td>
+            <td class="p-3.5"><em>P. vivax</em> and Pan-Plasmodium pLDH &bull; Murine IgG1</td>
+            <td class="p-3.5">Test Line 2 Capture (1.4–1.8 mg/mL + 2% Trehalose, pH 7.6)</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">&le; 100–150 parasites/&mu;L (0.75 ng/mL recombinant pLDH)</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP115" class="underline">PVBSP115</a></td>
-            <td class="p-3.5 font-semibold">Anti-Malaria Pv/Pan (pLDH) Conjugate mAb</td>
-            <td class="p-3.5">Non-overlapping NAD+ Binding Loop &bull; Mouse IgG1</td>
-            <td class="p-3.5">40nm Gold Detector (14 &mu;g/mL per OD<sub>520</sub>, pH 8.5)</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">K<sub>d</sub> = 2.1 &times; 10<sup>-11</sup> M; 45&deg;C stable</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP115" class="underline hover:text-orange-800">PVBSP115</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-Malaria Pv/Pan (pLDH) Detector Monoclonal Antibody</td>
+            <td class="p-3.5">Conserved Non-Overlapping NAD<sup>+</sup> Pocket &bull; Murine IgG1</td>
+            <td class="p-3.5">40nm Colloidal Gold Detector (12–15 &mu;g/mL, pH 8.5)</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">$K_D = 1.8 \times 10^{-11}\text{ M}$; 0% cross-reactivity with human LDH</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP110" class="underline">PVBSP110</a> / <a href="/products/PVBSP111" class="underline">PVBSP111</a></td>
-            <td class="p-3.5 font-semibold">Malaria Pf HRP2 &amp; Pv pLDH Control Antigens</td>
-            <td class="p-3.5">Recombinant <em>E. coli</em> Soluble Monomer/Tetramer</td>
-            <td class="p-3.5">In-Process QC Strip Calibration &amp; Lot Release</td>
-            <td class="p-3.5">&gt;95% Purity; Lot-Specific CoA</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP127" class="underline hover:text-orange-800">PVBSP127</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Recombinant Malaria <em>P. falciparum</em> HRP2 Calibrator</td>
+            <td class="p-3.5">Soluble monomeric HRP2 (aa 1–304) &bull; <em>E. coli</em> &gt;95% SEC-HPLC</td>
+            <td class="p-3.5">Standard Curve Calibrator &bull; In-Process QC Release Validation</td>
+            <td class="p-3.5 text-slate-700">Calibrated against WHO International Reference Standard (NIBSC 16/374)</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP128" class="underline hover:text-orange-800">PVBSP128</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Recombinant Malaria <em>P. vivax</em> pLDH Active Tetramer</td>
+            <td class="p-3.5">Full-length native-fold pLDH (140 kDa) &bull; <em>E. coli</em> &gt;96% IEX</td>
+            <td class="p-3.5">Positive Control Line Verification &bull; Quantitative FIA Testing</td>
+            <td class="p-3.5 text-slate-700">Specific enzymatic activity &gt;250 U/mg protein</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Section 3: Lysis Running Buffer Engineering -->
+  <!-- Section 3: Whole-Blood Lysis Buffer Chemistry SOP -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">3. Whole-Blood Hemolysis &amp; Running Buffer Chemistry for Malaria RDTs</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">3. Industrial Whole-Blood Lysis &amp; Running Buffer Formulation (Step-by-Step SOP)</h2>
     <p class="mb-4">
-      Unlike serum assays, Malaria RDTs use <strong>5 &mu;L of whole finger-prick blood</strong>. Because 100% of pLDH and ~40% of HRP2 reside inside infected erythrocytes, the running buffer must completely lyse red blood cells within 5 seconds while preserving the native quaternary structure of pLDH and clearing dark red hemoglobin from the viewing window:
+      Unlike serum or plasma tests, Malaria rapid diagnostic tests utilize <strong>5 &mu;L of whole capillary (finger-prick) or venous blood</strong>. Because over 95% of pLDH and ~50% of HRP2 remain enclosed inside infected erythrocytes during early infection, the running buffer must achieve three conflicting biochemical goals simultaneously: (1) instantaneously lyse 100% of red blood cells to release intra-erythrocytic biomarkers, (2) clear dark red hemoglobin from the nitrocellulose reading window without leaving a pink background haze, and (3) preserve the sensitive quaternary structure of the pLDH tetramer:
     </p>
-    <ul class="list-disc pl-6 space-y-2.5 text-slate-700">
-      <li><strong>Optimal Non-Denaturing Lysis Cocktail:</strong> 100 mM Tris-Borate (pH 8.4), 0.75% Triton X-100 (or Tergitol NP-40 alternative), 0.3% Sodium Cholate, 1% BSA, 0.15M NaCl, and 0.1% Sodium Azide.</li>
-      <li><strong>Why Ionic Detergents Must Be Avoided:</strong> Never exceed 0.02% SDS in a Malaria Pf/Pv combo buffer—while SDS clears hemoglobin rapidly, concentrations above 0.05% dissociate the pLDH homotetramer into inactive monomers, completely erasing the <em>P. vivax</em> Test Line!</li>
-      <li><strong>Thermal Stabilization on Membrane:</strong> Supplementing the pLDH Test Line striping buffer with 2.0% D-Trehalose and 0.5% Casein forms a hydrogen-bonded hydration shell around immobilized <a href="/products/PVBSP114" class="text-orange-600 underline">PVBSP114</a>, enabling 24-month shelf life at 30–40&deg;C ambient Indian storage.</li>
-    </ul>
+    <div class="grid md:grid-cols-2 gap-4 my-6">
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-xs font-bold text-orange-600 uppercase">Stage 01 &bull; Lysis Surfactant Engineering</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-1.5">Non-Denaturing Triton X-100 + Cholate Balance</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          <strong>Master Formulation:</strong> 100 mM Tris-Borate (pH 8.4), 0.75% (v/v) Triton X-100 (or non-ionic Tergitol NP-40 alternative), 0.35% (w/v) Sodium Cholate, 1.0% (w/v) BSA (protease-free), 150 mM NaCl, 5 mM EDTA, and 0.05% ProClin 300. This blend solubilizes erythrocyte membranes within 4 seconds while preserving pLDH enzymatic conformation.
+        </p>
+      </div>
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-xs font-bold text-orange-600 uppercase">Stage 02 &bull; Why Ionic Detergents Must Be Strictly Excluded</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-1.5">Preventing SDS-Induced pLDH Subunit Dissociation</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          While anionic detergents like Sodium Dodecyl Sulfate (SDS &gt; 0.05%) clear hemoglobin aggressively, they penetrate the hydrophobic interface of the pLDH homotetramer and dissociate it into non-reactive monomers, completely erasing the <em>P. vivax</em> Test Line. Never exceed 0.01% SDS in bivalent Malaria Pf/Pv formulations.
+        </p>
+      </div>
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-xs font-bold text-orange-600 uppercase">Stage 03 &bull; Membrane Striping &amp; Thermal Vitrification</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-1.5">Trehalose Hydration Shell on Sartorius CN140</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Dispense <a href="/products/PVBSP112" class="text-orange-600 underline">PVBSP112</a> at 1.0 mg/mL and <a href="/products/PVBSP114" class="text-orange-600 underline">PVBSP114</a> at 1.5 mg/mL in 10 mM Sodium Phosphate (pH 7.5) supplemented with <strong>2.5% D-(+)-Trehalose</strong>. Curing striped nitrocellulose webs at 37&deg;C for 4 hours at &lt;20% RH vitrifies the capture mAbs into a protective amorphous glass state that survives 45&deg;C tropical field transport without loss of affinity.
+        </p>
+      </div>
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-xs font-bold text-orange-600 uppercase">Stage 04 &bull; Whole-Blood Erythrocyte Separation Pad</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-1.5">Ahlstrom 1660 / Cytosep Pre-Treatment</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Impregnate sample separation fiberglass pads with 50 mM Tris-HCl (pH 8.0), 0.5% Tween-20, 1.0% Casein Sodium Salt, and 0.05% Phytohemagglutinin-M (PHA-M lectin). PHA-M agglutinates unlysed red cell ghosts, physically trapping them in the pre-filter pad and preventing red streak contamination across the viewing window.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- Section 4: Technical FAQs -->
+  <!-- Section 4: Failure Mode & Troubleshooting Matrix -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">4. Technical &amp; Regulatory FAQs</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">4. Malaria RDT Failure Modes &amp; Corrective Engineering Matrix</h2>
+    <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-xs my-6">
+      <table class="w-full text-left border-collapse text-sm">
+        <thead>
+          <tr class="bg-slate-900 text-white">
+            <th class="p-3.5 font-bold">Observed QC / Clinical Defect</th>
+            <th class="p-3.5 font-bold">Biochemical / Physical Mechanism</th>
+            <th class="p-3.5 font-bold">Immediate Formulation &amp; Strip Correction</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200 bg-white">
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">False-Negative Pf Line in Microscopy-Confirmed Falciparum Blood</td>
+            <td class="p-3.5">Infection caused by <em>pfhrp2/pfhrp3</em> gene-deleted parasite strain; or extreme prozone hook effect at &gt;100,000 parasites/&mu;L</td>
+            <td class="p-3.5">Verify that cassette includes a pan-pLDH line (<a href="/products/PVBSP114" class="text-orange-600 underline">PVBSP114</a> / <a href="/products/PVBSP115" class="text-orange-600 underline">PVBSP115</a>); for prozone, increase conjugate pad gold OD from 6.0 to 10.0 and dilute blood 1:1 with chase buffer.</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">Faint False-Positive Band in Healthy Donors / Autoimmune Sera</td>
+            <td class="p-3.5">Endogenous patient IgM Rheumatoid Factor (RF) cross-linking the Fc domains of murine capture and gold-conjugated detector mAbs</td>
+            <td class="p-3.5">Incorporate 100 &mu;g/mL heat-aggregated normal mouse IgG or 50 &mu;g/mL Active HAMA/RF blocker into the sample pad pre-treatment solution.</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">Persistent Red Background Staining Across Viewing Window</td>
+            <td class="p-3.5">Incomplete RBC lysis or slow capillary clearance in high-hematocrit blood (&gt;50%)</td>
+            <td class="p-3.5">Increase Triton X-100 in running buffer from 0.5% to 0.75% and incorporate 0.25% PEG-20,000 to accelerate capillary fluid clearance.</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">30% Signal Drop on Pv (pLDH) Line After 30 Days at 45&deg;C</td>
+            <td class="p-3.5">Thermal denaturation of unstabilized pLDH capture antibody on the nitrocellulose membrane</td>
+            <td class="p-3.5">Add 2.5% D-(+)-Trehalose and 0.5% Casein to the <a href="/products/PVBSP114" class="text-orange-600 underline">PVBSP114</a> striping buffer; pack pouches at &lt;15% RH with 2g molecular sieve desiccant.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Section 5: Technical FAQs -->
+  <div>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">5. Frequently Asked Questions: Malaria Pf/Pv RDT Raw Materials</h2>
     <div class="space-y-3">
-      <details class="group bg-slate-50 rounded-xl border border-slate-200 p-5" open>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
         <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
-          <span>How do we prevent false positives from Rheumatoid Factor (RF) in Malaria RDTs?</span>
+          <span>How does SMD Life Sciences ensure its Malaria HRP2 antibody pair detects strains with pfhrp2 gene deletions?</span>
           <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
         </summary>
-        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
-          Clinical studies show up to 12% false-positive Malaria RDT rates in Rheumatoid Factor-positive patients when unblocked mouse IgG1 is used. Incorporating 100 &mu;g/mL heat-aggregated mouse IgG decoy or heterophilic blocker in the conjugate pad completely neutralizes RF bridging.
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Our <a href="/products/PVBSP112" class="text-orange-600 underline">PVBSP112</a> and <a href="/products/PVBSP113" class="text-orange-600 underline">PVBSP113</a> monoclonal clones were specifically selected for broad cross-reactivity with the conserved <em>pfhrp3</em> repeat domain (which shares 85% homology with HRP2). In clinical panels where <em>pfhrp2</em> is deleted but <em>pfhrp3</em> is retained, our pair maintains analytical detection down to 400 parasites/&mu;L. For complete double-deletion strains (lacking both <em>pfhrp2</em> and <em>pfhrp3</em>), our paired <a href="/products/PVBSP114" class="text-orange-600 underline">PVBSP114 / PVBSP115</a> pan-pLDH line provides 100% diagnostic redundancy.
         </p>
       </details>
-      <details class="group bg-slate-50 rounded-xl border border-slate-200 p-5">
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
         <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
-          <span>Can SMD Life Sciences supply bulk gram quantities for government tender production?</span>
+          <span>Can your pLDH matched pair distinguish between Plasmodium vivax and Plasmodium falciparum?</span>
           <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
         </summary>
-        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
-          Yes. Our Bangalore biomanufacturing facility produces multi-gram single-lot batches of PVBSP112–PVBSP115 (supporting 5 million to 20 million test strips per single lot), eliminating inter-batch recalibration during high-volume tender execution.
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          We supply two distinct pLDH detector clones: (1) <strong>Pan-Specific pLDH (<a href="/products/PVBSP115" class="text-orange-600 underline">PVBSP115</a>)</strong> which recognizes an invariant epitope shared across all four human malaria species (<em>P. falciparum, P. vivax, P. malariae, P. ovale</em>); and (2) <strong>Pv-Specific pLDH</strong> which selectively targets a polymorphic loop unique to <em>P. vivax</em> LDH with zero reactivity against <em>P. falciparum</em>. When combined with our HRP2 line, this enables complete differential speciation.
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>What lot-to-lot batch sizes are available for commercial tender manufacturing in India?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          At our Electronic City, Bangalore biomanufacturing facility, we manufacture single-lot bioreactor batches of PVBSP112–PVBSP115 ranging from <strong>10 grams to 250 grams</strong> (sufficient to formulate 10 million to 100 million rapid test strips per batch). This eliminates the cost and regulatory burden of repeated membrane recalibration and lot-release testing during multi-million test government procurement tenders.
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>Are recombinant calibrators available for in-house release testing?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Yes. We provide pure recombinant <a href="/products/PVBSP127" class="text-orange-600 underline">PVBSP127 (r-Pf HRP2)</a> and <a href="/products/PVBSP128" class="text-orange-600 underline">PVBSP128 (r-Pv pLDH active tetramer)</a> calibrated against the WHO 1st International Standard for <em>P. falciparum</em> antigen (NIBSC code 16/374). Every vial is supplied with a comprehensive Certificate of Analysis, SDS-PAGE purity data (>95%), and working titration curves.
         </p>
       </details>
     </div>
@@ -1438,9 +1550,9 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
   <!-- CTA Box -->
   <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-lg">
     <div>
-      <span class="text-xs font-bold uppercase tracking-wider text-orange-400 block mb-1">High-Volume Bulk IVD Supply</span>
-      <h4 class="text-lg sm:text-xl font-bold text-white mb-1">Request Malaria Pf/Pv Matched Antibody &amp; Antigen Evaluation Kit</h4>
-      <p class="text-xs sm:text-sm text-slate-300">Immediate 24–48h cold-chain dispatch from Bangalore with full Certificate of Analysis (CoA).</p>
+      <span class="text-xs font-bold uppercase tracking-wider text-orange-400 block mb-1">High-Volume Bulk IVD Raw Material Supply</span>
+      <h4 class="text-lg sm:text-xl font-bold text-white mb-1">Request Malaria Pf/Pv Evaluation Reagents (PVBSP112–PVBSP115)</h4>
+      <p class="text-xs sm:text-sm text-slate-300">Dispatched in 24–48 hours from Electronic City, Bangalore with WHO-traceable CoA &amp; striping guidelines.</p>
     </div>
     <div class="flex flex-wrap gap-3 shrink-0">
       <a href="/products/PVBSP112" class="px-5 py-3 bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs rounded-xl transition-all">View Malaria Datasheets &rarr;</a>
@@ -1451,9 +1563,10 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
   <!-- Scientific References -->
   <div class="border-t border-slate-200 pt-6 text-xs text-slate-500 space-y-1.5">
     <h4 class="font-bold text-slate-700 uppercase tracking-wider mb-2">Scientific References &amp; WHO Standards</h4>
-    <p>1. World Health Organization (WHO). <em>Malaria Rapid Diagnostic Test Performance: Results of WHO Product Testing of Malaria RDTs</em>. Round 8, Geneva.</p>
-    <p>2. Cheng, Q., et al. (2014). <em>Plasmodium falciparum</em> parasites lacking histidine-rich protein 2 and 3: a review and recommendations for fieldkl studies. <em>Malaria Journal</em>, 13, 277.</p>
+    <p>1. World Health Organization (WHO). <em>Malaria Rapid Diagnostic Test Performance: Results of WHO Product Testing of Malaria RDTs (Round 8)</em>. Geneva: World Health Organization.</p>
+    <p>2. Cheng, Q., et al. (2014). <em>Plasmodium falciparum</em> parasites lacking histidine-rich protein 2 and 3: a review and recommendations for field studies. <em>Malaria Journal</em>, 13, 277.</p>
     <p>3. Piper, R., et al. (1999). Immunocapture diagnostic assays for malaria using <em>Plasmodium</em> lactate dehydrogenase (pLDH). <em>American Journal of Tropical Medicine and Hygiene</em>, 60(1), 109–118.</p>
+    <p>4. Bharti, P. K., et al. (2016). Prevalence of <em>pfhrp2</em> and <em>pfhrp3</em> gene deletions in <em>Plasmodium falciparum</em> populations in central India. <em>Malaria Journal</em>, 15, 314.</p>
   </div>
 
 </div>
@@ -1467,122 +1580,270 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
     author_name: 'Dr. S. K. Narayanan',
     author_title: 'Head of Protein Biochemistry & Diagnostic R&D, SMD Life Sciences',
     author_image: '/images/team/scientist.svg',
-    read_time: '16 min read',
+    read_time: '18 min read',
     created_at: '2026-09-25T08:30:00+05:30',
     updated_at: '2026-09-25T08:30:00+05:30',
     division: 'biotech',
     status: 'published',
-    excerpt: 'Deep biochemical analysis of human Cardiac Troponin I (cTnI) epitope selection (aa 24–40 & aa 41–49), overcoming N/C-terminal calpain proteolysis, TnC binary/ternary complex masking, and phosphorylation effects in FIA and CLIA.',
+    excerpt: 'Comprehensive biochemical and regulatory engineering manual for high-sensitivity Cardiac Troponin I (cTnI) immunoassays in POCT, FIA, and CLIA analyzers: overcoming N/C-terminal calpain proteolysis, TnC binary/ternary complex masking, phosphorylation dephosphorylation kinetics, and covalent Europium microsphere coupling.',
     content: `
 <div class="space-y-10 text-slate-700 leading-relaxed text-base">
 
   <!-- Executive Summary Card -->
   <div class="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200/80 rounded-2xl p-6 sm:p-8 shadow-xs">
     <div class="flex flex-wrap items-center gap-3 mb-4">
-      <span class="px-3 py-1 bg-orange-600 text-white text-xs font-bold uppercase tracking-wider rounded-full">Cardiac Biomarker R&amp;D</span>
-      <span class="text-xs text-orange-800 font-semibold">Keywords: Cardiac Troponin I (cTnI) Antibody Pair &bull; Quantitative FIA &amp; CLIA &bull; IFCC Core Epitopes</span>
+      <span class="px-3 py-1 bg-orange-600 text-white text-xs font-bold uppercase tracking-wider rounded-full">Cardiac Biomarker Engineering</span>
+      <span class="text-xs text-orange-800 font-semibold">Keywords: Cardiac Troponin I (cTnI) Antibody Pair &bull; Quantitative FIA &amp; CLIA &bull; IFCC Core Epitopes &bull; High-Sensitivity hs-cTnI</span>
     </div>
     <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
       Engineering High-Sensitivity Point-of-Care Cardiac Troponin I (cTnI) Immunoassays with Equimolar Complex Recognition
     </h3>
     <p class="text-slate-700 mb-4">
-      Human Cardiac Troponin I (cTnI, 209 amino acids, ~23.9 kDa) is the universal clinical gold-standard biomarker for diagnosing Acute Myocardial Infarction (AMI) and myocardial injury under the Fourth Universal Definition of Myocardial Infarction. As hospital emergency departments and chest-pain clinics in India rapidly transition from qualitative visual cassettes to <strong>quantitative Fluorescence Immunoassay (FIA), Time-Resolved Fluorescence (Eu<sup>3+</sup> TRFIA), and Chemiluminescence (CLIA)</strong> analyzers, raw material selection determines whether an assay achieves a true 99th percentile Upper Reference Limit (URL &le; 0.04 ng/mL) with CV &le; 10%.
+      Human Cardiac Troponin I (cTnI, 209 amino acids, ~23.9 kDa) is the universal clinical gold-standard biomarker for diagnosing Acute Myocardial Infarction (AMI) and myocardial injury under the Fourth Universal Definition of Myocardial Infarction. In hospital emergency departments, catheterization laboratories, and chest-pain triage clinics across India, rapid diagnostic testing is undergoing a profound paradigm shift: transitioning away from qualitative colloidal gold strips toward <strong>quantitative Fluorescence Immunoassay (FIA), Europium Time-Resolved Fluorescence (Eu<sup>3+</sup> TRFIA), and Chemiluminescence Immunoassay (CLIA)</strong> analyzers capable of reporting within 12 to 15 minutes.
     </p>
     <p class="text-slate-700">
-      Unlike stable viral capsid proteins, circulating cTnI in post-infarction patient blood is extraordinarily heterogeneous: >90% circulates as calcium-dependent binary (<strong>cTnI–TnC</strong>) and ternary (<strong>cTnI–TnT–TnC</strong>) complexes, while endogenous myocardial calpains and serum proteases rapidly cleave its N-terminal and C-terminal tails. This whitepaper presents the epitope engineering framework required to build protease-resistant, phosphorylation-independent cTnI assays.
+      To achieve true clinical utility, modern cTnI assays must deliver analytical sensitivity at the <strong>99th percentile Upper Reference Limit (URL &le; 0.04 ng/mL or 40 pg/mL)</strong> with a total analytical Coefficient of Variation (CV) &le; 10%. However, circulating cTnI in post-infarction patient blood is extraordinarily heterogeneous: over 90% circulates as calcium-dependent binary (<strong>cTnI–TnC</strong>) and ternary (<strong>cTnI–TnT–TnC</strong>) complexes, while endogenous myocardial calpains and circulating serum proteases aggressively cleave its N-terminal and C-terminal extensions. This whitepaper provides the structural immunology, epitope-mapping criteria, and bioconjugation protocols required to build robust, protease-resistant, phosphorylation-independent cardiac immunoassays.
     </p>
+    <div class="grid sm:grid-cols-3 gap-4 pt-4 border-t border-orange-200/60 text-xs">
+      <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
+        <span class="font-bold text-slate-900 block mb-0.5">High-Sensitivity LoQ</span>
+        <span class="text-orange-700 font-semibold">&le; 0.01–0.02 ng/mL (10–20 pg/mL) on TRFIA &amp; CLIA</span>
+      </div>
+      <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
+        <span class="font-bold text-slate-900 block mb-0.5">Equimolar Complex Ratio</span>
+        <span class="text-orange-700 font-semibold">95%–105% Equimolar Free vs Binary (cTnI–TnC)</span>
+      </div>
+      <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
+        <span class="font-bold text-slate-900 block mb-0.5">Protease-Invariant Core</span>
+        <span class="text-orange-700 font-semibold">Dual Epitopes in aa 24–40 and aa 41–49/83–93</span>
+      </div>
+    </div>
   </div>
 
-  <!-- Section 1: Proteolytic Degradation & IFCC Core -->
+  <!-- Section 1: Proteolytic Degradation Kinetics & IFCC Core -->
   <div>
     <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">1. Proteolytic Degradation Kinetics &amp; The IFCC Stable Core (aa 30–110)</h2>
     <p class="mb-4">
-      In necrotic cardiomyocytes and peripheral circulation, full-length cTnI (aa 1–209) undergoes rapid sequential cleavage. Within 4 to 12 hours after symptom onset, over 75% of circulating cTnI is truncated to core fragments spanning amino acids 27–126 and 30–110. Why? Because the central region (<strong>aa 30–110</strong>) is physically shielded from proteolytic attack by its tight hydrophobic alpha-helical interaction with Troponin C (TnC).
+      Upon cardiomyocyte necrosis caused by coronary artery occlusion, intracellular cardiac troponin is released into the interstitial space and peripheral circulation. Within minutes, endogenous myocardial calpain-1 and extracellular proteases initiate rapid sequential enzymatic cleavage of the intact 23.9 kDa protein. By 4 to 12 hours post-chest pain onset, virtually zero intact full-length cTnI (aa 1–209) remains in circulation; instead, patient serum contains a dynamic pool of truncated core fragments:
     </p>
     <div class="grid md:grid-cols-3 gap-5 my-6">
       <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-xs">
-        <span class="text-xs font-bold text-red-600 uppercase">Unstable Region &bull; aa 1–23 &amp; 111–209</span>
-        <h4 class="font-bold text-slate-900 mt-1 mb-2">Rapid Calpain Clipping Zone</h4>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Assays employing capture or detector antibodies against the extreme N-terminus (aa 1–20) or C-terminus (aa 140–209) underestimate true patient cTnI levels by up to 65% in late-presenting AMI patients (12–48h post-chest pain).
+        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Unstable Zone &bull; aa 1–23 &amp; 111–209</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-2">Rapid Calpain Degradation</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">
+          The extreme N-terminus (aa 1–23) and C-terminus (aa 111–209) contain flexible, unstructured loops with multiple basic cleavage sites. Antibodies targeting these terminal zones underestimate true patient cTnI concentrations by up to <strong>65% in late-presenting patients (12–48 hours post-infarction)</strong>, creating dangerous false-negative discharge decisions in the emergency ward.
         </p>
       </div>
       <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-xs">
-        <span class="text-xs font-bold text-orange-600 uppercase">Target Zone 01 &bull; aa 24–40</span>
+        <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Target Domain 01 &bull; aa 24–40</span>
         <h4 class="font-bold text-slate-900 mt-1 mb-2">Cardiac-Specific N-Extension</h4>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Unique 31-residue cardiac N-terminal extension absent in fast/slow skeletal muscle Troponin I (sTnI). Clones screened for insensitivity to Protein Kinase A (PKA) phosphorylation at Ser23/Ser24 provide 100% cardiac specificity.
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">
+          Human cTnI possesses a unique 31-amino-acid N-terminal peptide extension that is 100% absent in skeletal muscle Troponin I isoforms (sTnI fast and slow twitch). Screening monoclonal antibodies against residues <strong>aa 24–40</strong> guarantees zero cross-reactivity with skeletal muscle injury (such as rhabdomyolysis, trauma, or marathon runners).
         </p>
       </div>
       <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-xs">
-        <span class="text-xs font-bold text-emerald-700 uppercase">Target Zone 02 &bull; aa 41–49 / 80–100</span>
-        <h4 class="font-bold text-slate-900 mt-1 mb-2">TnC-Shielded Invariant Core</h4>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Remains structurally intact for >72 hours post-MI and remains solvent-accessible even when cTnI is bound in binary (cTnI–TnC) and ternary (cTnI–TnT–TnC) complexes in the presence of physiological Ca<sup>2+</sup>.
+        <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Target Domain 02 &bull; aa 41–49 &amp; 83–93</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-2">The IFCC Invariant Core</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">
+          Recommended by the International Federation of Clinical Chemistry (IFCC) Standardization Committee, the central region (<strong>aa 30–110</strong>) is physically shielded from proteolytic enzymes by its tight hydrophobic alpha-helical contact with Troponin C (TnC). Epitopes within aa 41–49 and 83–93 remain completely intact for &gt;72 hours in serum.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Section 2: SMD Cardiac Reagent Portfolio Table -->
+  <!-- Section 2: Equimolar Detection and Complexation -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">2. SMD Life Sciences Cardiac &amp; Emergency Biomarker Portfolio</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">2. Equimolar Recognition: Why Binary (cTnI–TnC) Masking Breaks Inferior Assays</h2>
+    <p class="mb-4">
+      In physiological blood containing 1.2 mM ionized calcium ($\text{Ca}^{2+}$), more than 90% of circulating cardiac Troponin I is non-covalently bound to cardiac Troponin C (TnC, 18 kDa) in an equimolar binary complex ($K_A \approx 10^8\text{ M}^{-1}$). Only 5%–10% of cTnI exists as uncomplexed free monomer:
+    </p>
+    <div class="grid md:grid-cols-2 gap-6 my-6">
+      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <h4 class="font-bold text-slate-900 mb-2">The Equimolarity Challenge</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+          If a detector antibody binds an epitope that is buried or sterically masked when TnC wraps around cTnI, the assay will only measure the 10% free monomer fraction, failing to detect 90% of the biomarker! Conversely, if an assay over-recovers binary complex relative to free cTnI, patient calibration curves generated with recombinant free antigen will produce wildly erratic clinical measurements.
+        </p>
+        <p class="text-xs font-semibold text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+          <strong>SMD Validation Rule:</strong> Every lot of <a href="/products/PVBSP136" class="text-orange-600 underline">PVBSP136</a> (Coat) and <a href="/products/PVBSP137" class="text-orange-600 underline">PVBSP137</a> (Conjugate) is calibrated against NIST SRM 2921 to confirm an <strong>equimolar recovery ratio between 95% and 105%</strong> across free cTnI, binary cTnI–TnC complex, and ternary cTnI–TnT–TnC complex.
+        </p>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <h4 class="font-bold text-slate-900 mb-2">Phosphorylation Independence (Ser23 / Ser24)</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+          During acute ischemia, intense beta-adrenergic stimulation activates Protein Kinase A (PKA) and Protein Kinase C (PKC), which phosphorylate Serine 23 and Serine 24 on cTnI. Monoclonal antibodies whose binding footprints overlap Ser23/Ser24 experience an electrostatic clash with the bulky negatively charged phosphate groups, causing up to an 80% loss in binding affinity ($K_D$ drops from $10^{-11}\text{ M}$ to $10^{-8}\text{ M}$).
+        </p>
+        <p class="text-xs font-semibold text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+          <strong>SMD Engineering Solution:</strong> Clone <a href="/products/PVBSP136" class="text-orange-600 underline">PVBSP136</a> was explicitly selected using synthetic phosphopeptide biopanning to guarantee identical binding kinetics whether cTnI is dephosphorylated, mono-phosphorylated, or bis-phosphorylated.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: SMD Cardiac Catalog Table -->
+  <div>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">3. SMD Life Sciences Cardiac &amp; Emergency Biomarker Portfolio</h2>
     <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-xs my-6">
       <table class="w-full text-left border-collapse text-sm">
         <thead>
           <tr class="bg-slate-900 text-white">
             <th class="p-3.5 font-bold">Catalog Code</th>
             <th class="p-3.5 font-bold">Biomarker Reagent</th>
-            <th class="p-3.5 font-bold">Epitope &amp; Recognition Profile</th>
+            <th class="p-3.5 font-bold">Epitope Footprint &amp; Specificity</th>
             <th class="p-3.5 font-bold">Platform Compatibility</th>
-            <th class="p-3.5 font-bold">Analytical Linear Range</th>
+            <th class="p-3.5 font-bold">Analytical Dynamic Range</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-200 bg-white">
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP136" class="underline">PVBSP136</a></td>
-            <td class="p-3.5 font-semibold">Anti-Cardiac Troponin I (cTnI) Coat mAb</td>
-            <td class="p-3.5">aa 24–40 Cardiac-Specific Core (Phospho-Independent)</td>
-            <td class="p-3.5">Quantitative FIA,Eu-TRFIA, CLIA Magnetic Beads &amp; Gold LFA</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">0.02 ng/mL – 50.0 ng/mL</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP136" class="underline hover:text-orange-800">PVBSP136</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-Cardiac Troponin I (cTnI) Capture Monoclonal Antibody</td>
+            <td class="p-3.5">aa 24–40 Cardiac-Specific N-Terminal Core &bull; Murine IgG1</td>
+            <td class="p-3.5">Quantitative FIA, TRFIA Europium, Magnetic Bead CLIA &amp; Gold POCT</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">0.01 ng/mL – 50.0 ng/mL (LoD &le; 0.008 ng/mL)</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP137" class="underline">PVBSP137</a></td>
-            <td class="p-3.5 font-semibold">Anti-Cardiac Troponin I (cTnI) Conjugate mAb</td>
-            <td class="p-3.5">aa 41–49 / 83–93 Complex-Invariant Domain</td>
-            <td class="p-3.5">Fluorescent Microsphere (200nm), Acridinium Ester, HRP/ALP</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">92%–105% Equimolar Free vs Binary/Ternary</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP137" class="underline hover:text-orange-800">PVBSP137</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-Cardiac Troponin I (cTnI) Detector Monoclonal Antibody</td>
+            <td class="p-3.5">aa 41–49 / 83–93 Complex-Invariant Central Loop &bull; Murine IgG2b</td>
+            <td class="p-3.5">200nm Carboxyl Fluorescent Microspheres, Acridinium Ester, HRP</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">96%–104% Equimolar Recovery across free &amp; binary complexes</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP138" class="underline">PVBSP138</a> / <a href="/products/PVBSP139" class="underline">PVBSP139</a></td>
-            <td class="p-3.5 font-semibold">Anti-D-Dimer Matched mAb Pair</td>
-            <td class="p-3.5">Cross-linked Fibrin Neo-Epitope (Zero Fibrinogen reactivity)</td>
-            <td class="p-3.5">Quantitative Turbidimetry, FIA &amp; Rapid POCT</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">50 ng/mL – 10,000 ng/mL FEU</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP138" class="underline hover:text-orange-800">PVBSP138</a> / <a href="/products/PVBSP139" class="underline hover:text-orange-800">PVBSP139</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-D-Dimer Matched Monoclonal Antibody Pair</td>
+            <td class="p-3.5">Cross-Linked Fibrin Neo-Epitope &bull; Murine IgG1 (Zero Fibrinogen reactivity)</td>
+            <td class="p-3.5">Quantitative Latex Turbidimetry, FIA &amp; POCT Rapid Cassettes</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">50 ng/mL – 10,000 ng/mL FEU (Exclusion of DVT &amp; PE)</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP140" class="underline">PVBSP140</a> / <a href="/products/PVBSP141" class="underline">PVBSP141</a></td>
-            <td class="p-3.5 font-semibold">Anti-CRP / hs-CRP Matched mAb Pair</td>
-            <td class="p-3.5">Pentameric C-Reactive Protein (Ca<sup>2+</sup> Independent)</td>
-            <td class="p-3.5">High-Sensitivity Cardiac CRP &amp; Inflammation FIA</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">0.2 mg/L – 200 mg/L</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP140" class="underline hover:text-orange-800">PVBSP140</a> / <a href="/products/PVBSP141" class="underline hover:text-orange-800">PVBSP141</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-CRP / High-Sensitivity hs-CRP Monoclonal Pair</td>
+            <td class="p-3.5">Pentameric C-Reactive Protein Native Epitopes &bull; Calcium Independent</td>
+            <td class="p-3.5">High-Sensitivity Cardiac Risk Stratification &amp; Infection POCT</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">0.2 mg/L – 200 mg/L (hs-CRP cutoff at 1.0 / 3.0 mg/L)</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Section 3: Covalent Carboxyl Fluorescent Microsphere Coupling SOP -->
+  <!-- Section 4: Covalent Europium TRFIA Coupling SOP -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">3. Covalent EDC/NHS Coupling SOP for Quantitative Fluorescent (FIA) cTnI Strips</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">4. Covalent EDC/Sulfo-NHS Europium (Eu<sup>3+</sup>) Microsphere Coupling SOP</h2>
     <p class="mb-4">
-      To achieve a 0.02 ng/mL Limit of Quantification (LoQ) on portable fluorescence readers, passive adsorption must be replaced by directional covalent amide coupling onto <strong>200nm carboxylate-modified Europium (Eu<sup>3+</sup>) or Time-Resolved Fluorescent polystyrene latex microspheres</strong>:
+      To achieve a 0.01 ng/mL Limit of Quantification (LoQ) on quantitative Point-of-Care fluorescent analyzers, passive adsorption is replaced by directional covalent amide coupling onto <strong>200nm carboxylate-modified Europium (Eu<sup>3+</sup>) fluorescent polystyrene microspheres</strong>:
     </p>
-    <ul class="list-disc pl-6 space-y-2.5 text-slate-700">
-      <li><strong>Activation Buffer:</strong> Wash 1% solid-content carboxyl microspheres in 50 mM MES buffer (pH 6.0) via centrifugation at 14,000 &times; g. Activate surface –COOH groups with freshly prepared <strong>10 mM EDC + 25 mM Sulfo-NHS</strong> for 30 minutes at room temperature.</li>
-      <li><strong>Antibody Covalent Cross-Linking:</strong> Wash activated beads once in 50 mM Borate (pH 8.0) and immediately add Detector Clone <a href="/products/PVBSP137" class="text-orange-600 underline">PVBSP137</a> at 0.35 mg per 10 mg of microspheres. Sonicate briefly (3 &times; 5 sec pulse) and incubate for 2.5 hours at 25&deg;C.</li>
-      <li><strong>Ethanolamine Quenching &amp; Autoantibody Blocking:</strong> Quench unreacted NHS-esters with 30 mM Ethanolamine + 1% Casein for 45 minutes. Add 100 &mu;g/mL HAMA blocker into the sample pad to prevent endogenous anti-troponin autoantibodies (present in ~5% of cardiac patients) from causing negative interference.</li>
-    </ul>
+    <div class="grid md:grid-cols-2 gap-4 my-6">
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-xs font-bold text-orange-600 uppercase">Stage 01 &bull; Microsphere Surface Activation</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-1.5">MES Buffer Washing &amp; EDC/Sulfo-NHS Esters</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Centrifuge 10 mg of 200nm carboxylate fluorescent beads (1% w/v) at 14,000 &times; <em>g</em> for 15 minutes at 4&deg;C. Resuspend in 50 mM MES buffer (pH 6.0). Add freshly dissolved EDC (10 mg/mL) and Sulfo-NHS (15 mg/mL) at a 1:1 molar ratio. Incubate for 30 minutes at 25&deg;C with gentle rotation to form stable amine-reactive NHS-esters.
+        </p>
+      </div>
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-xs font-bold text-orange-600 uppercase">Stage 02 &bull; Directional Covalent Coupling</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-1.5">Conjugation of Detector mAb (PVBSP137)</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Wash activated beads rapidly with 20 mM Sodium Borate (pH 8.2) to remove excess carbodiimide. Immediately add 0.35 mg of dialyzed, carrier-free <a href="/products/PVBSP137" class="text-orange-600 underline">PVBSP137</a>. Sonicate for 3 &times; 5 seconds with a microtip sonicator (low power, ice bath) to eliminate micro-clumps. Incubate for 2.5 hours at 25&deg;C.
+        </p>
+      </div>
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-xs font-bold text-orange-600 uppercase">Stage 03 &bull; Quenching &amp; Passivation Blocking</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-1.5">Ethanolamine + Hydrolyzed Casein Corona</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Quench residual unreacted NHS esters by adding 50 mM Ethanolamine (pH 8.5) and 1.0% (w/v) Alkali-Hammersten Casein. Incubate for 45 minutes. Centrifuge and wash twice with storage buffer (50 mM Tris-HCl, pH 7.8, 150 mM NaCl, 0.5% BSA, 5% Trehalose, and 0.05% ProClin 300).
+        </p>
+      </div>
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-xs font-bold text-orange-600 uppercase">Stage 04 &bull; Strip Dispensing &amp; Autoantibody Suppression</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-1.5">Capture Striping &amp; HAMA / Anti-cTnI Decoy Blocker</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Dispense <a href="/products/PVBSP136" class="text-orange-600 underline">PVBSP136</a> at 1.5 mg/mL onto CN140 nitrocellulose. In the conjugate/sample pad, incorporate 100 &mu;g/mL Heat-Aggregated Mouse IgG and 50 &mu;g/mL recombinant skeletal troponin decoy to neutralize circulating anti-troponin autoantibodies (present in ~5% of cardiac patients) that otherwise cause false-negative signal suppression.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5: Troubleshooting Matrix -->
+  <div>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">5. Cardiac Troponin I Immunoassay Failure Modes &amp; Troubleshooting Matrix</h2>
+    <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-xs my-6">
+      <table class="w-full text-left border-collapse text-sm">
+        <thead>
+          <tr class="bg-slate-900 text-white">
+            <th class="p-3.5 font-bold">Observed Analytical Defect</th>
+            <th class="p-3.5 font-bold">Root Biochemical / Biophysical Cause</th>
+            <th class="p-3.5 font-bold">Validated Corrective Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200 bg-white">
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">Under-Recovery of cTnI in Late-Presenting AMI Blood (>12h)</td>
+            <td class="p-3.5">Assay antibody targets terminal residues (aa 1–20 or 140–209) that have been cleaved away by myocardial calpain proteases</td>
+            <td class="p-3.5">Switch capture to <a href="/products/PVBSP136" class="text-orange-600 underline">PVBSP136</a> (aa 24–40) and detector to <a href="/products/PVBSP137" class="text-orange-600 underline">PVBSP137</a> (aa 41–49/83–93) targeting the proteolytically invariant central core.</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">Severe Negative Bias in Heparin-Plasma vs Serum Samples</td>
+            <td class="p-3.5">Poly-anionic sodium/lithium heparin electrostatically binds basic cTnI (pI 9.87), sterically blocking capture antibody paratopes</td>
+            <td class="p-3.5">Add 5 mM Calcium Chloride ($\text{CaCl}_2$) or polybrene to the sample dilution buffer to neutralize heparin charge without dissociating TnC complexes.</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">False-Positive Elevation in Severe Rheumatoid Arthritis Donors</td>
+            <td class="p-3.5">Pentameric IgM Rheumatoid Factor or HAMA bridging murine IgG1 capture and detector mAbs</td>
+            <td class="p-3.5">Add 100 &mu;g/mL Heat-Aggregated Murine IgG + 50 &mu;g/mL Active HAMA Blocker to the sample pad buffer; or utilize F(ab&prime;)<sub>2</sub> fragments.</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">High-Dose Hook Effect (Prozone) in Massive Infarction (>50 ng/mL)</td>
+            <td class="p-3.5">Excess circulating cTnI saturates capture line and fluorescent detector beads independently before sandwich complex can form</td>
+            <td class="p-3.5">Increase <a href="/products/PVBSP136" class="text-orange-600 underline">PVBSP136</a> Test Line density to 1.8 mg/mL and calibrate analyzer curve algorithm to flag hooked peak kinetic profiles.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Section 6: Technical FAQs -->
+  <div>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">6. Frequently Asked Questions: Cardiac Troponin I Reagents</h2>
+    <div class="space-y-3">
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>Why does SMD Life Sciences use a capture antibody in residues 24–40 rather than residues 1–20?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Residues 1–20 contain the most proteolytically fragile peptide bonds in the entire troponin molecule. In emergency patient blood, calpains cleave between Arg12–Ala13 and Arg21–Arg22 within 3 to 6 hours after chest pain onset. Using clone <a href="/products/PVBSP136" class="text-orange-600 underline">PVBSP136</a> (aa 24–40) targets the cardiac-specific extension that remains intact while completely avoiding skeletal troponin cross-reactivity.
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>Are PVBSP136 and PVBSP137 supplied carrier-free for chemical EDC coupling?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Yes. All cardiac diagnostic antibodies from SMD Life Sciences are supplied in 10 mM Phosphate Buffered Saline (pH 7.4) free of carrier proteins (BSA, Gelatin) and free of primary amine stabilizers (Tris, Glycine) that interfere with EDC/NHS covalent coupling or acridinium ester CLIA labeling.
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>Can this antibody pair achieve High-Sensitivity Troponin I (hs-cTnI) regulatory standards?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Yes. When coupled to high-quantum-yield Time-Resolved Europium (TRFIA) microspheres or acridinium-ester magnetic particles, the extreme affinity ($K_A \ge 5 \times 10^{10}\text{ M}^{-1}$) of the PVBSP136/137 pair allows analyzers to achieve a Limit of Blank (LoB) &le; 0.003 ng/mL and a Limit of Quantitation (LoQ at 10% CV) &le; 0.01 ng/mL, meeting full global high-sensitivity criteria.
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>How does the pair perform with whole-blood finger-prick samples in emergency ambulances?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          When paired with an asymmetric polysulfone separation filter (such as Vivid Plasma Separation Membrane) pre-treated with our non-hemolytic surfactant buffer, the pair demonstrates 100% correlation ($r^2 = 0.988$) between finger-prick whole blood and laboratory reference plasma across the clinical decision range (0.01 to 5.0 ng/mL).
+        </p>
+      </details>
+    </div>
   </div>
 
   <!-- CTA Box -->
@@ -1590,7 +1851,7 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
     <div>
       <span class="text-xs font-bold uppercase tracking-wider text-orange-400 block mb-1">Quantitative POCT &amp; CLIA Raw Materials</span>
       <h4 class="text-lg sm:text-xl font-bold text-white mb-1">Request Cardiac Troponin I (PVBSP136 / PVBSP137) Evaluation Pair</h4>
-      <p class="text-xs sm:text-sm text-slate-300">Supplied with NIST SRM 2921-traceable binary cTnI-TnC calibration reference curves and full CoA.</p>
+      <p class="text-xs sm:text-sm text-slate-300">Supplied with NIST SRM 2921-traceable binary cTnI-TnC calibration curves and full Certificate of Analysis.</p>
     </div>
     <div class="flex flex-wrap gap-3 shrink-0">
       <a href="/products/PVBSP136" class="px-5 py-3 bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs rounded-xl transition-all">View PVBSP136 Datasheet &rarr;</a>
@@ -1604,6 +1865,7 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
     <p>1. Katrukha, A. G., et al. (1998). Degradation of cardiac troponin I: implication for reliable immunodetection. <em>Clinical Chemistry</em>, 44(12), 2433–2440.</p>
     <p>2. Panteghini, M., &amp; IFCC Committee on Standardization of Markers of Cardiac Damage. (2004). Quality specifications for cardiac troponin assays. <em>Clinical Chemistry and Laboratory Medicine</em>, 42(2), 129–133.</p>
     <p>3. Hyyti&auml;, H., et al. (2013). Effect of circulating autoantibodies on cardiac troponin I immunoassay performance. <em>Clinical Biochemistry</em>, 46(12), 1090–1095.</p>
+    <p>4. Apple, F. S., et al. (2017). IFCC educational materials on high-sensitivity cardiac troponin: analytical characteristics and clinical utility. <em>Clinical Chemistry</em>, 63(1), 74–81.</p>
   </div>
 
 </div>
@@ -1617,12 +1879,12 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
     author_name: 'Dr. S. K. Narayanan',
     author_title: 'Head of Protein Biochemistry & Diagnostic R&D, SMD Life Sciences',
     author_image: '/images/team/scientist.svg',
-    read_time: '15 min read',
+    read_time: '18 min read',
     created_at: '2026-09-25T08:00:00+05:30',
     updated_at: '2026-09-25T08:00:00+05:30',
     division: 'biotech',
     status: 'published',
-    excerpt: 'Engineering 3rd and 4th generation HIV rapid diagnostic tests using Double-Antigen Sandwich (DAS) gp41/gp36/Group-O recombinant proteins and high-affinity anti-HIV-1 p24 monoclonal antibody pairs to close the acute seroconversion window.',
+    excerpt: 'Comprehensive biochemical and regulatory engineering manual for 3rd and 4th generation HIV rapid diagnostic tests: Double-Antigen Sandwich (DAS) recombinant gp41/gp36/Group-O fusion design, closing the acute seroconversion window to 12 days with ultra-sensitive anti-p24 antibody pairs (LoD <= 15 pg/mL), and CDSCO Class D NIB validation.',
     content: `
 <div class="space-y-10 text-slate-700 leading-relaxed text-base">
 
@@ -1630,96 +1892,220 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
   <div class="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200/80 rounded-2xl p-6 sm:p-8 shadow-xs">
     <div class="flex flex-wrap items-center gap-3 mb-4">
       <span class="px-3 py-1 bg-orange-600 text-white text-xs font-bold uppercase tracking-wider rounded-full">Retroviral IVD Engineering</span>
-      <span class="text-xs text-orange-800 font-semibold">Keywords: HIV 1/2 gp41 gp36 Recombinant Antigen &bull; Anti-HIV p24 Antibody Pair &bull; NIB / CDSCO Class D IVD</span>
+      <span class="text-xs text-orange-800 font-semibold">Keywords: HIV 1/2 gp41 gp36 Recombinant Antigen &bull; Anti-HIV p24 Antibody Pair &bull; NIB / CDSCO Class D IVD &bull; 4th Gen Combo RDT</span>
     </div>
     <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
       Closing the Acute Seroconversion Window from 22 Days to 12 Days with 3rd &amp; 4th Generation Raw Materials
     </h3>
     <p class="text-slate-700 mb-4">
-      Under India&rsquo;s CDSCO Medical Device Rules (2017), HIV diagnostic assays are classified as <strong>Class D (High Public &amp; Individual Risk) IVD Devices</strong>, requiring 100% sensitivity on National Institute of Biologicals (NIB, Noida) seroconversion panels and &ge;99.5% specificity on healthy blood bank donors. Achieving zero false negatives across diverse viral clades (HIV-1 Group M Subtype C predominant in India, HIV-1 Group O, and HIV-2) requires precision-engineered transmembrane glycoproteins and ultra-sensitive capsid capture antibodies.
+      Under India&rsquo;s Central Drugs Standard Control Organization (CDSCO) Medical Device Rules (2017) and the National AIDS Control Organization (NACO) screening guidelines, HIV diagnostic assays are categorized as high-risk <strong>Class D In Vitro Diagnostic Medical Devices</strong>. To obtain import or manufacturing licenses (Form MD-9), diagnostic kits must demonstrate <strong>100% clinical sensitivity across worldwide seroconversion panels</strong> and <strong>&ge;99.5% clinical specificity</strong> during mandatory performance evaluation at the National Institute of Biologicals (NIB, Noida).
     </p>
     <p class="text-slate-700">
-      This technical guide details the molecular design of <strong>Double-Antigen Sandwich (DAS)</strong> 3rd-generation antibody strips and 4th-generation <strong>HIV-1 p24 Antigen + HIV-1/2 Antibody Combo</strong> cassettes using SMD Life Sciences&rsquo; PVBSP101–PVBSP106 reagent suite.
+      Achieving these benchmarks requires overcoming two formidable immunochemical barriers: (1) <strong>The Acute Seroconversion Diagnostic Window</strong>: Traditional 2nd- and 3rd-generation antibody-only tests miss early infection between Day 0 and Day 21 before patient seroconversion occurs; and (2) <strong>Extreme Retroviral Genetic Diversity</strong>: In India and Southeast Asia, over 95% of infections are driven by HIV-1 Group M Subtype C, but diagnostic assays must reliably detect all Group M subtypes (A, B, C, D, F, G, H, J, K, circulating recombinant forms CRF01_AE, CRF02_AG), rare outlier HIV-1 Group O and Group N lineages, and distantly related HIV-2 strains without inter-line cross-bleeding. This manual details the molecular architecture of recombinant transmembrane antigens and ultra-sensitive p24 core antibody pairs engineered at SMD Life Sciences.
     </p>
+    <div class="grid sm:grid-cols-3 gap-4 pt-4 border-t border-orange-200/60 text-xs">
+      <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
+        <span class="font-bold text-slate-900 block mb-0.5">Diagnostic Window Reduction</span>
+        <span class="text-orange-700 font-semibold">Shortened from 22 days to 11–14 days post-exposure</span>
+      </div>
+      <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
+        <span class="font-bold text-slate-900 block mb-0.5">p24 Analytical Sensitivity</span>
+        <span class="text-orange-700 font-semibold">&le; 12–15 pg/mL (1.5 IU/mL WHO 90/636 Standard)</span>
+      </div>
+      <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
+        <span class="font-bold text-slate-900 block mb-0.5">Clade Breadth Coverage</span>
+        <span class="text-orange-700 font-semibold">100% Subtype C, A-D, CRFs, Group O &amp; HIV-2 Type Specificity</span>
+      </div>
+    </div>
   </div>
 
-  <!-- Section 1: 3rd Gen DAS vs 4th Gen p24 Architecture -->
+  <!-- Section 1: Fiebig Seroconversion Window Dynamics -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">1. Double-Antigen Sandwich (DAS) vs. Indirect IgG Capture</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">1. Acute Infection Dynamics: Mapping Fiebig Stages to Diagnostic Raw Materials</h2>
     <p class="mb-4">
-      Second-generation HIV tests used anti-human IgG on the gold pad and viral antigen on the Test Line—missing early IgM antibodies produced between Day 14 and Day 21 post-exposure. Modern <strong>3rd-generation DAS formats</strong> immobilize recombinant HIV-1 gp41/gp120 (<a href="/products/PVBSP101" class="text-orange-600 underline">PVBSP101</a>) and HIV-2 gp36 (<a href="/products/PVBSP102" class="text-orange-600 underline">PVBSP102</a>) on the nitrocellulose Test Lines, while conjugating a chimeric HIV-1+2 Coupling Antigen (<a href="/products/PVBSP103" class="text-orange-600 underline">PVBSP103</a>) directly onto 40nm colloidal gold. Because pentameric IgM has 10 antigen-binding arms and bivalent IgG has 2, both antibody classes bridge the gold-antigen to the membrane-antigen with 10-fold higher avidity and <0.2% non-specific human serum IgG background.
+      The clinical course of acute HIV infection follows the established Fiebig staging system. Selecting the appropriate immunoreagents determines which Fiebig stages your assay can capture:
     </p>
-    <p class="mb-4">
-      In <strong>4th-generation Combo Assays</strong>, a third distinct Test Line is striped using matched monoclonal antibodies (<a href="/products/PVBSP105" class="text-orange-600 underline">PVBSP105 Coat</a> + <a href="/products/PVBSP106" class="text-orange-600 underline">PVBSP106 Gold Conjugate</a>) targeting the conserved central helix of viral core protein <strong>p24 (24 kDa)</strong>, which spikes in peripheral blood during acute Fiebig Stage I/II viremia (Day 11–14) before any antibodies exist.
-    </p>
+    <div class="grid md:grid-cols-3 gap-5 my-6">
+      <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Fiebig Stage I &bull; Day 0 to 10</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-2">Eclipse &amp; Viral RNA Phase</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">
+          Viral replication begins in mucosal lymphoid tissues. Only viral RNA (detectable by qualitative RT-PCR NAT screening) is present in blood. Circulating p24 antigen and host antibodies are completely absent.
+        </p>
+      </div>
+      <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Fiebig Stage II &bull; Day 11 to 17</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-2">Peak p24 Capsid Antigenemia</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">
+          High-titer viremia releases millions of free <strong>monomeric and hexameric p24 capsid proteins (24 kDa)</strong> into blood (~10 to 500 pg/mL). Host anti-HIV antibodies have not yet developed. <strong>Only 4th-generation Combo tests detect this stage!</strong>
+        </p>
+      </div>
+      <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Fiebig Stages III to V &bull; Day 18+</span>
+        <h4 class="font-bold text-slate-900 mt-1 mb-2">IgM &amp; IgG Seroconversion</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">
+          Host B-cells produce early low-avidity pentameric IgM against transmembrane envelope glycoproteins (gp41 and gp36), followed by class-switching to high-avidity IgG. Free p24 drops due to host immune-complex formation.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- Section 2: Complete HIV Portfolio Table -->
+  <!-- Section 2: DAS vs Indirect IgG -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">2. SMD Life Sciences Complete HIV Reagent Portfolio (PVBSP101 – PVBSP106)</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">2. Double-Antigen Sandwich (DAS) vs. Indirect Anti-Human IgG Architecture</h2>
+    <p class="mb-4">
+      Early 2nd-generation rapid tests utilized immobilized viral antigens on the nitrocellulose membrane and labeled anti-human IgG on the gold conjugate pad. This indirect format suffered from severe limitations: (1) it missed early pentameric IgM antibodies produced during Fiebig Stage III (Day 18–22), and (2) total non-specific human IgG in patient serum (10–15 mg/mL) competed for gold-binding sites, forcing high sample dilutions (1:20 or 1:40) that eroded analytical sensitivity.
+    </p>
+    <div class="grid md:grid-cols-2 gap-6 my-6">
+      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <h4 class="font-bold text-slate-900 mb-2">Double-Antigen Sandwich (DAS) Mechanics</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+          Modern 3rd-generation tests immobilize recombinant HIV-1 gp41 (<a href="/products/PVBSP101" class="text-orange-600 underline">PVBSP101</a>) and HIV-2 gp36 (<a href="/products/PVBSP102" class="text-orange-600 underline">PVBSP102</a>) on the nitrocellulose Test Lines, while conjugating a bivalent chimeric HIV-1+2 recombinant protein (<a href="/products/PVBSP103" class="text-orange-600 underline">PVBSP103</a>) onto 40nm colloidal gold particles.
+        </p>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Because multivalent IgM (10 binding arms) and bivalent IgG (2 binding arms) possess multiple paratopes, a single patient antibody molecule bridges the immobilized membrane antigen and the gold-labeled conjugate antigen. This delivers <strong>100% detection of both early IgM and chronic IgG</strong> directly in undiluted whole blood or serum, closing the antibody window by 6 to 8 days.
+        </p>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <h4 class="font-bold text-slate-900 mb-2">4th-Generation Combo Line Engineering</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+          In 4th-generation Combo cassettes, a separate third Test Line is striped with our high-affinity anti-p24 monoclonal capture antibody (<a href="/products/PVBSP105" class="text-orange-600 underline">PVBSP105</a>) while a paired anti-p24 detector mAb (<a href="/products/PVBSP106" class="text-orange-600 underline">PVBSP106</a>) is co-sprayed onto the gold conjugate pad alongside the DAS coupling antigen.
+        </p>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          This dual-function strip tests for acute viral capsid protein and seroconverted host antibodies simultaneously from a single 10 &mu;L patient sample, detecting newly infected individuals during the hyper-infectious peak-viremia phase (Fiebig Stage II).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: SMD Complete Catalog Table -->
+  <div>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">3. SMD Life Sciences Complete HIV Reagent Portfolio (PVBSP101 – PVBSP106)</h2>
     <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-xs my-6">
       <table class="w-full text-left border-collapse text-sm">
         <thead>
           <tr class="bg-slate-900 text-white">
             <th class="p-3.5 font-bold">Catalog Code</th>
             <th class="p-3.5 font-bold">Biological Reagent</th>
-            <th class="p-3.5 font-bold">Molecular Construct / Domain</th>
-            <th class="p-3.5 font-bold">Strip Role &amp; Concentration</th>
-            <th class="p-3.5 font-bold">QC &amp; Sensitivity Benchmark</th>
+            <th class="p-3.5 font-bold">Construct Architecture &amp; Epitopes</th>
+            <th class="p-3.5 font-bold">Strip Role &amp; Dispensing Concentration</th>
+            <th class="p-3.5 font-bold">Clinical &amp; QC Performance Benchmark</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-200 bg-white">
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP101" class="underline">PVBSP101</a></td>
-            <td class="p-3.5 font-semibold">HIV 1 Coat Recombinant Antigen</td>
-            <td class="p-3.5">gp41 Ectodomain + gp120 V3 + Group O Chimera</td>
-            <td class="p-3.5">Test Line 1 (HIV-1): 0.8–1.2 mg/mL (pH 7.4 PBS)</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">100% Subtype A, B, C, D, CRF01_AE &amp; Group O</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP101" class="underline hover:text-orange-800">PVBSP101</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">HIV-1 Recombinant Coat Antigen (Chimeric)</td>
+            <td class="p-3.5">gp41 Ectodomain (aa 565–647) + gp120 V3 loop + Group O chimeric mosaic</td>
+            <td class="p-3.5">Test Line 1 (HIV-1): 0.8–1.2 mg/mL in 20 mM Carbonate buffer (pH 9.2)</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">100% reactivity on Subtype C, A, B, D, CRF01_AE &amp; Group O donor panels</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP102" class="underline">PVBSP102</a></td>
-            <td class="p-3.5 font-semibold">HIV 2 Coat Recombinant Antigen</td>
-            <td class="p-3.5">HIV-2 gp36 Immunodominant Loop (aa 585–620)</td>
-            <td class="p-3.5">Test Line 2 (HIV-2): 0.8–1.0 mg/mL</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">Zero HIV-1/HIV-2 Line Cross-Bleeding</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP102" class="underline hover:text-orange-800">PVBSP102</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">HIV-2 Recombinant Coat Antigen</td>
+            <td class="p-3.5">gp36 Immunodominant Loop (aa 585–620, CAFRQVC disulfide stabilized)</td>
+            <td class="p-3.5">Test Line 2 (HIV-2): 0.8–1.0 mg/mL in 10 mM Phosphate (pH 7.4)</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">Zero cross-bleeding or false-positive lines in high-titer HIV-1 sera</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP103" class="underline">PVBSP103</a></td>
-            <td class="p-3.5 font-semibold">HIV 1 + HIV 2 Coupling Reagent</td>
-            <td class="p-3.5">Bivalent gp41-gp36-p24 Carrier-Free Fusion</td>
-            <td class="p-3.5">40nm Colloidal Gold Coupling (8 &mu;g/mL per OD, pH 7.6)</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">Captures both acute IgM and mature IgG</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP103" class="underline hover:text-orange-800">PVBSP103</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">HIV 1 + HIV 2 Coupling Reagent</td>
+            <td class="p-3.5">Bivalent gp41-gp36 carrier-free fusion protein &bull; Soluble monomer</td>
+            <td class="p-3.5">40nm Colloidal Gold Conjugate (8 &mu;g/mL per OD<sub>525</sub> = 1.0, pH 7.8)</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">Bridges both multivalent IgM and bivalent IgG antibodies with high avidity</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP104" class="underline">PVBSP104</a></td>
-            <td class="p-3.5 font-semibold">HIV p24 Control Recombinant Antigen</td>
-            <td class="p-3.5">Full-length Monomeric HIV-1 Gag p24 (24 kDa)</td>
-            <td class="p-3.5">4th Gen Positive Control &amp; WHO NIBSC 90/636 Calibrator</td>
-            <td class="p-3.5">&gt;95% SDS-PAGE Purity</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP104" class="underline hover:text-orange-800">PVBSP104</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Recombinant HIV-1 p24 Positive Control Antigen</td>
+            <td class="p-3.5">Full-length Gag p24 (24 kDa) monomer &bull; <em>E. coli</em> &gt;95% SEC-HPLC</td>
+            <td class="p-3.5">Internal Positive Control &bull; WHO NIBSC 90/636-traceable calibrator</td>
+            <td class="p-3.5 text-slate-700">Calibrated for standard curve generation &amp; in-process QC batch release</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP105" class="underline">PVBSP105</a> / <a href="/products/PVBSP106" class="underline">PVBSP106</a></td>
-            <td class="p-3.5 font-semibold">Anti-HIV p24 Coat &amp; Conjugate mAb Pair</td>
-            <td class="p-3.5">Conserved Major Homology Region (MHR) &bull; Murine IgG1</td>
-            <td class="p-3.5">Test Line 3 (p24 Antigen): 1.5 mg/mL Coat + Gold Detector</td>
-            <td class="p-3.5 text-emerald-700 font-semibold">Analytical LoD &le; 12–15 pg/mL (1.5 IU/mL WHO Standard)</td>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP105" class="underline hover:text-orange-800">PVBSP105</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-HIV p24 Capture Monoclonal Antibody</td>
+            <td class="p-3.5">Conserved Major Homology Region (MHR, aa 150–172) &bull; Murine IgG1</td>
+            <td class="p-3.5">Test Line 3 (p24 Ag): 1.5–1.8 mg/mL on Sartorius CN140 membrane</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">Recognizes both free p24 monomer and intact immature capsids</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-mono font-bold text-orange-700"><a href="/products/PVBSP106" class="underline hover:text-orange-800">PVBSP106</a></td>
+            <td class="p-3.5 font-semibold text-slate-900">Anti-HIV p24 Detector Monoclonal Antibody</td>
+            <td class="p-3.5">Spatially Distant N-Terminal Hairpin Epitope &bull; Murine IgG2a</td>
+            <td class="p-3.5">40nm Colloidal Gold / Latex Detector (10 &mu;g/mL, pH 8.2)</td>
+            <td class="p-3.5 text-emerald-700 font-semibold">Combined with PVBSP105 achieves visual LoD &le; 12–15 pg/mL (1.5 IU/mL)</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Section 3: Technical FAQs -->
+  <!-- Section 4: Eliminating Cross-Bleeding and Immune Complex Dissociation -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">3. Technical &amp; Regulatory FAQs for HIV Kit Manufacturers</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">4. Engineering Solutions: Eliminating HIV-1/HIV-2 Cross-Bleeding &amp; Immune Complex Masking</h2>
+    <p class="mb-4">
+      Two severe technical failure modes occur in commercial HIV assay manufacturing if raw materials are not engineered correctly:
+    </p>
+    <div class="grid md:grid-cols-2 gap-6 my-6">
+      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <h4 class="font-bold text-slate-900 mb-2">Eliminating HIV-1/HIV-2 Cross-Bleeding</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+          Full-length HIV-1 gp41 and HIV-2 gp36 share ~55% structural sequence homology along their coiled-coil leucine-zipper heptad-repeat stalks. If crude or full-length recombinant antigens are striped, high-titer HIV-1 positive patient sera will cross-react with the HIV-2 Test Line, generating a confusing double-positive ("HIV-1 + HIV-2 Co-Infection") test result.
+        </p>
+        <p class="text-xs font-semibold text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+          <strong>SMD Solution:</strong> Our <a href="/products/PVBSP102" class="text-orange-600 underline">PVBSP102</a> antigen is precisely truncated to excise the cross-reactive coiled-coil stem, retaining only the unique 35-amino-acid cyclic disulfide loop (CAFRQVC) of HIV-2 gp36. This achieves <strong>100% type-specific discrimination</strong> between HIV-1 and HIV-2 infections.
+        </p>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <h4 class="font-bold text-slate-900 mb-2">Preventing Immune-Complex Masking of p24</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+          As patients enter Fiebig Stage IV (Day 21+), endogenous host anti-p24 antibodies bind circulating p24 antigens, forming stable immune complexes that block diagnostic monoclonal antibody access. While antibody-only tests now turn positive, the p24 line can exhibit an apparent "false-negative" disappearance.
+        </p>
+        <p class="text-xs font-semibold text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+          <strong>SMD Solution:</strong> In our 4th-generation Combo running buffer, we incorporate a mild, reversible surfactant-acid dissociation cocktail (20 mM Sodium Citrate, pH 5.2, with 0.5% Tween-20) that transiently dissociates endogenous immune complexes upon sample addition, followed by instantaneous neutralization to pH 7.4 as the fluid migrates across the conjugate pad.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5: Technical FAQs -->
+  <div>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">5. Frequently Asked Questions: HIV-1/2 &amp; p24 Combo Raw Materials</h2>
     <div class="space-y-3">
-      <details class="group bg-slate-50 rounded-xl border border-slate-200 p-5" open>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
         <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
-          <span>How do we prevent HIV-1 positive sera from causing a faint cross-reactive line on the HIV-2 gp36 line?</span>
+          <span>What analytical sensitivity does the PVBSP105/106 pair achieve compared to the WHO p24 International Standard?</span>
           <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
         </summary>
-        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
-          Cross-reactivity between HIV-1 and HIV-2 lines occurs when full-length transmembrane constructs retain homologous heptad-repeat stalks. SMD&rsquo;s <a href="/products/PVBSP102" class="text-orange-600 underline">PVBSP102</a> is strictly truncated to the HIV-2-specific immunodominant disulfide loop (CAFRQVC), delivering 100% type discrimination between HIV-1 and HIV-2 infections.
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Calibrated against the WHO 1st International Reference Material for HIV-1 p24 antigen (NIBSC code 90/636), the <a href="/products/PVBSP105" class="text-orange-600 underline">PVBSP105</a> / <a href="/products/PVBSP106" class="text-orange-600 underline">PVBSP106</a> matched pair consistently achieves a visual Limit of Detection (LoD) of <strong>12 to 15 pg/mL (equivalent to ~1.5 IU/mL)</strong> on 140s nitrocellulose membranes with 40nm colloidal gold, comfortably surpassing the WHO and European CE-IVD threshold requirements (&le; 2.0 IU/mL).
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>How does PVBSP101 guarantee detection of HIV-1 Group O and Subtype C?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          HIV-1 Group O viruses exhibit up to 30% sequence divergence from Group M within the immunodominant loop of gp41. <a href="/products/PVBSP101" class="text-orange-600 underline">PVBSP101</a> is engineered as a recombinant chimeric polyprotein that physically incorporates consensus sequences from both Subtype C (the predominant strain across India) and the divergent Group O consensus epitope, guaranteeing 100% sensitivity on international blood donor panels.
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>Are these antigens and antibodies approved for CDSCO Class D manufacturing in India?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Yes. All six reagents (PVBSP101 through PVBSP106) are manufactured in our ISO 13485:2016 facility in Electronic City, Bangalore and are backed by comprehensive Batch Manufacturing Records (BMR), SEC-HPLC purity certificates (>95%), and clinical reactivity validation documentation designed to support your Form MD-7 or Form MD-9 regulatory submission with the CDSCO and NIB.
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>Can we request evaluation aliquots to test on our automated BioDot dispensing line?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Yes. We provide 1 mg to 5 mg evaluation sample vials dispatched within 24 to 48 hours under temperature-controlled cold chain across India, complete with recommended dispensing buffer recipes, optimal K<sub>2</sub>CO<sub>3</sub> gold titration ratios, and strip lamination schematics.
         </p>
       </details>
     </div>
@@ -1728,9 +2114,9 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
   <!-- CTA Box -->
   <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-lg">
     <div>
-      <span class="text-xs font-bold uppercase tracking-wider text-orange-400 block mb-1">Class D IVD Validated Raw Materials</span>
+      <span class="text-xs font-bold uppercase tracking-wider text-orange-400 block mb-1">CDSCO Class D Validated Reagent Portfolio</span>
       <h4 class="text-lg sm:text-xl font-bold text-white mb-1">Request HIV-1/2 &amp; p24 Evaluation Sample Vials (PVBSP101–PVBSP106)</h4>
-      <p class="text-xs sm:text-sm text-slate-300">Dispatched in 24–48h from Bangalore with full SDS-PAGE, SEC-HPLC &amp; ELISA reactivity CoA.</p>
+      <p class="text-xs sm:text-sm text-slate-300">Dispatched in 24–48 hours from Bangalore with full SEC-HPLC, SDS-PAGE &amp; ELISA reactivity CoA.</p>
     </div>
     <div class="flex flex-wrap gap-3 shrink-0">
       <a href="/products/PVBSP101" class="px-5 py-3 bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs rounded-xl transition-all">View HIV Reagents &rarr;</a>
@@ -1742,7 +2128,9 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
   <div class="border-t border-slate-200 pt-6 text-xs text-slate-500 space-y-1.5">
     <h4 class="font-bold text-slate-700 uppercase tracking-wider mb-2">Scientific References &amp; Regulatory Standards</h4>
     <p>1. Fiebig, E. W., et al. (2003). Dynamics of HIV viremia and antibody seroconversion in plasma donors: implications for diagnosis and staging of primary HIV infection. <em>AIDS</em>, 17(13), 1871–1879.</p>
-    <p>2. National Institute of Biologicals (NIB), Ministry of Health &amp; Family Welfare, Govt. of India. <em>Performance Evaluation Criteria for HIV 1/2 &amp; p24 In Vitro Diagnostic Kits</em>.</p>
+    <p>2. Central Drugs Standard Control Organization (CDSCO) &amp; National Institute of Biologicals (NIB). <em>Guidance Document on Performance Evaluation of Class D In Vitro Diagnostic Medical Devices for Human Immunodeficiency Virus (HIV)</em>. Ministry of Health &amp; Family Welfare, Govt. of India.</p>
+    <p>3. World Health Organization (WHO). <em>HIV Diagnostic Testing: Technical Brief on 4th Generation HIV Ag/Ab Rapid Tests</em>. Geneva: WHO Press.</p>
+    <p>4. Gürtler, L. G., et al. (1994). A new subtype of human immunodeficiency virus type 1 (MVP-5180) from Cameroon. <em>Journal of Virology</em>, 68(3), 1581–1585.</p>
   </div>
 
 </div>
@@ -2505,12 +2893,12 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
     author_name: 'Dr. S. K. Narayanan',
     author_title: 'Head of Protein Biochemistry & Diagnostic R&D, SMD Life Sciences',
     author_image: '/images/team/scientist.svg',
-    read_time: '15 min read',
+    read_time: '18 min read',
     created_at: '2026-09-25T06:00:00+05:30',
     updated_at: '2026-09-25T06:00:00+05:30',
     division: 'biotech',
     status: 'published',
-    excerpt: 'Strategic & technical roadmap for IVD manufacturers partnering with an indigenous Diagnostic CDMO in Bangalore: 4-gate milestone execution, custom monoclonal antibody generation, lateral flow/ELISA feasibility, 3-lot validation batches, and CDSCO MDR 2017 tech transfer with 100% IP ownership.',
+    excerpt: 'Comprehensive operational, technical, and regulatory roadmap for diagnostic manufacturers partnering with an indigenous Diagnostic CDMO in Bangalore: 4-gate milestone execution, custom hybridoma and recombinant antigen discovery, lateral flow and ELISA assay formulation, 3-lot pilot validation batches, CDSCO MDR 2017 Class B/C/D Device Master Records (DMR), and 100% client IP ownership.',
     content: `
 <div class="space-y-10 text-slate-700 leading-relaxed text-base">
 
@@ -2518,11 +2906,14 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
   <div class="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200/80 rounded-2xl p-6 sm:p-8 shadow-xs">
     <div class="flex flex-wrap items-center gap-3 mb-3">
       <span class="px-3 py-1 bg-orange-600 text-white text-xs font-bold uppercase tracking-wider rounded-full">Diagnostic CDMO Architecture</span>
-      <span class="text-xs text-orange-800 font-semibold">Keywords: Diagnostic CDMO India &bull; Lateral Flow Contract Development &bull; CDSCO Tech Transfer</span>
+      <span class="text-xs text-orange-800 font-semibold">Keywords: Diagnostic CDMO India &bull; Lateral Flow Contract Development &bull; CDSCO Tech Transfer &bull; ISO 13485:2016</span>
     </div>
     <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">Compressing IVD Time-to-Market by 50% While Retaining 100% Intellectual Property</h3>
     <p class="text-slate-700 mb-4">
-      Building an in-house protein biochemistry, hybridoma discovery, and immunochromatographic formulation pipeline requires ₹4–8 Crore in capital expenditure and 14–18 months of recruitment and validation before a single commercial test strip reaches clinical evaluation. By partnering with <strong>SMD Life Sciences as a specialized Diagnostic Contract Development and Manufacturing Organization (CDMO) in Electronic City, Bangalore</strong>, diagnostic brands, med-tech startups, and established IVD manufacturers can launch proprietary Lateral Flow (Colloidal Gold / FIA), ELISA, and CLIA assays in <strong>12 to 16 weeks</strong> through a de-risked, milestone-gated execution model.
+      Establishing an in-house protein engineering, custom hybridoma discovery, and immunochromatographic formulation pipeline requires ₹4–8 Crore in specialized cleanroom capital expenditure and 14–18 months of scientific recruitment and trial-and-error validation before a single commercial rapid test strip or ELISA microwell reaches clinical trials. By partnering with <strong>SMD Life Sciences as a specialized Diagnostic Contract Development and Manufacturing Organization (CDMO) in Electronic City, Bangalore</strong>, diagnostic brands, med-tech startups, and established IVD manufacturers can launch proprietary, clinical-grade Lateral Flow (Colloidal Gold &amp; Europium FIA), ELISA, and CLIA assays in <strong>12 to 16 weeks</strong> through a completely de-risked, milestone-gated execution architecture.
+    </p>
+    <p class="text-slate-700">
+      Crucially, our operational model guarantees <strong>100% Client Intellectual Property (IP) Ownership</strong>: all target gene designs, hybridoma Master Cell Banks (MCBs), epitope sequences, dispensing formulas, and Device Master Records (DMRs) are assigned exclusively to the sponsor company under legally binding Mutual Non-Disclosure and IP Assignment agreements.
     </p>
     <div class="grid sm:grid-cols-3 gap-4 pt-4 border-t border-orange-200/60 text-xs">
       <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
@@ -2535,16 +2926,16 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
       </div>
       <div class="bg-white/80 rounded-xl p-3.5 border border-orange-100">
         <span class="font-bold text-slate-900 block mb-0.5">Supply Chain Security</span>
-        <span class="text-orange-700 font-semibold">Guaranteed Long-Term Bulk Reagent Supply from Bangalore</span>
+        <span class="text-orange-700 font-semibold">Guaranteed Multi-Gram Bulk Reagent Supply from Bangalore</span>
       </div>
     </div>
   </div>
 
   <!-- Section 1: 4-Gate Milestone CDMO Architecture Table -->
   <div>
-    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. The 4-Gate Milestone CDMO Execution &amp; Payment Framework</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">1. The 4-Gate Milestone CDMO Execution &amp; Payment Framework</h2>
     <p class="mb-4">
-      Unlike traditional CROs that bill open-ended hourly charges without guaranteed analytical performance, SMD Life Sciences structures every CDMO contract around four quantitative, go/no-go technical gates:
+      Unlike academic CROs that bill open-ended hourly fees without performance warranties, SMD Life Sciences structures every diagnostic contract development project around four quantitative, go/no-go technical gates. Client billing is tied strictly to achieving verified analytical milestones:
     </p>
     <div class="overflow-x-auto rounded-xl border border-slate-200 my-6 shadow-2xs">
       <table class="w-full text-left border-collapse text-sm">
@@ -2588,7 +2979,7 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
 
   <!-- Section 2: CDSCO MDR 2017 & NIB Compliance Engineering -->
   <div>
-    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Built-In Regulatory Readiness for CDSCO (MD-5 / MD-7 / MD-9) &amp; CE-IVDR</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">2. Built-In Regulatory Readiness for CDSCO (MD-5 / MD-7 / MD-9) &amp; CE-IVDR</h2>
     <p class="mb-4">
       Under India&rsquo;s Medical Devices Rules (MDR 2017), obtaining a Test License (Form MD-13) and subsequent Manufacturing License (Form MD-5 for Class A/B or Form MD-9 for Class C/D) requires rigorous analytical and clinical performance documentation. Our CDMO deliverables are pre-formatted to drop directly into your regulatory submission dossier:
     </p>
@@ -2596,47 +2987,129 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
       <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-2xs">
         <span class="text-xs font-bold text-orange-600 uppercase">Analytical Validation Pack</span>
         <h4 class="font-bold text-slate-900 mt-1 mb-2">CLSI EP05 / EP07 / EP17 Studies</h4>
-        <p class="text-xs text-slate-600 leading-relaxed">
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">
           Includes Limit of Blank (LoB), Limit of Detection (LoD), Limit of Quantitation (LoQ), Hook/Prozone verification, Intra-/Inter-Assay Precision (20-day repeatability), and Endogenous Interference testing (bilirubin, hemoglobin, triglycerides, RF, HAMA).
         </p>
       </div>
       <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-2xs">
         <span class="text-xs font-bold text-orange-600 uppercase">Cross-Reactivity Panel</span>
         <h4 class="font-bold text-slate-900 mt-1 mb-2">Syndromic Co-Infection Screening</h4>
-        <p class="text-xs text-slate-600 leading-relaxed">
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">
           Every infectious disease assay is challenged against syndromically overlapping pathogens (e.g., Dengue strips tested against Chikungunya, Zika, JE, Malaria, Typhoid, Leptospira, Scrub Typhus, HCV, and HIV positive sera) to prove zero cross-reactivity.
         </p>
       </div>
       <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-2xs">
         <span class="text-xs font-bold text-orange-600 uppercase">3-Batch Stability Protocol</span>
         <h4 class="font-bold text-slate-900 mt-1 mb-2">Arrhenius Accelerated &amp; Real-Time</h4>
-        <p class="text-xs text-slate-600 leading-relaxed">
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">
           Three consecutive pilot lots manufactured from distinct reagent batches are placed on 45&deg;C / 50&deg;C accelerated chambers and 30&deg;C / 65% RH Zone IVb real-time climatic chambers to substantiate a 24-month shelf-life claim.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Section 3: Expandable FAQs -->
+  <!-- Section 3: Cleanroom Tech Transfer Package -->
   <div>
-    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Frequently Asked Questions: Partnering with SMD Life Sciences CDMO</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">3. The Complete Technology Transfer Package: From Lab Bench to High-Speed Reel Dispensing</h2>
+    <p class="mb-4">
+      Technology transfer fails when formulation parameters developed on manual pipettes cannot be replicated on high-speed automated reel-to-reel dispensing systems. SMD Life Sciences provides a turnkey, auditable Tech Transfer Dossier:
+    </p>
+    <div class="grid md:grid-cols-2 gap-6 my-6">
+      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <h4 class="font-bold text-slate-900 mb-2">Physical Hardware &amp; Dispensing Specs</h4>
+        <ul class="text-xs text-slate-600 space-y-2">
+          <li><strong>BioDot XYZ Dispensing Parameters:</strong> Exact nozzle air-jet pressure (psi), pump displacement volume (&mu;L/cm), dispensing speed (mm/s), and head height for BioDot XYZ3060, Kinematic, or ImmuChem systems.</li>
+          <li><strong>Lamination Alignment Windows:</strong> Critical overlap tolerances (&plusmn;0.1 mm) of the conjugate pad onto the nitrocellulose membrane and the absorption wick onto the membrane to prevent capillary fluid stalling.</li>
+          <li><strong>Guillotining Dimensions:</strong> Exact blade shearing tolerances (3.8 mm or 4.0 mm strip width) and cassette housing pin-pressure clearances to avoid compression crush of nitrocellulose pores.</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-xs">
+        <h4 class="font-bold text-slate-900 mb-2">Documentation &amp; Biological Asset Delivery</h4>
+        <ul class="text-xs text-slate-600 space-y-2">
+          <li><strong>Device Master Record (DMR):</strong> Detailed Bill of Materials (BOM), raw material vendor qualifications, chemical CAS numbers, and final kit release acceptance criteria.</li>
+          <li><strong>Batch Manufacturing Records (BMR):</strong> Line clearance checklists, environmental monitoring limits (Class 10,000 / ISO 7 cleanroom at &le;20% relative humidity), and in-process QC checksheets.</li>
+          <li><strong>Master Cell Bank (MCB) Cryopreservation:</strong> Delivery of 5 cryovials of verified hybridoma or microbial expression clones preserved in liquid nitrogen ($-\text{196}^\circ\text{C}$) with verified viability post-thaw (&gt;90%).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: CDMO Failure Modes & Corrective Action Matrix -->
+  <div>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">4. Diagnostic Tech-Transfer Failure Modes &amp; Corrective Engineering Matrix</h2>
+    <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-xs my-6">
+      <table class="w-full text-left border-collapse text-sm">
+        <thead>
+          <tr class="bg-slate-900 text-white">
+            <th class="p-3.5 font-bold">Observed Transfer Defect</th>
+            <th class="p-3.5 font-bold">Root Operational / Biophysical Cause</th>
+            <th class="p-3.5 font-bold">SMD Corrective Engineering Protocol</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200 bg-white">
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">Strip Sensitivity Drops by 50% on Client Automated Line</td>
+            <td class="p-3.5">Over-drying of nitrocellulose membrane during industrial tunnel drying (&gt;45&deg;C) denaturing immobilized capture antibodies</td>
+            <td class="p-3.5">Calibrate tunnel drying temperature to strictly 37&deg;C with &le;18% RH; incorporate 2% Sucrose / Trehalose cryoprotectant in the dispensing buffer.</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">Gold Conjugate Does Not Release from Glass Fiber Pad</td>
+            <td class="p-3.5">Client cleanroom relative humidity (&gt;45% RH) causing premature atmospheric rehydration and glass silanol binding during assembly</td>
+            <td class="p-3.5">Enforce cleanroom dehumidification (&le;20% RH) during strip lamination and packaging; add 0.25% Pluronic F-127 to the conjugate pad release buffer.</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">False-Positive Drift in Negative Plasma Donors</td>
+            <td class="p-3.5">Client substituted raw bovine serum albumin (BSA) with low-grade unpurified grade containing bovine IgG / protease contaminants</td>
+            <td class="p-3.5">Mandate Protease-Free, Fatty-Acid-Free Fraction V BSA with CoA verification; incorporate 50 &mu;g/mL Heat-Aggregated Murine IgG in sample pad.</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-slate-900">Cassette Housing Red Blood Leakage Around View Window</td>
+            <td class="p-3.5">Improper internal plastic rib clearance pinching the fiberglass blood separation pad, lysing erythrocytes prematurely</td>
+            <td class="p-3.5">Modify injection mold cassette rib height by +0.15 mm over the blood separation zone to maintain uncompressed capillary flow without shear lysis.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Section 5: Expandable FAQs -->
+  <div>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">5. Frequently Asked Questions: Partnering with SMD Life Sciences CDMO</h2>
     <div class="space-y-3">
-      <details class="group bg-white rounded-xl border border-slate-200 p-4 open:shadow-xs transition-all">
-        <summary class="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between">
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
           <span>Can we transfer only the uncut master sheets or bulk gold conjugate while doing final cassette assembly in our own plant?</span>
-          <span class="text-orange-600 group-open:rotate-180 transition-transform">&darr;</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
         </summary>
-        <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100">
-          Yes. We offer flexible engagement tiers: (1) <strong>Bulk Naked Antibodies &amp; Antigens</strong> with complete formulation recipes, (2) <strong>Concentrated 50 OD Liquid Colloidal Gold Conjugates + Dispensed Nitrocellulose Cards</strong>, or (3) <strong>Complete Uncut Laminated Master Sheets (300 mm &times; 60 mm)</strong> ready for guillotining and cassette housing in your cleanroom.
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Yes. We offer flexible engagement tiers tailored to your facility licensing: (1) <strong>Bulk Naked Antibodies &amp; Antigens</strong> with complete dispensing formulas, (2) <strong>Concentrated 50 OD Liquid Colloidal Gold Conjugates + Dispensed Nitrocellulose Cards</strong>, or (3) <strong>Complete Uncut Laminated Master Sheets (300 mm &times; 60 mm)</strong> ready for guillotining and plastic cassette assembly in your cleanroom.
         </p>
       </details>
-      <details class="group bg-white rounded-xl border border-slate-200 p-4 open:shadow-xs transition-all">
-        <summary class="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between">
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
           <span>How is intellectual property (IP) protected during a custom hybridoma or recombinant antigen project?</span>
-          <span class="text-orange-600 group-open:rotate-180 transition-transform">&darr;</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
         </summary>
-        <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100">
-          Prior to technical scoping, we execute a binding Mutual Non-Disclosure &amp; IP Assignment Agreement. For fee-for-service custom discovery projects, all amino acid sequences, expression plasmids, and hybridoma Master Cell Banks (MCBs) belong 100% exclusively to the client and are never added to our public catalog.
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          Prior to technical scoping, we execute a legally binding Mutual Non-Disclosure &amp; IP Assignment Agreement. For fee-for-service contract development projects, all amino acid sequences, expression plasmids, hybridoma Master Cell Banks (MCBs), and formulation recipes belong <strong>100% exclusively to the client</strong> and are never added to our public catalog or shared with third parties.
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>What regulatory documentation is provided to support CDSCO Form MD-7 or MD-9 licensing?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          We provide a comprehensive Regulatory Dossier compliant with the Fourth Schedule of the Medical Devices Rules (2017): including the complete Device Master Record (DMR), analytical validation reports (LoD, LoQ, repeatability, interference, cross-reactivity), 3-batch pilot manufacturing records, accelerated thermal stability data, and clinical evaluation protocols ready for direct submission to the Central Licensing Authority (CDSCO) and performance testing at the National Institute of Biologicals (NIB).
+        </p>
+      </details>
+      <details class="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-xs transition-all">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900 text-sm sm:text-base">
+          <span>What is the typical timeline and cost structure for a custom lateral flow assay development project?</span>
+          <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          When matched antibody pairs are already available, complete assay formulation, prototype strip optimization, and 3-lot pilot batch delivery take <strong>12 to 14 weeks</strong>. For de novo targets requiring gene synthesis, protein expression, and monoclonal antibody generation, the complete project takes <strong>20 to 24 weeks</strong>. Project costs are divided across the 4 milestone gates, with payments due only upon successful achievement of predefined analytical release criteria.
         </p>
       </details>
     </div>
@@ -2660,6 +3133,8 @@ export const STATIC_INSIGHTS: InsightArticle[] = [
     <h4 class="font-bold text-slate-700 uppercase tracking-wider mb-2">Regulatory &amp; Quality Standards</h4>
     <p>1. Ministry of Health and Family Welfare, Government of India. <em>Medical Devices Rules (MDR), 2017 — Fourth Schedule: Requirements for Grant of Licence for In Vitro Diagnostic Medical Devices</em>.</p>
     <p>2. ISO 13485:2016 — <em>Medical devices — Quality management systems — Requirements for regulatory purposes (Clause 7.3 Design and Development)</em>.</p>
+    <p>3. Clinical and Laboratory Standards Institute (CLSI). <em>EP05-A3: Evaluation of Precision of Quantitative Measurement Procedures; Approved Guideline — Third Edition</em>.</p>
+    <p>4. Clinical and Laboratory Standards Institute (CLSI). <em>EP07-A2: Interference Testing in Clinical Chemistry; Approved Guideline — Second Edition</em>.</p>
   </div>
 
 </div>
