@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 import { STATIC_INSIGHTS } from '@/data/insights';
 import BiotechCatalogClient from '@/components/BiotechCatalogClient';
+import ProductsAutoCrawlHub from '@/components/ProductsAutoCrawlHub';
 
 export const metadata: Metadata = {
   title: 'Buy IVD Raw Materials & Reagents Online | Factory Direct India | SMD Life Sciences',
@@ -136,6 +137,9 @@ export default function BiotechProductsPage() {
         <Suspense fallback={<div className="text-center py-12 text-slate-400 text-sm">Loading catalog...</div>}>
           <BiotechCatalogClient products={BIOTECH_PRODUCTS} />
         </Suspense>
+
+        {/* 64 Products Auto-Scroll Ticker & Static SSR HTML Crawl Hub */}
+        <ProductsAutoCrawlHub />
 
         {/* Featured Technical Whitepapers & Assay Formulation Blogs */}
         <section className="mt-14 pt-10 border-t border-slate-200">

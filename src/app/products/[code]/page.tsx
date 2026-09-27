@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 import { STATIC_INSIGHTS } from '@/data/insights';
+import { getProductDeepInfo } from '@/data/productDeepData';
 
 interface PageProps {
   params: Promise<{ code: string }>;
@@ -95,20 +96,8 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
     ? 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'
     : 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.webp';
 
-  const productFaqs = [
-    {
-      question: `What is the certified purity and testing validation of ${product.name} (${product.code})?`,
-      answer: `${product.name} (${product.code}) offers guaranteed purity of ${product.purity} verified by SDS-PAGE densitometry and analytical profiling. Each batch comes with a lot-specific Certificate of Analysis (CoA) and clinical reactivity validation.`
-    },
-    {
-      question: `Can IVD kit manufacturers order evaluation samples of ${product.code}?`,
-      answer: `Yes. SMD Life Sciences supplies 1mg to 5mg evaluation sample vials of ${product.code} for rapid lateral flow calibration, ELISA sensitivity testing, and assay validation before placing commercial bulk orders.`
-    },
-    {
-      question: `What is the shipping temperature and domestic dispatch timeline for ${product.name}?`,
-      answer: `Recommended storage temperature is ${product.storage}. Domestic dispatch across India takes 24–48 hours directly from our Bangalore facility in temperature-controlled packaging (Blue Gel / Dry Ice).`
-    }
-  ];
+  const deepInfo = getProductDeepInfo(product);
+  const productFaqs = deepInfo.faqs;
 
   const schemaGraph = {
     '@context': 'https://schema.org',
@@ -348,6 +337,119 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
                 <div className="py-3 grid grid-cols-3">
                   <span className="text-slate-500 font-medium">Recommended Applications:</span>
                   <span className="col-span-2 text-slate-900">{product.applications}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Biochemical Target & Epitope Mechanism */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+              <h2 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <i className="fas fa-dna text-orange-600"></i>
+                Biological Target Biology &amp; Epitope Mechanism
+              </h2>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                {deepInfo.mechanism}
+              </p>
+            </div>
+
+            {/* Industrial Wet-Lab SOP & Dispensing Protocols */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+              <h2 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i className="fas fa-vial-circle-check text-orange-600"></i>
+                Industrial Wet-Lab SOP &amp; Dispensing Formulation
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-4 text-xs">
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+                  <div className="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                    <i className="fas fa-sliders text-orange-600"></i> Membrane Coating Concentration
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">
+                    {deepInfo.dispensingSop.membraneCoating}
+                  </p>
+                </div>
+
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+                  <div className="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                    <i className="fas fa-atom text-orange-600"></i> 40nm Gold / Europium Conjugation
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">
+                    {deepInfo.dispensingSop.goldConjugation}
+                  </p>
+                </div>
+
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+                  <div className="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                    <i className="fas fa-shield-virus text-orange-600"></i> Blocking Buffer Formulation
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">
+                    {deepInfo.dispensingSop.blockingBuffer}
+                  </p>
+                </div>
+
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+                  <div className="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                    <i className="fas fa-temperature-arrow-up text-orange-600"></i> Strip Drying &amp; Humidity Control
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">
+                    {deepInfo.dispensingSop.dryingConditions}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Matched Reagent Pairing Matrix */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+              <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <i className="fas fa-diagram-project text-orange-600"></i>
+                Matched Reagent Pairing &amp; Assay Architecture
+              </h2>
+              <div className="divide-y divide-slate-100 text-xs sm:text-sm">
+                <div className="py-3 flex justify-between items-center">
+                  <span className="text-slate-500 font-medium">Recommended Assay Role:</span>
+                  <span className="font-semibold text-slate-900 bg-orange-50 text-orange-700 px-2.5 py-1 rounded-md border border-orange-200/80">
+                    {deepInfo.pairingMatrix.recommendedRole}
+                  </span>
+                </div>
+                <div className="py-3 flex justify-between items-center">
+                  <span className="text-slate-500 font-medium">Recommended Matched Partner:</span>
+                  <Link 
+                    href={`/products/${deepInfo.pairingMatrix.matchedPairCode}`}
+                    className="font-bold text-orange-600 hover:text-orange-700 hover:underline flex items-center gap-1"
+                  >
+                    {deepInfo.pairingMatrix.matchedPairCode} &bull; {deepInfo.pairingMatrix.matchedPairName} &rarr;
+                  </Link>
+                </div>
+                <div className="py-3 flex justify-between items-center">
+                  <span className="text-slate-500 font-medium">Control Line Standard (C-Line):</span>
+                  <span className="font-semibold text-slate-800">
+                    {deepInfo.pairingMatrix.controlLineReagent}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Analytical Sensitivity & Performance Benchmarks */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+              <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <i className="fas fa-chart-line text-emerald-600"></i>
+                Analytical Sensitivity &amp; Performance Benchmarks
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-4 text-xs">
+                <div className="p-3.5 bg-emerald-50/60 rounded-xl border border-emerald-200/60">
+                  <div className="text-emerald-800 font-bold mb-0.5">Analytical Sensitivity (LoD)</div>
+                  <div className="text-emerald-950 font-semibold">{deepInfo.performance.analyticalSensitivity}</div>
+                </div>
+                <div className="p-3.5 bg-emerald-50/60 rounded-xl border border-emerald-200/60">
+                  <div className="text-emerald-800 font-bold mb-0.5">Clinical Specificity</div>
+                  <div className="text-emerald-950 font-semibold">{deepInfo.performance.clinicalSpecificity}</div>
+                </div>
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                  <div className="text-slate-600 font-bold mb-0.5">Lot-to-Lot Reproducibility</div>
+                  <div className="text-slate-900 font-semibold">CV {deepInfo.performance.lotToLotCv}</div>
+                </div>
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                  <div className="text-slate-600 font-bold mb-0.5">Quality Standard Compliance</div>
+                  <div className="text-slate-900 font-semibold">{deepInfo.performance.regulatoryStandard}</div>
                 </div>
               </div>
             </div>
