@@ -172,19 +172,19 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.smdlifesciences.com',
+        item: 'https://lifesciences.smdmedicare.in',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Scientific Insights',
-        item: 'https://www.smdlifesciences.com/insights',
+        item: 'https://lifesciences.smdmedicare.in/insights',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: article.title,
-        item: `https://www.smdlifesciences.com/insights/${article.slug || article.id}`,
+        item: `https://lifesciences.smdmedicare.in/insights/${article.slug || article.id}`,
       },
     ],
   };
@@ -192,26 +192,26 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    '@id': `https://www.smdlifesciences.com/insights/${cleanSlug}#article`,
+    '@id': `https://lifesciences.smdmedicare.in/insights/${cleanSlug}#article`,
     headline: article.title,
     author: {
       '@type': 'Person',
       name: article.author_name || 'SMD Life Sciences R&D Team',
       jobTitle: article.author_title || 'Biotechnology & IVD Research Scientist',
       worksFor: {
-        '@id': 'https://www.smdlifesciences.com/#organization',
+        '@id': 'https://lifesciences.smdmedicare.in/#organization',
       },
     },
     publisher: {
-      '@id': 'https://www.smdlifesciences.com/#organization',
+      '@id': 'https://lifesciences.smdmedicare.in/#organization',
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.smdlifesciences.com/insights/${cleanSlug}`,
+      '@id': `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,
     },
     datePublished: article.created_at,
     dateModified: article.updated_at || article.created_at,
-    image: article.blog_image || 'https://www.smdlifesciences.com/icon-512.png',
+    image: article.blog_image || 'https://lifesciences.smdmedicare.in/icon-512.png',
     description: article.excerpt || article.title,
   };
 

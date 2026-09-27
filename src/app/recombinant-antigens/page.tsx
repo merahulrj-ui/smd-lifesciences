@@ -18,18 +18,18 @@ export const metadata: Metadata = {
     'dengue ns1 recombinant antigen supplier'
   ],
   alternates: {
-    canonical: 'https://www.smdlifesciences.com/recombinant-antigens',
+    canonical: 'https://lifesciences.smdmedicare.in/recombinant-antigens',
   },
   openGraph: {
     title: 'Recombinant & Native Antigens Supplier India (Bangalore) | SMD Life Sciences',
     description: 'High-purity recombinant and native-grade diagnostic antigens manufactured in Electronic City, Bangalore for lateral flow, ELISA, and CLIA test kits.',
-    url: 'https://www.smdlifesciences.com/recombinant-antigens',
+    url: 'https://lifesciences.smdmedicare.in/recombinant-antigens',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: 'https://www.smdlifesciences.com/images/biotech_chromatography.webp',
+        url: 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp',
         width: 1200,
         height: 630,
         alt: 'Recombinant & Native Antigens Supplier India — ÄKTA Chromatography Purification',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Recombinant & Native Antigens Supplier India (Bangalore) | SMD Life Sciences',
     description: 'High-purity recombinant and native-conformation antigens manufactured in Electronic City, Bangalore for lateral flow and ELISA test kits.',
-    images: ['https://www.smdlifesciences.com/images/biotech_chromatography.webp'],
+    images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'],
   },
 };
 

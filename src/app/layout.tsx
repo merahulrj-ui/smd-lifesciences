@@ -24,7 +24,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.smdlifesciences.com'),
+  metadataBase: new URL('https://lifesciences.smdmedicare.in'),
   applicationName: 'SMD Life Sciences',
   title: {
     default: "SMD Life Sciences | IVD Raw Materials, Recombinant & Native Antigens Supplier India",
