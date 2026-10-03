@@ -90,6 +90,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in',
+    types: {
+      'application/rss+xml': 'https://lifesciences.smdmedicare.in/feed.xml',
+    },
   },
 };
 
