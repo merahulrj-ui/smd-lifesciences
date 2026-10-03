@@ -428,7 +428,7 @@ export default function BiotechServicesPage() {
           </div>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8 max-w-4xl">
-            Gene-to-protein custom manufacturing in prokaryotic (<em>E. coli</em>) and eukaryotic (<em>Pichia pastoris</em>, CHO) expression platforms. Optimized specifically for diagnostic coating antigens, clinical calibrators, and control proteins.
+            Gene-to-protein custom manufacturing in prokaryotic (<em>E. coli</em>) and eukaryotic (<em>Pichia pastoris</em>, CHO) expression platforms. Optimized specifically for bioactive recombinant cytokines (IL-6, IL-2, IL-8, IL-10, TNF-&alpha;, IFN-&gamma;), sepsis biomarkers (Procalcitonin PCT), diagnostic coating antigens, and quantitative immunoassay calibrators.
           </p>
 
           {/* Visual Showcase for Protein Expression & FPLC */}

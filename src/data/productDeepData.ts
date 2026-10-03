@@ -249,7 +249,52 @@ export function getProductDeepInfo(product: BiotechProduct): ProductDeepInfo {
     };
   }
 
-  // 6. Generic High-Performance Reagent (Cytokines, Enzymes, Control Antibodies, Vector-Borne, etc.)
+  // 6. Cytokines & Sepsis Biomarkers (IL-6, TNF-alpha, IFN-gamma, IL-2, IL-8, IL-10, PCT)
+  if (targetLower.includes('cytokine') || nameLower.includes('il-') || nameLower.includes('interferon') || nameLower.includes('ifn') || nameLower.includes('tnf') || nameLower.includes('procalcitonin') || nameLower.includes('pct')) {
+    return {
+      mechanism: `Bioactive recombinant human cytokine and high-affinity monoclonal antibody system engineered for quantitative inflammation, sepsis, and cytokine release syndrome (CRS) monitoring. Features sub-nanomolar affinity (KD < 0.1 nM) with zero cross-reactivity across homologous interleukins.`,
+      dispensingSop: {
+        membraneCoating: isAntigen
+          ? `0.5 - 1.0 mg/mL in 20 mM Sodium Phosphate (pH 7.4), 0.05% Trehalose`
+          : `1.0 - 1.5 mg/mL in 10 mM PBS (pH 7.2 - 7.4) dispensed at 1.0 µL/cm via BioDot platform`,
+        goldConjugation: `Titrate 40nm colloidal gold to pH 8.1 - 8.4 using 0.1M K2CO3. Optimal antibody loading: 7 - 10 µg/mL gold sol (OD520 = 1.0). Stabilize with 1% BSA.`,
+        blockingBuffer: `1% BSA (protease-free) + 0.1% Tween-20 + 2% Sucrose in 10 mM PBS (pH 7.4).`,
+        dryingConditions: `Strip drying at 37°C for 2 - 3 hours with relative humidity < 18%.`
+      },
+      pairingMatrix: {
+        recommendedRole: isAntigen ? 'Quantitative Calibrator / Standard' : (product.format.toLowerCase().includes('coat') ? 'Capture Line (Test Line)' : 'Detector Conjugate (Gold / TRFIA / CLIA)'),
+        matchedPairCode: product.code === 'PVBSP2601' ? 'PVBSP2602' : (product.code === 'PVBSP2001' ? 'PVBSP2002' : (product.code === 'PVBSP2901' ? 'PVBSP2902' : 'PVBSP5005')),
+        matchedPairName: product.code === 'PVBSP2601' ? 'Anti-Human IL-6 mAb (Detector)' : (product.code === 'PVBSP2001' ? 'Anti-Human IFN-Gamma mAb (Revealing)' : (product.code === 'PVBSP2901' ? 'Anti-Human TNF-Alpha mAb (Revealing)' : 'Goat Anti-Mouse IgG Control')),
+        controlLineReagent: 'PVBSP5005 (Goat Anti-Mouse IgG, 0.8 mg/mL)'
+      },
+      performance: {
+        analyticalSensitivity: '< 2 pg/mL (TRFIA / CLIA) and < 10 pg/mL (Colloidal Gold POCT)',
+        clinicalSpecificity: '> 99.5% cross-reactivity screening against human serum proteins',
+        lotToLotCv: '< 3.2% batch-to-batch variation across consecutive expression runs',
+        regulatoryStandard: 'CLSI EP17-A2 (Detection Limit) & ISO 13485:2016 Immunoassay Standard'
+      },
+      faqs: [
+        {
+          question: `Does ${product.code} cross-react with other related human interleukins?`,
+          answer: `No. Cross-reactivity testing against a panel of recombinant human cytokines (IL-1β, IL-2, IL-4, IL-8, IL-10, TNF-α, IFN-γ) shows <0.01% cross-reactivity up to 10,000 pg/mL.`
+        },
+        {
+          question: `Is ${product.name} suitable for automated chemiluminescent (CLIA) and FIA platforms?`,
+          answer: `Yes. Supplied in high-purity, amine-free buffer compatible with magnetic microparticle coating (tosyl / carboxyl beads) and Europium fluorescent bead conjugation.`
+        },
+        {
+          question: `What is the biological activity or purity verification for ${product.code}?`,
+          answer: `Purity is >95% confirmed by SDS-PAGE and SEC-HPLC. Endotoxin levels are verified at <0.1 EU/µg (LAL assay), ensuring zero non-specific background in cell culture or diagnostic assays.`
+        },
+        {
+          question: `How can we request bulk supply (100mg to 1g) for IVD kit manufacturing?`,
+          answer: `Contact the Bangalore scientific desk via WhatsApp (+91 95554 22455) or email for lot CoA, bulk tiered pricing, and 1mg–5mg evaluation samples.`
+        }
+      ]
+    };
+  }
+
+  // 7. Generic High-Performance Reagent (Enzymes, Control Antibodies, Vector-Borne, etc.)
   return {
     mechanism: `High-purity diagnostic-grade biological reagent manufactured under stringent ISO 13485:2016 cleanroom quality controls. Optimized for stoichiometric solid-phase immobilization and high-yield bioconjugation in diagnostic immunoassays and molecular workflows.`,
     dispensingSop: {
