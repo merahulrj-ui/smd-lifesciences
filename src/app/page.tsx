@@ -3,25 +3,27 @@ import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 
 export const metadata: Metadata = {
-  title: 'Buy IVD Raw Materials & Reagents Online | Recombinant Antigens & Antibodies India | SMD Life Sciences',
-  description: 'Direct manufacturer of validated IVD biological raw materials in Bangalore, India. High-affinity monoclonal antibodies, recombinant antigens & colloidal gold conjugates. Free CoA, 1mg-5mg evaluation samples, express dispatch.',
+  title: 'Custom Monoclonal Antibody Development & IVD Raw Materials India | SMD Life Sciences',
+  description: 'Bangalore CDMO specializing in custom monoclonal antibody development, bulk antibody production, and IVD biological raw materials. End-to-end hybridoma screening, bioreactor scale-up, and PV1 catalog reagents.',
   keywords: [
+    'custom monoclonal antibody development',
+    'custom monoclonal antibody production service',
+    'bulk antibody manufacturing bangalore',
+    'hybridoma development service india',
+    'recombinant antibody expression',
     'buy IVD raw materials India',
     'IVD raw material supplier Bangalore',
-    'custom monoclonal antibody development',
     'lateral flow raw materials bulk price',
     'recombinant antigen manufacturer Bangalore',
     'colloidal gold conjugate supplier',
-    'rapid test raw materials B2B',
-    'Dengue NS1 antigen bulk supplier',
-    'Malaria antigen manufacturer India'
+    'PVBSP101 recombinant antigen'
   ],
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in',
   },
   openGraph: {
-    title: 'Buy IVD Raw Materials & Reagents Online | SMD Life Sciences',
-    description: 'High-purity recombinant antigens, matched monoclonal antibodies, and custom CDMO services for IVD manufacturers with lot CoA.',
+    title: 'Custom Monoclonal Antibody Development & IVD Raw Materials | SMD Life Sciences',
+    description: 'Custom monoclonal antibody development, hybridoma screening, bulk antibody production, and validated IVD raw materials in Bangalore.',
     url: 'https://lifesciences.smdmedicare.in',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
@@ -136,11 +138,11 @@ export default function BiotechHomePage() {
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-5">
-                High-Purity Biological Raw Materials &amp; Custom CDMO for <span className="text-orange-600 underline decoration-orange-400/50 decoration-4 underline-offset-4">IVD Manufacturers</span>
+                Custom Monoclonal Antibody Development &amp; <span className="text-orange-600 underline decoration-orange-400/50 decoration-4 underline-offset-4">IVD Raw Materials</span>
               </h1>
               
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-7 max-w-2xl">
-                Indigenous Indian manufacturer and bulk supplier of high-affinity Monoclonal Antibodies, Recombinant Antigens, and 40nm Colloidal Gold Conjugates. Supported by state-of-the-art Bangalore biomanufacturing facilities and BIRAC, Dept. of Biotechnology, Govt. of India.
+                Bangalore-based biomanufacturing CDMO specializing in full-cycle Custom Monoclonal Antibody Development, hybridoma screening, and bioreactor production. Backed by validated in-house diagnostic reagents including the flagship PV1 catalog series.
               </p>
 
               <div className="flex flex-wrap gap-3.5 mb-8">

@@ -3,15 +3,19 @@ import Link from 'next/link';
 import CustomServiceRFQForm from '@/components/CustomServiceRFQForm';
 
 export const metadata: Metadata = {
-  title: 'Custom Monoclonal Antibody Development & Protein Expression India | SMD Life Sciences',
-  description: 'Specialized contract research & CDMO for IVD manufacturers. 4-Phase custom hybridoma monoclonal antibody development, recombinant protein expression, and lateral flow conjugation from Bangalore.',
+  title: 'Custom Monoclonal Antibody Development & Bulk Production India | SMD Life Sciences',
+  description: 'Full-cycle custom monoclonal antibody development and bulk antibody production for IVD test kit manufacturers and biopharma. Target immunization, hybridoma screening, VH/VL sequencing, and bioreactor scale-up in Bangalore.',
   keywords: [
-    'custom monoclonal antibody development service india',
-    'hybridoma development service india',
-    'recombinant protein expression services india',
-    'colloidal gold conjugation service',
-    'matched antibody pair screening',
-    'IVD CDMO contract manufacturing India'
+    'custom monoclonal antibody development',
+    'custom monoclonal antibody production service',
+    'custom mAb development services bangalore',
+    'hybridoma antibody development service india',
+    'bulk antibody contract manufacturing',
+    'recombinant antibody expression service',
+    'matched antibody pair development',
+    'diagnostic monoclonal antibody supplier india',
+    'lateral flow antibody conjugation service',
+    'Protein A antibody purification service'
   ],
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in/services',
@@ -151,14 +155,14 @@ export default function BiotechServicesPage() {
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-5">
-                Custom Antibody Discovery &amp;{' '}
+                Custom Monoclonal Antibody Development &amp;{' '}
                 <span className="text-orange-600 underline decoration-orange-400/50 decoration-4 underline-offset-4">
-                  Recombinant Expression
+                  Bulk Production Services
                 </span>
               </h1>
               
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-7 max-w-2xl">
-                Specialized bioprocess engineering for IVD test kit manufacturers and diagnostic assembly plants. Milestone-based custom hybridoma monoclonal antibody generation, high-yield ÄKTA FPLC protein purification, and matched pairing optimized for lateral flow membranes.
+                Full-cycle custom monoclonal antibody development and industrial production for IVD test kit manufacturers and biopharma R&amp;D. Milestone-gated hybridoma generation, high-throughput matched-pair screening, VH/VL recombinant archiving, and ÄKTA FPLC purification from our Bangalore biomanufacturing facility.
               </p>
 
               <div className="flex flex-wrap items-center gap-3.5 mb-8">
