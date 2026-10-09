@@ -150,7 +150,7 @@ export default function ProductsAutoCrawlHub() {
                 >
                   <div>
                     <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-orange-700 bg-orange-50 px-1.5 py-0.5 rounded mb-1">
-                      {article.category}
+                      Wet-Lab SOP &bull; {article.read_time}
                     </span>
                     <h4 className="text-xs font-semibold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-2">
                       {article.title}
