@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { BIOTECH_PRODUCTS, BiotechProduct } from '@/data/products';
+import { STATIC_INSIGHTS } from '@/data/insights';
 
 export default function ProductsAutoCrawlHub() {
-  // Categorize 64 products for comprehensive search engine crawl indexing
+  // Categorize all 70 products for comprehensive search engine crawl indexing
   const categories: { title: string; icon: string; items: BiotechProduct[] }[] = [
     {
       title: 'Infectious Diseases & Blood Bank Reagents',
@@ -43,24 +44,49 @@ export default function ProductsAutoCrawlHub() {
   ];
 
   return (
-    <section className="mt-14 pt-10 border-t border-slate-200">
-      {/* 2. STATIC SSR HTML CRAWL MATRIX (Googlebot Crawl Guarantee) */}
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 pt-10 pb-12 border-t border-slate-200">
+      {/* STATIC SSR HTML CRAWL MATRIX (Googlebot Crawl Guarantee for all 70 SKUs + 12 Whitepapers + CDMO Hubs) */}
       <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
         <div className="mb-6 pb-4 border-b border-slate-100">
-          <div className="flex items-center gap-2 mb-1">
+          <div className="flex flex-wrap items-center gap-2 mb-1">
             <span className="text-[11px] font-bold uppercase tracking-wider text-orange-600 bg-orange-50 border border-orange-200/80 px-2 py-0.5 rounded-full">
-              Full Biological Crawl Directory
+              Full Biological &amp; CDMO Crawl Directory
             </span>
             <span className="text-[11px] text-slate-400">
-              {BIOTECH_PRODUCTS.length} Validated Reagents &bull; 100% Crawlable SSR Links
+              {BIOTECH_PRODUCTS.length} Validated Reagents &bull; {STATIC_INSIGHTS.length} Technical Whitepapers &bull; 100% Crawlable SSR Links
             </span>
           </div>
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
-            Complete IVD Raw Materials, Recombinant Antigens &amp; Monoclonal Antibodies Directory
+            Complete Custom Monoclonal Antibody CDMO, IVD Raw Materials &amp; Whitepapers Directory
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl">
-            Direct access to all {BIOTECH_PRODUCTS.length} validated IVD raw materials manufactured at our Electronic City Bangalore facility. Every reagent includes lot-specific SDS-PAGE, SEC-HPLC profiles, ELISA titer curves, and Certificate of Analysis (CoA).
+            Direct access to our custom monoclonal antibody development services, technical wet-lab SOP whitepapers, and all {BIOTECH_PRODUCTS.length} validated IVD raw materials manufactured at our Electronic City Bangalore facility.
           </p>
+        </div>
+
+        {/* Core Commercial CDMO & Supplier Hubs */}
+        <div className="mb-8 pb-6 border-b border-slate-100">
+          <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-3">
+            <i className="fas fa-dna text-orange-600 text-xs"></i>
+            Custom Monoclonal Antibody Development &amp; Commercial IVD Sourcing Hubs
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5">
+            <Link href="/services" className="p-3 rounded-xl border border-orange-200 bg-orange-50/40 hover:border-orange-500 transition-all text-xs font-bold text-slate-900 hover:text-orange-700">
+              Custom Monoclonal Antibody Development &amp; Production &rarr;
+            </Link>
+            <Link href="/diagnostic-cdmo" className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-orange-400 transition-all text-xs font-bold text-slate-900 hover:text-orange-600">
+              Diagnostic CDMO &amp; Hybridoma Pair Screening India &rarr;
+            </Link>
+            <Link href="/recombinant-antigens" className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-orange-400 transition-all text-xs font-bold text-slate-900 hover:text-orange-600">
+              Bulk IVD Recombinant &amp; Native Antigens Supplier &rarr;
+            </Link>
+            <Link href="/ivd-raw-materials" className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-orange-400 transition-all text-xs font-bold text-slate-900 hover:text-orange-600">
+              Diagnostic Antibody &amp; IVD Raw Materials Supplier &rarr;
+            </Link>
+            <Link href="/insights" className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-orange-400 transition-all text-xs font-bold text-slate-900 hover:text-orange-600">
+              Biotech R&amp;D Whitepapers &amp; Wet-Lab Protocols &rarr;
+            </Link>
+          </div>
         </div>
 
         <div className="space-y-8">
@@ -105,6 +131,38 @@ export default function ProductsAutoCrawlHub() {
               </div>
             </div>
           ))}
+
+          {/* Technical Whitepapers & Wet-Lab SOPs */}
+          <div className="pt-6 border-t border-slate-100 space-y-3">
+            <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <i className="fas fa-book-medical text-orange-600 text-xs"></i>
+              Technical Whitepapers, Antibody Engineering &amp; Wet-Lab Assay Protocols
+              <span className="text-xs font-normal text-slate-500">
+                ({STATIC_INSIGHTS.length} Guides)
+              </span>
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+              {STATIC_INSIGHTS.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/insights/${article.slug}`}
+                  className="p-3 rounded-xl border border-slate-100 hover:border-orange-400 bg-slate-50/60 hover:bg-orange-50/40 transition-all flex items-start justify-between gap-2 group"
+                >
+                  <div>
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-orange-700 bg-orange-50 px-1.5 py-0.5 rounded mb-1">
+                      {article.category}
+                    </span>
+                    <h4 className="text-xs font-semibold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-2">
+                      {article.title}
+                    </h4>
+                  </div>
+                  <span className="text-slate-300 group-hover:text-orange-600 group-hover:translate-x-0.5 transition-all text-xs shrink-0 mt-1">
+                    &rarr;
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
