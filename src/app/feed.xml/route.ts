@@ -92,25 +92,23 @@ export async function GET() {
     .join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0">
   <channel>
     <title>SMD Life Sciences - Custom Monoclonal Antibody CDMO &amp; IVD Raw Materials Feed</title>
     <link>${BASE_URL}</link>
     <description>Latest custom monoclonal antibody services, validated recombinant antigens, diagnostic antibodies, and technical laboratory dossiers from SMD Life Sciences.</description>
-    <language>en-IN</language>
+    <language>en-us</language>
     <lastBuildDate>${STATIC_PUB_DATE}</lastBuildDate>
-    <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
-    <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
-    <atom:link href="https://pubsubhubbub.superfeedr.com/" rel="hub"/>
 ${itemsXml}
   </channel>
 </rss>`;
 
   return new NextResponse(xml, {
     headers: {
-      'Content-Type': 'application/xml',
+      'Content-Type': 'application/xml; charset=utf-8',
       'Access-Control-Allow-Origin': '*',
       'Cache-Control': 'public, max-age=0, must-revalidate',
+      'Link': `<${BASE_URL}/feed.xml>; rel="self", <https://pubsubhubbub.appspot.com/>; rel="hub"`,
     },
   });
 }
