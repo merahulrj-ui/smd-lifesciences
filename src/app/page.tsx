@@ -1,29 +1,32 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
+import ProductsAutoCrawlHub from '@/components/ProductsAutoCrawlHub';
 
 export const metadata: Metadata = {
-  title: 'Custom Monoclonal Antibody Development & IVD Raw Materials India | SMD Life Sciences',
-  description: 'Bangalore CDMO specializing in custom monoclonal antibody development, bulk antibody production, and IVD biological raw materials. End-to-end hybridoma screening, bioreactor scale-up, and PV1 catalog reagents.',
+  title: 'Custom Monoclonal Antibody Development & Bulk IVD Antigen Supplier India | SMD Life Sciences',
+  description: 'Bangalore CDMO & bulk IVD antigen supplier in India: Custom monoclonal antibody development, hybridoma screening, bulk antibody production, and >95% pure recombinant & native antigens (HIV, Syphilis, Dengue NS1, Cytokines). Request 1mg–5mg evaluation samples & Lot CoA.',
   keywords: [
     'custom monoclonal antibody development',
     'custom monoclonal antibody production service',
+    'bulk ivd antigen supplier',
+    'diagnostic antibody supplier india',
+    'hiv recombinant antigen supplier india',
+    'syphilis recombinant antigen supplier',
+    'native antigens supplier india',
+    'dengue ns1 antibody supplier india',
     'bulk antibody manufacturing bangalore',
     'hybridoma development service india',
-    'recombinant antibody expression',
+    'recombinant antibody supplier india',
     'buy IVD raw materials India',
-    'IVD raw material supplier Bangalore',
-    'lateral flow raw materials bulk price',
-    'recombinant antigen manufacturer Bangalore',
-    'colloidal gold conjugate supplier',
     'PVBSP101 recombinant antigen'
   ],
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in',
   },
   openGraph: {
-    title: 'Custom Monoclonal Antibody Development & IVD Raw Materials | SMD Life Sciences',
-    description: 'Custom monoclonal antibody development, hybridoma screening, bulk antibody production, and validated IVD raw materials in Bangalore.',
+    title: 'Custom Monoclonal Antibody Development & Bulk IVD Antigen Supplier India | SMD Life Sciences',
+    description: 'Custom monoclonal antibody development, hybridoma screening, bulk antibody production, and validated IVD antigens & antibodies in Bangalore. 1mg–5mg samples ready.',
     url: 'https://lifesciences.smdmedicare.in',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
@@ -39,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Buy IVD Raw Materials & Reagents Online | SMD Life Sciences',
-    description: 'High-purity recombinant antigens, matched monoclonal antibodies, and custom CDMO services for IVD manufacturers with lot CoA.',
+    title: 'Custom Monoclonal Antibody CDMO & Bulk IVD Antigen Supplier India | SMD Life Sciences',
+    description: 'Custom mAb development, bulk antibody production, and >95% pure recombinant antigens (HIV, Syphilis, Dengue, Cytokines) with Lot CoA.',
     images: ['https://lifesciences.smdmedicare.in/images/biotech_cleanroom_hero.webp'],
   },
 };
@@ -100,8 +103,25 @@ const pageSchema = {
   ],
 };
 
+const FLAGSHIP_HOME_CODES = [
+  'PVBSP101', // HIV-1 Recombinant Antigen
+  'PVBSP105', // Anti-HIV-1 p24 Monoclonal Antibody
+  'PVBSP301', // Syphilis Tp15-Tp17-Tp47 Chimeric Antigen
+  'PVBSP701', // Dengue Virus NS1 Recombinant Antigen
+  'PVBSP703', // Anti-Dengue NS1 Monoclonal Antibody
+  'PVBSP501', // Malaria P. falciparum HRP-2 Antigen
+  'PVBSP401', // Anti-HBsAg Monoclonal Antibody
+  'PVBSP201', // HCV Chimeric Recombinant Antigen
+  'PVBSP1401', // Cardiac Troponin I (cTnI) Antigen
+  'PVBSP26',  // Human IL-6 Recombinant Protein (Cytokine)
+  'PVBSP212', // Human Procalcitonin (PCT) Recombinant Antigen
+  'PVBSP5005', // Goat Anti-Mouse IgG Control Line Antibody
+];
+
 export default function BiotechHomePage() {
-  const sampleProducts = BIOTECH_PRODUCTS.slice(0, 6);
+  const sampleProducts = FLAGSHIP_HOME_CODES
+    .map((code) => BIOTECH_PRODUCTS.find((p) => p.code === code))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <div className="bg-white min-h-screen text-slate-900">
@@ -115,7 +135,7 @@ export default function BiotechHomePage() {
           <div className="flex items-center space-x-2 text-slate-500">
             <Link href="/" className="hover:text-[#064e3b] transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-slate-900 font-semibold">Life Sciences &amp; Diagnostic Solutions</span>
+            <span className="text-slate-900 font-semibold">Custom mAb CDMO &amp; Bulk IVD Antigen Supplier India</span>
           </div>
           <div className="hidden sm:flex items-center space-x-2">
             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-[#064e3b] border border-emerald-200/80">
@@ -138,11 +158,11 @@ export default function BiotechHomePage() {
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-5">
-                Custom Monoclonal Antibody Development &amp; <span className="text-orange-600 underline decoration-orange-400/50 decoration-4 underline-offset-4">IVD Raw Materials</span>
+                Custom Monoclonal Antibody Development &amp; <span className="text-orange-600 underline decoration-orange-400/50 decoration-4 underline-offset-4">Bulk IVD Antigen Supplier India</span>
               </h1>
               
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-7 max-w-2xl">
-                Bangalore-based biomanufacturing CDMO specializing in full-cycle Custom Monoclonal Antibody Development, hybridoma screening, and bioreactor production. Backed by validated in-house diagnostic reagents including the flagship PV1 catalog series.
+                Bangalore-based biomanufacturing CDMO &amp; diagnostic antibody supplier in India specializing in full-cycle <strong>Custom Monoclonal Antibody Development</strong>, hybridoma pair screening, and bioreactor production—backed by <strong>70+ in-stock bulk IVD recombinant &amp; native antigens</strong> (HIV-1/2 PV1 series, Syphilis, Dengue NS1, Malaria, and IL-6/PCT Cytokines).
               </p>
 
               <div className="flex flex-wrap gap-3.5 mb-8">
@@ -680,6 +700,9 @@ export default function BiotechHomePage() {
           </div>
         </div>
       </section>
+
+      {/* Full 70-SKU & 12-Whitepaper SSR Crawl Index */}
+      <ProductsAutoCrawlHub />
     </div>
   );
 }

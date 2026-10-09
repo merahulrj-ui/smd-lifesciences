@@ -1,23 +1,23 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import pool from '@/lib/db';
 import { STATIC_INSIGHTS } from '@/data/insights';
 
 export const metadata: Metadata = {
-  title: 'Biotech Scientific Insights & IVD Whitepapers | SMD Life Sciences',
-  description: 'Technical whitepapers, lateral flow assay protocols, and research validation studies for IVD kit manufacturers, R&D scientists, and CDMO partners.',
+  title: 'IVD Assay Development Whitepapers, Antibody Pairing & SOPs | SMD Life Sciences',
+  description: 'Technical whitepapers, lateral flow nitrocellulose coating SOPs, 40nm colloidal gold conjugation protocols, and monoclonal antibody pairing benchmarks for IVD manufacturers.',
   keywords: [
-    'IVD technical insights',
+    'IVD raw materials for immunoassay manufacturing',
     'lateral flow assay development protocols',
     'monoclonal antibody pairing studies',
     'recombinant antigen purification whitepapers',
-    'colloidal gold conjugation optimization'
+    'colloidal gold conjugation optimization',
+    'custom monoclonal antibody development'
   ],
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in/insights',
   },
   openGraph: {
-    title: 'Biotech Scientific Insights & IVD Whitepapers | SMD Life Sciences',
+    title: 'IVD Assay Development Whitepapers & Wet-Lab SOPs | SMD Life Sciences',
     description: 'Technical whitepapers and assay development protocols for IVD kit manufacturers and biotech researchers.',
     url: 'https://lifesciences.smdmedicare.in/insights',
     siteName: 'SMD Life Sciences',
@@ -26,33 +26,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biotech Scientific Insights & IVD Whitepapers | SMD Life Sciences',
+    title: 'IVD Assay Development Whitepapers & Wet-Lab SOPs | SMD Life Sciences',
     description: 'Technical whitepapers and assay development protocols for IVD kit manufacturers and biotech researchers.',
     images: ['https://lifesciences.smdmedicare.in/icon-512.png'],
   },
 };
 
-export const revalidate = 3600;
-
-export default async function BiotechInsightsPage() {
-  let articles: any[] = [];
-  try {
-    const [rows] = await pool.query(
-      'SELECT id, title, slug, blog_image, author_name, author_title, read_time, created_at, content FROM blog WHERE status = "published" AND division = "biotech" ORDER BY created_at DESC'
-    ) as any[];
-    articles = rows || [];
-  } catch (error) {
-    console.error('Error fetching biotech insights:', error);
-  }
-
-  // Merge static insights fallback
-  if (articles.length === 0) {
-    articles = STATIC_INSIGHTS;
-  } else {
-    const dbSlugs = new Set(articles.map((a: any) => a.slug));
-    const missingStatic = STATIC_INSIGHTS.filter((s) => !dbSlugs.has(s.slug));
-    articles = [...articles, ...missingStatic];
-  }
+export default function BiotechInsightsPage() {
+  const articles = STATIC_INSIGHTS;
 
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', year: 'numeric' };

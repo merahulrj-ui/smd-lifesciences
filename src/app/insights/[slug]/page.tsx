@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import pool from '@/lib/db';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 import { getStaticInsightBySlug, STATIC_INSIGHTS } from '@/data/insights';
 
@@ -14,23 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = resolvedParams.slug;
   const cleanSlug = slug.replace(/\.html$/, '');
 
-  let art: any = null;
-  try {
-    const [rows] = await pool.query(
-      'SELECT title, content, blog_image FROM blog WHERE (slug = ? OR slug = ? OR id = ?) LIMIT 1',
-      [slug, cleanSlug, isNaN(Number(slug)) ? 0 : Number(slug)]
-    ) as any[];
-
-    if (rows && rows.length > 0) {
-      art = rows[0];
-    }
-  } catch (e) {
-    // DB offline, fallback to static
-  }
-
-  if (!art) {
-    art = getStaticInsightBySlug(cleanSlug);
-  }
+  const art = getStaticInsightBySlug(cleanSlug);
 
   if (!art) {
     return { title: 'Scientific Insight | SMD Life Sciences' };
@@ -67,51 +50,19 @@ export async function generateStaticParams() {
   }));
 }
 
-export const revalidate = 3600;
-
 export default async function BiotechInsightDetailPage({ params }: Props) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
   const cleanSlug = slug.replace(/\.html$/, '');
 
-  let article: any = null;
-  try {
-    const [rows] = await pool.query(
-      'SELECT * FROM blog WHERE (slug = ? OR slug = ? OR REPLACE(LOWER(title), " ", "-") = ? OR id = ?) LIMIT 1',
-      [slug, cleanSlug, cleanSlug, isNaN(Number(slug)) ? 0 : Number(slug)]
-    ) as any[];
-
-    if (rows && rows.length > 0) {
-      article = rows[0];
-    }
-  } catch (error) {
-    console.error('Error fetching insight article from DB:', error);
-  }
-
-  // Fallback to static insights if not in database
-  if (!article) {
-    article = getStaticInsightBySlug(cleanSlug);
-  }
+  const article = getStaticInsightBySlug(cleanSlug);
 
   if (!article) {
     notFound();
   }
 
-  // Related Biotech Insights
-  let relatedInsights: any[] = [];
-  try {
-    const [rRows] = await pool.query(
-      'SELECT id, title, slug, blog_image, created_at, read_time FROM blog WHERE status = "published" AND division = "biotech" AND id != ? ORDER BY created_at DESC LIMIT 3',
-      [article.id]
-    ) as any[];
-    relatedInsights = rRows || [];
-  } catch (e) {
-    // ignore
-  }
-
-  if (relatedInsights.length === 0) {
-    relatedInsights = STATIC_INSIGHTS.filter((s) => s.slug !== cleanSlug).slice(0, 6);
-  }
+  // Related Biotech Insights (100% static SSG)
+  const relatedInsights = STATIC_INSIGHTS.filter((s) => s.slug !== cleanSlug).slice(0, 6);
 
   // Dynamically match Biotech Products mentioned in the article content (e.g., PVBSP112), fallback to top catalog items
   const mentionedCodes = Array.from(new Set((article.content?.match(/PVBSP\d{3}/gi) || []).map((c: string) => c.toUpperCase())));

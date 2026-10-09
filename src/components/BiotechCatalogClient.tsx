@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { BiotechProduct } from '@/data/products';
@@ -9,25 +9,32 @@ interface Props {
   products: BiotechProduct[];
 }
 
-const ITEMS_PER_PAGE = 15;
+const ITEMS_PER_PAGE = 18;
+
+function SearchQuerySync({ onSync }: { onSync: (q: string) => void }) {
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const q = searchParams.get('q') || '';
+    onSync(q);
+  }, [searchParams, onSync]);
+  return null;
+}
 
 export default function BiotechCatalogClient({ products }: Props) {
-  const searchParams = useSearchParams();
-  const initialQuery = searchParams.get('q') || '';
-  const [searchTerm, setSearchTerm] = useState(initialQuery);
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedType, setSelectedType] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Sync search term when URL query changes (e.g. from SearchModal)
-  useEffect(() => {
-    const q = searchParams.get('q') || '';
-    if (q !== searchTerm) {
-      setSearchTerm(q);
-      setCurrentPage(1);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams]);
+  const handleQuerySync = useCallback((q: string) => {
+    setSearchTerm((prev) => {
+      if (q !== prev) {
+        setCurrentPage(1);
+        return q;
+      }
+      return prev;
+    });
+  }, []);
 
   // Category counts
   const categories = useMemo(() => {
@@ -93,6 +100,9 @@ export default function BiotechCatalogClient({ products }: Props) {
 
   return (
     <div className="space-y-8 overflow-x-hidden">
+      <Suspense fallback={null}>
+        <SearchQuerySync onSync={handleQuerySync} />
+      </Suspense>
       {/* Search & Filter Terminal Bar */}
       <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 shadow-sm">
         

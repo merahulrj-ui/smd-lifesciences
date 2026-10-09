@@ -1,24 +1,29 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
+import ProductsAutoCrawlHub from '@/components/ProductsAutoCrawlHub';
 
 export const metadata: Metadata = {
-  title: 'Buy IVD Raw Materials & Reagents India | Batch CoA Guaranteed | SMD Life Sciences',
-  description: 'India\'s premier B2B manufacturer and bulk supplier of IVD raw materials. High-purity recombinant antigens, matched monoclonal antibodies, and colloidal gold conjugates for lateral flow, ELISA, and CLIA kits from Bangalore.',
+  title: 'Bulk IVD Antigen & Diagnostic Antibody Supplier India | Immunoassay Raw Materials | SMD Life Sciences',
+  description: 'India\'s premier B2B bulk IVD antigen and diagnostic antibody supplier in Bangalore. High-purity recombinant antigens (HIV, Syphilis, Dengue NS1, Cytokines), matched monoclonal antibodies, and lateral flow / ELISA immunoassay raw materials with Lot CoA.',
   keywords: [
+    'bulk ivd antigen supplier',
+    'diagnostic antibody supplier india',
+    'ivd raw materials for immunoassay manufacturing',
+    'recombinant ivd antibodies',
+    'recombinant antibody supplier india',
+    'dengue ns1 antibody supplier india',
     'buy IVD raw materials India',
     'diagnostic raw material supplier Bangalore',
     'lateral flow raw materials India bulk',
-    'rapid test kit raw materials bulk',
-    'recombinant antigens manufacturer India',
-    'IVD assay components supplier'
+    'rapid test kit raw materials bulk'
   ],
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in/ivd-raw-materials',
   },
   openGraph: {
-    title: 'Buy IVD Raw Materials & Reagents India | SMD Life Sciences',
-    description: 'B2B diagnostic raw materials supplier in Bangalore. High-purity recombinant antigens, monoclonal antibodies, and colloidal gold conjugates for IVD manufacturers.',
+    title: 'Bulk IVD Antigen & Diagnostic Antibody Supplier India | SMD Life Sciences',
+    description: 'B2B diagnostic antibody & bulk IVD antigen supplier in Bangalore. High-purity recombinant antigens, monoclonal antibodies, and immunoassay raw materials with Lot CoA.',
     url: 'https://lifesciences.smdmedicare.in/ivd-raw-materials',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
@@ -34,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Buy IVD Raw Materials & Reagents India | SMD Life Sciences',
-    description: 'High-purity recombinant antigens, monoclonal antibodies, and colloidal gold conjugates for IVD manufacturers.',
+    title: 'Bulk IVD Antigen & Diagnostic Antibody Supplier India | SMD Life Sciences',
+    description: 'High-purity recombinant antigens, diagnostic monoclonal antibodies, and immunoassay raw materials in India.',
     images: ['https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.webp'],
   },
 };
@@ -109,8 +114,25 @@ const ivdSchemaGraph = {
   ],
 };
 
+const FEATURED_IVD_CODES = [
+  'PVBSP101', // HIV-1 Recombinant Antigen
+  'PVBSP105', // Anti-HIV-1 p24 Monoclonal Antibody
+  'PVBSP301', // Syphilis Tp15-Tp17-Tp47 Chimeric Antigen
+  'PVBSP701', // Dengue Virus NS1 Recombinant Antigen
+  'PVBSP703', // Anti-Dengue NS1 Monoclonal Antibody
+  'PVBSP501', // Malaria P. falciparum HRP-2 Antigen
+  'PVBSP401', // Anti-HBsAg Monoclonal Antibody
+  'PVBSP201', // HCV Chimeric Recombinant Antigen
+  'PVBSP1401', // Cardiac Troponin I (cTnI) Antigen
+  'PVBSP2601', // Anti-Human IL-6 Monoclonal Antibody (Capture)
+  'PVBSP212', // Human Procalcitonin (PCT) Recombinant Antigen
+  'PVBSP5005', // Goat Anti-Mouse IgG Control Line Antibody
+];
+
 export default function IvdRawMaterialsPage() {
-  const featuredReagents = BIOTECH_PRODUCTS.slice(0, 12);
+  const featuredReagents = FEATURED_IVD_CODES
+    .map((code) => BIOTECH_PRODUCTS.find((p) => p.code === code))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <div className="bg-slate-50 min-h-screen">
@@ -360,6 +382,8 @@ export default function IvdRawMaterialsPage() {
           </div>
         </div>
       </section>
+
+      <ProductsAutoCrawlHub />
     </div>
   );
 }

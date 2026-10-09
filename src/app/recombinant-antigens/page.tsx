@@ -1,28 +1,29 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { BIOTECH_PRODUCTS } from '@/data/products';
+import ProductsAutoCrawlHub from '@/components/ProductsAutoCrawlHub';
 
 export const metadata: Metadata = {
-  title: 'Recombinant & Native Antigens Supplier India (Bangalore) | >95% Purity | SMD Life Sciences',
-  description: 'Leading B2B recombinant and native antigens supplier in India (Electronic City, Bangalore). High-purity viral, bacterial, parasitic & cardiac antigens (>95% SEC-HPLC) for lateral flow, ELISA, and CLIA diagnostic kits.',
+  title: 'Bulk IVD Recombinant & Native Antigens Supplier India (HIV, Syphilis, Dengue) | SMD Life Sciences',
+  description: 'Direct B2B bulk IVD antigen supplier in India (Bangalore). High-purity (>95% SEC-HPLC) HIV-1/2 (PV1 Series), Syphilis Tp15/17/47, Dengue NS1, Malaria HRP2, and IL-6/PCT Cytokine recombinant & native antigens. Request 1mg–5mg samples & Lot CoA.',
   keywords: [
+    'bulk ivd antigen supplier',
+    'hiv recombinant antigen supplier india',
+    'syphilis recombinant antigen supplier',
     'native antigens supplier India',
+    'recombinant antigens for diagnostics',
+    'dengue ns1 recombinant antigen supplier',
     'recombinant and native antigens supplier India',
-    'buy native antigens India',
     'buy recombinant antigens India',
     'recombinant antigens manufacturer Bangalore',
-    'bulk diagnostic antigens supplier',
-    'infectious disease recombinant antigens',
-    'cardiac marker recombinant antigens',
-    'malaria recombinant antigen bulk price',
-    'dengue ns1 recombinant antigen supplier'
+    'malaria recombinant antigen bulk price'
   ],
   alternates: {
     canonical: 'https://lifesciences.smdmedicare.in/recombinant-antigens',
   },
   openGraph: {
-    title: 'Recombinant & Native Antigens Supplier India (Bangalore) | SMD Life Sciences',
-    description: 'High-purity recombinant and native-grade diagnostic antigens manufactured in Electronic City, Bangalore for lateral flow, ELISA, and CLIA test kits.',
+    title: 'Bulk IVD Recombinant & Native Antigens Supplier India | SMD Life Sciences',
+    description: 'High-purity HIV-1/2, Syphilis, Dengue NS1, Malaria, and Cytokine recombinant & native diagnostic antigens manufactured in Bangalore. 1mg–5mg samples ready.',
     url: 'https://lifesciences.smdmedicare.in/recombinant-antigens',
     siteName: 'SMD Life Sciences',
     locale: 'en_IN',
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Recombinant & Native Antigens Supplier India (Bangalore) | SMD Life Sciences',
-    description: 'High-purity recombinant and native-conformation antigens manufactured in Electronic City, Bangalore for lateral flow and ELISA test kits.',
+    title: 'Bulk IVD Recombinant & Native Antigens Supplier India | SMD Life Sciences',
+    description: 'High-purity HIV, Syphilis, Dengue NS1 & Cytokine recombinant antigens manufactured in Bangalore with Lot CoA.',
     images: ['https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'],
   },
 };
@@ -117,10 +118,25 @@ const antigenSchemaGraph = {
   ],
 };
 
+const FEATURED_ANTIGEN_CODES = [
+  'PVBSP101', // HIV-1 Recombinant Antigen
+  'PVBSP102', // HIV-2 Recombinant Antigen
+  'PVBSP301', // Syphilis Tp15-Tp17-Tp47 Chimeric Antigen
+  'PVBSP302', // Syphilis Tp47 Recombinant Antigen
+  'PVBSP701', // Dengue Virus NS1 Recombinant Antigen
+  'PVBSP702', // Dengue Envelope (E) Protein Antigen
+  'PVBSP501', // Malaria P. falciparum HRP-2 Antigen
+  'PVBSP502', // Malaria P. vivax LDH (pLDH) Antigen
+  'PVBSP201', // HCV Chimeric Recombinant Antigen
+  'PVBSP1401', // Cardiac Troponin I (cTnI) Antigen
+  'PVBSP26',  // Human IL-6 Recombinant Protein (Cytokine)
+  'PVBSP212', // Human Procalcitonin (PCT) Recombinant Antigen
+];
+
 export default function RecombinantAntigensPage() {
-  const recombinantAntigens = BIOTECH_PRODUCTS.filter((p) =>
-    p.type.toLowerCase().includes('recombinant') || p.format.toLowerCase().includes('coating')
-  ).slice(0, 12);
+  const recombinantAntigens = FEATURED_ANTIGEN_CODES
+    .map((code) => BIOTECH_PRODUCTS.find((p) => p.code === code))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <div className="bg-slate-50 min-h-screen">
@@ -370,6 +386,8 @@ export default function RecombinantAntigensPage() {
           </div>
         </div>
       </section>
+
+      <ProductsAutoCrawlHub />
     </div>
   );
 }

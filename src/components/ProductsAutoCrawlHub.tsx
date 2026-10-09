@@ -33,10 +33,11 @@ export default function ProductsAutoCrawlHub() {
       ),
     },
     {
-      title: 'Cytokines, Control Calibrators & Industrial Enzymes',
+      title: 'Cytokines, Sepsis Markers, Control Calibrators & Industrial Enzymes',
       icon: 'fas fa-flask-vial',
       items: BIOTECH_PRODUCTS.filter((p) =>
-        ['Cytokines', 'Control Line / Calibrator', 'Bioprocessing Enzymes'].includes(p.category)
+        ['Cytokines', 'Control Antibodies', 'Enzymes'].includes(p.category) ||
+        ['Cytokines', 'Control Line / Calibrator', 'Bioprocessing Enzymes'].includes(p.target)
       ),
     },
   ];
@@ -51,14 +52,14 @@ export default function ProductsAutoCrawlHub() {
               Full Biological Crawl Directory
             </span>
             <span className="text-[11px] text-slate-400">
-              64 Reagents &bull; 100% Crawlable SSR Links
+              {BIOTECH_PRODUCTS.length} Validated Reagents &bull; 100% Crawlable SSR Links
             </span>
           </div>
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
-            Complete Diagnostic Reagent &amp; Monoclonal Antibody Directory
+            Complete IVD Raw Materials, Recombinant Antigens &amp; Monoclonal Antibodies Directory
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl">
-            Direct access to all 64 validated IVD raw materials manufactured at our Electronic City Bangalore facility. Every reagent includes lot-specific SDS-PAGE, ELISA titer curves, and Certificate of Analysis (CoA).
+            Direct access to all {BIOTECH_PRODUCTS.length} validated IVD raw materials manufactured at our Electronic City Bangalore facility. Every reagent includes lot-specific SDS-PAGE, SEC-HPLC profiles, ELISA titer curves, and Certificate of Analysis (CoA).
           </p>
         </div>
 
