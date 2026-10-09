@@ -1,10 +1,10 @@
 {
   "domain": "lifesciences.smdmedicare.in",
-  "crawledAt": "2026-10-03T14:19:52.721Z",
-  "totalUrls": 85,
-  "healthyUrls": 85,
+  "crawledAt": "2026-10-09T04:49:42.811Z",
+  "totalUrls": 91,
+  "healthyUrls": 91,
   "healthPercent": "100.0%",
-  "avgLatencyMs": 191,
-  "totalDurationSeconds": 3.43,
+  "avgLatencyMs": 300,
+  "totalDurationSeconds": 2.96,
   "failures": []
 }

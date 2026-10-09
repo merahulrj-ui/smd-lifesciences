@@ -29,6 +29,11 @@ export async function GET() {
       desc: 'Bulk biologicals, colloidal gold nanoparticles, blocking buffers, and conjugated antibodies for diagnostic manufacturing.',
     },
     {
+      title: 'Custom Monoclonal Antibody Development & Bulk Antibody Production CDMO India',
+      url: `${BASE_URL}/services`,
+      desc: 'End-to-end custom monoclonal antibody development, hybridoma screening, recombinant VH/VL expression, and gram-scale antibody production in Bangalore.',
+    },
+    {
       title: 'Diagnostic CDMO & Lateral Flow Rapid Test Development',
       url: `${BASE_URL}/diagnostic-cdmo`,
       desc: 'End-to-end contract development: hybridoma generation, recombinant expression, antibody pair screening, and strip assembly.',
@@ -80,12 +85,14 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SMD Life Sciences - IVD Raw Materials &amp; Reagents Feed</title>
+    <title>SMD Life Sciences - Custom Monoclonal Antibody CDMO &amp; IVD Raw Materials Feed</title>
     <link>${BASE_URL}</link>
-    <description>Latest validated recombinant antigens, antibodies, and technical laboratory dossiers from SMD Life Sciences.</description>
+    <description>Latest custom monoclonal antibody services, validated recombinant antigens, diagnostic antibodies, and technical laboratory dossiers from SMD Life Sciences.</description>
     <language>en-IN</language>
     <lastBuildDate>${now}</lastBuildDate>
     <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
+    <atom:link href="https://pubsubhubbub.superfeedr.com/" rel="hub"/>
     ${itemsXml}
   </channel>
 </rss>`;

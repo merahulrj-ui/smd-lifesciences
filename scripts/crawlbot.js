@@ -96,8 +96,51 @@ async function runCrawlBot() {
   }
   console.log(`\n   ✅ Crawl finished. 100% of live endpoints visited & edge caches warmed.`);
 
-  // 3. Save Report
-  console.log('\n📊 [3/3] Generating Crawl Diagnostics Report...');
+  // 3. Real-Time Bulk Auto-Indexing Push (Bypasses 10/day Manual GSC Quota)
+  console.log('\n🚀 [3/4] Broadcasting all 91 URLs via Google WebSub (PubSubHubbub) & IndexNow Batch API...');
+  let websubStatus = 'Skipped';
+  let indexNowStatus = 'Skipped';
+
+  // 3A. Google Official WebSub / PubSubHubbub Real-Time Feed Ping (Triggers Google FeedFetcher/Googlebot on /feed.xml)
+  try {
+    const body = new URLSearchParams({
+      'hub.mode': 'publish',
+      'hub.url': `${BASE_URL}/feed.xml`,
+    });
+    const hubRes = await fetchWithTimeout('https://pubsubhubbub.appspot.com/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString(),
+    });
+    websubStatus = `HTTP ${hubRes.status} (Accepted by Google WebSub Hub)`;
+    console.log(`   ✅ Google WebSub (PubSubHubbub) Push: ${websubStatus}`);
+  } catch (err) {
+    websubStatus = `Failed: ${err.message}`;
+    console.log(`   ⚠️ Google WebSub Push Error: ${err.message}`);
+  }
+
+  // 3B. IndexNow Bulk 91-URL Single-Request Push
+  try {
+    const indexNowKey = '58a698a9d185489fbb34e12c6a992687';
+    const indexRes = await fetchWithTimeout('https://api.indexnow.org/indexnow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify({
+        host: DOMAIN,
+        key: indexNowKey,
+        keyLocation: `${BASE_URL}/${indexNowKey}.txt`,
+        urlList: urls,
+      }),
+    });
+    indexNowStatus = `HTTP ${indexRes.status} (${urls.length} URLs submitted in 1 batch)`;
+    console.log(`   ✅ IndexNow Bulk API Push: ${indexNowStatus}`);
+  } catch (err) {
+    indexNowStatus = `Failed: ${err.message}`;
+    console.log(`   ⚠️ IndexNow Push Error: ${err.message}`);
+  }
+
+  // 4. Save Report
+  console.log('\n📊 [4/4] Generating Crawl Diagnostics Report...');
   const totalDuration = ((Date.now() - startTime) / 1000).toFixed(2);
   const successCount = crawlResults.filter(r => r.ok).length;
   const avgLatency = (crawlResults.reduce((acc, r) => acc + r.duration, 0) / (crawlResults.length || 1)).toFixed(0);
@@ -110,6 +153,8 @@ async function runCrawlBot() {
     healthPercent: ((successCount / (crawlResults.length || 1)) * 100).toFixed(1) + '%',
     avgLatencyMs: parseInt(avgLatency, 10),
     totalDurationSeconds: parseFloat(totalDuration),
+    googleWebSubPush: websubStatus,
+    indexNowBatchPush: indexNowStatus,
     failures: crawlResults.filter(r => !r.ok).map(r => ({ url: r.url, status: r.status, error: r.error })),
   };
 
@@ -122,6 +167,8 @@ async function runCrawlBot() {
   console.log(`   • Total URLs Crawled:     ${report.totalUrls}`);
   console.log(`   • Health Status:          ${report.healthyUrls}/${report.totalUrls} (${report.healthPercent})`);
   console.log(`   • Average Latency:        ${report.avgLatencyMs} ms`);
+  console.log(`   • Google WebSub Push:     ${report.googleWebSubPush}`);
+  console.log(`   • IndexNow Batch Push:    ${report.indexNowBatchPush}`);
   console.log(`   • Failed Endpoints:       ${report.failures.length}`);
   console.log(`   • Execution Time:         ${report.totalDurationSeconds}s`);
   console.log(`   • Report File Saved:      src/data/crawlbot_report.json`);

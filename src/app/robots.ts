@@ -21,7 +21,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://lifesciences.smdmedicare.in/sitemap.xml',
+    sitemap: [
+      'https://lifesciences.smdmedicare.in/sitemap.xml',
+      'https://lifesciences.smdmedicare.in/feed.xml',
+    ],
   };
 }
 
