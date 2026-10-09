@@ -1,10 +1,12 @@
 {
   "domain": "lifesciences.smdmedicare.in",
-  "crawledAt": "2026-10-09T04:49:42.811Z",
+  "crawledAt": "2026-10-09T07:50:06.756Z",
   "totalUrls": 91,
   "healthyUrls": 91,
   "healthPercent": "100.0%",
-  "avgLatencyMs": 300,
-  "totalDurationSeconds": 2.96,
+  "avgLatencyMs": 209,
+  "totalDurationSeconds": 5.03,
+  "googleWebSubPush": "HTTP 204 (Accepted by Google WebSub Hub)",
+  "indexNowBatchPush": "HTTP 200 / 200 (91 URLs accepted into IndexNow Mesh)",
   "failures": []
 }

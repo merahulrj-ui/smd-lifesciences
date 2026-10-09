@@ -119,20 +119,28 @@ async function runCrawlBot() {
     console.log(`   ⚠️ Google WebSub Push Error: ${err.message}`);
   }
 
-  // 3B. IndexNow Bulk 91-URL Single-Request Push
+  // 3B. IndexNow Bulk 91-URL Single-Request Push (Shared Mesh Broadcast)
   try {
     const indexNowKey = '58a698a9d185489fbb34e12c6a992687';
-    const indexRes = await fetchWithTimeout('https://api.indexnow.org/indexnow', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json; charset=utf-8' },
-      body: JSON.stringify({
-        host: DOMAIN,
-        key: indexNowKey,
-        keyLocation: `${BASE_URL}/${indexNowKey}.txt`,
-        urlList: urls,
-      }),
+    const payload = JSON.stringify({
+      host: DOMAIN,
+      key: indexNowKey,
+      keyLocation: `${BASE_URL}/${indexNowKey}.txt`,
+      urlList: urls,
     });
-    indexNowStatus = `HTTP ${indexRes.status} (${urls.length} URLs submitted in 1 batch)`;
+    const [resSeznam, resYandex] = await Promise.all([
+      fetchWithTimeout('https://search.seznam.cz/indexnow', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: payload,
+      }),
+      fetchWithTimeout('https://yandex.com/indexnow', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: payload,
+      }),
+    ]);
+    indexNowStatus = `HTTP ${resSeznam.status} / ${resYandex.status} (${urls.length} URLs accepted into IndexNow Mesh)`;
     console.log(`   ✅ IndexNow Bulk API Push: ${indexNowStatus}`);
   } catch (err) {
     indexNowStatus = `Failed: ${err.message}`;
