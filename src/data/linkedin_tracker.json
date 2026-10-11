@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-04T07:02:01.783Z",
+  "last_updated": "2026-10-11T12:02:09.403Z",
   "total_articles": 38,
-  "posted_count": 12,
-  "unposted_count": 26,
+  "posted_count": 13,
+  "unposted_count": 27,
   "posted_slugs": [
     "dethroning-tagrisso-fda-approves-rybrevant-lazcluze-1l-egfr-nsclc-mariposa",
     "western-blot-high-background-ghost-bands-troubleshooting-guide",
@@ -15,9 +15,23 @@
     "crispr-cas9-off-target-detection-guide-sequencing",
     "ct-value-variability-real-time-pcr-causes-solutions",
     "ivonescimab-beats-keytruda-phase-3-harmoni-2-trial-nsclc",
-    "zipalertinib-files-fda-nda-frontline-egfr-exon20-nsclc-rezilient3"
+    "zipalertinib-files-fda-nda-frontline-egfr-exon20-nsclc-rezilient3",
+    "atomic-vs-neoprism-crc-dmmr-colon-cancer-treatment-sequencing"
   ],
   "articles": [
+    {
+      "slug": "atomic-vs-neoprism-crc-dmmr-colon-cancer-treatment-sequencing",
+      "title": "ATOMIC vs. NEOPRISM-CRC: Did We Just Approve Colon Cancer Immunotherapy on the Wrong Side of Surgery?",
+      "category": "science-news",
+      "image": "/images/articles/atomic_neoprism_colon_cancer_1791702123142.jpg",
+      "status": "POSTED",
+      "date_posted": "2026-10-11",
+      "linkedin_activity": "urn:li:activity:7515018605303091201",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7515018605303091201/",
+      "impressions": "Live (Just Published)",
+      "priority": "🔥 FLAGSHIP SUNDAY PEAK (US EAST COAST 8:00 AM EST)",
+      "hook": "ATOMIC 86.3% DFS (HR 0.50) adjuvant approval vs NEOPRISM-CRC 59% pCR 9-week neoadjuvant de-escalation with 0 recurrences at 33 months."
+    },
     {
       "slug": "gotistobart-doubles-overall-survival-squamous-nsclc-preserve003-biontech-oncoc4",
       "title": "Gotistobart Doubles Overall Survival in Phase 3 Squamous NSCLC: BioNTech & OncoC4 Dethrone Docetaxel with pH-Recycling CTLA-4 Monotherapy",
