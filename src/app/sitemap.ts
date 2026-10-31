@@ -62,6 +62,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${BASE_URL}/services/custom-monoclonal-antibody-development`,
+      lastModified: LAST_MODIFIED_CORE,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${BASE_URL}/services/custom-polyclonal-antibody-production`,
+      lastModified: LAST_MODIFIED_CORE,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${BASE_URL}/shipping-policy`,
+      lastModified: LAST_MODIFIED_CORE,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/return-policy`,
+      lastModified: LAST_MODIFIED_CORE,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/privacy-policy`,
+      lastModified: LAST_MODIFIED_CORE,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/terms`,
+      lastModified: LAST_MODIFIED_CORE,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
   ];
 
   // Dynamic product routes (all 70 validated B2B reagents)
@@ -75,7 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static insight whitepaper routes
   const insightRoutes: MetadataRoute.Sitemap = STATIC_INSIGHTS.map((item) => ({
     url: `${BASE_URL}/insights/${item.slug}`,
-    lastModified: new Date(item.updated_at || item.created_at),
+    lastModified: new Date(item.updated_at || item.created_at || item.publishedAt || LAST_MODIFIED_CORE),
     changeFrequency: 'monthly',
     priority: 0.85,
   }));

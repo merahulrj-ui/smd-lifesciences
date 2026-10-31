@@ -70,9 +70,9 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
   const fallbackProducts = BIOTECH_PRODUCTS.filter((p) => !mentionedCodes.includes(p.code.toUpperCase()));
   const sampleReagents = [...matchedFromArticle, ...fallbackProducts].slice(0, 6);
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString?: string) => {
     const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', year: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-GB', options);
+    return new Date(dateString || "2026-10-01").toLocaleDateString('en-GB', options);
   };
 
   // Render article content (supports HTML string or structured JSON sections)

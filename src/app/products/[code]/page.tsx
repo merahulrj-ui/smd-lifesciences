@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 import { STATIC_INSIGHTS } from '@/data/insights';
 import { getProductDeepInfo } from '@/data/productDeepData';
+import ProductInquiryDesk from '@/components/ProductInquiryDesk';
 
 interface PageProps {
   params: Promise<{ code: string }>;
@@ -498,52 +499,10 @@ export default async function BiotechProductDetailPage({ params }: PageProps) {
           {/* Right Action & RFQ Sidebar (1 Column) */}
           <div className="space-y-6 lg:sticky lg:top-24 self-start">
             
-            {/* Direct RFQ Action Box */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-              <div className="text-xs font-bold uppercase tracking-wider text-orange-600 mb-1">
-                B2B Bulk Sourcing &amp; Samples
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">
-                Order Evaluation Sample or Bulk PO
-              </h3>
-              <p className="text-xs text-slate-500 mb-6">
-                Sample vials (1mg – 5mg) available for rapid lateral flow calibration and R&amp;D assay development.
-              </p>
-
-              <div className="space-y-3 mb-6">
-                <a 
-                  href={`https://wa.me/919555422455?text=Hello%20SMD%20Medicare,%20inquiry%20for%20Reagent%20${product.code}%20(${encodeURIComponent(product.name)}).%20Please%20provide%20bulk%20quote%20and%20CoA.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3.5 px-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg"
-                >
-                  <i className="fab fa-whatsapp text-white text-sm"></i> Inquire on WhatsApp (+91 95554 22455)
-                </a>
-
-                <a 
-                  href={`mailto:info@smdmedicare.in?subject=RFQ%20for%20${product.code}%20-%20${encodeURIComponent(product.name)}&body=Hello%20SMD%20Medicare%20Life%20Sciences,%0D%0A%0D%0AWe%20would%20like%20to%20request%20a%20quotation%20and%20Certificate%20of%20Analysis%20(CoA)%20for:%0D%0AProduct%20Code:%20${product.code}%0D%0AProduct%20Name:%20${encodeURIComponent(product.name)}%0D%0AQuantity%20Needed%20(mg/g):%20%0D%0ACompany%20Name:%20%0D%0AContact%20Number:%20`}
-                  className="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-sm"
-                >
-                  <i className="fas fa-paper-plane text-xs text-orange-400"></i>
-                  Email RFQ (info@smdmedicare.in)
-                </a>
-              </div>
-
-              <div className="space-y-3 pt-6 border-t border-slate-100 text-xs text-slate-600">
-                <div className="flex items-center gap-2">
-                  <i className="fas fa-truck text-slate-400 shrink-0 text-xs"></i>
-                  <span>24–48h Domestic Express Dispatch (Blue Gel / Dry Ice)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <i className="fas fa-file-invoice text-slate-400 shrink-0 text-xs"></i>
-                  <span>GST Invoice with Input Tax Credit (INR Billing)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <i className="fas fa-shield-alt text-slate-400 shrink-0 text-xs"></i>
-                  <span>Batch Reservation available for contract production</span>
-                </div>
-              </div>
-            </div>
+            <ProductInquiryDesk 
+              product={product} 
+              matchedPair={deepInfo.pairingMatrix} 
+            />
 
             {/* Custom Services Teaser Box */}
             <div className="relative bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-200 p-6 text-xs shadow-xs hover:border-orange-400 hover:shadow-md transition-all group cursor-pointer">

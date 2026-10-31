@@ -256,6 +256,69 @@ export default function BiotechServicesPage() {
         </div>
       </section>
 
+      {/* Flagship Specialty Protocols Navigation */}
+      <section className="bg-slate-50 border-b border-slate-200 py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600">Dedicated Service Portals</span>
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-0.5">Explore Specialized Turnkey Antibody Pipelines</h2>
+            </div>
+            <p className="text-xs text-slate-500 max-w-md">Detailed milestone timelines, screening criteria, and guaranteed deliverables for kit manufacturers.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link 
+              href="/services/custom-monoclonal-antibody-development"
+              className="bg-white p-6 rounded-2xl border border-slate-200 hover:border-orange-500 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[11px] font-bold text-orange-700 bg-orange-50 border border-orange-200 px-2.5 py-1 rounded-md">
+                    Murine Hybridoma Pipeline
+                  </span>
+                  <span className="text-xs font-semibold text-slate-500">12–16 Weeks</span>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 group-hover:text-orange-600 transition-colors mb-2">
+                  Custom Monoclonal Antibody (mAb) Development &rarr;
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  4-Phase milestone workflow, Balb/c mouse immunization, high-throughput hybridoma fusion, matched pair LFA validation, and &gt;95% pure mAb.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-orange-600">
+                <span>View Full 4-Phase Protocol &amp; Pricing</span>
+                <i className="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </Link>
+
+            <Link 
+              href="/services/custom-polyclonal-antibody-production"
+              className="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-md">
+                    Rabbit &amp; Rodent Protocols
+                  </span>
+                  <span className="text-xs font-semibold text-slate-500">45–70 Days</span>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition-colors mb-2">
+                  Custom Polyclonal Antibody (pAb) Production &rarr;
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Express 45-day &amp; standard 70-day protocols, KLH carrier peptide conjugation, lateral flow control line antibodies, and antigen-affinity purification.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-600">
+                <span>View Polyclonal Options &amp; Yields</span>
+                <i className="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Main Service Lines */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
         

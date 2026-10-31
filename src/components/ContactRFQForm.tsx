@@ -37,11 +37,11 @@ export default function ContactRFQForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     // 1. Bot Honeypot Check
     if (formData._anti_bot_trap) {
-      e.preventDefault();
-      // Silently discard bot submission
       setIsSuccess(true);
       return;
     }
@@ -58,7 +58,6 @@ export default function ContactRFQForm() {
 
     for (const val of fieldsToScan) {
       if (SCRIPT_PATTERN.test(val)) {
-        e.preventDefault();
         setErrorMessage('Security Alert: HTML tags, scripts, or executable code are strictly blocked.');
         return;
       }
@@ -66,13 +65,29 @@ export default function ContactRFQForm() {
 
     // 3. Payload Length Check
     if (formData.message.length > MAX_MESSAGE_LENGTH) {
-      e.preventDefault();
       setErrorMessage(`Message payload too large. Maximum ${MAX_MESSAGE_LENGTH} characters allowed.`);
       return;
     }
 
-    // Allow default form submission to Formspree
     setIsSubmitting(true);
+    try {
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Failed to submit inquiry. Please try again.');
+      }
+
+      setIsSuccess(true);
+    } catch (err: any) {
+      setErrorMessage(err.message || 'Error submitting inquiry. Please contact info@smdmedicare.in or WhatsApp directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSuccess) {
@@ -116,8 +131,6 @@ export default function ContactRFQForm() {
       )}
 
       <form 
-        action="https://formspree.io/f/mqakvjrp" 
-        method="POST" 
         onSubmit={handleSubmit}
         className="space-y-3"
       >

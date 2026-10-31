@@ -4,21 +4,28 @@ export interface FAQItem {
 }
 
 export interface Article {
+  id?: number | string;
   slug: string;
   title: string;
   category: string;
   categoryName: string;
   categoryColor: string;
   image: string;
+  blog_image?: string;
   excerpt: string;
   publishedAt: string;
+  created_at?: string;
+  updated_at?: string;
   readTime: string;
+  read_time?: string;
   author: {
     name: string;
     role: string;
     credentials: string;
     linkedin?: string;
   };
+  author_name?: string;
+  author_title?: string;
   keywords: string[];
   content: string;
   faqs?: FAQItem[];
@@ -1837,7 +1844,7 @@ Under the **MIQE Guidelines** published by Bustin et al. and accepted by ISO and
 5. Schrader C, Schielke A, Ellerbroek L, Johne R. *PCR inhibitors - occurrence, properties and mitigation strategies in food and environmental analysis*. Journal of Applied Microbiology. 2012; 113(5):1014-1026. [PubMed PMID: 22747964](https://pubmed.ncbi.nlm.nih.gov/22747964/)
 6. Nolan T, Hands RE, Bustin SA. *Quantification of mRNA using real-time RT-PCR*. Nature Protocols. 2006; 1(3):1559-1582. [PubMed PMID: 17406449](https://pubmed.ncbi.nlm.nih.gov/17406449/)
 7. International Organization for Standardization (ISO). *Medical laboratories — Requirements for quality and competence*. ISO 15189:2022. [ISO 15189:2022](https://www.iso.org/standard/76677.html)
-8. Svec D, Tichopad A, Novosadova V, et al. *How good is a PCR efficiency estimate: Recommendations for precise and robust qPCR efficiency assessments*. Biomolecular Detection and Quantification. 2015; 3:9-16. [PubMed PMID: 27077029](https://pubmed.ncbi.nlm.nih.gov/27077029/)
+8. Svec D, Tichopad A, Novosadova V, et al. *How good is a PCR efficiency estimate: Recommendations for precise and robust qPCR efficiency assessments*. Biomolecular Detection and Quantification. 2015; 3:9-16. [PubMed PMID: 27077029](https://pubmed.ncbi.nlm.nih.gov/27077029/)
     `
   ,
     faqs: [
@@ -6636,6 +6643,13 @@ CATEGORIES.forEach((cat) => {
 
 for (let i = 0; i < ARTICLES.length; i++) {
   ARTICLES[i] = optimizeArticleMedia(ARTICLES[i]);
+  ARTICLES[i].id = i + 1;
+  ARTICLES[i].blog_image = ARTICLES[i].image;
+  ARTICLES[i].author_name = ARTICLES[i].author?.name || 'SMD Life Sciences Editorial Team';
+  ARTICLES[i].author_title = ARTICLES[i].author?.role || 'Senior Bioprocess Lead';
+  ARTICLES[i].created_at = ARTICLES[i].publishedAt || '2026-10-01';
+  ARTICLES[i].updated_at = ARTICLES[i].publishedAt || '2026-10-01';
+  ARTICLES[i].read_time = ARTICLES[i].readTime || '8 min read';
 }
 
 export function getArticleBySlug(slug: string): Article | undefined {
@@ -6650,3 +6664,7 @@ export function getRelatedArticles(slug: string, category: string, limit = 3): A
   return ARTICLES.filter((a) => a.category === category && a.slug !== slug).slice(0, limit);
 }
 
+
+// Backward-compatibility aliases for routes
+export const STATIC_INSIGHTS = ARTICLES;
+export const getStaticInsightBySlug = getArticleBySlug;

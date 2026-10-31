@@ -35,10 +35,11 @@ export default function CustomServiceRFQForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     // 1. Honeypot check
     if (formData._anti_bot_trap) {
-      e.preventDefault();
       setIsSuccess(true);
       return;
     }
@@ -55,7 +56,6 @@ export default function CustomServiceRFQForm() {
 
     for (const val of fieldsToScan) {
       if (SCRIPT_PATTERN.test(val)) {
-        e.preventDefault();
         setErrorMessage('Security Alert: HTML tags, scripts, or executable code are strictly blocked.');
         return;
       }
@@ -63,12 +63,39 @@ export default function CustomServiceRFQForm() {
 
     // 3. Payload length check
     if (formData.project_notes.length > MAX_NOTES_LENGTH) {
-      e.preventDefault();
       setErrorMessage(`Payload too large. Maximum ${MAX_NOTES_LENGTH} characters allowed.`);
       return;
     }
 
     setIsSubmitting(true);
+    try {
+      const payload = {
+        name: formData.name,
+        company: formData.company,
+        email: formData.email,
+        phone: formData.phone,
+        inquiry_type: formData.service_type,
+        message: `[Target & Volume: ${formData.target_and_volume}] Notes: ${formData.project_notes}`,
+        _anti_bot_trap: formData._anti_bot_trap,
+      };
+
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Failed to submit proposal request.');
+      }
+
+      setIsSuccess(true);
+    } catch (err: any) {
+      setErrorMessage(err.message || 'Error submitting request. Please contact info@smdmedicare.in directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSuccess) {
@@ -110,8 +137,6 @@ export default function CustomServiceRFQForm() {
       )}
 
       <form 
-        action="https://formsubmit.co/info@smdmedicare.in" 
-        method="POST"
         onSubmit={handleSubmit}
         className="space-y-5"
       >

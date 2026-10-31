@@ -59,6 +59,16 @@ export default function BiotechFooter() {
               </Link>
             </li>
             <li>
+              <Link href="/services/custom-monoclonal-antibody-development" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
+                <i className="fas fa-angle-right text-[0.7em]"></i> Custom Monoclonal Antibody (Hybridoma)
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/custom-polyclonal-antibody-production" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
+                <i className="fas fa-angle-right text-[0.7em]"></i> Custom Polyclonal Antibody (Rabbit/Mouse)
+              </Link>
+            </li>
+            <li>
               <Link href="/insights" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
                 <i className="fas fa-angle-right text-[0.7em]"></i> Scientific Insights &amp; Whitepapers
               </Link>

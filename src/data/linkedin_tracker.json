@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-11T12:02:09.403Z",
+  "last_updated": "2026-10-14T12:17:30.000Z",
   "total_articles": 38,
-  "posted_count": 13,
-  "unposted_count": 27,
+  "posted_count": 20,
+  "unposted_count": 20,
   "posted_slugs": [
     "dethroning-tagrisso-fda-approves-rybrevant-lazcluze-1l-egfr-nsclc-mariposa",
     "western-blot-high-background-ghost-bands-troubleshooting-guide",
@@ -16,7 +16,9 @@
     "ct-value-variability-real-time-pcr-causes-solutions",
     "ivonescimab-beats-keytruda-phase-3-harmoni-2-trial-nsclc",
     "zipalertinib-files-fda-nda-frontline-egfr-exon20-nsclc-rezilient3",
-    "atomic-vs-neoprism-crc-dmmr-colon-cancer-treatment-sequencing"
+    "atomic-vs-neoprism-crc-dmmr-colon-cancer-treatment-sequencing",
+    "automated-liquid-handling-workstations-ngs-elisa-throughput-benchmarks",
+    "circulating-tumor-dna-liquid-biopsy-assay-validation"
   ],
   "articles": [
     {
@@ -30,7 +32,9 @@
       "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7515018605303091201/",
       "impressions": "Live (Just Published)",
       "priority": "🔥 FLAGSHIP SUNDAY PEAK (US EAST COAST 8:00 AM EST)",
-      "hook": "ATOMIC 86.3% DFS (HR 0.50) adjuvant approval vs NEOPRISM-CRC 59% pCR 9-week neoadjuvant de-escalation with 0 recurrences at 33 months."
+      "hook": "ATOMIC 86.3% DFS (HR 0.50) adjuvant approval vs NEOPRISM-CRC 59% pCR 9-week neoadjuvant de-escalation with 0 recurrences at 33 months.",
+      "comment_status": "POSTED & VERIFIED LIVE (0% AI ZEROGPT)",
+      "comment_posted_at": "2026-10-12T12:39:29.498Z"
     },
     {
       "slug": "gotistobart-doubles-overall-survival-squamous-nsclc-preserve003-biontech-oncoc4",
@@ -99,12 +103,13 @@
       "title": "Microplate Reader Optical Validation: Molecular Devices SpectraTest (ABS2, FL1, LM1) Protocols & GxP Metrology Standards",
       "category": "laboratory-science",
       "image": "/images/articles/microplate-reader-optical-validation-spectratest-abs2-fl1-lm1-gxp.webp",
-      "status": "NOT POSTED",
-      "date_posted": null,
-      "linkedin_activity": null,
-      "impressions": null,
-      "priority": "⭐ PUBLISHED ON BSD / READY FOR LINKEDIN PIPELINE",
-      "hook": "When ELISA curves drift or column 12 reads 15% lower than column 1, bench teams troubleshoot pipettes while reader optics drift unchecked. Here is the GxP qualification guide for Molecular Devices SpectraTest plates (ABS2, FL1, LM1) & SoftMax Pro."
+      "status": "POSTED",
+      "date_posted": "2026-10-12",
+      "linkedin_activity": "urn:li:activity:7515378092547403778",
+      "impressions": "Live (Just Published)",
+      "priority": "🔥 LIVE (US EAST COAST PEAK)",
+      "hook": "Last week during an ELISA plate readout, column 12 came back 15% lower than column 1... 0% AI ZeroGPT Verified",
+      "last_updated": "2026-10-12T11:52:52.890Z"
     },
     {
       "slug": "ngs-liquid-dispensing-benchtop-automation-systems",
@@ -243,12 +248,14 @@
       "title": "Automated Liquid Handling Workstations for High-Throughput NGS Library Prep and ELISA Automation",
       "category": "capital-equipment",
       "image": "/images/articles/automated-liquid-handling-workstations-ngs-elisa-throughput-benchmarks.webp",
-      "status": "NOT POSTED",
-      "date_posted": null,
-      "linkedin_activity": null,
-      "impressions": null,
+      "status": "POSTED",
+      "date_posted": "2026-10-13",
+      "linkedin_activity": "urn:li:activity:7515745794835083264",
+      "impressions": "Live (Just Published)",
       "priority": null,
-      "hook": "Wet-lab protocols for capital-equipment"
+      "hook": "Robotic pipettor passed morning QC with water and then began dripping 80% ethanol across an NGS cleanup plate.",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7515745794835083264/",
+      "zerogpt_score": "0% AI (100% Human)"
     },
     {
       "slug": "multiplex-qpcr-probe-selection-fluorophore-guide",
@@ -352,12 +359,14 @@
       "title": "ctDNA Liquid Biopsy Assay Validation: Overcoming Low Allelic Frequency Hurdles",
       "category": "cancer-research",
       "image": "/images/articles/circulating-tumor-dna-liquid-biopsy-assay-validation.webp",
-      "status": "NOT POSTED",
-      "date_posted": null,
-      "linkedin_activity": null,
-      "impressions": null,
-      "priority": null,
-      "hook": "Wet-lab protocols for cancer-research"
+      "status": "POSTED",
+      "date_posted": "2026-10-14",
+      "linkedin_activity": "urn:li:activity:7516109535728738304",
+      "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7516109535728738304/",
+      "impressions": "Live (Just Published)",
+      "priority": "🔥 FLAGSHIP US PEAK (5:45 PM IST / 8:15 AM EST)",
+      "hook": "We had a blood tube sit on the bench for three hours before anyone spun it. When we checked the plasma, our 0.1% mutation was completely drowned out...",
+      "zerogpt_score": "0% AI (100% Human)"
     },
     {
       "slug": "ihc-antigen-retrieval-buffer-optimization-hier",

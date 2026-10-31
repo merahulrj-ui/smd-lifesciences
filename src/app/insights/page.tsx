@@ -35,9 +35,9 @@ export const metadata: Metadata = {
 export default function BiotechInsightsPage() {
   const articles = STATIC_INSIGHTS;
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString?: string) => {
     const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', year: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-GB', options);
+    return new Date(dateString || "2026-10-01").toLocaleDateString('en-GB', options);
   };
 
   const getExcerpt = (content: string) => {
