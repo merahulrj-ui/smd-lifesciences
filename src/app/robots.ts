@@ -11,6 +11,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: [
           'Googlebot',
+          'Googlebot-Image',
+          'Google-Extended',
           'Bingbot',
           'Applebot',
           'OAI-SearchBot',
@@ -22,6 +24,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://lifesciences.smdmedicare.in/sitemap.xml',
+    host: 'https://lifesciences.smdmedicare.in',
   };
 }
-

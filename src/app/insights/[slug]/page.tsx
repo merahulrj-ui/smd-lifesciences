@@ -21,8 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const desc = art.excerpt || `Technical whitepaper: ${art.title}. Advanced protocols and validation data for diagnostic manufacturers.`;
 
+  const cleanTitle = art.title.replace(/\s+/g, ' ').trim();
+  const titleCore = cleanTitle.length > 58 ? cleanTitle.split(/[:|—–]/)[0].trim() : cleanTitle;
+  const pageTitle = `${titleCore} | Protocol & Bench Guide (2026) | SMD Life Sciences`;
+
   return {
-    title: `${art.title} | SMD Life Sciences Insights`,
+    title: pageTitle,
     description: desc,
     alternates: {
       canonical: `https://lifesciences.smdmedicare.in/insights/${cleanSlug}`,

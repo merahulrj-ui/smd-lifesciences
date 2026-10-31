@@ -2,8 +2,10 @@ import { MetadataRoute } from 'next';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 import { STATIC_INSIGHTS } from '@/data/insights';
 
+export const revalidate = 43200;
+
 const BASE_URL = 'https://lifesciences.smdmedicare.in';
-const LAST_MODIFIED_CORE = new Date('2026-10-08T00:00:00.000Z');
+const LAST_MODIFIED_CORE = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Core static routes

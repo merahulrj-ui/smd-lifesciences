@@ -24,6 +24,12 @@ async function runAutoCrawlPing() {
     `${BASE_URL}/ivd-raw-materials`,
     `${BASE_URL}/diagnostic-cdmo`,
     `${BASE_URL}/services`,
+    `${BASE_URL}/services/custom-monoclonal-antibody-development`,
+    `${BASE_URL}/services/custom-polyclonal-antibody-production`,
+    `${BASE_URL}/shipping-policy`,
+    `${BASE_URL}/return-policy`,
+    `${BASE_URL}/privacy-policy`,
+    `${BASE_URL}/terms`,
     `${BASE_URL}/about`,
     `${BASE_URL}/contact`,
   ];

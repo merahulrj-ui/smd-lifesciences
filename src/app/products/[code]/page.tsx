@@ -30,25 +30,52 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? 'https://lifesciences.smdmedicare.in/images/biotech_chromatography.webp'
     : 'https://lifesciences.smdmedicare.in/images/biotech_lateral_flow.webp';
 
+  // Dynamic Reagent Categorization for Maximum B2B Search Query Matching & CTR
+  let reagentRole = 'IVD Raw Material';
+  const lowerName = product.name.toLowerCase();
+  
+  if (product.code === 'PVBSP5005' || lowerName.includes('anti-mouse igg') || lowerName.includes('control line')) {
+    reagentRole = 'Lateral Flow Control Line (C-Line) Reagent';
+  } else if (lowerName.includes('coat') || lowerName.includes('capture')) {
+    reagentRole = 'Lateral Flow & ELISA Matched Pair (Capture Coat)';
+  } else if (lowerName.includes('coupling') || lowerName.includes('conjugate') || lowerName.includes('detector')) {
+    reagentRole = 'Lateral Flow & ELISA Matched Pair (Detector Conjugate)';
+  } else if (product.category === 'Enzymes') {
+    reagentRole = 'Biopharma Protein Characterization Enzyme';
+  } else if (product.category === 'Cytokines') {
+    reagentRole = 'Bioactive Recombinant Cytokine Protein';
+  } else if (product.category === 'Cardiac Markers') {
+    reagentRole = 'Cardiac Marker Reagent (cTnI/cTnT)';
+  } else if (product.category === 'Infectious Diseases') {
+    reagentRole = 'Rapid Test & ELISA Diagnostic Reagent';
+  }
+
+  const pageTitle = `${product.name} (${product.code}) | ${reagentRole} | 1mg Sample / Bulk CoA | SMD Life Sciences`;
+  const pageDesc = `Order ${product.name} (${product.code}) direct from Bangalore manufacturer. 1mg–5mg evaluation sample vials available. Validated for ${product.applications}. Purity: ${product.purity} | Target: ${product.target}. 24–48h cold-chain express dispatch across India with lot-specific Certificate of Analysis (CoA).`;
+
   return {
-    title: `Buy ${product.name} (${product.code}) | IVD Reagent Bulk Price & CoA | SMD Life Sciences`,
-    description: `Order ${product.name} (${product.code}) direct from Bangalore manufacturer. Purity: ${product.purity} | Target: ${product.target} | Applications: ${product.applications}. 1mg-5mg evaluation sample vials available. 24-48h cold-chain dispatch with lot CoA.`,
+    title: pageTitle,
+    description: pageDesc,
     keywords: [
       product.name,
       `${product.name} price`,
-      `${product.name} manufacturer India`,
-      `${product.code} IVD reagent`,
-      `${product.target} antibody antigen`,
-      'IVD raw material supplier Bangalore',
-      'lateral flow rapid test reagent',
-      'ELISA raw material India'
+      `${product.name} bulk supplier india`,
+      `${product.target} antibody matched pair`,
+      `${product.target} antigen lateral flow`,
+      `${product.code} reagent CoA`,
+      `buy ${product.code} 1mg sample`,
+      'lateral flow rapid test reagent bangalore',
+      'elisa raw material manufacturer india',
+      'ivd raw materials supplier bangalore',
+      '40nm colloidal gold conjugation antibody',
+      product.code
     ],
     alternates: {
       canonical: `https://lifesciences.smdmedicare.in/products/${product.code}`,
     },
     openGraph: {
-      title: `Buy ${product.name} (${product.code}) | IVD Reagent`,
-      description: `Purity ${product.purity}. Order 1mg-5mg evaluation samples or commercial bulk quantities with lot Certificate of Analysis (CoA).`,
+      title: pageTitle,
+      description: pageDesc,
       url: `https://lifesciences.smdmedicare.in/products/${product.code}`,
       siteName: 'SMD Life Sciences',
       locale: 'en_IN',
@@ -64,8 +91,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Buy ${product.name} (${product.code}) | IVD Reagent`,
-      description: `Purity ${product.purity}. Order 1mg-5mg evaluation samples or commercial bulk quantities with lot Certificate of Analysis (CoA).`,
+      title: pageTitle,
+      description: pageDesc,
       images: [productImage],
     },
   };
