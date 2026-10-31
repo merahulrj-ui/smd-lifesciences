@@ -1,0 +1,17 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+User-Agent: Googlebot
+User-Agent: Googlebot-Image
+User-Agent: Google-Extended
+User-Agent: Bingbot
+User-Agent: Applebot
+User-Agent: OAI-SearchBot
+User-Agent: GPTBot
+User-Agent: PerplexityBot
+User-Agent: ClaudeBot
+Allow: /
+
+Host: https://lifesciences.smdmedicare.in
+Sitemap: https://lifesciences.smdmedicare.in/sitemap.xml
