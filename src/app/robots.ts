@@ -21,9 +21,9 @@ export default function robots(): MetadataRoute.Robots {
           'ClaudeBot',
         ],
         allow: '/',
+        disallow: ['/api/'],
       },
     ],
     sitemap: 'https://lifesciences.smdmedicare.in/sitemap.xml',
-    host: 'https://lifesciences.smdmedicare.in',
   };
 }
