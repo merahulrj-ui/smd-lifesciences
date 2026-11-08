@@ -41,16 +41,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${BASE_URL}/diagnostic-cdmo`,
+      url: `${BASE_URL}/monoclonal-antibodies`,
       lastModified: LAST_MODIFIED_CORE,
       changeFrequency: 'weekly',
       priority: 0.95,
     },
     {
-      url: `${BASE_URL}/insights`,
+      url: `${BASE_URL}/diagnostic-cdmo`,
       lastModified: LAST_MODIFIED_CORE,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${BASE_URL}/about`,

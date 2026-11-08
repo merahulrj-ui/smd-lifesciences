@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { BIOTECH_PRODUCTS } from '@/data/products';
 import { getStaticInsightBySlug, STATIC_INSIGHTS } from '@/data/insights';
+import { LEGACY_INSIGHT_REDIRECTS } from '@/data/legacyRedirects';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -62,6 +63,9 @@ export default async function BiotechInsightDetailPage({ params }: Props) {
   const article = getStaticInsightBySlug(cleanSlug);
 
   if (!article) {
+    if (LEGACY_INSIGHT_REDIRECTS[cleanSlug]) {
+      permanentRedirect(LEGACY_INSIGHT_REDIRECTS[cleanSlug]);
+    }
     notFound();
   }
 

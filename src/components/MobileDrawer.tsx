@@ -134,12 +134,12 @@ export default function MobileDrawer() {
 
             <li>
               <Link 
-                href="/insights" 
+                href="/monoclonal-antibodies" 
                 onClick={closeDrawer} 
-                className={getDrawerLinkClass(pathname?.startsWith('/insights'))}
+                className={getDrawerLinkClass(pathname?.startsWith('/monoclonal-antibodies'))}
               >
-                <i className="fas fa-newspaper w-5 text-center text-blue-600"></i>
-                <span>Insights</span>
+                <i className="fas fa-vial w-5 text-center text-blue-600"></i>
+                <span>Monoclonal Antibodies</span>
               </Link>
             </li>
 

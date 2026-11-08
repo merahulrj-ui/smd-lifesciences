@@ -83,8 +83,8 @@ export default function ProductsAutoCrawlHub() {
             <Link href="/ivd-raw-materials" className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-orange-400 transition-all text-xs font-bold text-slate-900 hover:text-orange-600">
               Diagnostic Antibody &amp; IVD Raw Materials Supplier &rarr;
             </Link>
-            <Link href="/insights" className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-orange-400 transition-all text-xs font-bold text-slate-900 hover:text-orange-600">
-              Biotech R&amp;D Whitepapers &amp; Wet-Lab Protocols &rarr;
+            <Link href="/monoclonal-antibodies" className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-orange-400 transition-all text-xs font-bold text-slate-900 hover:text-orange-600">
+              Diagnostic Monoclonal Antibodies &amp; Matched Pairs &rarr;
             </Link>
           </div>
         </div>
@@ -132,11 +132,11 @@ export default function ProductsAutoCrawlHub() {
             </div>
           ))}
 
-          {/* Technical Whitepapers & Wet-Lab SOPs */}
+          {/* IVD Standards & Manufacturer Quality Guides */}
           <div className="pt-6 border-t border-slate-100 space-y-3">
             <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <i className="fas fa-book-medical text-orange-600 text-xs"></i>
-              Technical Whitepapers, Antibody Engineering &amp; Wet-Lab Assay Protocols
+              <i className="fas fa-clipboard-check text-orange-600 text-xs"></i>
+              IVD Quality Standards &amp; Technical Manufacturing Guides
               <span className="text-xs font-normal text-slate-500">
                 ({STATIC_INSIGHTS.length} Guides)
               </span>
@@ -150,7 +150,7 @@ export default function ProductsAutoCrawlHub() {
                 >
                   <div>
                     <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-orange-700 bg-orange-50 px-1.5 py-0.5 rounded mb-1">
-                      Wet-Lab SOP &bull; {article.read_time}
+                      IVD Standard &bull; {article.read_time}
                     </span>
                     <h4 className="text-xs font-semibold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-2">
                       {article.title}

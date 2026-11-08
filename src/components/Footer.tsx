@@ -69,8 +69,8 @@ export default function BiotechFooter() {
               </Link>
             </li>
             <li>
-              <Link href="/insights" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
-                <i className="fas fa-angle-right text-[0.7em]"></i> Scientific Insights &amp; Whitepapers
+              <Link href="/monoclonal-antibodies" className="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
+                <i className="fas fa-angle-right text-[0.7em]"></i> Diagnostic Monoclonal Antibodies (Matched Pairs)
               </Link>
             </li>
             <li>

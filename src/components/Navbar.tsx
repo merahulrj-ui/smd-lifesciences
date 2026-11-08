@@ -92,11 +92,14 @@ export default function Navbar() {
           <Link href="/products" className={getNavLinkClass(pathname?.startsWith('/products'))}>
             Products
           </Link>
+          <Link href="/recombinant-antigens" className={getNavLinkClass(pathname?.startsWith('/recombinant-antigens'))}>
+            Recombinant Antigens
+          </Link>
+          <Link href="/monoclonal-antibodies" className={getNavLinkClass(pathname?.startsWith('/monoclonal-antibodies'))}>
+            Monoclonal Antibodies
+          </Link>
           <Link href="/services" className={getNavLinkClass(pathname?.startsWith('/services'))}>
             CDMO Services
-          </Link>
-          <Link href="/insights" className={getNavLinkClass(pathname?.startsWith('/insights'))}>
-            Insights
           </Link>
           <Link href="/about" className={getNavLinkClass(pathname === '/about')}>
             About Us
